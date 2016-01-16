@@ -28,3 +28,5 @@ gem 'jquery-middleman', '3.1.2'
 # Middleman redcarpet engine + syntax highlighter for middleman
 gem 'redcarpet', '3.3.3'
 gem 'middleman-syntax', '2.0.0'
+gem 'middleman-gh-pages', '0.0.3'
+gem 'rake', '10.5.0'
