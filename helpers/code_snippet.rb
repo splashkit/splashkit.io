@@ -31,16 +31,16 @@ def code_snippet(gist_id, filename)
   end
 
   # This is where we generate our HTML
-  return <<-EOS
-    <!-- Code snippet #{filename} (#{gist_id}) -->
-    <div class="code-snippet">
-    <ul class='nav nav-tabs' role='tablist'>
+<<-EOS
+<!-- Code snippet #{filename} (#{gist_id}) -->
+<div class="code-snippet">
+  <ul class='nav nav-tabs' role='tablist'>
     #{list_items}
-    </ul>
-    <div class='tab-content'>
+  </ul>
+  <div class='tab-content'>
     #{tab_panes}
-    </div>
-    </div>
-    <!-- End code snippet -->
-  EOS
+  </div>
+</div>
+<!-- End code snippet -->
+EOS
 end
