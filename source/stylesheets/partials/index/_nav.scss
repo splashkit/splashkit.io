@@ -1,0 +1,45 @@
+.home.nav {
+  background-color: $grey-bg;
+  border-top: 1px solid $grey-border-color;
+  padding: 4em inherit;
+  ul {
+    // Defines the number of link columns
+    $link-cols: 3;
+    @include make-xs-column(12);
+    @include make-sm-column(12/3);
+    // Remove list
+    @include remove-list-style;
+    text-transform: uppercase;
+    // Margin to separate lists on small devices
+    margin-top: 2em;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 0;
+    }
+  }
+  ul li.title {
+    color: #747474;
+    font-size: 0.8em;
+    font-weight: 600;
+    padding-bottom: 1em;
+  }
+  ul li a {
+    display: block;
+    margin-left: 1em;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    border-top-style: solid;
+    padding: 1em inherit;
+    color: #303030;
+    &:hover {
+      text-decoration: none;
+      color: $link-color;
+    }
+    // Reduce width on larger devices to separate horizontally
+    @media (min-width: $screen-sm-min) {
+      width: 80%;
+    }
+  }
+  ul li:last-child a {
+    border-bottom-style: solid;
+  }
+}
