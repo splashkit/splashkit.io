@@ -1,39 +1,75 @@
-# Generates a code snippet from a provided gist_id and filename
-def code_snippet(gist_id, filename)
-  types = {
-    'Psuedocode' => 'psuedocode',
-    'C/C++'      => 'c',
-    'Pascal'     => 'pas',
-    'Swift'      => 'swift',
-    'Python'     => 'py'
+#
+# Generates a code snippet from a provided filename using the path provided
+# relative to data/snippets. By default, if path is not provided, it will use
+# the current page directory.
+#
+# E.g., if current page is "getting-started/graphics/index.html"
+# then the path will default to "data/snippets/getting-started/graphics"
+#
+def snippet(filename, path = nil)
+  # Maps file extensions to their tab titles
+  ext_to_title = {
+    '.c'          => 'C/C++',
+    '.cpp'        => 'C/C++',
+    '.cs'         => 'C#',
+    '.java'       => 'Java',
+    '.js'         => 'JavaScript',
+    '.pas'        => 'Pascal',
+    '.psuedocode' => 'Psuedocode',
+    '.py'         => 'Python',
+    '.swift'      => 'Swift'
   }
 
-  default_type = 'psuedocode'
+  # Check for path, otherwise use current page
+  path = path.nil? ? current_page.destination_path[/.*\//] : path
+  # Prepend data/snippets to the path
+  path = 'data/snippets/' << path
+  # Create the HTML formatter pased on HTMLPygments + HTMLTable
+  formatter = Rouge::Formatters::HTMLPygments.new(Rouge::Formatters::HTMLTable.new(Rouge::Formatters::HTML.new))
+  # Get all the files that match the path with the filename
+  files = Dir.glob(path << filename << ".*").map do |f|
+    extname = File.extname(f)
+    basename = File.basename(f, extname)
+    title = ext_to_title[extname]
+    lexer = Rouge::Lexer.guess({filename: f})
+    src = File.read(f)
+    html = formatter.format(lexer.lex(src))
+    id = "#{extname[/[a-z]+/]}-#{basename}" # remove "." from extension
+    {
+      id: id,
+      title: title,
+      html:  html
+    }
+  end
+
+  # Sort alphabetically
+  files.sort_by! { |f| f[:id] }
 
   # Auto Generation of HTML
   list_items = ""
   tab_panes = ""
-  types.each do |pretty_type, type|
-    tab_id = "#{gist_id}-#{type}"
-    gist_file = "#{filename}.#{type}"
+  files.each_with_index do |file, index|
+    tab_id = file[:id]
+
+    # Determine if this is the default tab
+    is_active = index == 0
 
     # Generate the <li> items HTML
     list_items << "<li role='presentation'"
-    list_items <<  (type == default_type ? "class='active'" : "")
-    list_items << "><a href='##{tab_id}' aria-controls='#{tab_id}' role='tab' data-toggle='tab'>#{pretty_type}</a></li>"
+    list_items <<  (is_active ? "class='active'" : "")
+    list_items << "><a href='##{tab_id}' aria-controls='#{tab_id}' role='tab' data-toggle='tab'>#{file[:title]}</a></li>"
 
     # Generate the tab panes HTML
     tab_panes << "<div role='tabpanel' id='#{tab_id}' class='tab-pane"
-    tab_panes << (type == default_type ? " active'>" : "'>")
-    tab_panes << "<script data-gist src='https://gist.github.com/#{gist_id}.js?file=#{gist_file}' type='text/javascript'></script>"
-
+    tab_panes << (is_active ? " active'>" : "'>")
+    tab_panes << file[:html]
     tab_panes << "</div>"
   end
 
-  # This is where we generate our HTML
+# This is where we generate our HTML
 <<-EOS
-<!-- Code snippet #{filename} (#{gist_id}) -->
-<div class="code-snippet">
+<!-- Code snippet for #{filename} -->
+<div class="snippet">
   <ul class='nav nav-tabs' role='tablist'>
     #{list_items}
   </ul>
