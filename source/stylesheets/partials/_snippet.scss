@@ -1,0 +1,49 @@
+.snippet {
+  ul.nav {
+    border-bottom: none;
+    li {
+      font-size: 0.9em;
+      margin-bottom: 0;
+    }
+    li a {
+      color: #8e8e8e;
+      padding: 5px 10px;
+      &, &:hover, &:active {
+        background-color: initial;
+        border: none;
+        border-radius: 0;
+      }
+      &:hover {
+        color: #555555;
+      }
+    }
+    li.active a {
+      font-weight: bold;
+    }
+  }
+  .tab-content {
+    cursor: pointer;
+    table.rouge-table {
+      width: 100%;
+    }
+    td.rouge-gutter {
+      width: 6ex;
+    }
+    pre {
+      border: none;
+      border-radius: 0;
+      background-color: initial;
+      margin: 0;
+      padding: 0;
+    }
+    pre.codehilite {
+      background-color: #f0f0f0;
+      padding: 21px 7px 0px 14px;
+    }
+    pre.lineno {
+      padding: 0;
+      color: #BFBFBF;
+      margin-right: 2ex;
+    }
+  }
+}
