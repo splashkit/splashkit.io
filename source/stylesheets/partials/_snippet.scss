@@ -23,6 +23,21 @@
   }
   .tab-content {
     cursor: pointer;
+    position: relative;
+    &::before {
+      content: "Click to select";
+      display: none;
+      position: absolute;
+      right: 0;
+      padding: 1em;
+      font-size: 0.8em;
+      background-color: rgba(128, 128, 128, 0.8);
+      color: #fff;
+      border-bottom-left-radius: 3px;
+    }
+    &:hover::before {
+      display: block;
+    }
     table.rouge-table {
       width: 100%;
     }
