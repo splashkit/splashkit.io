@@ -63,10 +63,10 @@ set :js_dir, 'javascripts'
 # Set the image directory to be ./images
 set :images_dir, 'images'
 
-# Activate markdown and syntax highlighting
-activate :syntax, :line_numbers => true
+# Activate markdown using Redcarpet parsing engine and syntax highlighting
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
+activate :rouge_syntax
 
 # Pretty index directory structure
 activate :directory_indexes

@@ -25,9 +25,8 @@ gem 'bootstrap-sass', '3.3.6', :require => false
 # Grab jQuery
 gem 'jquery-middleman', '3.1.2'
 
-# Middleman redcarpet engine + syntax highlighter for middleman
+# Markdown redcarpet parsing engine + syntax highlighter for middleman
 gem 'redcarpet', '3.3.3'
-gem 'middleman-syntax', '2.0.0'
 
 # Publish middleman website to gh-pages
 gem 'middleman-gh-pages', '0.0.3'
@@ -37,3 +36,5 @@ gem 'rake', '10.5.0'
 
 # Ruby slim for templating engine
 gem 'slim', '3.0.6'
+
+gem 'middleman-rouge', '0.0.1'
