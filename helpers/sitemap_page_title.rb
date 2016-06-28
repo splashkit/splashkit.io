@@ -1,5 +1,8 @@
+#
 # Generates a title based on the current directory tree
-# e.g. foo-bar/qux/index.html -> Foo Bar - Qux
+#
+# E.g., "foo-bar/qux/index.html" will translate to "Foo Bar - Qux"
+#
 def sitemap_page_title
   # Grab the destination path from the current_page data
   dest_path = current_page.destination_path
