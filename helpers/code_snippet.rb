@@ -73,7 +73,7 @@ def snippet(filename, path = nil)
   <ul class='nav nav-tabs' role='tablist'>
     #{list_items}
   </ul>
-  <div class='tab-content'>
+  <div class='tab-content' onclick="selectSnippet(this)">
     #{tab_panes}
   </div>
 </div>
