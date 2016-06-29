@@ -24,6 +24,10 @@
   .tab-content {
     cursor: pointer;
     position: relative;
+    .rouge-code ::selection {
+      color: #fff;
+      background-color: rgba(128, 128, 128, 0.8);
+    }
     &::before {
       content: "Click to select";
       display: none;
@@ -53,7 +57,7 @@
     }
     pre.codehilite {
       background-color: #f0f0f0;
-      padding: 21px 7px 0px 14px;
+      padding: 21px 14px 0px 14px;
     }
     pre.lineno {
       padding: 0;
