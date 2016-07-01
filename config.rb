@@ -24,9 +24,18 @@
 #   page "/admin/*"
 # end
 
-# with_layout :markdown do
-#   page "/getting-started.html"
-# end
+# Root Layout
+with_layout :root do
+  page "/*"
+end
+# Article layout
+with_layout :articles do
+  page "/articles/*"
+end
+# API layout
+with_layout :api do
+  page "/api/*"
+end
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -50,8 +59,9 @@ helpers do
   require_all "helpers"
 end
 
-# Use Ruby Slim
+# Use Ruby Slim and disable option warning
 require 'slim'
+Slim::Engine.disable_option_validator!
 
 # Import CSS/SCSS
 set :css_dir, 'stylesheets'

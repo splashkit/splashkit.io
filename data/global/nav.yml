@@ -1,0 +1,17 @@
+about:
+  -
+    title: Getting Started
+    href: /articles/getting-started
+  -
+    title: API Documentation
+    href: /api
+download:
+  -
+    title: macOS
+    href: /download#macos
+  -
+    title: Linux
+    href: /download#linux
+  -
+    title: Windows
+    href: /download#windows

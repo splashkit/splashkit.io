@@ -13,11 +13,12 @@
 @import "modules/typography";
 @import "modules/lists";
 
-// Import partials - applies to components such as a class or element
-@import "partials/anchor";
-@import "partials/body";
-@import "partials/snippet";
-@import "partials/footer";
+// Import global partials - applies to components such as a class or element
+@import "partials/global/anchor";
+@import "partials/global/body";
+@import "partials/global/snippet";
+@import "partials/global/footer";
+@import "partials/global/nav";
 
 // Index partials
 @import "partials/index/jumbotron";

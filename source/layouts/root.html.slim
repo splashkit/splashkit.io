@@ -9,7 +9,10 @@ html
     // Bootstrap support for mobile
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
 
-    // Generate title dynamically
+    // Viewport font fix
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    // Generate title dynamically using sitemap_page_title helper
     title= "SplashKit - #{sitemap_page_title || 'Home'}"
 
     // Include styles and javascripts
@@ -17,9 +20,9 @@ html
     =javascript_include_tag "main"
 
   body class="#{page_classes}"
-    nav.container
-      // Global header here
+    nav.global
+      =partial 'partials/global/nav'
     main
-      ==yield
+      =yield
     footer
-      | &copy; My Company 2015
+      =partial 'partials/global/footer'
