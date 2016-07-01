@@ -1,4 +1,11 @@
 body {
   position: relative;
   height: 100vh;
+  // For small pages
+  background-color: $footer-bg;
+}
+main {
+  background-color: #fff;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }

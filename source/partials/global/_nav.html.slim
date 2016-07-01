@@ -1,7 +1,9 @@
-// Define links in global navigation under data/global/nav.yml
-- data.global.nav.each do | key, navlinks |
-  ul class="#{key.dasherize}"
-    li.title= key.titleize
-    - navlinks.each do | link |
-      li
-        = link_to link.title, link.href
+// Navigation for the main nav header
+.container
+  .splashkit-logo
+    p hello
+  ul.nav-list.collapsed
+    - data.global.nav.each do | key, _ |
+      li.title= key.titleize
+  .nav-list.expanded
+    =partial 'partials/global/nav-list'

@@ -3,7 +3,7 @@
 body.index > nav.global {
   display: none;
 }
-body.index > main > nav.global {
+body.index > main > .nav-list {
   background-color: $grey-bg;
   border-top: 1px solid $grey-border-color;
   padding: 4em;

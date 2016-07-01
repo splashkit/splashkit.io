@@ -12,13 +12,15 @@
 @import "modules/colors";
 @import "modules/typography";
 @import "modules/lists";
+@import "modules/split-layout";
 
 // Import global partials - applies to components such as a class or element
 @import "partials/global/anchor";
 @import "partials/global/body";
-@import "partials/global/snippet";
 @import "partials/global/footer";
 @import "partials/global/nav";
+@import "partials/global/snippet";
+@import "partials/global/splashkit-logo";
 
 // Index partials
 @import "partials/index/jumbotron";

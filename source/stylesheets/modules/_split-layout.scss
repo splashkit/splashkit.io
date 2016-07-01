@@ -1,0 +1,8 @@
+@mixin split-left-layout {
+  // Only for larger screens
+  @include make-md-column(3);
+}
+@mixin split-right-layout {
+  // Only for larger screens
+  @include make-md-column(9);
+}

@@ -1,4 +1,47 @@
 nav.global {
+  background-color: $grey-bg;
+  border-bottom: 1px solid $grey-border-color;
+  padding: 1em 0;
+  .container {
+    display: flex;
+    flex-wrap: wrap; // TODO: breaking on newline
+  }
+  .splashkit-logo {
+    @include split-left-layout;
+  }
+  .nav-list {
+    @include split-right-layout;
+  }
+  &:hover {
+    .nav-list.collapsed {
+      display: none;
+    }
+    .nav-list.expanded {
+      position: static;
+      top: auto;
+      right: auto;
+    }
+  }
+  .nav-list.expanded {
+    position: fixed;
+    bottom: 100%;
+    right: 100%;
+    font-size: 0.9em;
+  }
+  .nav-list.collapsed {
+    @include remove-list-style;
+    text-transform: uppercase;
+    margin: 0;
+    align-items: center;
+    li.title {
+      padding-bottom: 0;
+      &:not(:last-child) {
+        margin-right: 8ex;
+      }
+    }
+  }
+}
+.nav-list {
   @media (min-width: $screen-sm-min) {
     // Keep lists side by side in small screens
     display: flex;
@@ -15,7 +58,7 @@ nav.global {
       flex: 1;
     }
   }
-  ul li.title {
+  li.title {
     color: #747474;
     font-size: 0.8em;
     font-weight: 600;

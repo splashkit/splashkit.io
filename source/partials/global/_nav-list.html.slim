@@ -1,0 +1,7 @@
+// Define nav list links in global navigation under data/global/nav.yml
+- data.global.nav.each do | key, navlinks |
+  ul class="#{key.dasherize}"
+    li.title= key.titleize
+    - navlinks.each do | link |
+      li
+        = link_to link.title, link.href
