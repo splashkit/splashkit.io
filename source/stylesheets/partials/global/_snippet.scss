@@ -4,17 +4,17 @@
     li {
       font-size: 0.9em;
       margin-bottom: 0;
+      &.active a, &:hover a {
+        color: #333333;
+      }
     }
     li a {
       color: #8e8e8e;
       padding: 5px 10px;
       &, &:hover, &:active {
-        background-color: initial;
-        border: none;
-        border-radius: 0;
-      }
-      &:hover {
-        color: #555555;
+        // background-color: initial;
+        // border: none;
+        // border-radius: 0;
       }
     }
     li.active a {
