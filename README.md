@@ -13,6 +13,16 @@ $ gem install bundler
 $ bundle install
 ```
 
+#### El Capitan and OpenSSL issues
+
+If you are using OS X El Capitan, install OpenSSL using `brew` and set the bundle
+config to point to this install:
+
+```bash
+$ brew install openssl
+$ bundle config build.eventmachine --with-cppflags="-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib"
+```
+
 ## Developing
 
 Develop using:
