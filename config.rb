@@ -12,11 +12,11 @@
 ###
 
 # Root Layout
-page '/*', layout: :root
+page '/index.html', layout: :root
 # Article layout
 page '/articles/*', layout: :articles
 # API layout
-page '/api/*', layout: :api
+page '/api.html', layout: :api
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -39,6 +39,9 @@ helpers do
   # Require all functions in the helpers directory
   require_all 'helpers'
 end
+
+# Helpers for string
+require 'lib/core_ext/string'
 
 # Use Ruby Slim and disable option warning
 require 'slim'
