@@ -1,0 +1,185 @@
+<%
+data.api.api.each do |key, value|
+  name = key.to_human_case
+  types = (value.typedefs + value.structs + value.enums).sort_by{ |h| h[:name] }
+%>
+
+<h1>
+  <%= name %>
+</h1>
+
+<%#
+  BRIEF
+%>
+<%
+  if value.brief
+%>
+  <p class="lead">
+    <%= value.brief.to_html%>
+  </p>
+<%
+  end #if value brief
+%>
+<%#
+  DESCRIPTION
+%>
+<%
+  if value.description
+%>
+<div>
+  <%= value.description.to_html %>
+</div>
+<%
+  end # end if value description
+%>
+<%#
+  FUNCTIONS
+%>
+<%
+  if !value.functions.empty?
+%>
+<h2>
+  <%= name %> Functions
+</h2>
+<%
+  end # if functions empty
+%>
+<%
+  value.functions.each do |function|
+    function_name = function.name.to_human_case if function.name
+    function_description = function.description || "No function description"
+%>
+<dl class="dl-horizontal">
+  <dt> <%= function_name %> </dt>
+  <dd>
+    <%= function_description.to_html %>
+<%#
+  FUNCTION PARAMS
+%>
+<%
+    if function.parameters && function.parameters.count > 0
+%>
+    <table class="table table-hover">
+      <caption>Parameters</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+<%
+      function.parameters.each do |key, param|
+        param_name = key.to_human_case
+        param_type = param.type.to_human_case if param.type
+        param_description = param.description || "No parameter description"
+%>
+        <tr>
+          <td> <%= param_name %> </td>
+          <td> <%= param_type %> </td>
+          <td> <%= param_description.to_html %> </td>
+        </tr>
+<%
+      end # end function params each
+%>
+      </tbody>
+    </table>
+<%
+    end # if params count
+%>
+<%#
+  FUNCTION RETURN
+%>
+<%
+    return_type = function.return.type.to_human_case if function.return.type
+    return_description = function.return.description || "No return description"
+    if function.return && !function.return.empty?
+%>
+    <table class="table table-hover">
+      <caption>Returns</caption>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+           <td> <%= return_type %> </td>
+           <td> <%= return_description.to_html %> </td>
+        </tr>
+      </tbody>
+    </table>
+<%
+    end # end if function.return
+%>
+  </dd>
+</dl>
+<%
+  end # end functions.each
+%>
+<%#
+  TYPES
+  TODO: Check if we have types
+%>
+<h2>
+  <%= name %> types
+</h2>
+<%
+  types.each do |type|
+    type_name = type.name.to_human_case if type.name
+    type_description = type.description || "No description"
+    is_struct = !type.fields.nil?
+    is_enum = !type.constants.nil?
+%>
+<dl class="dl-horizontal">
+  <dt id = "<%=type.name.to_kebab_case %>"> <%= type_name %> </dt>
+  <dd>
+    <%= type_description.to_html %>
+<%#
+  STRUCT FIELDS
+%>
+<%
+    if is_struct
+%>
+    <table class="table table-hover">
+      <caption> Struct Fields </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+<%
+      type.fields.each do |key, field|
+        field_name =          key.to_human_case if key
+        field_description =   field.description || "No field description"
+        field_type =          field.type || "ERROR - No type given"
+%>
+        <tr>
+           <td> <%= field_name %> </td>
+           <td> <%= field_type.to_html %> </td>
+           <td> <%= field_description.to_html %> </td>
+        </tr>
+<%
+      end # end struct.fieldds.each
+%>
+      </tbody>
+    </table>
+<%
+    end # if struct
+%>
+<%#
+  ENUM CONSTANTS
+%>
+  </dd>
+<%
+  end # end types.each
+%>
+</dl>
+<%
+end # end api.each
+%>
