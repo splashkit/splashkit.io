@@ -9,7 +9,7 @@
 
 <% if value.brief  %>
 <p class="lead">
-  <%= value.brief%>
+  <%= value.brief.to_html%>
 </p>
 <% end #if value brief %>
 
@@ -82,26 +82,25 @@ if function.parameters && function.parameters.count > 0
   </tbody>
 </table>
 
-
-<% end %>
+<% end # end table %>
 
 </dd>
 </dl>
-<% end %>
+<% end # end description %>
 
 <h2>
   <%= name %> types
 </h2>
 
 <%
-  puts value.typedefs.inspect
+  # puts value.typedefs.inspect
   value.typedefs.each do |typedef|
     type_name =         if typedef.name then typedef.name.to_human_case else "" end
     type_description =  if typedef.description then typedef.description.to_html else "" end
 %>
 
 <dl class="dl-horizontal">
-  <dt> <%= type_name %> </dt>
+  <dt id = "<%=typedef.name.to_kebab_case %>"> <%= type_name %> </dt>
   <dd> <%= type_description %> </dd>
 </dl>
 
