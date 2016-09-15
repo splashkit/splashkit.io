@@ -129,7 +129,7 @@ GEM
     redcarpet (3.3.3)
     require_all (1.3.3)
     rouge (2.0.5)
-    sass (3.4.22)
+    sass (3.4.19)
     servolux (0.12.0)
     slim (3.0.6)
       temple (~> 0.7.3)
@@ -162,9 +162,10 @@ DEPENDENCIES
   rake (= 10.5.0)
   redcarpet (= 3.3.3)
   require_all (= 1.3.3)
+  sass (= 3.4.19)
   slim (= 3.0.6)
   tzinfo-data
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.1
