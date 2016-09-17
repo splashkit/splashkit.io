@@ -13,7 +13,7 @@ data.api.api.each do |key, value|
       if value.brief
     %>
     <hr>
-    <p class="lead">
+    <p>
       <%= value.brief.to_html%>
     </p>
     <%
@@ -100,21 +100,8 @@ data.api.api.each do |key, value|
     return_description = function.return.description || "No return description"
     if function.return && !function.return.empty?
 %>
-          <table class="table table-hover">
-            <caption>Returns</caption>
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td> <%= return_type %> </td>
-                <td> <%= return_description.to_html %> </td>
-              </tr>
-            </tbody>
-          </table>
+          <p> Returns (<%= return_type %>) <%= return_description %></p>
+   
 <%
     end # end if function.return
 %>
