@@ -3,6 +3,10 @@
   cursor: pointer;
 }
 
+.panel-heading:hover > .name-title{
+    text-decoration: underline;
+}
+
 .panel-default .panel-heading > .name-title {
   font-size: 2em;
   color:#3F51B5;
