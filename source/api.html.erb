@@ -1,25 +1,28 @@
 <%
 data.api.api.each do |key, value|
+  name_id = key.to_kebab_case
   name = key.to_human_case
   types = (value.typedefs + value.structs + value.enums).sort_by{ |h| h[:name] }
 %>
 
-<h1>
-  <%= name %>
-</h1>
+<div class="panel panel-default">
+  <div class="panel-heading" data-toggle="collapse" href="#accordion-<%= name_id %>" aria-expanded="false" aria-multiselectable="true" aria-controls="accordion-<%= name_id %>" id = "<%=name%>">
+    <div class=name-title> <%= name %> </div>
 
-<%#
-  BRIEF
-%>
-<%
-  if value.brief
-%>
-  <p class="lead">
-    <%= value.brief.to_html%>
-  </p>
-<%
-  end #if value brief
-%>
+    <%
+      if value.brief
+    %>
+      <p class="lead">
+        <%= value.brief.to_html%>
+      </p>
+    <%
+      end #if value brief
+    %>
+  </div>
+
+  <div class="collapse" id="accordion-<%= name_id %>">
+    <div class="panel-body">
+
 <%#
   DESCRIPTION
 %>
@@ -180,6 +183,9 @@ data.api.api.each do |key, value|
   end # end types.each
 %>
 </dl>
+  </div>
+</div>
+</div>
 <%
 end # end api.each
 %>
