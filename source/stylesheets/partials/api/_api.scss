@@ -1,0 +1,23 @@
+.panel-default > .panel-heading {
+  border-color: #ddd;
+  cursor: pointer;
+}
+
+.panel-heading:hover > .name-title{
+    text-decoration: underline;
+}
+
+.panel-default .panel-heading > .name-title {
+  font-size: 2em;
+  color:#3F51B5;
+}
+
+.panel-default .panel-heading > p {
+  font-size: 1.125em;
+}
+
+hr {
+  border-color: #ddd;
+  margin: 0px;
+  margin-top: 10px;
+}

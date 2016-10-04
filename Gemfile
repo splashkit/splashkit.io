@@ -24,6 +24,7 @@ gem 'middleman-sprockets', '4.0.0'
 gem 'middleman-compass', '4.0.1'
 
 # Boostrap as SASS (require false is important)
+gem 'sass', '3.4.19'
 gem 'bootstrap-sass', '3.3.6', require: false
 
 # Grab jQuery
