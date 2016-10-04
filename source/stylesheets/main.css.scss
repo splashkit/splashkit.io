@@ -1,3 +1,9 @@
+// Import third-party vendor code
+@import "vendor/pygments-github";
+@import "vendor/font-awesome";
+@import "compass";
+@import "bootstrap";
+
 // Import modules - website-wide applicability
 @import "modules/colors";
 @import "modules/typography";
@@ -16,9 +22,3 @@
 @import "partials/index/nav";
 @import "partials/index/main";
 @import "partials/api/api";
-
-// Import third-party vendor code
-@import "vendor/pygments-github";
-@import "vendor/font-awesome";
-@import "compass";
-@import "bootstrap";
