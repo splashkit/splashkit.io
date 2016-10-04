@@ -1,0 +1,7 @@
+<%# Define links and text in global navigation under data/global/footer.yml %>
+<p class="copyright-notice">
+  <% data.global.footer.copyright_notice.split("\n").each do | par | %>
+    <%= par %>
+    <br>
+  <% end %>
+</p>

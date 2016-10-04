@@ -38,6 +38,3 @@ gem 'middleman-gh-pages', '~>0.3.0'
 
 # Rake tasks
 gem 'rake', '10.5.0'
-
-# Ruby slim for templating engine
-gem 'slim', '3.0.6'

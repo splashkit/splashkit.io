@@ -4,7 +4,14 @@ Website for SplashKit SDK, hosted via GitHub pages
 
 ## Getting started
 
-Start by ensuring you have ruby on your system. You may want to install [rbenv](https://github.com/rbenv/rbenv) to keep your ruby versions under control. Refer to rbenv's [installation guide](https://github.com/rbenv/rbenv#installation) on how to do so.
+Start by ensuring you have ruby on your system. You **must** install [rbenv](https://github.com/rbenv/rbenv) to keep your ruby versions under control. Refer to rbenv's [installation guide](https://github.com/rbenv/rbenv#installation) on how to do so.
+
+Ensure you have installed ruby version 2.3.1:
+
+```bash
+$ rbenv install 2.3.1
+$ rbenv rehash
+```
 
 Then, install [bundler](http://bundler.io) to sort out your ruby dependencies:
 

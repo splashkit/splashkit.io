@@ -40,10 +40,6 @@ helpers do
   require_all 'helpers'
 end
 
-# Use Ruby Slim and disable option warning
-require 'slim'
-Slim::Engine.disable_option_validator!
-
 # Activate sprokets + compass
 activate :sprockets
 

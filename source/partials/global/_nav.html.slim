@@ -1,9 +1,0 @@
-// Navigation for the main nav header
-.container
-  .splashkit-logo
-    p hello
-  ul.nav-list.collapsed
-    - data.global.nav.each do | key, _ |
-      li.title= key.titleize
-  .nav-list.expanded
-    =partial 'partials/global/nav-list'
