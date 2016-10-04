@@ -1,12 +1,3 @@
-// Import third-party vendor code
-// Bootstrap variables here:
-//   https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
-@import "vendor/normalize";
-@import "vendor/pygments-github";
-@import "vendor/font-awesome";
-@import "compass";
-@import "bootstrap";
-
 // Import modules - website-wide applicability
 @import "modules/colors";
 @import "modules/typography";
@@ -16,7 +7,7 @@
 @import "partials/global/anchor";
 @import "partials/global/body";
 @import "partials/global/footer";
-@import "partials/global/nav";
+@import "partials/global/navbar";
 @import "partials/global/snippet";
 @import "partials/global/splashkit-logo";
 
@@ -24,4 +15,10 @@
 @import "partials/index/jumbotron";
 @import "partials/index/nav";
 @import "partials/index/main";
-@import "partials/api/api"
+@import "partials/api/api";
+
+// Import third-party vendor code
+@import "vendor/pygments-github";
+@import "vendor/font-awesome";
+@import "compass";
+@import "bootstrap";

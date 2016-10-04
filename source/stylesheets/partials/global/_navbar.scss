@@ -1,0 +1,8 @@
+$navbar-border-radius: 0;
+
+body > nav.navbar.sk-navbar {
+  background: darken($splashkit-blue, 5%);
+  .navbar-brand {
+    color: lighten($splashkit-yellow, 7%);
+  }
+}

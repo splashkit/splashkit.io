@@ -1,7 +1,27 @@
-body > footer {
-  text-align: left;
-  padding: 3em;
-  font-weight: 200;
+$footer-color:            #ccc;
+$footer-background-color: #312f31;
+
+body > footer.sk-footer {
+  padding: 4rem 0;
+  margin-top: 4rem;
+  font-size: 85%;
   color: $footer-color;
-  background-color: $footer-bg;
+  background-color: $footer-background-color;
+  a {
+    color: #fff;
+    font-weight: 500;
+  }
+  ul.sk-footer-links {
+    padding-left: 0;
+    margin-bottom: 1rem;
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: 1rem;
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
 }

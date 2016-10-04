@@ -1,7 +1,10 @@
 copyright_notice: |
-  &copy; 2016 SplashKit contributors
-  SplashKit is licensed under LGPL
-social_links:
+  SplashKit is an open source project maintained by the <a href="http://github.com/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graph/contributors">our contributors</a>.
+  Library source code is licensed under LGPL, all others under GPL.
+links:
+  -
+    title: GitHub
+    href: http://github.com/splashkit
   -
     title: Facebook
     href: http://facebook.com/splashkit

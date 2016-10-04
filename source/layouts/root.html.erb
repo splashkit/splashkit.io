@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-      <%# Always force latest IE rendering engine or request Chrome Frame %>
-      <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <%# Always force latest IE rendering engine or request Chrome Frame %>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-      <%# Bootstrap support for mobile %>
-      <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <%# Bootstrap support for mobile %>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-      <%# Viewport font fix %>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%# Viewport font fix %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <%# Generate title dynamically using sitemap_page_title helper %>
-      <title><%= "SplashKit - #{sitemap_page_title || 'Home'}" %></title>
+    <%# Generate title dynamically using sitemap_page_title helper %>
+    <title><%= "SplashKit - #{sitemap_page_title || 'Home'}" %></title>
 
-      <%# Include styles and javascripts %>
-      <%= stylesheet_link_tag "main" %>
-      <%= javascript_include_tag "main" %>
-    </head>
-    <body class="<%= page_classes %>">
-        <nav class="global">
-            <%= partial 'partials/global/nav' %>
-        </nav>
-        <main>
-            <%= yield %>
-        </main>
-        <footer>
-            <%= partial 'partials/global/footer' %>
-        </footer>
-    </body>
+    <%# Include styles and javascripts %>
+    <%= stylesheet_link_tag "main" %>
+    <%= javascript_include_tag "main" %>
+  </head>
+  <body class="<%= page_classes %>">
+    <%= partial 'partials/global/navbar' %>
+    <main id="content">
+        <%= yield %>
+    </main>
+    <%= partial 'partials/global/footer' %>
+  </body>
 </html>

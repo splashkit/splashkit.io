@@ -1,7 +1,17 @@
 <%# Define links and text in global navigation under data/global/footer.yml %>
-<p class="copyright-notice">
-  <% data.global.footer.copyright_notice.split("\n").each do | par | %>
-    <%= par %>
-    <br>
-  <% end %>
-</p>
+<footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+      <% data.global.footer.links.each do | link | %>
+        <li>
+          <a href="<%= link.href %>"> <%= link.title %> </a>
+        </li>
+      <% end %>
+    </ul>
+    <% data.global.footer.copyright_notice.split("\n").each do | par | %>
+      <p>
+        <%= par %>
+      </p>
+    <% end %>
+  </div>
+</footer>
