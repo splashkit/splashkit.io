@@ -23,9 +23,10 @@ gem 'middleman-autoprefixer', '~>2.7.0'
 gem 'middleman-sprockets', '4.0.0'
 gem 'middleman-compass', '4.0.1'
 
-# Boostrap as SASS (require false is important)
+# Boostrap as SASS
 gem 'sass', '3.4.19'
-gem 'bootstrap-sass', '3.3.6', require: false
+gem 'bootstrap', '~> 4.0.0.alpha4'
+gem 'rails-assets-tether', '>= 1.1.0'
 
 # Grab jQuery
 gem 'jquery-middleman', '3.1.2'
