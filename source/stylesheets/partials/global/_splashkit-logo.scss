@@ -1,6 +1,11 @@
-.splashkit-logo {
-  background-image: url('https://placehold.it/150x50');
+$sk-logo-aspect-ratio-w: 15;
+$sk-logo-aspect-ratio-h: 16;
+
+.sk-logo {
+  background-image: url('/images/skbox.svg');
   background-repeat: no-repeat;
-  height: 50px;
-  width: 150px;
+  background-size: cover;
+  display: inline-block;
+  width: $sk-logo-aspect-ratio-w;
+  height: $sk-logo-aspect-ratio-h;
 }

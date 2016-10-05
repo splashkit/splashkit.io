@@ -1,6 +1,7 @@
 body > nav.navbar.sk-navbar {
-  background: darken($splashkit-blue, 5%);
+  background: darken($splashkit-blue, 7%);
   border-radius: 0;
+  box-shadow: 0px 0px 3px #36459b;
   .navbar-brand {
     color: lighten($splashkit-yellow, 7%);
     font-weight: 500;
@@ -8,7 +9,7 @@ body > nav.navbar.sk-navbar {
   .navbar-toggler {
     color: #fff;
   }
-  #global-search {
+  .sk-global-search {
     border-style: 1px;
     border-bottom-style: solid;
     border-bottom-color: $navbar-dark-color;

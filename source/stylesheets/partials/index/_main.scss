@@ -1,0 +1,72 @@
+body.index > main {
+  background-color: $splashkit-blue;
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+  .sk-logo {
+    width: 10px * $sk-logo-aspect-ratio-w;
+    height: 10px * $sk-logo-aspect-ratio-h;
+  }
+  .sk-logo, p.lead, pre.sk-install-script {
+    margin: 0 auto 30px;
+    display: block;
+  }
+  p.lead {
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+  .sk-install {
+    p {
+      font-weight: 300;
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+  .sk-install pre.sk-install-script {
+    background: #fff;
+    padding: 1.5em;
+    border-radius: 0.25em;
+  }
+  .container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sk-install ul.sk-install-packages {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      text-align: center;
+      display: inline-block;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      @include media-breakpoint-up(md) {
+        width: 15%;
+      }
+      &:first-child {
+        margin-left: auto;
+      }
+      &:last-child {
+        margin-right: auto;
+      }
+      a {
+        font-weight: 500;
+        color: $splashkit-yellow;
+      }
+      a:hover {
+        color: $splashkit-aqua;
+        text-decoration: none;
+      }
+      i {
+        display: block;
+        margin: 0 auto;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

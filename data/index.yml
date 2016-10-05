@@ -1,0 +1,17 @@
+lead_text: |
+  SplashKit is a beginner's all-purpose software toolkit.
+download_script: >
+  sudo bash <(curl -s https://raw.githubusercontent.com/jakerenzella/skm/develop/mac-build/mac-install.sh)
+download_packages:
+  -
+    title: macOS
+    icon: fa-apple
+    url: http://
+  -
+    title: Windows
+    icon: fa-windows
+    url: http://
+  -
+    title: Linux
+    icon: fa-linux
+    url: http://
