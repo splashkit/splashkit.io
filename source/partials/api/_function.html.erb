@@ -1,12 +1,7 @@
-<%
-  function_name = function.name.to_human_case if function.name
-  function_description = function.description || "No function description"
-  slug = slug_for function
-%>
 <section class="sk-api-function sk-api-section">
-  <h3 id="<%= slug %>" data-anchor> <%= function_name %> </h3>
+  <h3 id="<%= slug_for function %>" data-anchor> <%= function.name.to_human_case %> </h3>
   <div class="sk-api-description">
-    <%= function_description.to_html %>
+    <%= (function.description || "No function description").to_html %>
   </div>
   <% if function.return || function.parameters %>
     <dl>

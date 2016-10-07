@@ -86,6 +86,7 @@ data.api.each do |key, data|
     name: name,
     types: types,
     functions: data.functions,
+    defines: data.defines,
     description: data.description,
     brief: data.brief
   }

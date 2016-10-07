@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<%# Functions for api %>
+<%# Functions %>
 <% if !functions.empty? %>
   <section id="functions" class="sk-functions">
     <h2> Functions </h2>
@@ -14,12 +14,22 @@
   </section>
 <% end %>
 
-<%# Types for api %>
+<%# Types %>
 <% if !types.empty? %>
   <section id="types" class="sk-types">
     <h2> Types </h2>
     <% types.each do |type| %>
       <%= partial 'partials/api/type', locals: { type: type } %>
+    <% end %>
+  </section>
+<% end %>
+
+<%# Macros %>
+<% if !defines.empty? %>
+  <section id="types" class="sk-types">
+    <h2> Macros </h2>
+    <% defines.each do |define| %>
+      <%= partial 'partials/api/defines', locals: { define: define } %>
     <% end %>
   </section>
 <% end %>

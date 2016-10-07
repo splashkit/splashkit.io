@@ -1,14 +1,11 @@
 <%
-  type_name = type.name.to_human_case if type.name
-  type_description = type.description || "No description"
   is_struct = !type.fields.nil?
   is_enum = !type.constants.nil?
-  slug = slug_for type
 %>
 <section class="sk-api-type sk-api-section">
-  <h3 id="<%= slug %>" data-anchor> <%= type_name %> </h3>
+  <h3 id="<%= slug_for type %>" data-anchor> <%= type.name.to_human_case %> </h3>
   <div class="sk-api-description">
-    <%= type_description.to_html %>
+    <%= (type.description || "No description").to_html %>
   </div>
   <% if is_struct || is_enum %>
     <dl>
