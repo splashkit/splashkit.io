@@ -1,0 +1,24 @@
+header.sk-page-header {
+  background-color: $splashkit-blue;
+  text-align: center;
+  color: #fff;
+  padding: 40px 0;
+  margin-bottom: 40px;
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+  @include media-breakpoint-up(md) {
+    text-align: left;
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}

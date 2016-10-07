@@ -20,10 +20,10 @@
     <%= javascript_include_tag "main" %>
   </head>
   <body class="<%= page_classes %>">
-    <%= partial 'partials/global/navbar' %>
+    <%= partial 'partials/navbar' %>
     <main id="content">
-        <%= yield %>
+      <%= yield %>
     </main>
-    <%= partial 'partials/global/footer' %>
+    <%= partial 'partials/footer' %>
   </body>
 </html>

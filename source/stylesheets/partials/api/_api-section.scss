@@ -1,0 +1,32 @@
+section.sk-api-section {
+  & + section.sk-api-section {
+    margin-top: 2rem;
+  }
+  h3 {
+    font-weight: 300;
+  }
+  .sk-api-description {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  dl {
+    dt {
+      color: $text-muted;
+      font-weight: 600;
+    }
+    dd table {
+      @extend .table;
+      @extend .table-hover;
+      @extend .table-sm;
+    }
+    @include clearfix();
+    @include media-breakpoint-up(md) {
+      dt {
+        @include make-col(2);
+      }
+      dd {
+        @include make-col(10);
+      }
+    }
+  }
+}

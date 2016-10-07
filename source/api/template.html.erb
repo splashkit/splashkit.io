@@ -1,0 +1,19 @@
+<% if description %>
+  <p>
+    <%= description %>
+  </p>
+<% end %>
+
+<%# Functions for api %>
+<% if !functions.empty? %>
+  <section class="sk-functions">
+    <h2> Functions </h2>
+    <% functions.each do |function| %>
+      <%= partial 'partials/api/function', locals: { function: function } %>
+    <% end %>
+  </section>
+<% end %>
+
+<%# Types for api %>
+<% if !types.empty? %>
+<% end %>

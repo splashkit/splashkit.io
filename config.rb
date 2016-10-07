@@ -12,15 +12,28 @@
 ###
 
 # Root Layout
-page '/index.html', layout: :root
+page '/index.html', layout: :index
 # Article layout
-page '/articles/*', layout: :articles
-# API layout
-page '/api.html', layout: :api
+page '/articles/*', layout: :'articles/index'
 
-# Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+# API proxy pages
+data.api.each do |key, data|
+  name = key.to_human_case
+  types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
+  locals = {
+    raw_api_data: data,
+    name: name,
+    types: types,
+    functions: data.functions,
+    description: data.description,
+    brief: data.brief
+  }
+  proxy "/api/#{key}/index.html",
+        '/api/template.html',
+        locals: locals,
+        ignore: true,
+        layout: :'api/index'
+end
 
 ###
 # Helpers

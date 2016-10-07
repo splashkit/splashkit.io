@@ -1,0 +1,64 @@
+<%
+  function_name = function.name.to_human_case if function.name
+  function_description = function.description || "No function description"
+  slug = slug_for function
+%>
+<section id="<%= slug %>" class="sk-api-function sk-api-section">
+  <h3 class="card-title"> <%= function_name %> </h3>
+  <div class="sk-api-description">
+    <%= function_description.to_html %>
+  </div>
+  <% if function.return || function.parameters %>
+    <dl>
+      <%# == Return Type == %>
+      <%
+        return_description = function.return.description || "No return description"
+        if function.return.type
+          return_type = function.return.type.to_human_case
+          is_proc = function.return.type == 'void' && !function.return.is_pointer && !function.return.is_reference
+        end
+      %>
+      <% if function.return && !function.return.empty? && !is_proc %>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <%= return_type %>
+          </strong>
+          <%= return_description.to_html %>
+        </dd>
+      <% end %>
+      <%# == Parameters == %>
+      <% if function.parameters && !function.parameters.empty? %>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% function.parameters.each do |key, param| %>
+                <%
+                  param_name = key.to_human_case
+                  param_type = param.type.to_human_case if param.type || "No type provided"
+                  param_description = param.description || "No parameter description"
+                %>
+                <tr>
+                  <td> <%= param_name %> </td>
+                  <td> <%= param_type %> </td>
+                  <td> <%= param_description.to_html %> </td>
+                </tr>
+              <% end # end function params each %>
+            </tbody>
+          </table>
+        </dd>
+      <% end # if params %>
+  <% end # if params || return %>
+</section>

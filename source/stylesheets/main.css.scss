@@ -10,13 +10,16 @@
 @import "modules/lists";
 
 // Import global partials - applies to components such as a class or element
-@import "partials/global/anchor";
-@import "partials/global/body";
-@import "partials/global/footer";
-@import "partials/global/navbar";
-@import "partials/global/snippet";
-@import "partials/global/splashkit-logo";
+@import "partials/anchor";
+@import "partials/body";
+@import "partials/footer";
+@import "partials/navbar";
+@import "partials/main";
+@import "partials/page-header";
+@import "partials/snippet";
+@import "partials/splashkit-logo";
 
 // Index partials
 @import "partials/index/main";
 @import "partials/api/api";
+@import "partials/api/api-section";
