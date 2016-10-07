@@ -4,7 +4,7 @@
   slug = slug_for function
 %>
 <section class="sk-api-function sk-api-section">
-  <h3 class="card-title" id="<%= slug %>" data-anchor> <%= function_name %> </h3>
+  <h3 id="<%= slug %>" data-anchor> <%= function_name %> </h3>
   <div class="sk-api-description">
     <%= function_description.to_html %>
   </div>
@@ -38,22 +38,29 @@
           <table>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Type</th>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
                 <th>Description</th>
               </tr>
             </thead>
             <tbody>
-              <% function.parameters.each do |key, param| %>
-                <%
-                  param_name = key.to_human_case
-                  param_type = param.type ? param.type.to_human_case : "No type provided"
-                  param_description = param.description || "No parameter description"
-                %>
+              <% function.parameters.each do |param_name, param_data| %>
                 <tr>
-                  <td> <%= param_name %> </td>
-                  <td> <%= param_type %> </td>
-                  <td> <%= param_description.to_html %> </td>
+                  <th>
+                    <%= param_name.to_human_case %>
+                  </th>
+                  <td>
+                    <% if param_data.type %>
+                      <code>
+                        <%= param_data.type.to_human_case %>
+                      </code>
+                    <% else %>
+                      Unknown
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= (param_data.description || "No description").to_html %>
+                  </td>
                 </tr>
               <% end # end function params each %>
             </tbody>

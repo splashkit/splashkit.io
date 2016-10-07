@@ -8,34 +8,6 @@
 # end
 
 ###
-# Page options, layouts, aliases and proxies
-###
-
-# Root Layout
-page '/index.html', layout: :index
-# Article layout
-page '/articles/*', layout: :'articles/index'
-
-# API proxy pages
-data.api.each do |key, data|
-  name = key.to_human_case
-  types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
-  locals = {
-    raw_api_data: data,
-    name: name,
-    types: types,
-    functions: data.functions,
-    description: data.description,
-    brief: data.brief
-  }
-  proxy "/api/#{key}/index.html",
-        '/api/template.html',
-        locals: locals,
-        ignore: true,
-        layout: :'api/index'
-end
-
-###
 # Helpers
 ###
 
@@ -87,4 +59,39 @@ configure :build do
 
   # Enable cache buster
   activate :asset_hash
+end
+
+###
+# Page options, layouts, aliases and proxies
+###
+
+# Root Layout
+page '/index.html', layout: :index
+# Article layout
+page '/articles/*', layout: :'articles/index'
+
+# Register all slugs before genertating API proxy pages
+data.api.each do |key, data|
+  (data.functions + data.typedefs + data.structs + data.enums + data.defines).each do |data|
+    register_slug(data, key)
+  end
+end
+
+# API proxy pages
+data.api.each do |key, data|
+  name = key.to_human_case
+  types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
+  locals = {
+    raw_api_data: data,
+    name: name,
+    types: types,
+    functions: data.functions,
+    description: data.description,
+    brief: data.brief
+  }
+  proxy "/api/#{key}/index.html",
+        '/api/template.html',
+        locals: locals,
+        ignore: true,
+        layout: :'api/index'
 end

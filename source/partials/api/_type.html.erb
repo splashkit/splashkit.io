@@ -1,0 +1,80 @@
+<%
+  type_name = type.name.to_human_case if type.name
+  type_description = type.description || "No description"
+  is_struct = !type.fields.nil?
+  is_enum = !type.constants.nil?
+  slug = slug_for type
+%>
+<section class="sk-api-type sk-api-section">
+  <h3 id="<%= slug %>" data-anchor> <%= type_name %> </h3>
+  <div class="sk-api-description">
+    <%= type_description.to_html %>
+  </div>
+  <% if is_struct || is_enum %>
+    <dl>
+      <%# == Struct Data == %>
+      <% if is_struct %>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% type.fields.each do |field_name, field_data| %>
+                <tr>
+                  <th>
+                    <%= field_name.to_human_case %>
+                  </th>
+                  <td>
+                    <% if field_data.type %>
+                      <code> <%= field_data.type.to_human_case %> </code>
+                    <% else %>
+                      Unknown
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= (field_data.description || "No description").to_html %>
+                  </td>
+                </tr>
+              <% end # end function params each %>
+            </tbody>
+          </table>
+        </dd>
+      <% elsif is_enum %>
+      <%# == Enum data == %>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% type.constants.each do |constant_name, constant_data| %>
+                <tr>
+                  <th>
+                    <%= constant_name.to_human_case %>
+                  </th>
+                  <td>
+                    <%= (constant_data.description || "No description").to_html %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </dd>
+      <% end %>
+    </dl>
+  <% end %>
+</section>

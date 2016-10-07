@@ -9,3 +9,7 @@ a.anchorjs-link {
     text-decoration: none;
   }
 }
+// Code anchor - remove applied red
+a > code {
+  color: revert;
+}

@@ -1,3 +1,4 @@
+require 'helpers/slug'
 
 module CoreExtensions
   module String
@@ -17,8 +18,16 @@ module CoreExtensions
 
     def humanize_backticks
       gsub(/`(.*?)`/) do |match|
-        match.gsub(/(?<=`).*(?=`)/) do |inner_match|
-          "`#{inner_match.to_human_case}`"
+        # trim off backticks
+        inner_match = match[1..-2]
+        # humanize inner match
+        inner_match_humanized = inner_match.to_human_case
+        puts inner_match, inner_match_humanized
+        if slug_exists? inner_match
+          url = url_for inner_match
+          "[`#{inner_match_humanized}`](#{url})"
+        else
+          "`#{inner_match_humanized}`"
         end
       end
     end
