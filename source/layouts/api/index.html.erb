@@ -2,10 +2,10 @@
   <div class="row">
     <%= partial 'partials/page_header', locals: { title: name, brief: brief } %>
   </div>
-  <div class="container">
+  <div data-spy="scroll" data-target="#sk-api-root-navbar" class="sk-api-root container">
     <div class="row">
       <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
-        Sidebar navigation will go here!
+        <%= partial 'partials/api/nav' %>
       </aside>
       <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
         <%= yield %>

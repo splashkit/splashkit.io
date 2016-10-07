@@ -3,7 +3,6 @@ class SlugRegistry < Hash
   include Singleton
 end
 
-
 #
 # Generates a unique slug (i.e., id name) for something
 #
@@ -27,7 +26,7 @@ def slug_for(data)
   name.to_kebab_case
 end
 
-def url_for(data)
+def slug_url_for(data)
   slug = data.to_kebab_case
   SlugRegistry.instance[slug]
 end

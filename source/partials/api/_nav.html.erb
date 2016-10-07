@@ -1,0 +1,21 @@
+<ul id="sk-api-root-navbar" class="nav list-unstyled">
+  <% data.api.each do |key, api| %>
+    <% is_active = current_page.path == "api/#{key}/index.html" %>
+    <li class="nav-item">
+      <a href="/api/<%= key %>" class="nav-link">
+        <%= api.name.to_human_case %>
+      </a>
+      <% if is_active %>
+        <ul class="nav list-unstyled">
+            <% (api.functions + api.typedefs + api.structs + api.enums + api.defines).each do |link| %>
+              <li class="nav-item">
+                <a href="#<%= slug_for link %>" class="nav-link">
+                  <%= link.name.to_human_case %>
+                </a>
+              </li>
+            <% end %>
+        </ul>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
