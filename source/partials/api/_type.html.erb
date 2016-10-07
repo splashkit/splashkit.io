@@ -34,7 +34,7 @@
                   </th>
                   <td>
                     <% if field_data.type %>
-                      <code> <%= field_data.type.to_human_case %> </code>
+                      <%= field_data.type.to_slug_link %>
                     <% else %>
                       Unknown
                     <% end %>

@@ -12,9 +12,7 @@
     <dl>
       <%# == Return Type == %>
       <%
-        return_description = function.return.description || "No return description"
         if function.return.type
-          return_type = function.return.type.to_human_case
           is_proc = function.return.type == 'void' && !function.return.is_pointer && !function.return.is_reference
         end
       %>
@@ -24,9 +22,9 @@
         </dt>
         <dd>
           <strong>
-            <%= return_type %>
+            <%= function.return.type.to_slug_link %>
           </strong>
-          <%= return_description.to_html %>
+          <%= (function.return.description || "No return description").to_html %>
         </dd>
       <% end %>
       <%# == Parameters == %>
@@ -51,9 +49,7 @@
                   </th>
                   <td>
                     <% if param_data.type %>
-                      <code>
-                        <%= param_data.type.to_human_case %>
-                      </code>
+                      <%= param_data.type.to_slug_link %>
                     <% else %>
                       Unknown
                     <% end %>

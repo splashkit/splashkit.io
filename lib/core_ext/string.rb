@@ -16,6 +16,10 @@ module CoreExtensions
       markdown.render(humanize_backticks)
     end
 
+    def to_slug_link
+      "`#{self}`".to_html
+    end
+
     def humanize_backticks
       gsub(/`(.*?)`/) do |match|
         # trim off backticks
