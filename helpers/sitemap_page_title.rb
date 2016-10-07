@@ -1,15 +1,9 @@
-# Exceptions to title mapping
-TITLE_MAPPING_EXCEPTIONS = {
-  'Api' => 'API'
-}.freeze
-
 #
 # Generates a title based on the current directory tree
 #
 # E.g., "foo-bar/qux/index.html" will translate to "Foo Bar - Qux"
 #
 def sitemap_page_title
-  handle_exceptions = ->(s) { TITLE_MAPPING_EXCEPTIONS[s] || s }
   # Grab the destination path from the current_page data
   dest_path = current_page.destination_path
   # Replace all dashes with spaces
@@ -19,7 +13,7 @@ def sitemap_page_title
   # (i.e. getting started/foo/index.html -> getting started - foo)
   dest_path = dest_path.split('/')[0...-1].join(' - ')
   # Capitalize every word
-  page_title = dest_path.split.map(&:capitalize).map(&handle_exceptions).join(' ')
+  page_title = dest_path.split.map { |s| YAML.load_file('data/humanize.yml')[s] || s.capitalize }.join(' ')
   # Return nil if no page title, or the page_title
   !page_title.strip.empty? ? page_title : nil
 end

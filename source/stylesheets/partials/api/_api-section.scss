@@ -2,6 +2,9 @@ section.sk-api-section {
   & + section.sk-api-section {
     margin-top: 2rem;
   }
+  &:hover *[data-anchor] > a.anchorjs-link {
+    opacity: 1;
+  }
   h3 {
     font-weight: 300;
   }
@@ -28,6 +31,9 @@ section.sk-api-section {
       }
       dd {
         @include make-col(10);
+      }
+      dd table thead th.sk-table-fixed-header {
+        width: 20%;
       }
     }
   }

@@ -1,0 +1,10 @@
+#
+# This is a registry of all humanized names which cannot be 'automatically'
+# humanised
+#
+api: API
+bool: Boolean
+int: Integer
+vector_2d: Vector 2D
+point_2d: Point 2D
+matrix_2d: Matrix 2D

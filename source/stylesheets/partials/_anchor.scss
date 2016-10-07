@@ -1,3 +1,11 @@
 a:hover, a:active, a:focus {
   outline: 0px;
 }
+// Color for anchorjs link
+a.anchorjs-link {
+  color: $splashkit-aqua;
+  &:hover {
+    color: darken($splashkit-aqua, 20%);
+    text-decoration: none;
+  }
+}
