@@ -13,6 +13,7 @@ section.sk-api-section {
     dt {
       color: $text-muted;
       font-weight: 600;
+      margin-bottom: 1rem;
     }
     dd table {
       @extend .table;
@@ -20,9 +21,10 @@ section.sk-api-section {
       @extend .table-sm;
     }
     @include clearfix();
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       dt {
         @include make-col(2);
+        margin-bottom: 0;
       }
       dd {
         @include make-col(10);

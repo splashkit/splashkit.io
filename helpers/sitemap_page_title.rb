@@ -1,14 +1,15 @@
+# Exceptions to title mapping
+TITLE_MAPPING_EXCEPTIONS = {
+  'Api' => 'API'
+}.freeze
+
 #
 # Generates a title based on the current directory tree
 #
 # E.g., "foo-bar/qux/index.html" will translate to "Foo Bar - Qux"
 #
 def sitemap_page_title
-  # Exceptions to title mapping
-  exceptions = {
-    'Api' => 'API'
-  }
-  handle_exceptions = ->(s) { exceptions[s] || s }
+  handle_exceptions = ->(s) { TITLE_MAPPING_EXCEPTIONS[s] || s }
   # Grab the destination path from the current_page data
   dest_path = current_page.destination_path
   # Replace all dashes with spaces
