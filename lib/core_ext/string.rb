@@ -22,7 +22,6 @@ module CoreExtensions
         inner_match = match[1..-2]
         # humanize inner match
         inner_match_humanized = inner_match.to_human_case
-        puts inner_match, inner_match_humanized
         if slug_exists? inner_match
           url = url_for inner_match
           "[`#{inner_match_humanized}`](#{url})"

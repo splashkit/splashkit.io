@@ -23,7 +23,8 @@ def register_slug(data, group)
 end
 
 def slug_for(data)
-  data.name.to_kebab_case
+  name = data.is_a?(String) ? data : data.name
+  name.to_kebab_case
 end
 
 def url_for(data)
@@ -31,6 +32,6 @@ def url_for(data)
   SlugRegistry.instance[slug]
 end
 
-def slug_exists?(slug)
-  SlugRegistry.instance.keys.include? slug
+def slug_exists?(data)
+  SlugRegistry.instance.keys.include? slug_for data
 end
