@@ -1,5 +1,5 @@
 <%
-data.api.api.each do |key, value|
+data.api.each do |key, value|
   name_id = key.to_kebab_case
   name = key.to_human_case
   types = (value.typedefs + value.structs + value.enums).sort_by{ |h| h[:name] }
