@@ -1,21 +1,27 @@
-<ul id="sk-api-root-navbar" class="nav list-unstyled">
-  <% data.api.each do |key, api| %>
-    <% is_active = current_page.path == "api/#{key}/index.html" %>
-    <li class="nav-item">
-      <a href="/api/<%= key %>" class="nav-link">
-        <%= api.name.to_human_case %>
-      </a>
-      <% if is_active %>
-        <ul class="nav list-unstyled">
-            <% (api.functions + api.typedefs + api.structs + api.enums + api.defines).each do |link| %>
-              <li class="nav-item">
-                <a href="#<%= slug_for link %>" class="nav-link">
-                  <%= link.name.to_human_case %>
-                </a>
-              </li>
+<nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+    <% data.api.keys.each do |api_group| %>
+      <% is_active = current_page.url == "#{path_for_group(api_group)}/" %>
+      <li class="nav-item">
+        <%# Group %>
+        <a href="<%= path_for_group api_group %>" class="nav-link <%= 'active' if is_active %>">
+          <%= api_group.to_human_case %>
+        </a>
+        <%# Active page TOC %>
+        <% if is_active && (!functions.empty? || !types.empty? || !defines.empty?) %>
+          <nav role="navigation">
+            <% if !functions.empty? %>
+              <%= partial 'partials/api/section_nav', locals: { header: 'Functions', links: functions } %>
             <% end %>
-        </ul>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+            <% if !types.empty? %>
+              <%= partial 'partials/api/section_nav', locals: { header: 'Types', links: types } %>
+            <% end %>
+            <% if !defines.empty? %>
+              <%= partial 'partials/api/section_nav', locals: { header: 'Macros', links: defines } %>
+            <% end %>
+          </nav>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

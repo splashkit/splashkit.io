@@ -71,15 +71,15 @@ page '/index.html', layout: :index
 page '/articles/*', layout: :'articles/index'
 
 # Register all slugs before genertating API proxy pages
-data.api.each do |key, data|
+data.api.each do |api_group, data|
   (data.functions + data.typedefs + data.structs + data.enums + data.defines).each do |data|
-    register_slug(data, key)
+    register_slug(data, api_group)
   end
 end
 
 # API proxy pages
-data.api.each do |key, data|
-  name = key.to_human_case
+data.api.each do |api_group, data|
+  name = api_group.to_human_case
   types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
   locals = {
     raw_api_data: data,
@@ -90,7 +90,8 @@ data.api.each do |key, data|
     description: data.description,
     brief: data.brief
   }
-  proxy "/api/#{key}/index.html",
+  proxy_url = "#{path_for_group(api_group)}/index.html"
+  proxy proxy_url,
         '/api/template.html',
         locals: locals,
         ignore: true,

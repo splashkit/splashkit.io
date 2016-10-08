@@ -13,7 +13,7 @@ def register_slug(data, group)
     overload_num = slug[(slug =~ /-\d+$/).to_i + 1..-1].to_i + 1
     slug += "-#{overload_num}" # "hello-world" -> "hello-world-1"
   end
-  url = "/api/#{group}/\##{slug}"
+  url = "#{path_for_group group}/\##{slug}"
   merge_data = {}
   # Where does the slug lead to? The url...
   merge_data[slug] = url
@@ -27,8 +27,7 @@ def slug_for(data)
 end
 
 def slug_url_for(data)
-  slug = data.to_kebab_case
-  SlugRegistry.instance[slug]
+  SlugRegistry.instance[slug_for data]
 end
 
 def slug_exists?(data)

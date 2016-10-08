@@ -1,0 +1,12 @@
+<ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    <%= header %>
+  </li>
+  <% links.each do |link| %>
+    <li class="nav-item">
+      <a href="#<%= slug_for link %>" class="nav-link">
+        <%= link.name.to_human_case %>
+      </a>
+    </li>
+  <% end %>
+</ul>

@@ -1,8 +1,6 @@
 <% wrap_layout :index do %>
-  <div class="row">
-    <%= partial 'partials/page_header', locals: { title: name, brief: brief } %>
-  </div>
-  <div data-spy="scroll" data-target="#sk-api-root-navbar" class="sk-api-root container">
+  <%= partial 'partials/page_header', locals: { title: name, brief: brief } %>
+  <div class="sk-api-root container">
     <div class="row">
       <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
         <%= partial 'partials/api/nav' %>

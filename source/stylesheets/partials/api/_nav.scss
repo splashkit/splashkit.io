@@ -1,0 +1,29 @@
+.sk-api-root.container aside.sk-sidebar nav {
+  ul.nav.sk-api-nav-root > li.nav-item {
+    font-size: 0.9rem;
+    font-weight: 300;
+    a {
+      color: $gray;
+    }
+    a.active {
+      color: $gray-dark;
+      font-weight: 500;
+    }
+    a:hover {
+      color: $splashkit-blue;
+    }
+  }
+  ul.nav.sk-api-nav-article {
+    margin: 0.5rem 1.5ex 0.5rem ;
+    font-size: 0.8rem;
+    a {
+      color: $gray-light;
+    }
+    li.nav-header {
+      color: $text-muted;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      font-weight: 400;
+    }
+  }
+}

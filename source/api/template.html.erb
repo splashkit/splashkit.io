@@ -1,12 +1,12 @@
 <% if description %>
-  <div class="sk-root-api-description">
+  <section class="sk-api-description">
     <%= description.to_html %>
-  </div>
+  </section>
 <% end %>
 
 <%# Functions %>
 <% if !functions.empty? %>
-  <section id="functions" class="sk-functions">
+  <section class="sk-api-functions">
     <h2> Functions </h2>
     <% functions.each do |function| %>
       <%= partial 'partials/api/function', locals: { function: function } %>
@@ -16,7 +16,7 @@
 
 <%# Types %>
 <% if !types.empty? %>
-  <section id="types" class="sk-types">
+  <section class="sk-api-types">
     <h2> Types </h2>
     <% types.each do |type| %>
       <%= partial 'partials/api/type', locals: { type: type } %>
@@ -26,7 +26,7 @@
 
 <%# Macros %>
 <% if !defines.empty? %>
-  <section id="types" class="sk-types">
+  <section class="sk-api-defines">
     <h2> Macros </h2>
     <% defines.each do |define| %>
       <%= partial 'partials/api/defines', locals: { define: define } %>
