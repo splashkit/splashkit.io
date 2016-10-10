@@ -1,9 +1,17 @@
 require 'helpers/slug'
 
+HUMANIZED_STRINGS = YAML.load_file('data/humanize.yml').freeze
+
 module CoreExtensions
   module String
     def to_human_case
-      YAML.load_file('data/humanize.yml')[self] || split('_').map(&:capitalize).join(' ')
+      selff = split('_').map(&:capitalize).join('_')
+      HUMANIZED_STRINGS.each do |old, new|
+        old   = old.split('_').map(&:capitalize).join('_')
+        regex = Regexp.new("(?<=[^a-z]|^)#{old}(?=[^a-z]|$)")
+        selff = selff.gsub(regex, new)
+      end
+      selff.tr('_', ' ')
     end
 
     def to_kebab_case

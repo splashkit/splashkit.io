@@ -10,3 +10,16 @@ point_2d: Point 2D
 matrix_2d: Matrix 2D
 json: JSON
 utils: Utilities
+http_post: HTTP POST
+http_get: HTTP GET
+http_put: HTTP PUT
+http_delete: HTTP DELETE
+http: HTTP
+uri: URI
+url: URL
+ipv4: IPv4
+ip: IP
+dec: Decimal
+hex: Hexadecimal
+str: String
+html: HTML
