@@ -1,0 +1,37 @@
+var searchOptions = {
+  valueNames: [ 'name', 'api', 'type', { name: 'link', attr: 'href' } ],
+  plugins: [ ListFuzzySearch() ],
+  item: '<li><a class="link"><p class="name"></p><p class="api"></p><p class="type"></p></a></li>',
+  page: 5
+};
+
+var searchValues = [];
+<% data.api.each do |api_name, api_data| %>
+  <% api_name = api_name.to_human_case %>
+  <% api_data.functions.each do |f| %>
+    searchValues.push({
+      name: '<%= f.name.to_human_case %>',
+      api:  '<%= api_name %>',
+      type: 'Function',
+      link: '<%= slug_url_for f %>'
+    });
+  <% end %>
+  <% (api_data.typedefs + api_data.enums + api_data.structs).each do |t| %>
+    searchValues.push({
+      name: '<%= t.name.to_human_case %>',
+      api:  '<%= api_name %>',
+      type: 'Type',
+      link: '<%= slug_url_for t %>'
+    });
+  <% end %>
+  <% api_data.defines.each do |d| %>
+    searchValues.push({
+      name: '<%= d.name.to_human_case %>',
+      api:  '<%= api_name %>',
+      type: 'Macro',
+      link: '<%= slug_url_for d %>'
+    });
+  <% end %>
+<% end %>
+
+var searchList = new List('sk-global-search', searchOptions, searchValues);

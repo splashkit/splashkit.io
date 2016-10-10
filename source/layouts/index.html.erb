@@ -15,9 +15,8 @@
     <%# Generate title dynamically using sitemap_page_title helper %>
     <title><%= "SplashKit - #{sitemap_page_title || 'Home'}" %></title>
 
-    <%# Include styles and javascripts %>
+    <%# Include styles %>
     <%= stylesheet_link_tag "main" %>
-    <%= javascript_include_tag "main" %>
   </head>
   <body class="<%= page_classes %>">
     <%= partial 'partials/navbar' %>
@@ -25,5 +24,7 @@
       <%= yield %>
     </main>
     <%= partial 'partials/footer' %>
+    <%# Include JavaScript %>
+    <%= javascript_include_tag "main" %>
   </body>
 </html>
