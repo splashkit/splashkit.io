@@ -51,8 +51,9 @@
     li {
       @extend .list-group-item;
       padding: 0;
-      &:hover {
+      &:hover, &:focus {
         background-color: $gray-lighter;
+        outline: none;
       }
       a.link {
         display: block;
