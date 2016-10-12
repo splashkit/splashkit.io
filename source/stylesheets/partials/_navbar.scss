@@ -6,6 +6,10 @@ body > nav.navbar.sk-navbar {
   .navbar-brand {
     color: lighten($splashkit-yellow, 7%);
     font-weight: 500;
+    float: none;
+    @include media-breakpoint-up(sm) {
+      float: left;
+    }
   }
   .navbar-toggler {
     color: #fff;
