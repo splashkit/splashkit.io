@@ -29,10 +29,11 @@
     vertical-align: top;
   }
   input:invalid + .sk-search-results-container,
-  input:not(:focus) + .sk-search-results-container {
+  input:not(:focus) + .sk-search-results-container:not(:hover) {
     display: none;
   }
-  input:valid:focus + .sk-search-results-container {
+  input:valid:focus + .sk-search-results-container,
+  .sk-search-results-container:hover {
     z-index: 1;
     position: absolute;
     top: 39px;
