@@ -70,13 +70,6 @@ page '/index.html', layout: :index
 # Article layout
 page '/articles/*', layout: :'articles/index'
 
-# Register all slugs before genertating API proxy pages
-data.api.each do |api_group, data|
-  (data.functions + data.typedefs + data.structs + data.enums + data.defines).each do |data|
-    register_slug(data, api_group)
-  end
-end
-
 # API proxy pages
 data.api.each do |api_group, data|
   name = api_group.to_human_case

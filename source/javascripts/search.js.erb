@@ -1,3 +1,9 @@
+<%#
+  Only call register_all_slugs once. Can't be called in config as templates
+  aren't yet registered. Need to have the hrefs for the search first.
+%>
+<% register_all_slugs %>
+
 var searchOptions = {
   valueNames: [ 'name', 'api', 'type', { name: 'link', attr: 'href' } ],
   plugins: [ ListFuzzySearch() ],
