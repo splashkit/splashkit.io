@@ -4,6 +4,9 @@
   border-bottom-color: $navbar-dark-color;
   color: $navbar-dark-color;
   position: relative;
+  @include media-breakpoint-down(md) {
+    margin: 0.5rem 0 1.5rem 0;
+  }
   input, .input-group-addon {
     border: none;
     background: none;

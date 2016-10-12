@@ -7,7 +7,7 @@ body > nav.navbar.sk-navbar {
     color: lighten($splashkit-yellow, 7%);
     font-weight: 500;
     float: none;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
       float: left;
     }
   }
