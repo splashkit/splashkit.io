@@ -8,5 +8,11 @@ body > nav.navbar.sk-navbar {
   }
   .navbar-toggler {
     color: #fff;
+    i.sk-navbar-toggler-icon {
+      @extend .fa-times;
+    }
+    &.collapsed i.sk-navbar-toggler-icon {
+      @extend .fa-bars;
+    }
   }
 }
