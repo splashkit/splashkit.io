@@ -2,19 +2,19 @@
   <div class="row">
     <span class="sk-logo"></span>
     <p class="lead">
-      <%= data.index.lead_text %>
+      SplashKit is a beginner's all-purpose software toolkit.
     </p>
   </div>
   <div class="row sk-install">
     <p>
       To install SplashKit, <strong>copy and paste</strong> the following in your <strong>terminal</strong>:
     </p>
-    <pre class="sk-install-script container"><%= data.index.download_script.strip %></pre>
+    <pre class="sk-install-script container"><%= data.download.download_script.strip %></pre>
     <p>
       or <strong>download an installer</strong> for your platform below:
     </p>
     <ul class="sk-install-packages container">
-      <% data.index.download_packages.each do |pkg| %>
+      <% data.download.download_packages.each do |pkg| %>
       <li>
         <a href="<%= pkg.link %>">
           <i class="fa <%= pkg.icon %>"></i>
