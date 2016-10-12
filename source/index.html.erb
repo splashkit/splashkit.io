@@ -6,22 +6,12 @@
     </p>
   </div>
   <div class="row sk-install">
+    <h5>
+      Mac Beta
+    </h5>
     <p>
       To install SplashKit, <strong>copy and paste</strong> the following in your <strong>terminal</strong>:
     </p>
     <pre class="sk-install-script container"><%= data.download.download_script.strip %></pre>
-    <p>
-      or <strong>download an installer</strong> for your platform below:
-    </p>
-    <ul class="sk-install-packages container">
-      <% data.download.download_packages.each do |pkg| %>
-      <li>
-        <a href="<%= pkg.link %>">
-          <i class="fa <%= pkg.icon %>"></i>
-          <%= pkg.title %>
-        </a>
-      </li>
-      <% end %>
-    </ul>
   </div>
 </div>
