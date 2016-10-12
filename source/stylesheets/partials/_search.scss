@@ -2,7 +2,6 @@
   border-style: 1px;
   border-bottom-style: solid;
   border-bottom-color: $navbar-dark-color;
-  color: $navbar-dark-color;
   position: relative;
   @include media-breakpoint-down(md) {
     margin: 0.5rem 0 1.5rem 0;
@@ -13,7 +12,7 @@
     border-radius: 0;
     color: inherit;
   }
-  input::placeholder {
+  &, .input-group-addon, input::placeholder {
     color: $navbar-dark-color;
   }
   &:active, input:focus {
@@ -45,7 +44,7 @@
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     @extend .card;
-    ul.sk-search-results.list {
+    ul.sk-search-results.list, .sk-no-results-found {
       @extend .list-group;
       @extend .list-group-flush;
     }
@@ -74,6 +73,22 @@
           display: none;
         }
       }
+    }
+  }
+  .sk-search-results:not(:empty) + .sk-search-no–results {
+    display: none;
+  }
+  .sk-search-no–results {
+    text-align: center;
+    color: $text-muted;
+    padding: 1.5rem;
+    i {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin: 0;
+      font-weight: 300;
     }
   }
 }
