@@ -8,29 +8,36 @@ var searchOptions = {
 var searchValues = [];
 <% data.api.each do |api_name, api_data| %>
   <% api_name = api_name.to_human_case %>
+  <% pushed = [] %>
   <% api_data.functions.each do |f| %>
+    <% next if pushed.include? f.name %>
     searchValues.push({
       name: '<%= f.name.to_human_case %>',
       api:  '<%= api_name %>',
       type: 'Function',
       link: '<%= slug_url_for f %>'
     });
+    <% pushed << f.name %>
   <% end %>
   <% (api_data.typedefs + api_data.enums + api_data.structs).each do |t| %>
+    <% next if pushed.include? t.name %>
     searchValues.push({
       name: '<%= t.name.to_human_case %>',
       api:  '<%= api_name %>',
       type: 'Type',
       link: '<%= slug_url_for t %>'
     });
+    <% pushed << t.name %>
   <% end %>
   <% api_data.defines.each do |d| %>
+    <% next if pushed.include? d.name %>
     searchValues.push({
       name: '<%= d.name.to_human_case %>',
       api:  '<%= api_name %>',
       type: 'Macro',
       link: '<%= slug_url_for d %>'
     });
+    <% pushed << d.name %>
   <% end %>
 <% end %>
 
