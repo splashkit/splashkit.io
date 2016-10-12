@@ -1,0 +1,75 @@
+#sk-global-search {
+  border-style: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $navbar-dark-color;
+  color: $navbar-dark-color;
+  position: relative;
+  input, .input-group-addon {
+    border: none;
+    background: none;
+    border-radius: 0;
+    color: inherit;
+  }
+  input::placeholder {
+    color: $navbar-dark-color;
+  }
+  &:active, input:focus {
+    color: $navbar-dark-active-color;
+    border-bottom-color: $navbar-dark-active-color;
+  }
+  &:hover {
+    color: $navbar-dark-hover-color;
+    border-bottom-color: $navbar-dark-hover-color;
+    input::placeholder {
+      color: $navbar-dark-hover-color;
+    }
+  }
+  .input-group-addon {
+    padding-right: 0.25rem;
+    vertical-align: top;
+  }
+  input:invalid + .sk-search-results-container,
+  input:not(:focus) + .sk-search-results-container {
+    display: none;
+  }
+  input:valid:focus + .sk-search-results-container {
+    z-index: 1;
+    position: absolute;
+    top: 39px;
+    left: 0;
+    right: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    @extend .card;
+    ul.sk-search-results.list {
+      @extend .list-group;
+      @extend .list-group-flush;
+    }
+    li {
+      @extend .list-group-item;
+      padding: 0;
+      &:hover {
+        background-color: $gray-lighter;
+      }
+      a.link {
+        display: block;
+        padding: 0.75rem 1.25rem;
+        p {
+          margin: 0;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+        p.api {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: $text-muted;
+        }
+        p.type {
+          display: none;
+        }
+      }
+    }
+  }
+}

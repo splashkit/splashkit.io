@@ -9,33 +9,4 @@ body > nav.navbar.sk-navbar {
   .navbar-toggler {
     color: #fff;
   }
-  .sk-global-search {
-    border-style: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: $navbar-dark-color;
-    color: $navbar-dark-color;
-    input, .input-group-addon {
-      border: none;
-      background: none;
-      border-radius: 0;
-      color: inherit;
-    }
-    input::placeholder {
-      color: $navbar-dark-color;
-    }
-    &:active, input:focus {
-      color: $navbar-dark-active-color;
-      border-bottom-color: $navbar-dark-active-color;
-    }
-    &:hover {
-      color: $navbar-dark-hover-color;
-      border-bottom-color: $navbar-dark-hover-color;
-      input::placeholder {
-        color: $navbar-dark-hover-color;
-      }
-    }
-    .input-group-addon {
-      padding-right: 0.25rem;
-    }
-  }
 }
