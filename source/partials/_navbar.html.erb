@@ -6,7 +6,7 @@
     <a class="navbar-brand" href="/">SplashKit</a>
     <ul class="nav navbar-nav">
       <li class="nav-item dropdown">
-        <a class="nav-link <%= 'active' if current_page.url.start_with? '/api' %>" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <a class="nav-link <%= active_on 'api' %>" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
         <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
           <% data.api.each do |api_name, _| %>
             <a class="dropdown-item" href="/api/<%= api_name %>"><%= api_name.to_human_case %></a>
@@ -14,7 +14,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link <%= 'active' if current_page.url.start_with? '/guides' %>" href="/articles/coming-soon" target="_blank">Guides</a>
+        <a class="nav-link <%= active_on 'guides' %>" href="/guides" target="_blank">Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
