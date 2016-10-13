@@ -23,3 +23,4 @@ dec: Decimal
 hex: Hexadecimal
 str: String
 html: HTML
+vector: Dynamic Array
