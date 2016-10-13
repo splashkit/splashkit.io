@@ -33864,14 +33864,13 @@
         "fields": {
           "elements": {
             "type": "double",
-            "description": "In SplashKit, matrices can be used to combine together a number of\noperations that need to be performed on `vector_2d` values. You can \ntranslate, rotate and scale, and combine these together into a\nsingle matrix that can then be applied to vectors and points.",
+            "description": "The elements of the matrix",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
-            "is_array": true,
+            "is_array": false,
             "array_dimension_sizes": [
-              3,
-              3
+
             ],
             "is_vector": false,
             "type_parameter": null
@@ -42021,7 +42020,7 @@
         "fields": {
           "center": {
             "type": "point_2d",
-            "description": "Circles have a center point and a radius. This means that, unlike shapes\nlike the `rectangle`, the circle extends out both left and right, and up\nand down from the point you position it at.",
+            "description": "The center point of the circle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42034,7 +42033,7 @@
           },
           "radius": {
             "type": "float",
-            "description": "Circles have a center point and a radius. This means that, unlike shapes\nlike the `rectangle`, the circle extends out both left and right, and up\nand down from the point you position it at.",
+            "description": "The radius of the circle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42056,9 +42055,9 @@
         "description": "Colors can be used when drawing shapes and clearing surfaces. Color in\nsplashkit does include a alpha value used for opacity, which allows you\nto have partially transparent colors.",
         "brief": null,
         "fields": {
-          "g": {
+          "r": {
             "type": "float",
-            "description": "Colors can be used when drawing shapes and clearing surfaces. Color in\nsplashkit does include a alpha value used for opacity, which allows you\nto have partially transparent colors.",
+            "description": "The red component of the color (between 0 and 1.0)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42069,9 +42068,9 @@
             "is_vector": false,
             "type_parameter": null
           },
-          "r": {
+          "g": {
             "type": "float",
-            "description": "Colors can be used when drawing shapes and clearing surfaces. Color in\nsplashkit does include a alpha value used for opacity, which allows you\nto have partially transparent colors.",
+            "description": "The green component of the color (between 0 and 1.0)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42084,7 +42083,7 @@
           },
           "b": {
             "type": "float",
-            "description": "Colors can be used when drawing shapes and clearing surfaces. Color in\nsplashkit does include a alpha value used for opacity, which allows you\nto have partially transparent colors.",
+            "description": "The blue component of the color (between 0 and 1.0)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42097,7 +42096,7 @@
           },
           "a": {
             "type": "float",
-            "description": "Colors can be used when drawing shapes and clearing surfaces. Color in\nsplashkit does include a alpha value used for opacity, which allows you\nto have partially transparent colors.",
+            "description": "The alpha component of the color (between 0 and 1.0)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42121,7 +42120,7 @@
         "fields": {
           "dest": {
             "type": "void",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "The destination of the drawing: a window or bitmap.",
             "is_pointer": true,
             "is_const": false,
             "is_reference": false,
@@ -42134,7 +42133,7 @@
           },
           "scale_x": {
             "type": "float",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "How much x values are scaled.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42147,7 +42146,7 @@
           },
           "scale_y": {
             "type": "float",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "How much y values are scaled.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42160,7 +42159,7 @@
           },
           "angle": {
             "type": "float",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "A rotation angle for bitmap drawing.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42173,7 +42172,7 @@
           },
           "anchor_offset_x": {
             "type": "float",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "The x location of the anchor point around which\nbitmap drawing will rotate.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42186,7 +42185,7 @@
           },
           "anchor_offset_y": {
             "type": "float",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "The y location of the anchor point around which\nbitmap drawing will rotate.",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42199,7 +42198,7 @@
           },
           "flip_x": {
             "type": "bool",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "Should bitmaps be flipped horizontally",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42212,7 +42211,7 @@
           },
           "flip_y": {
             "type": "bool",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "Should bitmaps be flipped vertically",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42225,7 +42224,7 @@
           },
           "is_part": {
             "type": "bool",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "Indicates that part of a bitmap should be drawn",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42238,7 +42237,7 @@
           },
           "part": {
             "type": "rectangle",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "The area of the bitmap to draw",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42251,7 +42250,7 @@
           },
           "camera": {
             "type": "drawing_dest",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "How the current window camera affects the drawing",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42264,7 +42263,7 @@
           },
           "line_width": {
             "type": "int",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "How wide are lines (only lines at this stage)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42277,7 +42276,7 @@
           },
           "anim": {
             "type": "animation",
-            "description": "Drawing options allow you to customise drawing options. These should be\ninitialised using the drawing option functions.",
+            "description": "The animation to use, which overrides the part\noption",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42301,7 +42300,7 @@
         "fields": {
           "start_point": {
             "type": "point_2d",
-            "description": "A line goes from a start point to an end point.",
+            "description": "The start of the line",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42314,7 +42313,7 @@
           },
           "end_point": {
             "type": "point_2d",
-            "description": "A line goes from a start point to an end point.",
+            "description": "The end of the line",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42338,7 +42337,7 @@
         "fields": {
           "x": {
             "type": "float",
-            "description": "A Point2D represents an location in Cartesian coordinates (x,y).\nThe x value represents the distance from the left edge of the window or bitmap, increasing\nin value as you travel right. The y value represents the distance from the top\nedge of the window or bitmap, and increases as you travel down toward the bottom.\n\nPoint2D is a great way to keep track of the location of something in a 2D space like\na Window or Bitmap.",
+            "description": "The distance from the left side of the bitmap or window (\nincreasing as you go to the right)",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42351,7 +42350,7 @@
           },
           "y": {
             "type": "float",
-            "description": "A Point2D represents an location in Cartesian coordinates (x,y).\nThe x value represents the distance from the left edge of the window or bitmap, increasing\nin value as you travel right. The y value represents the distance from the top\nedge of the window or bitmap, and increases as you travel down toward the bottom.\n\nPoint2D is a great way to keep track of the location of something in a 2D space like\na Window or Bitmap.",
+            "description": "The distance from the top of a bitmap or window (increasing\nas you go down).",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42375,13 +42374,13 @@
         "fields": {
           "points": {
             "type": "point_2d",
-            "description": "Quads (quadrilaterals) are shapes with 4 sides, but unlike `rectangle`,\nthese shapes can have axis that do not line up with screen/bitmap axis.\n\nPoints should be constructed with the top left as the first point, top\nright as the second, bottom left as the third, and bottom right as the\nlast point. Other orders may give unexpected outcomes.",
+            "description": "The array of points: top left, top right, bottom left,\nbottom right",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
-            "is_array": true,
+            "is_array": false,
             "array_dimension_sizes": [
-              4
+
             ],
             "is_vector": false,
             "type_parameter": null
@@ -42399,7 +42398,7 @@
         "fields": {
           "x": {
             "type": "float",
-            "description": "Rectangles are simple rectangle shapes that exist at a point and have a\nset width and height. This means that the rectangle always has edges that\nfollow the sides of the `window` or `bitmap` (so they are aligned with\nthe x and y axes). The rectangle's position is its top left corner - it\nthen extends to the right and down from this position.",
+            "description": "The distance to the left edge of the rectangle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42412,7 +42411,7 @@
           },
           "y": {
             "type": "float",
-            "description": "Rectangles are simple rectangle shapes that exist at a point and have a\nset width and height. This means that the rectangle always has edges that\nfollow the sides of the `window` or `bitmap` (so they are aligned with\nthe x and y axes). The rectangle's position is its top left corner - it\nthen extends to the right and down from this position.",
+            "description": "The distance to the top edge of the rectangle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42425,7 +42424,7 @@
           },
           "width": {
             "type": "float",
-            "description": "Rectangles are simple rectangle shapes that exist at a point and have a\nset width and height. This means that the rectangle always has edges that\nfollow the sides of the `window` or `bitmap` (so they are aligned with\nthe x and y axes). The rectangle's position is its top left corner - it\nthen extends to the right and down from this position.",
+            "description": "The width of the rectangle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42438,7 +42437,7 @@
           },
           "height": {
             "type": "float",
-            "description": "Rectangles are simple rectangle shapes that exist at a point and have a\nset width and height. This means that the rectangle always has edges that\nfollow the sides of the `window` or `bitmap` (so they are aligned with\nthe x and y axes). The rectangle's position is its top left corner - it\nthen extends to the right and down from this position.",
+            "description": "The height of the rectangle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42462,13 +42461,13 @@
         "fields": {
           "points": {
             "type": "point_2d",
-            "description": "A triangle consists of three points, being the three points of the\ntriangle.",
+            "description": "The points of the triangle",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
-            "is_array": true,
+            "is_array": false,
             "array_dimension_sizes": [
-              3
+
             ],
             "is_vector": false,
             "type_parameter": null
@@ -42486,7 +42485,7 @@
         "fields": {
           "x": {
             "type": "double",
-            "description": "Vectors represent a direction and distance, and can be visualised as an\narrow from one point to another in 2 dimensional space. Internally, the\n`vector_2d` is stored as its x and y components.\n\nVector is a great way to represent movement or forces. You could use a\n`vector_2d` to track how much a character moves each update (as the\nvector stores the direction and distance). Similarly, you could use a\n`vector_2d` to represent gravity or other forces. You can then\nadd a number of force vectors together to get a final force to be applied\nto a character.",
+            "description": "The distance to move horizontally",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
@@ -42499,7 +42498,7 @@
           },
           "y": {
             "type": "double",
-            "description": "Vectors represent a direction and distance, and can be visualised as an\narrow from one point to another in 2 dimensional space. Internally, the\n`vector_2d` is stored as its x and y components.\n\nVector is a great way to represent movement or forces. You could use a\n`vector_2d` to track how much a character moves each update (as the\nvector stores the direction and distance). Similarly, you could use a\n`vector_2d` to represent gravity or other forces. You can then\nadd a number of force vectors together to get a final force to be applied\nto a character.",
+            "description": "The distance to move vertically",
             "is_pointer": false,
             "is_const": false,
             "is_reference": false,
