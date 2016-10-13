@@ -5,16 +5,17 @@
 api: API
 bool: Boolean
 int: Integer
+vector(?!_2d): Dynamic Array # Not Vector 2D
 vector_2d: Vector 2D
 point_2d: Point 2D
 matrix_2d: Matrix 2D
 json: JSON
 utils: Utilities
+http(?=_): HTTP # HTTP on its own
 http_post: HTTP POST
 http_get: HTTP GET
 http_put: HTTP PUT
 http_delete: HTTP DELETE
-http: HTTP
 uri: URI
 url: URL
 ipv4: IPv4
@@ -23,4 +24,3 @@ dec: Decimal
 hex: Hexadecimal
 str: String
 html: HTML
-vector: Dynamic Array
