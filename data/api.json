@@ -29029,7 +29029,7 @@
     ]
   },
   "networking": {
-    "brief": "SplashKit's network-related functions allow you to communicate data\nacross networks.Allows the creation of basic web servers",
+    "brief": "SplashKit's network-related functions allow you to communicate data\nacross networks.",
     "description": "",
     "functions": [
       {

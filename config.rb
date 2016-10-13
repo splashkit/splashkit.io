@@ -69,6 +69,8 @@ end
 page '/index.html', layout: :index
 # Article layout
 page '/articles/*', layout: :'articles/index'
+# Guides layout (use article)
+page '/guides/*', layout: :'articles/index'
 
 # API proxy pages
 data.api.each do |api_group, data|
