@@ -3,7 +3,7 @@
   border-bottom-style: solid;
   border-bottom-color: $navbar-dark-color;
   position: relative;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     margin: 0.5rem 0 1.5rem 0;
   }
   input, .input-group-addon {
@@ -52,7 +52,7 @@
       @extend .list-group-item;
       padding: 0;
       &:hover, &:focus {
-        background-color: $gray-lighter;
+        background-color: $dropdown-link-hover-bg;
         outline: none;
       }
       a.link {

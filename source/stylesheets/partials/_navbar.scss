@@ -20,4 +20,24 @@ body > nav.navbar.sk-navbar {
       @extend .fa-bars;
     }
   }
+  .navbar-nav {
+    .nav-item.dropdown {
+      cursor: pointer;
+    }
+    .sk-api-menu {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: 250px;
+        overflow: scroll;
+      }
+    }
+    .sk-api-menu a {
+      color: $link-color;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
 }
