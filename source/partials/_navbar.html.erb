@@ -5,8 +5,13 @@
   <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
     <a class="navbar-brand" href="/">SplashKit</a>
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/api/animations">Documentation</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link <%= 'active' if current_page.url.start_with? '/api' %>" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+          <% data.api.each do |api_name, _| %>
+            <a class="dropdown-item" href="/api/<%= api_name %>"><%= api_name.to_human_case %></a>
+          <% end %>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/articles/coming-soon" target="_blank">Guides</a>
