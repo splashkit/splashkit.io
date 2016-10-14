@@ -17,7 +17,7 @@ end
 #
 def register_all_slugs
   if SlugRegistry.instance.all_registered?
-    puts 'Cannot call register_all_slugs twice'
+    # puts 'Cannot call register_all_slugs twice'
     return
   end
   data.api.each do |api_group, data|
@@ -42,7 +42,7 @@ def register_slug(data, group)
   merge_data = {}
   # Where does the slug lead to? The url...
   merge_data[slug] = url
-  puts "Registered #{slug} at #{url}"
+  # puts "Registered #{slug} at #{url}"
   SlugRegistry.instance.merge!(merge_data)
   slug
 end
