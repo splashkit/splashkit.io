@@ -1,25 +1,28 @@
 #
 # This is a registry of all humanized names which cannot be 'automatically'
-# humanised
+# humanised.
 #
-api: API
-bool: Boolean
-int: Integer
+# RegEx matches are separated with underscores and must be Title_Case
+# to be matched. E.g., my_func_match, my_foo_match => My_(Func|Foo)_Match
+#
+Api: API
+Bool: Boolean
+Int: Integer
 2d: 2D
-json: JSON
-utils: Utilities
-http_post: HTTP POST
-http_get: HTTP GET
-http_put: HTTP PUT
-http_delete: HTTP DELETE
-http(?=_): HTTP
-uri: URI
-url: URL
-ipv4: IPv4
-ip: IP
-dec: Decimal
-hex: Hexadecimal
-html: HTML
-rgb: RGB
+Json: JSON
+Utils: Utilities
+(?<=Http_|Is_)Post: POST
+(?<=Http_|Is_)Get: GET
+(?<=Http_|Is_)Put: PUT
+(?<=Http_|Is_)Delete: DELETE
+Http(?=_): HTTP
+Uri: URI
+Url: URL
+Ipv4: IPv4
+Ip: IP
+Dec: Decimal
+Hex: Hexadecimal
+Html: HTML
+Rgb: RGB
 # Singular matches (on its own)
-(?<!.)vector(?!.): Dynamic Array # Not Vector 2D
+(?<!.)Vector(?!.): Dynamic Array # Not Vector 2D

@@ -5,9 +5,8 @@ HUMANIZED_STRINGS = YAML.load_file('data/humanize.yml').freeze
 module CoreExtensions
   module String
     def to_human_case
-      selff = split('_').map(&:capitalize).join('_')
+      selff = split(/[_\s]/).map(&:capitalize).join('_')
       HUMANIZED_STRINGS.each do |old, new|
-        old   = old.split('_').map(&:capitalize).join('_')
         regex = Regexp.new("(?<=[^a-z]|^)#{old}(?=[^a-z]|$)")
         selff = selff.gsub(regex, new)
       end
