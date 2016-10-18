@@ -1,4 +1,5 @@
 #sk-global-search {
+  $num-search-results-to-show: 5;
   border-style: 1px;
   border-bottom-style: solid;
   border-bottom-color: $navbar-dark-color;
@@ -47,6 +48,8 @@
     ul.sk-search-results.list, .sk-no-results-found {
       @extend .list-group;
       @extend .list-group-flush;
+      max-height: 65px * $num-search-results-to-show;
+      overflow-y: scroll;
     }
     li {
       @extend .list-group-item;
