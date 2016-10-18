@@ -42,7 +42,6 @@ def register_slug(data, group)
   merge_data = {}
   # Where does the slug lead to? The url...
   merge_data[slug] = url
-  # puts "Registered #{slug} at #{url}"
   SlugRegistry.instance.merge!(merge_data)
   slug
 end
@@ -53,10 +52,7 @@ def slug_for(data)
 end
 
 def slug_url_for(data)
-  slug = slug_for data
-  url = SlugRegistry.instance[slug_for data]
-  puts "Getting slug #{slug} to #{url}"
-  url
+  SlugRegistry.instance[slug_for data]
 end
 
 def slug_exists?(data)
