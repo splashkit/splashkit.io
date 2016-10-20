@@ -1,5 +1,5 @@
 download_script: >
-  sudo bash <(curl -s https://raw.githubusercontent.com/jakerenzella/skm/master/mac-build/mac-install.sh)
+  sudo bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/develop/skm-install.sh)
 download_packages:
   -
     title: macOS
