@@ -8,6 +8,7 @@
 Api: API
 Bool: Boolean
 Int: Integer
+Char: Character
 2d: 2D
 Json: JSON
 Utils: Utilities
