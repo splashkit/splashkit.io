@@ -6,11 +6,10 @@
 # E.g., if current page is "getting-started/graphics/index.html"
 # then the path will default to "data/snippets/getting-started/graphics"
 #
-def snippet(filename, path = nil)
+def snippet(filename_or_hash, path = nil)
   # Maps file extensions to their tab titles
   ext_to_title = {
-    '.c'          => 'C/C++',
-    '.cpp'        => 'C/C++',
+    '.cpp'        => 'C++',
     '.cs'         => 'C#',
     '.java'       => 'Java',
     '.js'         => 'JavaScript',
@@ -19,27 +18,56 @@ def snippet(filename, path = nil)
     '.py'         => 'Python',
     '.swift'      => 'Swift'
   }
+  hash_key_to_ext = {
+    cpp:        '.cpp',
+    pascal:     '.pas',
+    java:       '.java',
+    javascript: '.pas',
+    python:     '.py',
+    swift:      '.swift'
+  }
 
   # Check for path, otherwise use current page
   path = path.nil? ? current_page.destination_path[/.*\//] : path
   # Prepend data/snippets to the path
   path = 'data/snippets/' << path
   # Create the HTML formatter pased on HTMLPygments + HTMLTable
-  formatter = Rouge::Formatters::HTMLPygments.new(Rouge::Formatters::HTMLTable.new(Rouge::Formatters::HTML.new))
+  formatter = Rouge::Formatters::HTMLPygments.new(Rouge::Formatters::HTML.new)
+  formatter_table = Rouge::Formatters::HTMLPygments.new(Rouge::Formatters::HTMLTable.new(Rouge::Formatters::HTML.new))
   # Get all the files that match the path with the filename
-  files = Dir.glob(path << filename << ".*").map do |f|
-    extname = File.extname(f)
-    basename = File.basename(f, extname)
-    title = ext_to_title[extname]
-    lexer = Rouge::Lexer.guess({filename: f})
-    src = File.read(f)
-    html = formatter.format(lexer.lex(src))
-    id = "#{extname[/[a-z]+/]}-#{basename}" # remove "." from extension
-    {
-      id: id,
-      title: title,
-      html:  html
-    }
+  if filename_or_hash.is_a? Hash
+    hash = filename_or_hash
+    files = hash.map do |lang, data|
+      extname = hash_key_to_ext[lang.to_sym]
+      title = ext_to_title[extname]
+      lexer = Rouge::Lexer.guess(filename: "file.#{extname}")
+      src = data
+      formatter = src.lines.count < 5 ? formatter : formatter_table
+      html = formatter.format(lexer.lex(src))
+      id = "#{extname[/[a-z]+/]}-snippet-#{rand(0..9999)}"
+      {
+        id: id,
+        title: title,
+        html:  html
+      }
+    end
+  else
+    filename = filename_or_hash
+    files = Dir.glob(path << filename << ".*").map do |f|
+      extname = File.extname(f)
+      basename = File.basename(f, extname)
+      title = ext_to_title[extname]
+      lexer = Rouge::Lexer.guess(filename: f)
+      src = File.read(f)
+      html = formatter.format(lexer.lex(src))
+      formatter = src.lines.count < 5 ? formatter : formatter_table
+      id = "#{extname[/[a-z]+/]}-#{basename}" # remove "." from extension
+      {
+        id: id,
+        title: title,
+        html:  html
+      }
+    end
   end
 
   # Sort alphabetically
@@ -55,28 +83,27 @@ def snippet(filename, path = nil)
     is_active = index == 0
 
     # Generate the <li> items HTML
-    list_items << "<li role='presentation'"
-    list_items <<  (is_active ? "class='active'" : "")
-    list_items << "><a href='##{tab_id}' aria-controls='#{tab_id}' role='tab' data-toggle='tab'>#{file[:title]}</a></li>"
+    list_items << "<li class='nav-item'>"
+    list_items << "<a href='##{tab_id}' aria-controls='#{tab_id}' role='tab' data-toggle='tab' class='nav-link"
+    list_items <<  (is_active ? " active'>" : "'>")
+    list_items << "#{file[:title]}</a></li>"
 
     # Generate the tab panes HTML
-    tab_panes << "<div role='tabpanel' id='#{tab_id}' class='tab-pane"
-    tab_panes << (is_active ? " active'>" : "'>")
+    tab_panes << "<div role='tabpanel' id='#{tab_id}' class='tab-pane fade"
+    tab_panes << (is_active ? " in active'>" : "'>")
     tab_panes << file[:html]
-    tab_panes << "</div>"
+    tab_panes << '</div>'
   end
 
 # This is where we generate our HTML
 <<-EOS
-<!-- Code snippet for #{filename} -->
-<div class="snippet">
+<div class='sk-snippet'>
   <ul class='nav nav-tabs' role='tablist'>
     #{list_items}
   </ul>
-  <div class='tab-content' onclick="selectSnippet(this)">
+  <div class='tab-content' data-clipboard>
     #{tab_panes}
   </div>
 </div>
-<!-- End code snippet -->
 EOS
 end

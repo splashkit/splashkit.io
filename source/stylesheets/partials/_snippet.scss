@@ -1,43 +1,28 @@
-.snippet {
+.sk-snippet {
   ul.nav {
     border-bottom: none;
     li {
       font-size: 0.9em;
       margin-bottom: 0;
-      &.active a, &:hover a {
-        color: #333333;
-      }
     }
     li a {
       color: #8e8e8e;
       padding: 5px 10px;
-      &, &:hover, &:active {
-        // background-color: initial;
-        // border: none;
-        // border-radius: 0;
-      }
     }
-    li.active a {
+    li a.active {
       font-weight: bold;
+      color: #333333;
     }
   }
   .tab-content {
     cursor: pointer;
     position: relative;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 0 3px 3px 3px;
     .rouge-code ::selection {
       color: #fff;
       background-color: rgba(128, 128, 128, 0.8);
-    }
-    &::before {
-      content: "Click to select";
-      display: none;
-      position: absolute;
-      right: 0;
-      padding: 1em;
-      font-size: 0.8em;
-      background-color: rgba(128, 128, 128, 0.8);
-      color: #fff;
-      border-bottom-left-radius: 3px;
     }
     &:hover::before {
       display: block;
@@ -54,15 +39,6 @@
       background-color: initial;
       margin: 0;
       padding: 0;
-    }
-    pre.codehilite {
-      background-color: #f0f0f0;
-      padding: 21px 14px 0px 14px;
-    }
-    pre.lineno {
-      padding: 0;
-      color: #BFBFBF;
-      margin-right: 2ex;
     }
   }
 }

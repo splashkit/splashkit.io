@@ -25,5 +25,6 @@ Dec: Decimal
 Hex: Hexadecimal
 Html: HTML
 Rgb: RGB
+Cpp: C++
 # Singular matches (on its own)
 (?<!.)Vector(?!.): Dynamic Array # Not Vector 2D
