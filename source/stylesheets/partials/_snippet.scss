@@ -18,27 +18,23 @@
     cursor: pointer;
     position: relative;
     background-color: #f0f0f0;
-    padding: 1rem;
-    border-radius: 0 3px 3px 3px;
-    .rouge-code ::selection {
-      color: #fff;
-      background-color: rgba(128, 128, 128, 0.8);
-    }
-    &:hover::before {
-      display: block;
-    }
-    table.rouge-table {
-      width: 100%;
-    }
-    td.rouge-gutter {
-      width: 6ex;
-    }
+    border-radius: 0 4px 4px 4px;
     pre {
-      border: none;
-      border-radius: 0;
-      background-color: initial;
-      margin: 0;
-      padding: 0;
+      margin-bottom: 0;
+      padding: 1rem;
+      transition: background-color ease-in 0.15s;
+    }
+    pre::selection {
+      background-color: transparent;
+    }
+    pre code {
+      &::selection, span::selection {
+        color: #fff;
+        background-color: rgba(128, 128, 128, 0.8);
+      }
+    }
+    pre:hover {
+      background-color: darken(#f0f0f0, 5%);
     }
   }
 }

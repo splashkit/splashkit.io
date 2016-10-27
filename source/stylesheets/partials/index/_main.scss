@@ -27,7 +27,7 @@ body.index > main {
     background-color: #fff;
     padding: 1.5em;
     border-radius: 0.25em;
-    transition: background-color linear 0.15s;
+    transition: background-color ease-in 0.15s;
     &:hover {
       background-color: $splashkit-yellow;
       cursor: pointer;

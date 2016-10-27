@@ -1,0 +1,18 @@
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+    <% files.each_with_index do |file, index| %>
+      <li class="nav-item">
+        <a href="#<%= file[:id] %>" aria-controls="<%= file[:id] %>" role="tab" data-toggle="tab" class="nav-link <%= 'active' if index == 0 %>">
+          <%= file[:title] %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <div class="tab-content">
+    <% files.each_with_index do |file, index| %>
+      <div role="tabpanel" id="<%= file[:id] %>" class="tab-pane fade <%= 'in active' if index == 0 %>" data-clipboard data-clipboard-target="#<%= file[:id] %> pre">
+        <%= file[:html] %>
+      </div>
+    <% end %>
+  </div>
+</div>

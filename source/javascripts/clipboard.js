@@ -1,11 +1,27 @@
 $(document).ready(function () {
   var sel = '*[data-clipboard]';
   var els = document.querySelectorAll(sel);
+  var clipboardTargetFor = function(el) {
+    return $(el.getAttribute('data-clipboard-target'))[0] || el;
+  }
+  var showPopover = function(el, msg, show) {
+    $(el).popover('dispose');
+    $(el).popover({
+      trigger: 'hover',
+      placement: el.getAttribute('data-clipboard-placement') || 'bottom',
+      content: msg
+    });
+    if (show) {
+      setTimeout(function() {
+        $(el).popover('show');
+      }, 250);
+    }
+  }
 
   var clipboard = new Clipboard(sel);
   clipboard.on('success', function(e) {
-    e.trigger.setAttribute('aria-label', 'Copied to clipboard');
-    $(e.trigger).popover('show');
+    var el = clipboardTargetFor(e.trigger);
+    showPopover(el, 'Copied!', true);
   });
   clipboard.on('failure', function(e) {
     var actionMsg;
@@ -18,23 +34,15 @@ $(document).ready(function () {
     else {
       actionMsg = 'Press Ctrl-C to copy';
     }
-    el.setAttribute('aria-label', actionMsg);
-    $(e.trigger).popover('show');
+    var el = clipboardTargetFor(e.trigger);
+    showPopover(el, actionMsg, true);
   });
 
   for (var i = 0; i < els.length; i++) {
-    var el = els[i];
-    var actionMsg = 'Click to copy';
-    el.setAttribute('aria-label', actionMsg);
-    $(el).popover({
-      trigger: 'hover',
-      placement: 'bottom',
-      content: function() {
-        return el.getAttribute('aria-label');
-      }
-    });
+    var el = clipboardTargetFor(els[i]);
+    showPopover(el, 'Click to copy');
     el.addEventListener('mouseleave', function(e) {
-      el.setAttribute('aria-label', actionMsg);
+      showPopover(clipboardTargetFor(e.target), 'Click to copy');
     });
   }
 })
