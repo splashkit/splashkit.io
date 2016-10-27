@@ -24,9 +24,18 @@ body.index > main {
     }
   }
   .sk-install pre.sk-install-script {
-    background: #fff;
+    background-color: #fff;
     padding: 1.5em;
     border-radius: 0.25em;
+    transition: background-color linear 0.15s;
+    &:hover {
+      background-color: $splashkit-yellow;
+      cursor: pointer;
+    }
+    &::selection {
+      background-color: darken($splashkit-yellow, 30%);
+      color: #fff;
+    }
   }
   .container {
     width: 75%;
