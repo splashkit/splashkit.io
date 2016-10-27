@@ -74,36 +74,5 @@ def snippet(filename_or_hash, path = nil)
   files.sort_by! { |f| f[:id] }
 
   # Auto Generation of HTML
-  list_items = ""
-  tab_panes = ""
-  files.each_with_index do |file, index|
-    tab_id = file[:id]
-
-    # Determine if this is the default tab
-    is_active = index == 0
-
-    # Generate the <li> items HTML
-    list_items << "<li class='nav-item'>"
-    list_items << "<a href='##{tab_id}' aria-controls='#{tab_id}' role='tab' data-toggle='tab' class='nav-link"
-    list_items <<  (is_active ? " active'>" : "'>")
-    list_items << "#{file[:title]}</a></li>"
-
-    # Generate the tab panes HTML
-    tab_panes << "<div role='tabpanel' id='#{tab_id}' class='tab-pane fade"
-    tab_panes << (is_active ? " in active'>" : "'>")
-    tab_panes << file[:html]
-    tab_panes << '</div>'
-  end
-
-# This is where we generate our HTML
-<<-EOS
-<div class='sk-snippet'>
-  <ul class='nav nav-tabs' role='tablist'>
-    #{list_items}
-  </ul>
-  <div class='tab-content' data-clipboard>
-    #{tab_panes}
-  </div>
-</div>
-EOS
+  partial 'partials/snippet', locals: { files: files }
 end
