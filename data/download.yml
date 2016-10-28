@@ -1,5 +1,5 @@
 download_script: >
-  bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/skm-install.sh)
+  bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)
 download_packages:
   -
     title: macOS
