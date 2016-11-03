@@ -3,6 +3,8 @@ body.index > main {
   padding: 80px 0;
   color: white;
   text-align: center;
+  display: flex;
+  align-items: center;
   .sk-logo {
     width: 10px * $sk-logo-aspect-ratio-w;
     height: 10px * $sk-logo-aspect-ratio-h;
