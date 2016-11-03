@@ -1,12 +1,17 @@
 body {
   position: relative;
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
+  height: 100%;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+  }
 }
 main {
   background-color: #fff;
   padding-top: 1em;
   padding-bottom: 3em;
-  flex: 1;
+  @include media-breakpoint-up(md) {
+    flex: 1;
+  }
 }
