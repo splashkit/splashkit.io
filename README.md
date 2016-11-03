@@ -48,6 +48,13 @@ Deploy using:
 $ rake deploy
 ```
 
+If this fails, try rebuilding the build folder from scratch then redeploy:
+
+```bash
+$ rm -rf build
+$ rake deploy
+```
+
 ## License
 
 Coming soon
