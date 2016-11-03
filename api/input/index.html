@@ -1,0 +1,4496 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Input</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_input api_input_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Input
+      </h1>
+        <p class="lead">
+          Input handles user interaction and events such as keypresses.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link active">
+          Input
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#process-events" class="nav-link">
+        Process Events
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#quit-requested" class="nav-link">
+        Quit Requested
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reset-quit" class="nav-link">
+        Reset Quit
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#any-key-pressed" class="nav-link">
+        Any Key Pressed
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#deregister-callback-on-key-down" class="nav-link">
+        Deregister Callback On Key Down
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#deregister-callback-on-key-typed" class="nav-link">
+        Deregister Callback On Key Typed
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#deregister-callback-on-key-up" class="nav-link">
+        Deregister Callback On Key Up
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-down" class="nav-link">
+        Key Down
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-name" class="nav-link">
+        Key Name
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-released" class="nav-link">
+        Key Released
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-typed" class="nav-link">
+        Key Typed
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-up" class="nav-link">
+        Key Up
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#register-callback-on-key-down" class="nav-link">
+        Register Callback On Key Down
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#register-callback-on-key-typed" class="nav-link">
+        Register Callback On Key Typed
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#register-callback-on-key-up" class="nav-link">
+        Register Callback On Key Up
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#hide-mouse" class="nav-link">
+        Hide Mouse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-clicked" class="nav-link">
+        Mouse Clicked
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-down" class="nav-link">
+        Mouse Down
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-movement" class="nav-link">
+        Mouse Movement
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-position" class="nav-link">
+        Mouse Position
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-position-vector" class="nav-link">
+        Mouse Position Vector
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-shown" class="nav-link">
+        Mouse Shown
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-up" class="nav-link">
+        Mouse Up
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-wheel-scroll" class="nav-link">
+        Mouse Wheel Scroll
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-x" class="nav-link">
+        Mouse X
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-y" class="nav-link">
+        Mouse Y
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-mouse" class="nav-link">
+        Move Mouse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-mouse" class="nav-link">
+        Move Mouse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#show-mouse" class="nav-link">
+        Show Mouse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#show-mouse" class="nav-link">
+        Show Mouse
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#draw-collected-text" class="nav-link">
+        Draw Collected Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#end-reading-text" class="nav-link">
+        End Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#end-reading-text" class="nav-link">
+        End Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reading-text" class="nav-link">
+        Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reading-text" class="nav-link">
+        Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-reading-text" class="nav-link">
+        Start Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-reading-text" class="nav-link">
+        Start Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-reading-text" class="nav-link">
+        Start Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-reading-text" class="nav-link">
+        Start Reading Text
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#text-entry-cancelled" class="nav-link">
+        Text Entry Cancelled
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#text-entry-cancelled" class="nav-link">
+        Text Entry Cancelled
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#text-input" class="nav-link">
+        Text Input
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#text-input" class="nav-link">
+        Text Input
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#key-callback" class="nav-link">
+        Key Callback
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#key-code" class="nav-link">
+        Key Code
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#mouse-button" class="nav-link">
+        Mouse Button
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="process-events" data-anchor> Process Events </h3>
+  <div class="sk-api-description">
+    <p>ProcessEvents allows SplashKit to react to user interactions. This
+procedure checks the current keyboard and mouse states and should be
+called once within your game loop to check user interaction.</p>
+
+<p>Side Effects
+- Reads user interaction events
+- Updates keys down, text input, etc.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5208" aria-controls="cpp-snippet-5208" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-964" aria-controls="pas-snippet-964" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5208" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5208 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">process_events</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-964" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-964 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ProcessEvents</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="quit-requested" data-anchor> Quit Requested </h3>
+  <div class="sk-api-description">
+    <p>Checks to see if the user has asked for the application to quit. This
+value is updated by the <a href="/api/input/#process-events"><code>Process Events</code></a> routine. Also see
+<a href="/api/graphics/#window-close-requested"><code>Window Close Requested</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the application has been requested to close.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2029" aria-controls="cpp-snippet-2029" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2416" aria-controls="pas-snippet-2416" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2029" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2029 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">quit_requested</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2416" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2416 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QuitRequested</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reset-quit" data-anchor> Reset Quit </h3>
+  <div class="sk-api-description">
+    <p>Cancels a quit request, ensuring the quit requested will return false.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4610" aria-controls="cpp-snippet-4610" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9018" aria-controls="pas-snippet-9018" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4610" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4610 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_quit</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9018" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9018 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetQuit</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="any-key-pressed" data-anchor> Any Key Pressed </h3>
+  <div class="sk-api-description">
+    <p>Checks to see if any key has been pressed since the last time
+<a href="/api/input/#process-events"><code>Process Events</code></a> was called.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if any key was pressed.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1239" aria-controls="cpp-snippet-1239" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2299" aria-controls="pas-snippet-2299" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1239" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1239 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">any_key_pressed</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2299" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2299 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnyKeyPressed</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="deregister-callback-on-key-down" data-anchor> Deregister Callback On Key Down </h3>
+  <div class="sk-api-description">
+    <p>Remove the registered callback from receiving events related to key down actions.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to from from key down events</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-661" aria-controls="cpp-snippet-661" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3834" aria-controls="pas-snippet-3834" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-661" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-661 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_down</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3834" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3834 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="deregister-callback-on-key-typed" data-anchor> Deregister Callback On Key Typed </h3>
+  <div class="sk-api-description">
+    <p>Remove the registered callback from receiving events related to key typed actions.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to from from key typed events</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9117" aria-controls="cpp-snippet-9117" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4534" aria-controls="pas-snippet-4534" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9117" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9117 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_typed</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4534" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4534 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="deregister-callback-on-key-up" data-anchor> Deregister Callback On Key Up </h3>
+  <div class="sk-api-description">
+    <p>Remove the registered callback from receiving events related to key up actions.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to from from key up events</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7662" aria-controls="cpp-snippet-7662" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2238" aria-controls="pas-snippet-2238" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7662" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7662 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_up</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2238" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2238 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="key-down" data-anchor> Key Down </h3>
+  <div class="sk-api-description">
+    <p>Returns true when the key requested is being held down. This is updated
+as part of the <a href="/api/input/#process-events"><code>Process Events</code></a> call. Use the key codes from <a href="/api/input/#key-code"><code>Key Code</code></a>
+to specify the key to be checked.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the key is currently held down</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-code"><code>Key Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The key to check if it is down</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-625" aria-controls="cpp-snippet-625" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9679" aria-controls="pas-snippet-9679" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-625" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-625 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_down</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9679" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9679 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyDown</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="key-name" data-anchor> Key Name </h3>
+  <div class="sk-api-description">
+    <p>The <a href="/api/input/#key-name"><code>Key Name</code></a> function returns a string name for a given <a href="/api/input/#key-code"><code>Key Code</code></a>. For
+example, <code>Comma Key</code> returns the string &#39;Comma&#39;. This function could be used
+to display more meaningful key names for configuring game controls, etc.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The name of the key</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-code"><code>Key Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The key to get the name of</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4399" aria-controls="cpp-snippet-4399" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2194" aria-controls="pas-snippet-2194" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4399" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4399 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">key_name</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2194" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2194 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyName</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="key-released" data-anchor> Key Released </h3>
+  <div class="sk-api-description">
+    <p>Returns true if the specified key was released since the last time
+<a href="/api/input/#process-events"><code>Process Events</code></a> was called. This occurs only once for the key that is
+released and will not return true again until the key is pressed down and
+released again.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the key was just released</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-code"><code>Key Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The key to check if it was released</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1244" aria-controls="cpp-snippet-1244" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1148" aria-controls="pas-snippet-1148" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1244" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1244 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_released</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1148" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1148 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyReleased</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="key-typed" data-anchor> Key Typed </h3>
+  <div class="sk-api-description">
+    <p>Returns true when the key requested is just pressed down. This is updated
+as part of the <a href="/api/input/#process-events"><code>Process Events</code></a> call. Use the key codes from <a href="/api/input/#key-code"><code>Key Code</code></a>
+to specify the key to be checked. this will only occur once for that key that is
+pressed and will not return true again until the key is released and presssed down again</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the key was just pressed down</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-code"><code>Key Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The key to check if it was typed</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1525" aria-controls="cpp-snippet-1525" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5177" aria-controls="pas-snippet-5177" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1525" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1525 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_typed</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5177" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5177 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyTyped</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="key-up" data-anchor> Key Up </h3>
+  <div class="sk-api-description">
+    <p>Returns false when the key requested is being held down. This is updated
+as part of the <a href="/api/input/#process-events"><code>Process Events</code></a> call. Use the key codes from <a href="/api/input/#key-code"><code>Key Code</code></a>
+to specify the key to be checked.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the key is currently up</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-code"><code>Key Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The key to check if it is up</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4052" aria-controls="cpp-snippet-4052" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8093" aria-controls="pas-snippet-8093" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4052" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4052 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_up</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8093" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8093 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyUp</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="register-callback-on-key-down" data-anchor> Register Callback On Key Down </h3>
+  <div class="sk-api-description">
+    <p>Register the passed in callback function to receive notification of key down
+calls. This will be called in response to <a href="/api/input/#process-events"><code>Process Events</code></a>, for each key that
+the user presses down.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to be called when a key is first pressed</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1913" aria-controls="cpp-snippet-1913" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4602" aria-controls="pas-snippet-4602" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1913" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1913 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_down</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4602" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4602 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="register-callback-on-key-typed" data-anchor> Register Callback On Key Typed </h3>
+  <div class="sk-api-description">
+    <p>Register the passed in callback function to receive notification of key typed
+calls. This will be called in response to <a href="/api/input/#process-events"><code>Process Events</code></a>, when the user initially
+presses a key down.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to be called when a key is typed</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1011" aria-controls="cpp-snippet-1011" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9243" aria-controls="pas-snippet-9243" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1011" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1011 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_typed</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9243" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9243 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="register-callback-on-key-up" data-anchor> Register Callback On Key Up </h3>
+  <div class="sk-api-description">
+    <p>Register the passed in callback function to receive notification of key up
+calls. This will be called in response to <a href="/api/input/#process-events"><code>Process Events</code></a>, for each key that
+the user releases.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Callback
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#key-callback"><code>Key Callback</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to be called when a key is released</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6612" aria-controls="cpp-snippet-6612" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8998" aria-controls="pas-snippet-8998" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6612" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6612 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_up</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8998" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8998 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="hide-mouse" data-anchor> Hide Mouse </h3>
+  <div class="sk-api-description">
+    <p>Tells the mouse cursor to hide (no longer visible) if it is currently
+showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-80" aria-controls="cpp-snippet-80" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4300" aria-controls="pas-snippet-4300" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-80" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-80 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">hide_mouse</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4300" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4300 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">HideMouse</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-clicked" data-anchor> Mouse Clicked </h3>
+  <div class="sk-api-description">
+    <p>Returns true if the specified button was clicked since the last time
+<a href="/api/input/#process-events"><code>Process Events</code></a> was called.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the mouse button was clicked</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Button
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#mouse-button"><code>Mouse Button</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The mouse button to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-912" aria-controls="cpp-snippet-912" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1466" aria-controls="pas-snippet-1466" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-912" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-912 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_clicked</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1466" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1466 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseClicked</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-down" data-anchor> Mouse Down </h3>
+  <div class="sk-api-description">
+    <p>Returns <code>True</code> if the specified button is currently pressed down.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the mouse button is down</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Button
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#mouse-button"><code>Mouse Button</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The mouse button to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2140" aria-controls="cpp-snippet-2140" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8763" aria-controls="pas-snippet-8763" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2140" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2140 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_down</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8763" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8763 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseDown</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-movement" data-anchor> Mouse Movement </h3>
+  <div class="sk-api-description">
+    <p>Returns the amount of accumulated mouse movement, since the last time
+<a href="/api/input/#process-events"><code>Process Events</code></a> was called, as a <a href="/api/types/#vector-2d"><code>Vector 2D</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+          </strong>
+          <p>The movement of the mouse since the last process events</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4411" aria-controls="cpp-snippet-4411" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2641" aria-controls="pas-snippet-2641" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4411" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4411 pre">
+        <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_movement</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2641" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2641 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseMovement</span><span class="p">():</span> <span class="n">Vector2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-position" data-anchor> Mouse Position </h3>
+  <div class="sk-api-description">
+    <p>Returns the current window position of the mouse as a <code>Point2d</code></p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+          </strong>
+          <p>The position of the mouse in the current window.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7785" aria-controls="cpp-snippet-7785" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5797" aria-controls="pas-snippet-5797" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7785" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7785 pre">
+        <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">mouse_position</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5797" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5797 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MousePosition</span><span class="p">():</span> <span class="n">Point2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-position-vector" data-anchor> Mouse Position Vector </h3>
+  <div class="sk-api-description">
+    <p>Returns The current window position of the mouse as a <code>Dynamic Array</code></p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+          </strong>
+          <p>The offset from the window origin to the mouse.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1265" aria-controls="cpp-snippet-1265" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-448" aria-controls="pas-snippet-448" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1265" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1265 pre">
+        <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_position_vector</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-448" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-448 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MousePositionVector</span><span class="p">():</span> <span class="n">Vector2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-shown" data-anchor> Mouse Shown </h3>
+  <div class="sk-api-description">
+    <p>Returns <code>True</code> if the mouse is currently visible, <code>False</code> if not.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the mouse is shown.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-498" aria-controls="cpp-snippet-498" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8162" aria-controls="pas-snippet-8162" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-498" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-498 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_shown</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8162" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8162 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseShown</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-up" data-anchor> Mouse Up </h3>
+  <div class="sk-api-description">
+    <p>Returns <code>True</code> if the specified button is currently up.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the mouse button is up (i.e. not down)</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Button
+                  </th>
+                  <td>
+                      <p><a href="/api/input/#mouse-button"><code>Mouse Button</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The mouse button to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2095" aria-controls="cpp-snippet-2095" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-946" aria-controls="pas-snippet-946" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2095" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2095 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_up</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-946" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-946 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseUp</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-wheel-scroll" data-anchor> Mouse Wheel Scroll </h3>
+  <div class="sk-api-description">
+    <p>Returns the amount the mouse wheel was scrolled since the last call
+to <a href="/api/input/#process-events"><code>Process Events</code></a>. The result is a vector containing the x and y
+amounts scrolled. Scroll left generates a negative x, scroll right a
+positive x. Scroll backward is negative y, scroll forward positive y.
+Note that on MacOS the directions may be inverted by OS settings.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+          </strong>
+          <p>The distance and direction of the mouse scroll since the last
+<a href="/api/input/#process-events"><code>Process Events</code></a></p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2185" aria-controls="cpp-snippet-2185" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3432" aria-controls="pas-snippet-3432" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2185" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2185 pre">
+        <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_wheel_scroll</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3432" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3432 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseWheelScroll</span><span class="p">():</span> <span class="n">Vector2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-x" data-anchor> Mouse X </h3>
+  <div class="sk-api-description">
+    <p>Returns the current x value of the mouse&#39;s position.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The distance of the mouse from the left edge of the current
+window location</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3079" aria-controls="cpp-snippet-3079" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3760" aria-controls="pas-snippet-3760" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3079" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3079 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">mouse_x</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3760" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3760 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseX</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="mouse-y" data-anchor> Mouse Y </h3>
+  <div class="sk-api-description">
+    <p>Returns the current y value of the mouse&#39;s position.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The distance of the mouse from the top edge of the current
+window location</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5864" aria-controls="cpp-snippet-5864" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4824" aria-controls="pas-snippet-4824" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5864" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5864 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">mouse_y</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4824" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4824 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseY</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-mouse" data-anchor> Move Mouse </h3>
+  <div class="sk-api-description">
+    <p>Moves the mouse cursor to the specified screen location.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The new x location of the mouse</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The new y location of the mouse</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3443" aria-controls="cpp-snippet-3443" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3538" aria-controls="pas-snippet-3538" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3443" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3443 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_mouse</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3538" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3538 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveMouse</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-mouse" data-anchor> Move Mouse </h3>
+  <div class="sk-api-description">
+    <p>Moves the mouse cursor to the specified screen location.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Point
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The new location of the mouse</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8929" aria-controls="cpp-snippet-8929" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4104" aria-controls="pas-snippet-4104" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8929" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8929 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_mouse</span><span class="p">(</span><span class="n">point_2d</span> <span class="n">point</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4104" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4104 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveMouse</span><span class="p">(</span><span class="n">point</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="show-mouse" data-anchor> Show Mouse </h3>
+  <div class="sk-api-description">
+    <p>Tells the mouse cursor to be visible if it was previously hidden with
+by a <code>Hidemouse</code> or <code>Setmousevisible</code>(False) call.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7626" aria-controls="cpp-snippet-7626" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5964" aria-controls="pas-snippet-5964" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7626" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7626 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">show_mouse</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5964" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5964 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ShowMouse</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="show-mouse" data-anchor> Show Mouse </h3>
+  <div class="sk-api-description">
+    <p>Used to explicitly set the mouse cursors visible state (if it is showing
+in the window or not) based on the show parameter.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Show
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>When true the mouse is shown, when false it is hidden</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8818" aria-controls="cpp-snippet-8818" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6788" aria-controls="pas-snippet-6788" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8818" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8818 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">show_mouse</span><span class="p">(</span><span class="kt">bool</span> <span class="n">show</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6788" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6788 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ShowMouse</span><span class="p">(</span><span class="n">show</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="draw-collected-text" data-anchor> Draw Collected Text </h3>
+  <div class="sk-api-description">
+    <p>Draw the text that the user is currently enterring on the current window.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Clr
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#color"><code>Color</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The color for the text</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Fnt
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#font"><code>Font</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The font to use</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Font Size
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The size of the font</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Opts
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#drawing-options"><code>Drawing Options</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>Any drawing options</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1123" aria-controls="cpp-snippet-1123" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-132" aria-controls="pas-snippet-132" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1123" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1123 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">draw_collected_text</span><span class="p">(</span><span class="n">color</span> <span class="n">clr</span><span class="p">,</span> <span class="n">font</span> <span class="n">fnt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">font_size</span><span class="p">,</span> <span class="k">const</span> <span class="n">drawing_options</span> <span class="o">&amp;</span><span class="n">opts</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-132" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-132 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DrawCollectedText</span><span class="p">(</span><span class="n">clr</span><span class="p">:</span> <span class="n">Color</span><span class="p">;</span> <span class="n">fnt</span><span class="p">:</span> <span class="n">Font</span><span class="p">;</span> <span class="n">fontSize</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="k">const</span> <span class="n">opts</span><span class="p">:</span> <span class="n">DrawingOptions</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="end-reading-text" data-anchor> End Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Ends reading text in for the current window.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4580" aria-controls="cpp-snippet-4580" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1405" aria-controls="pas-snippet-1405" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4580" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4580 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">end_reading_text</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1405" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1405 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">EndReadingText</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="end-reading-text" data-anchor> End Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Ends reading text for the passed in window.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window to end reading text</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9958" aria-controls="cpp-snippet-9958" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1413" aria-controls="pas-snippet-1413" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9958" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9958 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">end_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1413" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1413 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">EndReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reading-text" data-anchor> Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Returns true when the current window is reading text.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True when window is setup to read input from the user.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3474" aria-controls="cpp-snippet-3474" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1715" aria-controls="pas-snippet-1715" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3474" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3474 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">reading_text</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1715" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1715 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadingText</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reading-text" data-anchor> Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Returns true when the window is reading text.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True when window is setup to read input from the user.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6817" aria-controls="cpp-snippet-6817" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4080" aria-controls="pas-snippet-4080" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6817" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6817 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4080" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4080 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-reading-text" data-anchor> Start Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Start reading text in the current window within the bounds of the
+supplied rectangle.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The area where the text will be entered.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1462" aria-controls="cpp-snippet-1462" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9180" aria-controls="pas-snippet-9180" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1462" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1462 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">rectangle</span> <span class="n">rect</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9180" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9180 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-reading-text" data-anchor> Start Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Start reading text in the current window within the bounds of the
+supplied rectangle. The text will start with an initial value.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The area where the text will be entered.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Initial Text
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The initial text, which may be edited by the user.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9019" aria-controls="cpp-snippet-9019" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9030" aria-controls="pas-snippet-9030" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9019" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9019 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="n">string</span> <span class="n">initial_text</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9030" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9030 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">;</span> <span class="n">initialText</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-reading-text" data-anchor> Start Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Start reading text in the window within the bounds of the
+supplied rectangle.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window where the text will be entered</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The area where the text will be entered.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7180" aria-controls="cpp-snippet-7180" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7680" aria-controls="pas-snippet-7680" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7180" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7180 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">rectangle</span> <span class="n">rect</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7680" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7680 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-reading-text" data-anchor> Start Reading Text </h3>
+  <div class="sk-api-description">
+    <p>Start reading text in the window within the bounds of the
+supplied rectangle. The text will start with an initial value.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window where the text will be entered</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The area where the text will be entered.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Initial Text
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The initial text, which may be edited by the user.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2898" aria-controls="cpp-snippet-2898" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6574" aria-controls="pas-snippet-6574" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2898" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2898 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="n">string</span> <span class="n">initial_text</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6574" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6574 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">;</span> <span class="n">initialText</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="text-entry-cancelled" data-anchor> Text Entry Cancelled </h3>
+  <div class="sk-api-description">
+    <p>Did the user press escape and cancel the enterring of text?</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True when the use has cancelled text entry</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5284" aria-controls="cpp-snippet-5284" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3790" aria-controls="pas-snippet-3790" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5284" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5284 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">text_entry_cancelled</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3790" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3790 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextEntryCancelled</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="text-entry-cancelled" data-anchor> Text Entry Cancelled </h3>
+  <div class="sk-api-description">
+    <p>Did the user press escape and cancel the enterring of text?</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True when the use has cancelled text entry</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6399" aria-controls="cpp-snippet-6399" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9815" aria-controls="pas-snippet-9815" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6399" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6399 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">text_entry_cancelled</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9815" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9815 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextEntryCancelled</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="text-input" data-anchor> Text Input </h3>
+  <div class="sk-api-description">
+    <p>The text the user has currently enterred on the current window.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The user&#39;s text entry</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6578" aria-controls="cpp-snippet-6578" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7262" aria-controls="pas-snippet-7262" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6578" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6578 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">text_input</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7262" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7262 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextInput</span><span class="p">():</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="text-input" data-anchor> Text Input </h3>
+  <div class="sk-api-description">
+    <p>The text the user has currently enterred on the current window.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The user&#39;s text entry</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Wind
+                  </th>
+                  <td>
+                      <p><a href="/api/graphics/#window"><code>Window</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The window to check</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4866" aria-controls="cpp-snippet-4866" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8779" aria-controls="pas-snippet-8779" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4866" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4866 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">text_input</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8779" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8779 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextInput</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="key-callback" data-anchor> Key Callback </h3>
+  <div class="sk-api-description">
+    <p>The <a href="/api/input/#key-callback"><code>Key Callback</code></a> is a function pointer used to register your code with SplashKit
+or keyboard related events. See <a href="/api/input/#register-callback-on-key-down"><code>Register Callback On Key Down</code></a>,
+<a href="/api/input/#register-callback-on-key-up"><code>Register Callback On Key Up</code></a>, and <a href="/api/input/#register-callback-on-key-typed"><code>Register Callback On Key Typed</code></a></p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="key-code" data-anchor> Key Code </h3>
+  <div class="sk-api-description">
+    <p>These are the key codes you can use to check details of keyboard actions.
+See <a href="/api/input/#key-down"><code>Key Down</code></a>, <a href="/api/input/#key-up"><code>Key Up</code></a>, <a href="/api/input/#key-typed"><code>Key Typed</code></a>, and <a href="/api/input/#key-released"><code>Key Released</code></a> functions.
+You can get a string representation of these keys using <a href="/api/input/#key-name"><code>Key Name</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Unknown Key
+                  </th>
+                  <td>
+                    <p>The unknown key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Backspace Key
+                  </th>
+                  <td>
+                    <p>The backspace key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Tab Key
+                  </th>
+                  <td>
+                    <p>The tab key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Clear Key
+                  </th>
+                  <td>
+                    <p>The clear key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Return Key
+                  </th>
+                  <td>
+                    <p>The return key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Pause Key
+                  </th>
+                  <td>
+                    <p>The pause key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Escape Key
+                  </th>
+                  <td>
+                    <p>The escape key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Space Key
+                  </th>
+                  <td>
+                    <p>The space key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Exclaim Key
+                  </th>
+                  <td>
+                    <p>The exclaim key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Double Quote Key
+                  </th>
+                  <td>
+                    <p>The double quote key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Hash Key
+                  </th>
+                  <td>
+                    <p>The hash key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Dollar Key
+                  </th>
+                  <td>
+                    <p>The dollar key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Ampersand Key
+                  </th>
+                  <td>
+                    <p>The ampersand key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Quote Key
+                  </th>
+                  <td>
+                    <p>The quote key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Paren Key
+                  </th>
+                  <td>
+                    <p>The left paren key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Paren Key
+                  </th>
+                  <td>
+                    <p>The right paren key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Asterisk Key
+                  </th>
+                  <td>
+                    <p>The asterisk key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Plus Key
+                  </th>
+                  <td>
+                    <p>The plus key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Comma Key
+                  </th>
+                  <td>
+                    <p>The comma key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Minus Key
+                  </th>
+                  <td>
+                    <p>The minus key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Period Key
+                  </th>
+                  <td>
+                    <p>The period key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Slash Key
+                  </th>
+                  <td>
+                    <p>The slash key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 0 Key
+                  </th>
+                  <td>
+                    <p>The num 0 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 1 Key
+                  </th>
+                  <td>
+                    <p>The num 1 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 2 Key
+                  </th>
+                  <td>
+                    <p>The num 2 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 3 Key
+                  </th>
+                  <td>
+                    <p>The num 3 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 4 Key
+                  </th>
+                  <td>
+                    <p>The num 4 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 5 Key
+                  </th>
+                  <td>
+                    <p>The num 5 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 6 Key
+                  </th>
+                  <td>
+                    <p>The num 6 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 7 Key
+                  </th>
+                  <td>
+                    <p>The num 7 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 8 Key
+                  </th>
+                  <td>
+                    <p>The num 8 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num 9 Key
+                  </th>
+                  <td>
+                    <p>The num 9 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Colon Key
+                  </th>
+                  <td>
+                    <p>The colon key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Semi Colon Key
+                  </th>
+                  <td>
+                    <p>The semi colon key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Less Key
+                  </th>
+                  <td>
+                    <p>The less key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Equals Key
+                  </th>
+                  <td>
+                    <p>The equals key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Greater Key
+                  </th>
+                  <td>
+                    <p>The greater key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Question Key
+                  </th>
+                  <td>
+                    <p>The question key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    At Key
+                  </th>
+                  <td>
+                    <p>The at key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Bracket Key
+                  </th>
+                  <td>
+                    <p>The left bracket key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Backslash Key
+                  </th>
+                  <td>
+                    <p>The backslash () key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Bracket Key
+                  </th>
+                  <td>
+                    <p>The right bracket key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Caret Key
+                  </th>
+                  <td>
+                    <p>The caret (^) key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Underscore Key
+                  </th>
+                  <td>
+                    <p>The underscore (_) key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Backquote Key
+                  </th>
+                  <td>
+                    <p>The backquote (`) key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    A Key
+                  </th>
+                  <td>
+                    <p>The a key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    B Key
+                  </th>
+                  <td>
+                    <p>The b key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    C Key
+                  </th>
+                  <td>
+                    <p>The c key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    D Key
+                  </th>
+                  <td>
+                    <p>The d key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    E Key
+                  </th>
+                  <td>
+                    <p>The e key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F Key
+                  </th>
+                  <td>
+                    <p>The f key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    G Key
+                  </th>
+                  <td>
+                    <p>The g key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    H Key
+                  </th>
+                  <td>
+                    <p>The h key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    I Key
+                  </th>
+                  <td>
+                    <p>The i key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    J Key
+                  </th>
+                  <td>
+                    <p>The j key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    K Key
+                  </th>
+                  <td>
+                    <p>The k key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    L Key
+                  </th>
+                  <td>
+                    <p>The l key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    M Key
+                  </th>
+                  <td>
+                    <p>The m key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    N Key
+                  </th>
+                  <td>
+                    <p>The n key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    O Key
+                  </th>
+                  <td>
+                    <p>The o key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    P Key
+                  </th>
+                  <td>
+                    <p>The p key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Q Key
+                  </th>
+                  <td>
+                    <p>The q key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    R Key
+                  </th>
+                  <td>
+                    <p>The r key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    S Key
+                  </th>
+                  <td>
+                    <p>The s key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    T Key
+                  </th>
+                  <td>
+                    <p>The t key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    U Key
+                  </th>
+                  <td>
+                    <p>The u key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    V Key
+                  </th>
+                  <td>
+                    <p>The v key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    W Key
+                  </th>
+                  <td>
+                    <p>The w key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    X Key
+                  </th>
+                  <td>
+                    <p>The x key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y Key
+                  </th>
+                  <td>
+                    <p>The y key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Z Key
+                  </th>
+                  <td>
+                    <p>The z key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Delete Key
+                  </th>
+                  <td>
+                    <p>The delete key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 0
+                  </th>
+                  <td>
+                    <p>The keypad 0 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 1
+                  </th>
+                  <td>
+                    <p>The keypad 1 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 2
+                  </th>
+                  <td>
+                    <p>The keypad 2 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 3
+                  </th>
+                  <td>
+                    <p>The keypad 3 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 4
+                  </th>
+                  <td>
+                    <p>The keypad 4 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 5
+                  </th>
+                  <td>
+                    <p>The keypad 5 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 6
+                  </th>
+                  <td>
+                    <p>The keypad 6 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 7
+                  </th>
+                  <td>
+                    <p>The keypad 7 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 8
+                  </th>
+                  <td>
+                    <p>The keypad 8 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad 9
+                  </th>
+                  <td>
+                    <p>The keypad 9 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Period
+                  </th>
+                  <td>
+                    <p>The keypad period key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Divide
+                  </th>
+                  <td>
+                    <p>The keypad divide key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Multiply
+                  </th>
+                  <td>
+                    <p>The keypad multiply key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Minus
+                  </th>
+                  <td>
+                    <p>The keypad minus key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Plus
+                  </th>
+                  <td>
+                    <p>The keypad plus key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Enter
+                  </th>
+                  <td>
+                    <p>The keypad enter key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Keypad Equals
+                  </th>
+                  <td>
+                    <p>The keypad equals key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Up Key
+                  </th>
+                  <td>
+                    <p>The up key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Down Key
+                  </th>
+                  <td>
+                    <p>The down key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Key
+                  </th>
+                  <td>
+                    <p>The right key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Key
+                  </th>
+                  <td>
+                    <p>The left key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Insert Key
+                  </th>
+                  <td>
+                    <p>The insert key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Home Key
+                  </th>
+                  <td>
+                    <p>The home key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    End Key
+                  </th>
+                  <td>
+                    <p>The end key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Page Up Key
+                  </th>
+                  <td>
+                    <p>The page up key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Page Down Key
+                  </th>
+                  <td>
+                    <p>The page down key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F1 Key
+                  </th>
+                  <td>
+                    <p>The f1 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F2 Key
+                  </th>
+                  <td>
+                    <p>The f2 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F3 Key
+                  </th>
+                  <td>
+                    <p>The f3 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F4 Key
+                  </th>
+                  <td>
+                    <p>The f4 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F5 Key
+                  </th>
+                  <td>
+                    <p>The f5 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F6 Key
+                  </th>
+                  <td>
+                    <p>The f6 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F7 Key
+                  </th>
+                  <td>
+                    <p>The f7 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F8 Key
+                  </th>
+                  <td>
+                    <p>The f8 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F9 Key
+                  </th>
+                  <td>
+                    <p>The f9 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F10 Key
+                  </th>
+                  <td>
+                    <p>The f10 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F11 Key
+                  </th>
+                  <td>
+                    <p>The f11 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F12 Key
+                  </th>
+                  <td>
+                    <p>The f12 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F13 Key
+                  </th>
+                  <td>
+                    <p>The f13 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F14 Key
+                  </th>
+                  <td>
+                    <p>The f14 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    F15 Key
+                  </th>
+                  <td>
+                    <p>The f15 key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Num Lock Key
+                  </th>
+                  <td>
+                    <p>The num lock key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Caps Lock Key
+                  </th>
+                  <td>
+                    <p>The caps lock key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Scroll Lock Key
+                  </th>
+                  <td>
+                    <p>The scroll lock key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Shift Key
+                  </th>
+                  <td>
+                    <p>The right shift key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Shift Key
+                  </th>
+                  <td>
+                    <p>The left shift key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Ctrl Key
+                  </th>
+                  <td>
+                    <p>The right ctrl key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Ctrl Key
+                  </th>
+                  <td>
+                    <p>The left ctrl key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Alt Key
+                  </th>
+                  <td>
+                    <p>The right alt or option key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Alt Key
+                  </th>
+                  <td>
+                    <p>The left alt or option key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Super Key
+                  </th>
+                  <td>
+                    <p>The left super (windows or command) key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Super Key
+                  </th>
+                  <td>
+                    <p>The right super (windows or command) key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Mode Key
+                  </th>
+                  <td>
+                    <p>The mode key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Help Key
+                  </th>
+                  <td>
+                    <p>The help key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Sys Req Key
+                  </th>
+                  <td>
+                    <p>The sys req key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Menu Key
+                  </th>
+                  <td>
+                    <p>The menu key</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Power Key
+                  </th>
+                  <td>
+                    <p>The power key</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="mouse-button" data-anchor> Mouse Button </h3>
+  <div class="sk-api-description">
+    <p>A mouse can have many different types of buttons. Most people know
+about the simple Left and Right buttons, but there is also a Middle
+button (sometimes part of a scoll wheel), and possible side buttons.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    No Button
+                  </th>
+                  <td>
+                    <p>No mouse button</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Left Button
+                  </th>
+                  <td>
+                    <p>The left mouse button</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Middle Button
+                  </th>
+                  <td>
+                    <p>The middle mouse button</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Right Button
+                  </th>
+                  <td>
+                    <p>The right mouse button</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Mouse X1 Button
+                  </th>
+                  <td>
+                    <p>The x1 mouse button</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Mouse X2 Button
+                  </th>
+                  <td>
+                    <p>The x2 mouse button</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

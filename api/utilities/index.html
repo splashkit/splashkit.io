@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Utilities</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_utilities api_utilities_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Utilities
+      </h1>
+        <p class="lead">
+          SplashKit random provides a simple implementation of random.SplashKit provides miscellaneous utilities for unclassified functionality.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link active">
+          Utilities
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#rnd" class="nav-link">
+        Rnd
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#rnd" class="nav-link">
+        Rnd
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#current-ticks" class="nav-link">
+        Current Ticks
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#delay" class="nav-link">
+        Delay
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#file-as-string" class="nav-link">
+        File As String
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    <p>The SplashKit<code>S Random Library Provides Two Rnd Methods, A</code>rnd()<code>which generates
+a random number between 0 and 1, and</code>Rnd(int Ubound)<code>which
+generates a random number between 0 and the value scpeficied in</code>Ubound`.</p>
+
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="rnd" data-anchor> Rnd </h3>
+  <div class="sk-api-description">
+    <p>Generates a random number between 0 and 1</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>Returns a <code>Float</code> between <code>0</code> and <code>1</code></p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2677" aria-controls="cpp-snippet-2677" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-165" aria-controls="pas-snippet-165" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2677" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2677 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">rnd</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-165" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-165 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">Rnd</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="rnd" data-anchor> Rnd </h3>
+  <div class="sk-api-description">
+    <p>Generates a random number between 0 and <code>Ubound</code>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns an <code>Integer</code> between <code>0</code> and <code>Ubound</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Ubound
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>the <code>Integer</code> representing the upper bound.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4059" aria-controls="cpp-snippet-4059" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9890" aria-controls="pas-snippet-9890" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4059" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4059 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">rnd</span><span class="p">(</span><span class="kt">int</span> <span class="n">ubound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9890" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9890 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">Rnd</span><span class="p">(</span><span class="n">ubound</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="current-ticks" data-anchor> Current Ticks </h3>
+  <div class="sk-api-description">
+    <p>Gets the number of milliseconds that have passed since the program was
+started.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Unsigned Integer</code></p>
+
+          </strong>
+          <p>The number of milliseconds passed</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2256" aria-controls="cpp-snippet-2256" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5650" aria-controls="pas-snippet-5650" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2256" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2256 pre">
+        <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">current_ticks</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5650" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5650 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CurrentTicks</span><span class="p">():</span> <span class="kt">Cardinal</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="delay" data-anchor> Delay </h3>
+  <div class="sk-api-description">
+    <p>Puts the program to sleep for a specified number of milliseconds. If this
+is larger than 1 second, SplashKit will check to see if the user tries to
+quit during the delay. If the user does quit, the delay function returns
+without waiting.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Milliseconds
+                  </th>
+                  <td>
+                      <p><code>Unsigned Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The number of milliseconds to wait</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-427" aria-controls="cpp-snippet-427" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8685" aria-controls="pas-snippet-8685" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-427" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-427 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">delay</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">milliseconds</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8685" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8685 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="k">Delay</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">:</span> <span class="kt">Cardinal</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="file-as-string" data-anchor> File As String </h3>
+  <div class="sk-api-description">
+    <p>Return a SplashKit resource of <a href="/api/resources/#resource-kind"><code>Resource Kind</code></a> with name <code>Filename</code>
+as a string.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The file loaded into a string.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The filename of the resource.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Kind
+                  </th>
+                  <td>
+                      <p><a href="/api/resources/#resource-kind"><code>Resource Kind</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The kind of resource.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3584" aria-controls="cpp-snippet-3584" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4923" aria-controls="pas-snippet-4923" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3584" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3584 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">file_as_string</span><span class="p">(</span><span class="n">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">resource_kind</span> <span class="n">kind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4923" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4923 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">FileAsString</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">kind</span><span class="p">:</span> <span class="n">ResourceKind</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

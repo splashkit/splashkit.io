@@ -1,0 +1,3993 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Networking</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_networking api_networking_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Networking
+      </h1>
+        <p class="lead">
+          SplashKit's network-related functions allow you to communicate data
+across networks.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link active">
+          Networking
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#decimal-to-hexadecimal" class="nav-link">
+        Decimal To Hexadecimal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#hexadecimal-str-to-ipv4" class="nav-link">
+        Hexadecimal Str To IPv4
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#hexadecimal-to-decimal-string" class="nav-link">
+        Hexadecimal To Decimal String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#ipv4-to-decimal" class="nav-link">
+        IPv4 To Decimal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#ipv4-to-hexadecimal" class="nav-link">
+        IPv4 To Hexadecimal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#ipv4-to-str" class="nav-link">
+        IPv4 To Str
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#my-ip" class="nav-link">
+        My IP
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#download-bitmap" class="nav-link">
+        Download Bitmap
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#download-font" class="nav-link">
+        Download Font
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#download-music" class="nav-link">
+        Download Music
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#download-sound-effect" class="nav-link">
+        Download Sound Effect
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-response" class="nav-link">
+        Free Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-get" class="nav-link">
+        HTTP GET
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-post" class="nav-link">
+        HTTP POST
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-response-to-string" class="nav-link">
+        HTTP Response To String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#save-response-to-file" class="nav-link">
+        Save Response To File
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-incoming-requests" class="nav-link">
+        Has Incoming Requests
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-delete-request-for" class="nav-link">
+        Is DELETE Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-get-request-for" class="nav-link">
+        Is GET Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-options-request-for" class="nav-link">
+        Is Options Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-post-request-for" class="nav-link">
+        Is POST Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-put-request-for" class="nav-link">
+        Is PUT Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-request-for" class="nav-link">
+        Is Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#is-trace-request-for" class="nav-link">
+        Is Trace Request For
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#next-web-request" class="nav-link">
+        Next Web Request
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#request-body" class="nav-link">
+        Request Body
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#request-method" class="nav-link">
+        Request Method
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#request-uri" class="nav-link">
+        Request URI
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#request-uri-stubs" class="nav-link">
+        Request URI Stubs
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-html-file-response" class="nav-link">
+        Send HTML File Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#send-response" class="nav-link">
+        Send Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#split-uri-stubs" class="nav-link">
+        Split URI Stubs
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-web-server" class="nav-link">
+        Start Web Server
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-web-server" class="nav-link">
+        Start Web Server
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#stop-web-server" class="nav-link">
+        Stop Web Server
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#connection" class="nav-link">
+        Connection
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#connection-type" class="nav-link">
+        Connection Type
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-method" class="nav-link">
+        HTTP Method
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-request" class="nav-link">
+        HTTP Request
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-response" class="nav-link">
+        HTTP Response
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#message" class="nav-link">
+        Message
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#server-socket" class="nav-link">
+        Server Socket
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#web-server" class="nav-link">
+        Web Server
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="decimal-to-hexadecimal" data-anchor> Decimal To Hexadecimal </h3>
+  <div class="sk-api-description">
+    <p>Converts the supplied decimal integer into it&#39;s hexadecimal representation.
+e.g. 0x7F000001 from 2130706433</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>hexadecimal representation of the supplied decimal integer</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    A Decimal
+                  </th>
+                  <td>
+                      <p><code>Unsigned Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>decimal to be converted to a hexadecimal number string</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4295" aria-controls="cpp-snippet-4295" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6774" aria-controls="pas-snippet-6774" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4295" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4295 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">dec_to_hex</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">a_dec</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6774" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6774 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DecToHex</span><span class="p">(</span><span class="n">aDec</span><span class="p">:</span> <span class="kt">Cardinal</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="hexadecimal-str-to-ipv4" data-anchor> Hexadecimal Str To IPv4 </h3>
+  <div class="sk-api-description">
+    <p>The supplied hexadecimal string is translated into ipv4 standard address string.
+Function handles hex strings starting with or without 0x.
+e.g. 127.0.0.1 from 0x7F000001</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>standard ipv4 address using format X.X.X.X</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    A Hexadecimal
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>hexadecimal ipv4 string to convert</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2351" aria-controls="cpp-snippet-2351" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-532" aria-controls="pas-snippet-532" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2351" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2351 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">hex_str_to_ipv4</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">a_hex</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-532" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-532 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HexStrToIpv4</span><span class="p">(</span><span class="k">const</span> <span class="n">aHex</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="hexadecimal-to-decimal-string" data-anchor> Hexadecimal To Decimal String </h3>
+  <div class="sk-api-description">
+    <p>The supplied hexadecimal string is converted into it&#39;s decimal representation
+e.g. 7F into 127</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>decimal representation of supplied hex string</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    A Hexadecimal
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>hexadecimal string to convert</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5526" aria-controls="cpp-snippet-5526" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1275" aria-controls="pas-snippet-1275" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5526" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5526 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">hex_to_dec_string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">a_hex</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1275" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1275 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HexToDecString</span><span class="p">(</span><span class="k">const</span> <span class="n">aHex</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="ipv4-to-decimal" data-anchor> IPv4 To Decimal </h3>
+  <div class="sk-api-description">
+    <p>Encodes the supplied ipv4 address string (in format X.X.X.X) into a single integer
+e.g. 127.0.0.1 into 2130706433</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Unsigned Integer</code></p>
+
+          </strong>
+          <p>encoded ipv4 string</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    A IP
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>ipv4 address to encode</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4291" aria-controls="cpp-snippet-4291" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6898" aria-controls="pas-snippet-6898" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4291" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4291 pre">
+        <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">ipv4_to_dec</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">a_ip</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6898" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6898 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">Ipv4ToDec</span><span class="p">(</span><span class="k">const</span> <span class="n">aIp</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Cardinal</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="ipv4-to-hexadecimal" data-anchor> IPv4 To Hexadecimal </h3>
+  <div class="sk-api-description">
+    <p>Converts an ipv4 address into it&#39;s hexadecimal representation
+e.g. 0x7F000001 from 127.0.0.1</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>hexadecimal representation of ipc4 string</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    A IP
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>ip address to convert</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6924" aria-controls="cpp-snippet-6924" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3862" aria-controls="pas-snippet-3862" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6924" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6924 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">ipv4_to_hex</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">a_ip</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3862" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3862 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">Ipv4ToHex</span><span class="p">(</span><span class="k">const</span> <span class="n">aIp</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="ipv4-to-str" data-anchor> IPv4 To Str </h3>
+  <div class="sk-api-description">
+    <p>Decodes the supplied unsigned 32 bit integer into it&#39;s ipv4 address form
+e.g. 2130706433 into 127.0.0.1</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>ipv4 address string in X.X.X.X format</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    IP
+                  </th>
+                  <td>
+                      <p><code>Unsigned Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>integer to be decoded</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6485" aria-controls="cpp-snippet-6485" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5329" aria-controls="pas-snippet-5329" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6485" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6485 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">ipv4_to_str</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">ip</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5329" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5329 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">Ipv4ToStr</span><span class="p">(</span><span class="n">ip</span><span class="p">:</span> <span class="kt">Cardinal</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="my-ip" data-anchor> My IP </h3>
+  <div class="sk-api-description">
+    <p>Returns the ipv4 string of the localhost loopback for the current computer.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>ipv4 address string in X.X.X.X format</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5183" aria-controls="cpp-snippet-5183" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7675" aria-controls="pas-snippet-7675" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5183" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5183 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">my_ip</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7675" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7675 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">MyIp</span><span class="p">():</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="download-bitmap" data-anchor> Download Bitmap </h3>
+  <div class="sk-api-description">
+    <p>Download an image from a web server and load it into SplashKit so that
+you can use it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#bitmap"><code>Bitmap</code></a></p>
+
+          </strong>
+          <p>The bitmap that was loaded</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the bitmap resource when it is loaded</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The URL path to the image resoure</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port to connect to on the server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6642" aria-controls="cpp-snippet-6642" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9102" aria-controls="pas-snippet-9102" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6642" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6642 pre">
+        <pre class="codehilite"><code><span class="n">bitmap</span> <span class="n">download_bitmap</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9102" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9102 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DownloadBitmap</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">Bitmap</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="download-font" data-anchor> Download Font </h3>
+  <div class="sk-api-description">
+    <p>Download a font from a web server and load it into SplashKit so that
+you can use it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#font"><code>Font</code></a></p>
+
+          </strong>
+          <p>The font that was loaded</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the font resource when it is loaded</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The URL path to the font resoure</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port to connect to on the server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-80" aria-controls="cpp-snippet-80" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6857" aria-controls="pas-snippet-6857" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-80" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-80 pre">
+        <pre class="codehilite"><code><span class="n">font</span> <span class="n">download_font</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6857" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6857 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DownloadFont</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">Font</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="download-music" data-anchor> Download Music </h3>
+  <div class="sk-api-description">
+    <p>Download a music file from a web server and load it into SplashKit so
+that you can use it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/audio/#music"><code>Music</code></a></p>
+
+          </strong>
+          <p>The music that was loaded</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the music resource when it is loaded</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The URL path to the music resoure</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port to connect to on the server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6387" aria-controls="cpp-snippet-6387" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2186" aria-controls="pas-snippet-2186" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6387" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6387 pre">
+        <pre class="codehilite"><code><span class="n">music</span> <span class="n">download_music</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2186" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2186 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DownloadMusic</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">Music</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="download-sound-effect" data-anchor> Download Sound Effect </h3>
+  <div class="sk-api-description">
+    <p>Download a sound effect from a web server and load it into SplashKit so
+that you can use it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/audio/#sound-effect"><code>Sound Effect</code></a></p>
+
+          </strong>
+          <p>The sound effect that was loaded</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the sound effect resource when it is loaded</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The URL path to the sound effect resoure</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port to connect to on the server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3608" aria-controls="cpp-snippet-3608" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-849" aria-controls="pas-snippet-849" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3608" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3608 pre">
+        <pre class="codehilite"><code><span class="n">sound_effect</span> <span class="n">download_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-849" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-849 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DownloadSoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">SoundEffect</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-response" data-anchor> Free Response </h3>
+  <div class="sk-api-description">
+    <p>Free the response resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Response
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-response"><code>HTTP Response</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The response to free</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-290" aria-controls="cpp-snippet-290" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5389" aria-controls="pas-snippet-5389" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-290" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-290 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_response</span><span class="p">(</span><span class="n">http_response</span> <span class="n">response</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5389" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5389 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeResponse</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="n">HttpResponse</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="http-get" data-anchor> HTTP GET </h3>
+  <div class="sk-api-description">
+    <p>Make a get request to access a resource on the internet.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#http-response"><code>HTTP Response</code></a></p>
+
+          </strong>
+          <p>The response with all of the data received</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The path to the resource, for example http://splashkit.io</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port on the server (80 for http, 443 for https)</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3191" aria-controls="cpp-snippet-3191" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7543" aria-controls="pas-snippet-7543" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3191" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3191 pre">
+        <pre class="codehilite"><code><span class="n">http_response</span> <span class="n">http_get</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7543" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7543 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HttpGet</span><span class="p">(</span><span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">HttpResponse</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="http-post" data-anchor> HTTP POST </h3>
+  <div class="sk-api-description">
+    <p>Post the supplied information to the indicated url.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#http-response"><code>HTTP Response</code></a></p>
+
+          </strong>
+          <p>The response from the server</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    URL
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The url of the server to post the data to</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port to connect to on the server</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Body
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The body of the message to post</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8244" aria-controls="cpp-snippet-8244" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6873" aria-controls="pas-snippet-6873" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8244" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8244 pre">
+        <pre class="codehilite"><code><span class="n">http_response</span> <span class="n">http_post</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">url</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">,</span> <span class="n">string</span> <span class="n">body</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6873" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6873 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HttpPost</span><span class="p">(</span><span class="k">const</span> <span class="n">url</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">;</span> <span class="n">body</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">HttpResponse</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="http-response-to-string" data-anchor> HTTP Response To String </h3>
+  <div class="sk-api-description">
+    <p>Read the HTTP response and convert it to text</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The data from the response as text</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Response
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-response"><code>HTTP Response</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The response from the server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1649" aria-controls="cpp-snippet-1649" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8122" aria-controls="pas-snippet-8122" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1649" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1649 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">http_response_to_string</span><span class="p">(</span><span class="n">http_response</span> <span class="n">response</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8122" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8122 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HttpResponseToString</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="n">HttpResponse</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="save-response-to-file" data-anchor> Save Response To File </h3>
+  <div class="sk-api-description">
+    <p>Save the HTTP response downloaded into a file.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Response
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-response"><code>HTTP Response</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The response from the server</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The path to the file where the response should be saved</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5322" aria-controls="cpp-snippet-5322" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6530" aria-controls="pas-snippet-6530" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5322" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5322 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">save_response_to_file</span><span class="p">(</span><span class="n">http_response</span> <span class="n">response</span><span class="p">,</span> <span class="n">string</span> <span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6530" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6530 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SaveResponseToFile</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="n">HttpResponse</span><span class="p">;</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-incoming-requests" data-anchor> Has Incoming Requests </h3>
+  <div class="sk-api-description">
+    <p>Returns true if the given <code>Web Sever</code> has pending requests.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> denoting whether the <a href="/api/networking/#web-server"><code>Web Server</code></a> has pending requests.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Server
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#web-server"><code>Web Server</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#web-server"><code>Web Server</code></a> to check for waiting requests.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5975" aria-controls="cpp-snippet-5975" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7565" aria-controls="pas-snippet-7565" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5975" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5975 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_incoming_requests</span><span class="p">(</span><span class="n">web_server</span> <span class="n">server</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7565" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7565 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasIncomingRequests</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">WebServer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-delete-request-for" data-anchor> Is DELETE Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to delete a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP DELETE request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2387" aria-controls="cpp-snippet-2387" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4983" aria-controls="pas-snippet-4983" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2387" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2387 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_delete_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4983" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4983 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsDeleteRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-get-request-for" data-anchor> Is GET Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to get a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP GET request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5475" aria-controls="cpp-snippet-5475" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3996" aria-controls="pas-snippet-3996" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5475" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5475 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_get_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3996" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3996 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsGetRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-options-request-for" data-anchor> Is Options Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to check options for given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP OPTIONS request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7107" aria-controls="cpp-snippet-7107" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9013" aria-controls="pas-snippet-9013" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7107" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7107 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_options_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9013" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9013 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsOptionsRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-post-request-for" data-anchor> Is POST Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to create (post) a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP POST request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8119" aria-controls="cpp-snippet-8119" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3232" aria-controls="pas-snippet-3232" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8119" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8119 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_post_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3232" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3232 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsPostRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-put-request-for" data-anchor> Is PUT Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to update (put) a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP PUT request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3758" aria-controls="cpp-snippet-3758" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2578" aria-controls="pas-snippet-2578" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3758" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3758 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_put_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2578" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2578 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsPutRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-request-for" data-anchor> Is Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request is after a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is for the indicated method and path</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Method
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-method"><code>HTTP Method</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The kind of request</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4672" aria-controls="cpp-snippet-4672" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-619" aria-controls="pas-snippet-619" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4672" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4672 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="n">http_method</span> <span class="n">method</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-619" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-619 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="n">method</span><span class="p">:</span> <span class="n">HttpMethod</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="is-trace-request-for" data-anchor> Is Trace Request For </h3>
+  <div class="sk-api-description">
+    <p>Checks if a request wants to trace a given resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the request is a HTTP TRACE request for <code>Path</code></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Request
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to check</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The resource/route path</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2094" aria-controls="cpp-snippet-2094" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9875" aria-controls="pas-snippet-9875" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2094" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2094 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">is_trace_request_for</span><span class="p">(</span><span class="n">http_request</span> <span class="n">request</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9875" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9875 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">IsTraceRequestFor</span><span class="p">(</span><span class="n">request</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="next-web-request" data-anchor> Next Web Request </h3>
+  <div class="sk-api-description">
+    <p>Returns the next request on a given <a href="/api/networking/#web-server"><code>Web Server</code></a> instance</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+          </strong>
+          <p>Returns the next request on the given <a href="/api/networking/#web-server"><code>Web Server</code></a> instance.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Server
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#web-server"><code>Web Server</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#web-server"><code>Web Server</code></a> to get the <a href="/api/networking/#http-request"><code>HTTP Request</code></a> from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3248" aria-controls="cpp-snippet-3248" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6027" aria-controls="pas-snippet-6027" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3248" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3248 pre">
+        <pre class="codehilite"><code><span class="n">http_request</span> <span class="n">next_web_request</span><span class="p">(</span><span class="n">web_server</span> <span class="n">server</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6027" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6027 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">NextWebRequest</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">WebServer</span><span class="p">):</span> <span class="n">HttpRequest</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="request-body" data-anchor> Request Body </h3>
+  <div class="sk-api-description">
+    <p>Returns the body of the request.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The body of the request.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>A request object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3263" aria-controls="cpp-snippet-3263" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-585" aria-controls="pas-snippet-585" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3263" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3263 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">request_body</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-585" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-585 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RequestBody</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="request-method" data-anchor> Request Method </h3>
+  <div class="sk-api-description">
+    <p>Returns the HTTP method of the client request.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#http-method"><code>HTTP Method</code></a></p>
+
+          </strong>
+          <p>Returns the request method.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>A request object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4637" aria-controls="cpp-snippet-4637" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2422" aria-controls="pas-snippet-2422" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4637" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4637 pre">
+        <pre class="codehilite"><code><span class="n">http_method</span> <span class="n">request_method</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2422" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2422 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RequestMethod</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">):</span> <span class="n">HttpMethod</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="request-uri" data-anchor> Request URI </h3>
+  <div class="sk-api-description">
+    <p>Returns the server URI of the client request.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns the requested URI in the form of a string.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>A request object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8218" aria-controls="cpp-snippet-8218" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5470" aria-controls="pas-snippet-5470" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8218" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8218 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">request_uri</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5470" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5470 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RequestUri</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="request-uri-stubs" data-anchor> Request URI Stubs </h3>
+  <div class="sk-api-description">
+    <p>Returns an array of strings representing each stub of the URI.</p>
+
+<p>For example a request sent to http://localhost:8080/names/0 returns...</p>
+
+<p>[&quot;names&quot;, &quot;0&quot;]</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Dynamic Array</code></p>
+
+          </strong>
+          <p>The array of stubs as strings.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request for retrieving URI to split into stubs.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6937" aria-controls="cpp-snippet-6937" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2663" aria-controls="pas-snippet-2663" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6937" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6937 pre">
+        <pre class="codehilite"><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">request_uri_stubs</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2663" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2663 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RequestUriStubs</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">):</span> <span class="n">ArrayOfString</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-html-file-response" data-anchor> Send HTML File Response </h3>
+  <div class="sk-api-description">
+    <p>Serves a HTML file to the given <a href="/api/networking/#http-request"><code>HTTP Request</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to be sent.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the file in Resources/server</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1980" aria-controls="cpp-snippet-1980" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3581" aria-controls="pas-snippet-3581" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1980" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1980 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_html_file_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3581" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3581 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendHtmlFileResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Sends a response with no content to a <a href="/api/networking/#http-request"><code>HTTP Request</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#http-request"><code>HTTP Request</code></a> to send the response to</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5925" aria-controls="cpp-snippet-5925" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9782" aria-controls="pas-snippet-9782" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5925" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5925 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9782" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9782 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Sends a message to a given <a href="/api/networking/#http-request"><code>HTTP Request</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request to be sent.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Message
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The message to be sent</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9553" aria-controls="cpp-snippet-9553" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2407" aria-controls="pas-snippet-2407" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9553" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9553 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">message</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2407" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2407 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="k">const</span> <span class="k">message</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Sends a response code to a given <a href="/api/networking/#http-request"><code>HTTP Request</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#http-request"><code>HTTP Request</code></a> to send the response to</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Code
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#http-status-code"><code>HTTP Status Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="See%20https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status code</a> to be sent.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6323" aria-controls="cpp-snippet-6323" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6904" aria-controls="pas-snippet-6904" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6323" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6323 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="n">http_status_code</span> <span class="n">code</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6904" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6904 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="n">code</span><span class="p">:</span> <span class="n">HttpStatusCode</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Sends a message to a given <a href="/api/networking/#http-request"><code>HTTP Request</code></a> with the specified content type.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#http-request"><code>HTTP Request</code></a> to send the response to</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Code
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#http-status-code"><code>HTTP Status Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="See%20https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status code</a> to be sent.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Message
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The messsage, in the form of a <a href="/api/networking/#http-response"><code>HTTP Response</code></a>, to be sent.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1596" aria-controls="cpp-snippet-1596" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7760" aria-controls="pas-snippet-7760" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1596" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1596 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="n">http_status_code</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">message</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7760" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7760 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="n">code</span><span class="p">:</span> <span class="n">HttpStatusCode</span><span class="p">;</span> <span class="k">const</span> <span class="k">message</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Sends a message to a given <a href="/api/networking/#http-request"><code>HTTP Request</code></a> with the specified content type.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/networking/#http-request"><code>HTTP Request</code></a> to send the response to</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Code
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#http-status-code"><code>HTTP Status Code</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="See%20https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">HTTP status code</a> to be sent.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Message
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The messsage, in the form of a <a href="/api/networking/#http-response"><code>HTTP Response</code></a>, to be sent.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Content Type
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The content type of the response.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4500" aria-controls="cpp-snippet-4500" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2755" aria-controls="pas-snippet-2755" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4500" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4500 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="n">http_status_code</span> <span class="n">code</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">message</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">content_type</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2755" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2755 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="n">code</span><span class="p">:</span> <span class="n">HttpStatusCode</span><span class="p">;</span> <span class="k">const</span> <span class="k">message</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">contentType</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="send-response" data-anchor> Send Response </h3>
+  <div class="sk-api-description">
+    <p>Send a JSON response to a given <a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#http-request"><code>HTTP Request</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The request the response belongs to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The json to be sent.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1545" aria-controls="cpp-snippet-1545" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6550" aria-controls="pas-snippet-6550" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1545" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1545 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">send_response</span><span class="p">(</span><span class="n">http_request</span> <span class="n">r</span><span class="p">,</span> <span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6550" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6550 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SendResponse</span><span class="p">(</span><span class="n">r</span><span class="p">:</span> <span class="n">HttpRequest</span><span class="p">;</span> <span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="split-uri-stubs" data-anchor> Split URI Stubs </h3>
+  <div class="sk-api-description">
+    <p>Returns an array of strings representing each stub of the URI.</p>
+
+<p>For example a request sent to http://localhost:8080/names/0 returns...</p>
+
+<p>[&quot;names&quot;, &quot;0&quot;]</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Dynamic Array</code></p>
+
+          </strong>
+          <p>The array of stubs as strings.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    URI
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The URI to split into stubs.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2671" aria-controls="cpp-snippet-2671" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4497" aria-controls="pas-snippet-4497" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2671" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2671 pre">
+        <pre class="codehilite"><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">split_uri_stubs</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">uri</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4497" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4497 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">SplitUriStubs</span><span class="p">(</span><span class="k">const</span> <span class="n">uri</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">ArrayOfString</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-web-server" data-anchor> Start Web Server </h3>
+  <div class="sk-api-description">
+    <p>Creates a new web server instance and starts it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#web-server"><code>Web Server</code></a></p>
+
+          </strong>
+          <p>Returns a new <code>Web Sever</code> instance.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7996" aria-controls="cpp-snippet-7996" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6396" aria-controls="pas-snippet-6396" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7996" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7996 pre">
+        <pre class="codehilite"><code><span class="n">web_server</span> <span class="n">start_web_server</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6396" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6396 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">StartWebServer</span><span class="p">():</span> <span class="n">WebServer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-web-server" data-anchor> Start Web Server </h3>
+  <div class="sk-api-description">
+    <p>Starts the web server on a given port number.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/networking/#web-server"><code>Web Server</code></a></p>
+
+          </strong>
+          <p>Returns a new <a href="/api/networking/#web-server"><code>Web Server</code></a> instance.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Port
+                  </th>
+                  <td>
+                      <p><code>Unsigned Short</code></p>
+
+                  </td>
+                  <td>
+                    <p>The port number to connect through.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7328" aria-controls="cpp-snippet-7328" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4258" aria-controls="pas-snippet-4258" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7328" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7328 pre">
+        <pre class="codehilite"><code><span class="n">web_server</span> <span class="n">start_web_server</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">short</span> <span class="n">port</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4258" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4258 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">StartWebServer</span><span class="p">(</span><span class="n">port</span><span class="p">:</span> <span class="kt">Word</span><span class="p">):</span> <span class="n">WebServer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="stop-web-server" data-anchor> Stop Web Server </h3>
+  <div class="sk-api-description">
+    <p>Stops a given <a href="/api/networking/#web-server"><code>Web Server</code></a> instance.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Server
+                  </th>
+                  <td>
+                      <p><a href="/api/networking/#web-server"><code>Web Server</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The server instance to stop.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5029" aria-controls="cpp-snippet-5029" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3152" aria-controls="pas-snippet-3152" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5029" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5029 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_web_server</span><span class="p">(</span><span class="n">web_server</span> <span class="n">server</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3152" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3152 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopWebServer</span><span class="p">(</span><span class="n">server</span><span class="p">:</span> <span class="n">WebServer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="connection" data-anchor> Connection </h3>
+  <div class="sk-api-description">
+    <p>A connection represents the communication channel from a client going to
+a server. This can be used for the client and the server to send and
+receive messages.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="connection-type" data-anchor> Connection Type </h3>
+  <div class="sk-api-description">
+    <p>The kind of protocol used for a server of connection.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Tcp
+                  </th>
+                  <td>
+                    <p>Uses the TCP protocol. SplashKit can send messages of any
+size, and repackage it from you at the other end. Messages
+are reliably transferred.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Udp
+                  </th>
+                  <td>
+                    <p>Uses the UDP protocol. SplashKit will send messages of up
+to 1024 bytes (by default). You need to handle packaging
+anything larger than this.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Unknown
+                  </th>
+                  <td>
+                    <p>The protocol is unknown, usually due to the connection
+or server being invalid or closed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="http-method" data-anchor> HTTP Method </h3>
+  <div class="sk-api-description">
+    <p>The method token is used to indicate the kind of action to be performed
+on the server. See <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html">W3 specifications</a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    HTTP GET Method
+                  </th>
+                  <td>
+                    <p>A get method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP POST Method
+                  </th>
+                  <td>
+                    <p>A post method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP PUT Method
+                  </th>
+                  <td>
+                    <p>A put method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP DELETE Method
+                  </th>
+                  <td>
+                    <p>A delete method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Options Method
+                  </th>
+                  <td>
+                    <p>An options method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Trace Method
+                  </th>
+                  <td>
+                    <p>A trace method</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Unknown HTTP Method
+                  </th>
+                  <td>
+                    <p>A method not recognised by SplashKit</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="http-request" data-anchor> HTTP Request </h3>
+  <div class="sk-api-description">
+    <p>No description</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="http-response" data-anchor> HTTP Response </h3>
+  <div class="sk-api-description">
+    <p>A HTTP response is a resource that comes back from a HTTP request. This
+may be the text related to a web page, or the data related to a resource.
+Once you have used the response, you need to make sure to call
+<a href="/api/networking/#free-response"><code>Free Response</code></a>.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="message" data-anchor> Message </h3>
+  <div class="sk-api-description">
+    <p>A message contains data that has been transferred between a client
+connection and a server (or visa versa).</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="server-socket" data-anchor> Server Socket </h3>
+  <div class="sk-api-description">
+    <p>A server represents a network resource that clients can connect to. The
+server will receive messages from all of the client connections, and can
+be used to access the clients connected to the server.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="web-server" data-anchor> Web Server </h3>
+  <div class="sk-api-description">
+    <p>No description</p>
+
+  </div>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

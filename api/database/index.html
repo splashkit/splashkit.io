@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Database</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_database api_database_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Database
+      </h1>
+        <p class="lead">
+          SplashKit Database allows you to create, query and otherwise
+manipulate a database.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link active">
+          Database
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#database-named" class="nav-link">
+        Database Named
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-all-databases" class="nav-link">
+        Free All Databases
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-all-query-results" class="nav-link">
+        Free All Query Results
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-database" class="nav-link">
+        Free Database
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-database" class="nav-link">
+        Free Database
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-query-result" class="nav-link">
+        Free Query Result
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#get-next-row" class="nav-link">
+        Get Next Row
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-database" class="nav-link">
+        Has Database
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-row" class="nav-link">
+        Has Row
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#open-database" class="nav-link">
+        Open Database
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-column-for-boolean" class="nav-link">
+        Query Column For Boolean
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-column-for-double" class="nav-link">
+        Query Column For Double
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-column-for-integer" class="nav-link">
+        Query Column For Integer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-column-for-string" class="nav-link">
+        Query Column For String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-success" class="nav-link">
+        Query Success
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-type-of-col" class="nav-link">
+        Query Type Of Col
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reset-query-result" class="nav-link">
+        Reset Query Result
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#rows-changed" class="nav-link">
+        Rows Changed
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#run-sql" class="nav-link">
+        Run Sql
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#run-sql" class="nav-link">
+        Run Sql
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#database" class="nav-link">
+        Database
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#query-result" class="nav-link">
+        Query Result
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    <p>SplashKit&#39;s database library allows you to easily create or load databases
+and to perform queries on them. To get started with databases in SplashKit,
+the first thinkg you need to do is to load or create a database file. You can
+do this by calling the <code>Open Database(string Name)</code> function.</p>
+
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="database-named" data-anchor> Database Named </h3>
+  <div class="sk-api-description">
+    <p>Retrieves a <a href="/api/database/#database"><code>Database</code></a> that has been loaded into SplashKit.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/database/#database"><code>Database</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/database/#database"><code>Database</code></a> that has been loaded with the specified
+<code>Name</code> using <a href="/api/database/#open-database"><code>Open Database</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the database to return.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8330" aria-controls="cpp-snippet-8330" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4743" aria-controls="pas-snippet-4743" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8330" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8330 pre">
+        <pre class="codehilite"><code><span class="n">database</span> <span class="n">database_named</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4743" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4743 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">DatabaseNamed</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Database</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-all-databases" data-anchor> Free All Databases </h3>
+  <div class="sk-api-description">
+    <p>Releases all of the databases which have been loaded.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-997" aria-controls="cpp-snippet-997" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6154" aria-controls="pas-snippet-6154" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-997" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-997 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_databases</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6154" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6154 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllDatabases</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-all-query-results" data-anchor> Free All Query Results </h3>
+  <div class="sk-api-description">
+    <p>Frees all of the databases which have been loaded.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5941" aria-controls="cpp-snippet-5941" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7653" aria-controls="pas-snippet-7653" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5941" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5941 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_query_results</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7653" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7653 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllQueryResults</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-database" data-anchor> Free Database </h3>
+  <div class="sk-api-description">
+    <p>Frees the SplashKit resources associated with the database.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db To Close
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#database"><code>Database</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#database"><code>Database</code></a> whose resources should be released.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8851" aria-controls="cpp-snippet-8851" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1401" aria-controls="pas-snippet-1401" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8851" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8851 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_database</span><span class="p">(</span><span class="n">database</span> <span class="n">db_to_close</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1401" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1401 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeDatabase</span><span class="p">(</span><span class="n">dbToClose</span><span class="p">:</span> <span class="n">Database</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-database" data-anchor> Free Database </h3>
+  <div class="sk-api-description">
+    <p>Frees the SplashKit resources associated with the database at a given name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name Of Db To Close
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> denoting where the database is which should be released.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4478" aria-controls="cpp-snippet-4478" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3167" aria-controls="pas-snippet-3167" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4478" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4478 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name_of_db_to_close</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3167" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3167 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeDatabase</span><span class="p">(</span><span class="n">nameOfDbToClose</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-query-result" data-anchor> Free Query Result </h3>
+  <div class="sk-api-description">
+    <p>Releases the SplashKit resources associated with the query.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Query
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> whose resources should be released.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1018" aria-controls="cpp-snippet-1018" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4995" aria-controls="pas-snippet-4995" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1018" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1018 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_query_result</span><span class="p">(</span><span class="n">query_result</span> <span class="n">query</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4995" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4995 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeQueryResult</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="get-next-row" data-anchor> Get Next Row </h3>
+  <div class="sk-api-description">
+    <p>Gets the next row available on a given <a href="/api/database/#query-result"><code>Query Result</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> which represents if there was a valid row of data to move to.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to move to the next row on.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7515" aria-controls="cpp-snippet-7515" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1447" aria-controls="pas-snippet-1447" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7515" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7515 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">get_next_row</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1447" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1447 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">GetNextRow</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-database" data-anchor> Has Database </h3>
+  <div class="sk-api-description">
+    <p>Determines if SplashKit has a database loaded for the supplied name.
+This checks against all databases loaded, those loaded without a name
+are assigned the filename as a default. If this returns <code>False</code>, you may
+want to use <code>Load Database</code> to load in a specific database and give
+it the desired name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns <code>True</code> if a database with the given <code>Name</code> has
+has been loaded.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the database you want to check for.
+This will match the name you used when opening the database in open_database</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2337" aria-controls="cpp-snippet-2337" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6690" aria-controls="pas-snippet-6690" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2337" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2337 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6690" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6690 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasDatabase</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-row" data-anchor> Has Row </h3>
+  <div class="sk-api-description">
+    <p>Checks if a given <a href="/api/database/#query-result"><code>Query Result</code></a> has a valid row of data.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> which represents if there was a valid row of data.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to check for a valid row of data on.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1870" aria-controls="cpp-snippet-1870" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3845" aria-controls="pas-snippet-3845" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1870" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1870 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_row</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3845" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3845 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasRow</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="open-database" data-anchor> Open Database </h3>
+  <div class="sk-api-description">
+    <p>Loads or creates, and returns a database.</p>
+
+<p>The supplied <code>Filename</code> is the name of the file of the database. The
+supplied <code>Name</code> indicates the name to use to refer to this <a href="/api/database/#database"><code>Database</code></a>.
+The <a href="/api/database/#database"><code>Database</code></a> can then be retrieved by passing this <code>Name</code> to
+the <a href="/api/database/#database-named"><code>Database Named</code></a> function. If the database file does not exist, it
+will be created for you.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/database/#database"><code>Database</code></a></p>
+
+          </strong>
+          <p>A new <a href="/api/database/#database"><code>Database</code></a> with the initialised values provided.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name used to refer to the database.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The filename used to locate the database to use.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4952" aria-controls="cpp-snippet-4952" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-842" aria-controls="pas-snippet-842" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4952" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4952 pre">
+        <pre class="codehilite"><code><span class="n">database</span> <span class="n">open_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-842" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-842 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">OpenDatabase</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Database</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-column-for-boolean" data-anchor> Query Column For Boolean </h3>
+  <div class="sk-api-description">
+    <p>Queries a given column in the current row of the <a href="/api/database/#query-result"><code>Query Result</code></a> for a bool.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns the <code>Boolean</code> which is the data at that column.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to perform the query on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Col
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column you would like to query data from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9683" aria-controls="cpp-snippet-9683" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5404" aria-controls="pas-snippet-5404" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9683" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9683 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">query_column_for_bool</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5404" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5404 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForBool</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-column-for-double" data-anchor> Query Column For Double </h3>
+  <div class="sk-api-description">
+    <p>Queries a given column in the current row of the <a href="/api/database/#query-result"><code>Query Result</code></a> for a double.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Double</code></p>
+
+          </strong>
+          <p>Returns the <code>Double</code> which is the data at that column.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to perform the query on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Col
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column you would like to query data from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1231" aria-controls="cpp-snippet-1231" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9197" aria-controls="pas-snippet-9197" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1231" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1231 pre">
+        <pre class="codehilite"><code><span class="kt">double</span> <span class="n">query_column_for_double</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9197" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9197 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForDouble</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Double</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-column-for-integer" data-anchor> Query Column For Integer </h3>
+  <div class="sk-api-description">
+    <p>Queries a given column in the current row of the <a href="/api/database/#query-result"><code>Query Result</code></a> for an integer.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns the <code>Integer</code> which is the data at that column.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to perform the query on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Col
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column you would like to query data from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1741" aria-controls="cpp-snippet-1741" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5561" aria-controls="pas-snippet-5561" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1741" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1741 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">query_column_for_int</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5561" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5561 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForInt</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-column-for-string" data-anchor> Query Column For String </h3>
+  <div class="sk-api-description">
+    <p>Queries a given column in the current row of the <a href="/api/database/#query-result"><code>Query Result</code></a> for a string.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns the <code>String</code> which is the data at that column.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to perform the query on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Col
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column you would like to query data from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1558" aria-controls="cpp-snippet-1558" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5654" aria-controls="pas-snippet-5654" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1558" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1558 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">query_column_for_string</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5654" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5654 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForString</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-success" data-anchor> Query Success </h3>
+  <div class="sk-api-description">
+    <p>Checks if the most recent query at the given <a href="/api/database/#query-result"><code>Query Result</code></a> was a success or failure.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns whether or not the query was a success or failure represented as a <code>Boolean</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to check the success of.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2214" aria-controls="cpp-snippet-2214" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2103" aria-controls="pas-snippet-2103" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2214" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2214 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">query_success</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2103" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2103 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QuerySuccess</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="query-type-of-col" data-anchor> Query Type Of Col </h3>
+  <div class="sk-api-description">
+    <p>Queries a given column in the current row of the <a href="/api/database/#query-result"><code>Query Result</code></a> for the data type at its postition.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns a <code>String</code> which is the name of the data type being stored.
+- Could return: <code>Integer</code>, <code>Float</code>, <code>Text</code>, <code>Null</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to perform the query on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Col
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column you would like to know the data type of</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9741" aria-controls="cpp-snippet-9741" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3714" aria-controls="pas-snippet-3714" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9741" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9741 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">query_type_of_col</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3714" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3714 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryTypeOfCol</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reset-query-result" data-anchor> Reset Query Result </h3>
+  <div class="sk-api-description">
+    <p>Resets a query_result back to its initial state, ready to be re-executed.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db Result
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> to reset.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5299" aria-controls="cpp-snippet-5299" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2722" aria-controls="pas-snippet-2722" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5299" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5299 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_query_result</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2722" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2722 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetQueryResult</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="rows-changed" data-anchor> Rows Changed </h3>
+  <div class="sk-api-description">
+    <p>Calculates the number of row changed in the database at the last time
+a changing query was performed on the given database.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns the <code>Integer</code> which represents how many rows were changed
+in the database.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#database"><code>Database</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The database to check how many rows changed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1000" aria-controls="cpp-snippet-1000" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5403" aria-controls="pas-snippet-5403" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1000" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1000 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">rows_changed</span><span class="p">(</span><span class="n">database</span> <span class="n">db</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5403" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5403 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RowsChanged</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="run-sql" data-anchor> Run Sql </h3>
+  <div class="sk-api-description">
+    <p>Returns the <a href="/api/database/#query-result"><code>Query Result</code></a> for the query passed into <code>Sql</code>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/database/#query-result"><code>Query Result</code></a> which represents
+the result of perfoming <code>Sql</code> on <code>Db</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Db
+                  </th>
+                  <td>
+                      <p><a href="/api/database/#database"><code>Database</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The database to perform <code>Sql</code> on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Sql
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The sql statement to perform on <code>Db</code>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3374" aria-controls="cpp-snippet-3374" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7799" aria-controls="pas-snippet-7799" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3374" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3374 pre">
+        <pre class="codehilite"><code><span class="n">query_result</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">database</span> <span class="n">db</span><span class="p">,</span> <span class="n">string</span> <span class="n">sql</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7799" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7799 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RunSql</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">;</span> <span class="n">sql</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">QueryResult</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="run-sql" data-anchor> Run Sql </h3>
+  <div class="sk-api-description">
+    <p>Returns the <a href="/api/database/#query-result"><code>Query Result</code></a> for the query passed into <code>Sql</code>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/database/#query-result"><code>Query Result</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/database/#query-result"><code>Query Result</code></a> which represents
+the result of perfoming <code>Sql</code> on the database at <code>Database Name</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Database Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The string name of the database to perform <code>Sql</code> on.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Sql
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The sql statement to perform on the database at <code>Database Name</code>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8244" aria-controls="cpp-snippet-8244" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5203" aria-controls="pas-snippet-5203" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8244" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8244 pre">
+        <pre class="codehilite"><code><span class="n">query_result</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">string</span> <span class="n">database_name</span><span class="p">,</span> <span class="n">string</span> <span class="n">sql</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5203" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5203 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RunSql</span><span class="p">(</span><span class="n">databaseName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">sql</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">QueryResult</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="database" data-anchor> Database </h3>
+  <div class="sk-api-description">
+    <p>The <a href="/api/database/#database"><code>Database</code></a> type is used to refer to databases that can be
+manipulated by the SplashKit database code. Databases are:</p>
+
+<ul>
+<li><p>opened with <a href="/api/database/#open-database"><code>Open Database</code></a>,</p></li>
+<li><p>and must be released using <a href="/api/database/#free-database"><code>Free Database</code></a> (to release a specific
+database) or <code>Delete All Databases</code> (to release all loaded
+databases).</p></li>
+</ul>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="query-result" data-anchor> Query Result </h3>
+  <div class="sk-api-description">
+    <p>The <a href="/api/database/#query-result"><code>Query Result</code></a> type is used to store the result of performing
+a query on the database. It can:</p>
+
+<ul>
+<li><p>show the success or failure of a query using <a href="/api/database/#query-success"><code>Query Success</code></a>,</p></li>
+<li><p>stores the data from queries which return data. This data is
+accessed using <a href="/api/database/#query-column-for-boolean"><code>Query Column For Boolean</code></a>, <a href="/api/database/#query-column-for-integer"><code>Query Column For Integer</code></a>,
+<a href="/api/database/#query-column-for-string"><code>Query Column For String</code></a> and <a href="/api/database/#query-column-for-double"><code>Query Column For Double</code></a>.</p></li>
+</ul>
+
+  </div>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

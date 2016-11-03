@@ -1,0 +1,3173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Animations</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_animations api_animations_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Animations
+      </h1>
+        <p class="lead">
+          Animations in SplashKit can be used to move between cells in
+bitmaps and sprites. Each animation generates a number sequence
+that can then be used when drawing bitmaps.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link active">
+          Animations
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#animation-count" class="nav-link">
+        Animation Count
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-current-cell" class="nav-link">
+        Animation Current Cell
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-current-vector" class="nav-link">
+        Animation Current Vector
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-ended" class="nav-link">
+        Animation Ended
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-entered-frame" class="nav-link">
+        Animation Entered Frame
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-frame-time" class="nav-link">
+        Animation Frame Time
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-index" class="nav-link">
+        Animation Index
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-name" class="nav-link">
+        Animation Name
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-script-name" class="nav-link">
+        Animation Script Name
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-script-named" class="nav-link">
+        Animation Script Named
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-animation" class="nav-link">
+        Create Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-animation" class="nav-link">
+        Create Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-animation" class="nav-link">
+        Create Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-animation" class="nav-link">
+        Create Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-animation" class="nav-link">
+        Create Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-all-animation-scripts" class="nav-link">
+        Free All Animation Scripts
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-animation" class="nav-link">
+        Free Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-animation-script" class="nav-link">
+        Free Animation Script
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-animation-script" class="nav-link">
+        Free Animation Script
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-animation-named" class="nav-link">
+        Has Animation Named
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-animation-script" class="nav-link">
+        Has Animation Script
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#load-animation-script" class="nav-link">
+        Load Animation Script
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#restart-animation" class="nav-link">
+        Restart Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#restart-animation" class="nav-link">
+        Restart Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#update-animation" class="nav-link">
+        Update Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#update-animation" class="nav-link">
+        Update Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#update-animation" class="nav-link">
+        Update Animation
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-count" data-anchor> Animation Count </h3>
+  <div class="sk-api-description">
+    <p>Returns the number of <a href="/api/types/#animation"><code>Animation</code></a>s within an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns an <code>Integer</code> equal to the total number of animations in the script.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to count the animations in.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3517" aria-controls="cpp-snippet-3517" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1329" aria-controls="pas-snippet-1329" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3517" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3517 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_count</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1329" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1329 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCount</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-current-cell" data-anchor> Animation Current Cell </h3>
+  <div class="sk-api-description">
+    <p>Returns the current cell (the part of the image or sprite) of this
+animation. This can be used to animate an image or sprite.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns the current cell of the animation passed to the method.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to return the cell of.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7085" aria-controls="cpp-snippet-7085" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2567" aria-controls="pas-snippet-2567" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7085" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7085 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_current_cell</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2567" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2567 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCurrentCell</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-current-vector" data-anchor> Animation Current Vector </h3>
+  <div class="sk-api-description">
+    <p>Returns the <a href="/api/types/#vector-2d"><code>Vector 2D</code></a> assigned to the current frame in the animation.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/types/#vector-2d"><code>Vector 2D</code></a> assigned to the current frame in the animation.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The animation to check the vector of.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4745" aria-controls="cpp-snippet-4745" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4113" aria-controls="pas-snippet-4113" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4745" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4745 pre">
+        <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">animation_current_vector</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4113" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4113 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCurrentVector</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="n">Vector2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-ended" data-anchor> Animation Ended </h3>
+  <div class="sk-api-description">
+    <p>Checks if an <a href="/api/types/#animation"><code>Animation</code></a> has ended.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> denoting whether the <a href="/api/types/#animation"><code>Animation</code></a> has ended.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The animation to check.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2698" aria-controls="cpp-snippet-2698" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4115" aria-controls="pas-snippet-4115" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2698" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2698 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">animation_ended</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4115" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4115 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationEnded</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-entered-frame" data-anchor> Animation Entered Frame </h3>
+  <div class="sk-api-description">
+    <p>Returns true if the <a href="/api/types/#animation"><code>Animation</code></a> entered a new frame on its last update.
+This can be used to trigger actions on frames within an animation.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> denoting whether the <a href="/api/types/#animation"><code>Animation</code></a> has ended.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The animation to check.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9280" aria-controls="cpp-snippet-9280" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3731" aria-controls="pas-snippet-3731" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9280" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9280 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">animation_entered_frame</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3731" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3731 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationEnteredFrame</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-frame-time" data-anchor> Animation Frame Time </h3>
+  <div class="sk-api-description">
+    <p>Returns the amount of time spent in the current frame. When this
+exceeds the frames duration the animation moves to the next frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>Returns the amount of time spent in the current frame as a <code>Float</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The animation to check.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8419" aria-controls="cpp-snippet-8419" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3197" aria-controls="pas-snippet-3197" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8419" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8419 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">animation_frame_time</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3197" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3197 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationFrameTime</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-index" data-anchor> Animation Index </h3>
+  <div class="sk-api-description">
+    <p>Searches an <a href="/api/types/#animation-script"><code>Animation Script</code></a> for an <a href="/api/types/#animation"><code>Animation</code></a> and returns its
+index.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns the index of the <a href="/api/types/#animation"><code>Animation</code></a> in the <a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to look for the <a href="/api/types/#animation"><code>Animation</code></a> in.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation"><code>Animation</code></a> to look for.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3560" aria-controls="cpp-snippet-3560" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8933" aria-controls="pas-snippet-8933" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3560" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3560 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_index</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8933" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8933 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationIndex</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-name" data-anchor> Animation Name </h3>
+  <div class="sk-api-description">
+    <p>Searches an <a href="/api/types/#animation-script"><code>Animation Script</code></a> for an animation and returns its name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns the name of the <a href="/api/types/#animation"><code>Animation</code></a> in the <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Temp
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to search for.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6345" aria-controls="cpp-snippet-6345" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9362" aria-controls="pas-snippet-9362" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6345" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6345 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">animation_name</span><span class="p">(</span><span class="n">animation</span> <span class="n">temp</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9362" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9362 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationName</span><span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-script-name" data-anchor> Animation Script Name </h3>
+  <div class="sk-api-description">
+    <p>Retuns the name of an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns a <code>String</code> that is the name of the animation script passed to the method.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to return the name of.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2843" aria-controls="cpp-snippet-2843" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2098" aria-controls="pas-snippet-2098" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2843" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2843 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">animation_script_name</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2098" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2098 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationScriptName</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="animation-script-named" data-anchor> Animation Script Named </h3>
+  <div class="sk-api-description">
+    <p>Loads and returns a <a href="/api/types/#animation-script"><code>Animation Script</code></a>. The supplied filename is
+used to locate the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to load. The supplied name
+indicates the name to use to refer to this in SplashKit. The
+<a href="/api/types/#animation-script"><code>Animation Script</code></a> can then be retrieved by passing this name to
+the animation<em>script</em>named method.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+          </strong>
+          <p>Returns the newly loaded <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>Indicates the name used to locate the animation_script to load</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8967" aria-controls="cpp-snippet-8967" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5474" aria-controls="pas-snippet-5474" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8967" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8967 pre">
+        <pre class="codehilite"><code><span class="n">animation_script</span> <span class="n">animation_script_named</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5474" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5474 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationScriptNamed</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">AnimationScript</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7392" aria-controls="cpp-snippet-7392" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9106" aria-controls="pas-snippet-9106" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7392" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7392 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9106" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9106 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>. This may play a
+sound effect if the animation is set to play a sound effect on its
+first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3557" aria-controls="cpp-snippet-3557" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7514" aria-controls="pas-snippet-7514" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3557" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3557 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7514" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7514 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Idx
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The index of the <a href="/api/types/#animation"><code>Animation</code></a> to create.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4451" aria-controls="cpp-snippet-4451" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6255" aria-controls="pas-snippet-6255" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4451" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4451 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6255" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6255 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>. This may play a
+sound effect if the animation is set to play a sound effect on its
+first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Idx
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The index of the <a href="/api/types/#animation"><code>Animation</code></a> to create.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3913" aria-controls="cpp-snippet-3913" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3916" aria-controls="pas-snippet-3916" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3913" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3913 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3916" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3916 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1794" aria-controls="cpp-snippet-1794" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2415" aria-controls="pas-snippet-2415" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1794" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1794 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2415" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2415 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>. This may play a
+sound effect if the animation is set to play a sound effect on its
+first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Script Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to assign the <a href="/api/types/#animation"><code>Animation</code></a> to.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation"><code>Animation</code></a> to be assigned</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6099" aria-controls="cpp-snippet-6099" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9623" aria-controls="pas-snippet-9623" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6099" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6099 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9623" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9623 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-animation" data-anchor> Create Animation </h3>
+  <div class="sk-api-description">
+    <p>Creates an animation from an <a href="/api/types/#animation-script"><code>Animation Script</code></a>. This may play a
+sound effect if the animation is set to play a sound effect on its
+first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+          </strong>
+          <p>Returns the newly created <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to create the <a href="/api/types/#animation"><code>Animation</code></a> from.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Idx
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The index of the <a href="/api/types/#animation"><code>Animation</code></a> to create.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6845" aria-controls="cpp-snippet-6845" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3367" aria-controls="pas-snippet-3367" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6845" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6845 pre">
+        <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3367" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3367 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-animation" data-anchor> Create Animation </h3>
+  <div class="sk-api-description">
+    <p>Creates an animation from an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+          </strong>
+          <p>Returns the newly created <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to create the <a href="/api/types/#animation"><code>Animation</code></a> from</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name for the new <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3047" aria-controls="cpp-snippet-3047" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8943" aria-controls="pas-snippet-8943" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3047" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3047 pre">
+        <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8943" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8943 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-animation" data-anchor> Create Animation </h3>
+  <div class="sk-api-description">
+    <p>Creates an animation from a <a href="/api/types/#animation-script"><code>Animation Script</code></a>. This may play a
+sound effect if the animation is set to play a sound effect on
+its first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+          </strong>
+          <p>Returns the newly created <a href="/api/types/#animation"><code>Animation</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to create the <a href="/api/types/#animation"><code>Animation</code></a> from</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name for the new <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5682" aria-controls="cpp-snippet-5682" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7346" aria-controls="pas-snippet-7346" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5682" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5682 pre">
+        <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7346" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7346 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-animation" data-anchor> Create Animation </h3>
+  <div class="sk-api-description">
+    <p>Creates an animation from an <a href="/api/types/#animation-script"><code>Animation Script</code></a>&#39;s name. This may
+play a sound effect if the animation is set to play a sound effect
+on its first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+          </strong>
+          <p>Returns the newly created <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to create the <a href="/api/types/#animation"><code>Animation</code></a> from</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name for the new <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1849" aria-controls="cpp-snippet-1849" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4742" aria-controls="pas-snippet-4742" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1849" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1849 pre">
+        <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4742" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4742 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-animation" data-anchor> Create Animation </h3>
+  <div class="sk-api-description">
+    <p>Creates an animation from an <a href="/api/types/#animation-script"><code>Animation Script</code></a>&#39;s name. This may
+play a sound effect if the animation is set to play a sound effect
+on its first frame.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+          </strong>
+          <p>Returns the newly created <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to create the <a href="/api/types/#animation"><code>Animation</code></a> from</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name for the new <a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7542" aria-controls="cpp-snippet-7542" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5574" aria-controls="pas-snippet-5574" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7542" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7542 pre">
+        <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5574" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5574 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-all-animation-scripts" data-anchor> Free All Animation Scripts </h3>
+  <div class="sk-api-description">
+    <p>Frees all loaded <a href="/api/types/#animation-script"><code>Animation Script</code></a>s.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6370" aria-controls="cpp-snippet-6370" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3790" aria-controls="pas-snippet-3790" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6370" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6370 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_animation_scripts</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3790" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3790 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllAnimationScripts</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-animation" data-anchor> Free Animation </h3>
+  <div class="sk-api-description">
+    <p>Disposes of the resources used in the animation.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Ani
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be disposed of.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6452" aria-controls="cpp-snippet-6452" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1650" aria-controls="pas-snippet-1650" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6452" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6452 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">ani</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1650" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1650 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimation</span><span class="p">(</span><span class="n">ani</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-animation-script" data-anchor> Free Animation Script </h3>
+  <div class="sk-api-description">
+    <p>Frees loaded animation frames data. Use this when you will no
+longer be using the animation for any purpose, including within
+sprite.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script To Free
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to be freed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4257" aria-controls="cpp-snippet-4257" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9743" aria-controls="pas-snippet-9743" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4257" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4257 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation_script</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script_to_free</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9743" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9743 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimationScript</span><span class="p">(</span><span class="n">scriptToFree</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-animation-script" data-anchor> Free Animation Script </h3>
+  <div class="sk-api-description">
+    <p>Frees loaded <a href="/api/types/#animation-script"><code>Animation Script</code></a> data. Use this when you will no
+longer be using the animation for any purpose, including within
+sprite.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to be freed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3556" aria-controls="cpp-snippet-3556" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3674" aria-controls="pas-snippet-3674" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3556" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3556 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3674" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3674 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-animation-named" data-anchor> Has Animation Named </h3>
+  <div class="sk-api-description">
+    <p>Returns whether an <a href="/api/types/#animation-script"><code>Animation Script</code></a> has been loaded with the
+given name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns a <code>Boolean</code> that denotes whether the <a href="/api/types/#animation-script"><code>Animation Script</code></a> has been loaded.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Script
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation-script"><code>Animation Script</code></a> to check.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a> to look for.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5592" aria-controls="cpp-snippet-5592" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6874" aria-controls="pas-snippet-6874" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5592" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5592 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_animation_named</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6874" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6874 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasAnimationNamed</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-animation-script" data-anchor> Has Animation Script </h3>
+  <div class="sk-api-description">
+    <p>Determines if SplashKit has animation frames loaded for the
+supplied name. This checks against all loaded animation frames,
+those loaded without a name are assigned the filename as a default.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns the <code>Boolean</code> that denotes if the animation has the <a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the animation script to look for.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1723" aria-controls="cpp-snippet-1723" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3693" aria-controls="pas-snippet-3693" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1723" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1723 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3693" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3693 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="load-animation-script" data-anchor> Load Animation Script </h3>
+  <div class="sk-api-description">
+    <p>Load animation details from an animation frames file.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#animation-script"><code>Animation Script</code></a></p>
+
+          </strong>
+          <p>Returns the newly loaded <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The file to load the <a href="/api/types/#animation-script"><code>Animation Script</code></a> from.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7670" aria-controls="cpp-snippet-7670" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3851" aria-controls="pas-snippet-3851" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7670" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7670 pre">
+        <pre class="codehilite"><code><span class="n">animation_script</span> <span class="n">load_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3851" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3851 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">LoadAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">AnimationScript</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="restart-animation" data-anchor> Restart Animation </h3>
+  <div class="sk-api-description">
+    <p>Restarts an <a href="/api/types/#animation"><code>Animation</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to restart.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1651" aria-controls="cpp-snippet-1651" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-874" aria-controls="pas-snippet-874" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1651" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1651 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">restart_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-874" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-874 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RestartAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="restart-animation" data-anchor> Restart Animation </h3>
+  <div class="sk-api-description">
+    <p>Restarts an <a href="/api/types/#animation"><code>Animation</code></a>. This may play a sound effect if the first
+frame triggers a sound.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to restart.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-954" aria-controls="cpp-snippet-954" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-857" aria-controls="pas-snippet-857" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-954" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-954 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">restart_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-857" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-857 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RestartAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="update-animation" data-anchor> Update Animation </h3>
+  <div class="sk-api-description">
+    <p>Updates the animation, updating the time spent and possibly moving to
+a new frame in the animation. This may play a sound effect if the new
+frame triggers a sound.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to update.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Pct
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The amount that the frame time will be incremented</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9338" aria-controls="cpp-snippet-9338" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7765" aria-controls="pas-snippet-7765" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9338" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9338 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7765" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7765 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">pct</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="update-animation" data-anchor> Update Animation </h3>
+  <div class="sk-api-description">
+    <p>Updates the animation, updating the time spent and possibly moving to
+a new frame in the animation. This may play a sound effect if the new
+frame triggers a sound.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to update.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8359" aria-controls="cpp-snippet-8359" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6856" aria-controls="pas-snippet-6856" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8359" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8359 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6856" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6856 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="update-animation" data-anchor> Update Animation </h3>
+  <div class="sk-api-description">
+    <p>Updates the animation, updating the time spent and possibly moving to
+a new frame in the animation. This may play a sound effect if the new
+frame triggers a sound.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to update.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Pct
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The amount that the frame time will be incremented</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4119" aria-controls="cpp-snippet-4119" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1120" aria-controls="pas-snippet-1120" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4119" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4119 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1120" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1120 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">pct</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

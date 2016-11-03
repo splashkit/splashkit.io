@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Resources</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_resources api_resources_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Resources
+      </h1>
+        <p class="lead">
+          SplashKit resource functions allow you to locate resources in a
+project's `Resources` folder.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link active">
+          Resources
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#deregister-free-notifier" class="nav-link">
+        Deregister Free Notifier
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#path-to-resource" class="nav-link">
+        Path To Resource
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#path-to-resources" class="nav-link">
+        Path To Resources
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#path-to-resources" class="nav-link">
+        Path To Resources
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#register-free-notifier" class="nav-link">
+        Register Free Notifier
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-resources-path" class="nav-link">
+        Set Resources Path
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#free-notifier" class="nav-link">
+        Free Notifier
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#resource-kind" class="nav-link">
+        Resource Kind
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="deregister-free-notifier" data-anchor> Deregister Free Notifier </h3>
+  <div class="sk-api-description">
+    <p>Remove the function from the list of functions receiving notification
+of resource freeing.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Handler
+                  </th>
+                  <td>
+                      <p><a href="/api/resources/#free-notifier"><code>Free Notifier</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to remove</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4991" aria-controls="cpp-snippet-4991" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1580" aria-controls="pas-snippet-1580" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4991" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4991 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_free_notifier</span><span class="p">(</span><span class="n">free_notifier</span> <span class="o">*</span><span class="n">handler</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1580" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1580 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterFreeNotifier</span><span class="p">(</span><span class="n">handler</span><span class="p">:</span> <span class="n">FreeNotifier</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="path-to-resource" data-anchor> Path To Resource </h3>
+  <div class="sk-api-description">
+    <p>Gets the path to a give file of a certain resource kind.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The full path to the resource.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the file of the resource kind.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Kind
+                  </th>
+                  <td>
+                      <p><a href="/api/resources/#resource-kind"><code>Resource Kind</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The kind of resource you are loading.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5088" aria-controls="cpp-snippet-5088" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2671" aria-controls="pas-snippet-2671" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5088" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5088 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resource</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">,</span> <span class="n">resource_kind</span> <span class="n">kind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2671" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2671 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResource</span><span class="p">(</span><span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">kind</span><span class="p">:</span> <span class="n">ResourceKind</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="path-to-resources" data-anchor> Path To Resources </h3>
+  <div class="sk-api-description">
+    <p>Returns the path to the resources folder for the SplashKit program. This
+will be auto detected at startup, but can be changed using
+<a href="/api/resources/#set-resources-path"><code>Set Resources Path</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Path to SplashKit Resources folder.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3663" aria-controls="cpp-snippet-3663" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2412" aria-controls="pas-snippet-2412" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3663" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3663 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resources</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2412" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2412 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResources</span><span class="p">():</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="path-to-resources" data-anchor> Path To Resources </h3>
+  <div class="sk-api-description">
+    <p>Returns the path to the folder containing a given resource kind. This is
+the path SplashkKit will search when you load a resource.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The path to the folder containing this kind of resource.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Kind
+                  </th>
+                  <td>
+                      <p><a href="/api/resources/#resource-kind"><code>Resource Kind</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The type of resource you want the path for.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6816" aria-controls="cpp-snippet-6816" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2188" aria-controls="pas-snippet-2188" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6816" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6816 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resources</span><span class="p">(</span><span class="n">resource_kind</span> <span class="n">kind</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2188" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2188 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResources</span><span class="p">(</span><span class="n">kind</span><span class="p">:</span> <span class="n">ResourceKind</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="register-free-notifier" data-anchor> Register Free Notifier </h3>
+  <div class="sk-api-description">
+    <p>Register a function to be called when any resource is freed.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Fn
+                  </th>
+                  <td>
+                      <p><a href="/api/resources/#free-notifier"><code>Free Notifier</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The function to be called when a resource is freed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9306" aria-controls="cpp-snippet-9306" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-989" aria-controls="pas-snippet-989" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9306" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9306 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_free_notifier</span><span class="p">(</span><span class="n">free_notifier</span> <span class="o">*</span><span class="n">fn</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-989" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-989 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterFreeNotifier</span><span class="p">(</span><span class="n">fn</span><span class="p">:</span> <span class="n">FreeNotifier</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-resources-path" data-anchor> Set Resources Path </h3>
+  <div class="sk-api-description">
+    <p>Sets the path to the SplashKit resources folder. Resource paths are then
+located within this folder.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Path
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The file path to the SplashKit Resources folder.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1779" aria-controls="cpp-snippet-1779" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4168" aria-controls="pas-snippet-4168" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1779" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1779 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_resources_path</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4168" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4168 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetResourcesPath</span><span class="p">(</span><span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="free-notifier" data-anchor> Free Notifier </h3>
+  <div class="sk-api-description">
+    <p>The free notifier can be registered with the system. It is called every
+time a resource is freed.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="resource-kind" data-anchor> Resource Kind </h3>
+  <div class="sk-api-description">
+    <p>SplashKit is able to manage a number of different kinds of resources
+for you.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Animation Resource
+                  </th>
+                  <td>
+                    <p>Animation scripts are loaded as Animation
+resources. These are located in the projects
+<code>Resources/animations</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Bundle Resource
+                  </th>
+                  <td>
+                    <p>Resource bundles contain lists of other
+resources. These are located in the projects
+<code>Resources/bundles</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Database Resource
+                  </th>
+                  <td>
+                    <p>Database resources are located in the
+<code>Resources/databases</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Font Resource
+                  </th>
+                  <td>
+                    <p>Fonts resources are located in the
+<code>Resources/fonts</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Image Resource
+                  </th>
+                  <td>
+                    <p>Image resources are located in the
+<code>Resources/images</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    JSON Resource
+                  </th>
+                  <td>
+                    <p>JSON resources are located in the projects
+<code>Resources/json</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Music Resource
+                  </th>
+                  <td>
+                    <p>Music resources can be played as music, and
+live in the program&#39;s <code>Resources/sounds</code>
+folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Server Resource
+                  </th>
+                  <td>
+                    <p>Server resources that can be sent as responses
+to web server requests.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Sound Resource
+                  </th>
+                  <td>
+                    <p>Sound resources can be played as sound
+effects, and live in the program&#39;s
+<code>Resources/sounds</code> folder.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Timer Resource
+                  </th>
+                  <td>
+                    <p>Timer resources are not saved to file, but
+can be created by SplashkKit resource
+bundles.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Other Resource
+                  </th>
+                  <td>
+                    <p>Other resources can be loaded, these will be
+located directly in these project&#39;s
+<code>Resources</code> folder.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

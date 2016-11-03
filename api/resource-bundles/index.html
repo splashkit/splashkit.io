@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Resource Bundles</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_resource-bundles api_resource-bundles_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Resource Bundles
+      </h1>
+        <p class="lead">
+          SplashKit resource bundles allow you to quickly and easily load a
+number of resources in the `Resources` folder.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link active">
+          Resource Bundles
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#free-resource-bundle" class="nav-link">
+        Free Resource Bundle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-resource-bundle" class="nav-link">
+        Has Resource Bundle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#load-resource-bundle" class="nav-link">
+        Load Resource Bundle
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    <p>Supports the loading and freeing of game resource bundles. Resource types
+include images, sounds, music and animation files to name a few. Resource
+files must be saved in specific locations of a <code>Resources</code> folder for
+your game.</p>
+
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-resource-bundle" data-anchor> Free Resource Bundle </h3>
+  <div class="sk-api-description">
+    <p>When you are finished with the resources in a bundle, you can free them all
+by calling this procedure. It will free the resource bundle and all of the
+associated resources.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the resource bundle to be freed</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4956" aria-controls="cpp-snippet-4956" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1962" aria-controls="pas-snippet-1962" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4956" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4956 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_resource_bundle</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1962" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1962 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeResourceBundle</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-resource-bundle" data-anchor> Has Resource Bundle </h3>
+  <div class="sk-api-description">
+    <p>Returns true when the named resource bundle has already been loaded.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True when the bundle is already loaded.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the resource bundle.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5364" aria-controls="cpp-snippet-5364" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1345" aria-controls="pas-snippet-1345" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5364" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5364 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_resource_bundle</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1345" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1345 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasResourceBundle</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="load-resource-bundle" data-anchor> Load Resource Bundle </h3>
+  <div class="sk-api-description">
+    <p>Loads all of the resources in the resource bundle. The resource bundle is a
+text file that describes the resources you want to load. These rescources
+are then loaded when you call this procedure, and can all be released when
+you call <code>Release Resource Bundle</code>.</p>
+
+<p>Save the resource bundle text files into your projects <code>Resources</code> in the
+<code>Bundles</code> folder. Use the following as the format for each of the
+resources.</p>
+
+<p>Start a line with a <code>//</code> to have it ignored when the bundle is loaded. This
+can be used to add comments to your bundle.</p>
+
+<ul>
+<li> To load an <strong>animation</strong> use the format:</li>
+</ul>
+
+<p><code>
+ANIM,name,filename
+</code></p>
+
+<p>For example, the following will load an animation named &quot;WalkingScript&quot; that
+loads the animation from &quot;kermit.txt&quot; in your games animation <code>Resources</code>.</p>
+
+<p><code>
+ANIM,WalkingScript,kermit.txt
+</code></p>
+
+<ul>
+<li> To load a <strong>bitmap</strong> use the format: </li>
+</ul>
+
+<p><code>
+BMP,name,filename
+</code></p>
+
+<p>For example, the following will load a bitmap named &quot;Logo&quot; using the
+&quot;Logo.png&quot; file.</p>
+
+<p><code>
+BITMAP,Logo,logo.png
+</code></p>
+
+<ul>
+<li> To load a <strong>bitmap</strong> that has a number of cells, you can extend the
+bitmap format with the cell details. This has the format:</li>
+</ul>
+
+<p><code>
+BMP,name,filename,cell-width,cell-height,columns,rows,count
+</code></p>
+
+<p>The following will setup the &quot;Player&quot; bitmap to have cells that are 75
+pixels wide, and 42 pixels height. There are 4 columns in 1 row, giving
+a total of 4 cells.</p>
+
+<p><code>
+BITMAP,Player,player.png,75,42,4,1,4
+</code></p>
+
+<ul>
+<li> To load a font use FONT,name,filename. For example, the following loads a
+font named &quot;GameFont&quot; that represents the &quot;demolition.otf&quot;.</li>
+</ul>
+
+<p><code>
+FONT,GameFont,demolition.otf
+</code></p>
+
+<ul>
+<li> To load music, use MUSIC,name,filename. The following loads &quot;GameMusic&quot;
+for the &quot;magical_night.ogg&quot; file.</li>
+</ul>
+
+<p><code>
+MUSIC,GameMusic,magical_night.ogg
+</code></p>
+
+<ul>
+<li> To load a sound effect, use SOUND,name,filename. For example the following
+loads &quot;error&quot; from the &quot;error.wav&quot; file.</li>
+</ul>
+
+<p><code>
+SOUND,error,error.wav
+</code></p>
+
+<ul>
+<li> To create a timer use TIMER,name. The following creates a timer named as
+&quot;my timer&quot;.</li>
+</ul>
+
+<p><code>
+TIMER,my timer
+</code></p>
+
+<ul>
+<li> You can also load another resource bundle using BUNDLE,name,filename.
+The following loads &quot;another bundle&quot; from the &quot;another.txt&quot; file.</li>
+</ul>
+
+<p><code>
+BUNDLE,another bundle,another.txt
+</code></p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the bundle when it is loaded.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The filename to load.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7233" aria-controls="cpp-snippet-7233" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2047" aria-controls="pas-snippet-2047" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7233" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7233 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">load_resource_bundle</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2047" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2047 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">LoadResourceBundle</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

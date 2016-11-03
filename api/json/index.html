@@ -1,0 +1,3130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - JSON</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_json api_json_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        JSON
+      </h1>
+        <p class="lead">
+          SplashKit Json allows you to create and read JSON objects.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link active">
+          JSON
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#create-json" class="nav-link">
+        Create JSON
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#create-json" class="nav-link">
+        Create JSON
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-all-json" class="nav-link">
+        Free All JSON
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-json" class="nav-link">
+        Free JSON
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-count-keys" class="nav-link">
+        JSON Count Keys
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-from-color" class="nav-link">
+        JSON From Color
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-from-file" class="nav-link">
+        JSON From File
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-from-string" class="nav-link">
+        JSON From String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-has-key" class="nav-link">
+        JSON Has Key
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-array" class="nav-link">
+        JSON Read Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-array" class="nav-link">
+        JSON Read Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-array" class="nav-link">
+        JSON Read Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-array" class="nav-link">
+        JSON Read Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-boolean" class="nav-link">
+        JSON Read Boolean
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-number" class="nav-link">
+        JSON Read Number
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-number-as-double" class="nav-link">
+        JSON Read Number As Double
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-number-as-integer" class="nav-link">
+        JSON Read Number As Integer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-object" class="nav-link">
+        JSON Read Object
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-read-string" class="nav-link">
+        JSON Read String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-array" class="nav-link">
+        JSON Set Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-array" class="nav-link">
+        JSON Set Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-array" class="nav-link">
+        JSON Set Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-array" class="nav-link">
+        JSON Set Array
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-boolean" class="nav-link">
+        JSON Set Boolean
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-number" class="nav-link">
+        JSON Set Number
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-number" class="nav-link">
+        JSON Set Number
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-number" class="nav-link">
+        JSON Set Number
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-object" class="nav-link">
+        JSON Set Object
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-set-string" class="nav-link">
+        JSON Set String
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-to-color" class="nav-link">
+        JSON To Color
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-to-file" class="nav-link">
+        JSON To File
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#json-to-string" class="nav-link">
+        JSON To String
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#json" class="nav-link">
+        JSON
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    <p>Splashkit&#39;s JSON library allows you to easily create or read JSON objects and
+manipulate them to/from a JSON string or from a file containing a JSON
+string. Create a new JSON object with a call to <code>Create JSON()</code> and
+read or write data to it by calling methods like
+<code>JSON Add String(json J, String Key, String Value)</code> and
+<code>JSON Read String(json J, String Key)</code>.</p>
+
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-json" data-anchor> Create JSON </h3>
+  <div class="sk-api-description">
+    <p>The empty <a href="/api/json/#json"><code>JSON</code></a> object returned can be filled with data and read by the
+functions and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>Returns an empty <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2609" aria-controls="cpp-snippet-2609" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6497" aria-controls="pas-snippet-6497" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2609" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2609 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">create_json</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6497" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6497 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateJson</span><span class="p">():</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-json" data-anchor> Create JSON </h3>
+  <div class="sk-api-description">
+    <p><code>String JSON String</code> must be valid JSON.
+The <a href="/api/json/#json"><code>JSON</code></a> object returned can be filled with data and read by the functions
+and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>Returns a <a href="/api/json/#json"><code>JSON</code></a> object filled with data from the parameter <code>String</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    JSON String
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The JSON formatted <code>String</code> to be converted to a <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2851" aria-controls="cpp-snippet-2851" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7090" aria-controls="pas-snippet-7090" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2851" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2851 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">create_json</span><span class="p">(</span><span class="n">string</span> <span class="n">json_string</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7090" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7090 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateJson</span><span class="p">(</span><span class="n">jsonString</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-all-json" data-anchor> Free All JSON </h3>
+  <div class="sk-api-description">
+    <p>Releases all of the <a href="/api/json/#json"><code>JSON</code></a> objects which have been loaded.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4389" aria-controls="cpp-snippet-4389" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5302" aria-controls="pas-snippet-5302" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4389" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4389 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_json</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5302" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5302 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllJson</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-json" data-anchor> Free JSON </h3>
+  <div class="sk-api-description">
+    <p>Frees the SplashKit resources associated with the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object whose resources should be released.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1069" aria-controls="cpp-snippet-1069" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5845" aria-controls="pas-snippet-5845" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1069" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1069 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_json</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5845" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5845 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeJson</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-count-keys" data-anchor> JSON Count Keys </h3>
+  <div class="sk-api-description">
+    <p>Returns the count of keys in the top-level <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>The count of keys in the top-level <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object to count keys.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7749" aria-controls="cpp-snippet-7749" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5794" aria-controls="pas-snippet-5794" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7749" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7749 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">json_count_keys</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5794" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5794 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonCountKeys</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-from-color" data-anchor> JSON From Color </h3>
+  <div class="sk-api-description">
+    <p>Converts a <a href="/api/types/#color"><code>Color</code></a> to a <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>The <a href="/api/types/#color"><code>Color</code></a> serialized into a <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Clr
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#color"><code>Color</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#color"><code>Color</code></a> to convert to <a href="/api/json/#json"><code>JSON</code></a>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1529" aria-controls="cpp-snippet-1529" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1833" aria-controls="pas-snippet-1833" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1529" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1529 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_color</span><span class="p">(</span><span class="n">color</span> <span class="n">clr</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1833" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1833 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromColor</span><span class="p">(</span><span class="n">clr</span><span class="p">:</span> <span class="n">Color</span><span class="p">):</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-from-file" data-anchor> JSON From File </h3>
+  <div class="sk-api-description">
+    <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object from a JSON string stored in <code>Resources/json/filename</code>
+and loads the data into the returned <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/json/#json"><code>JSON</code></a> object loaded from the JSON file in <code>Filename</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The filename of the file to be written to <code>Resources/json/</code>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2179" aria-controls="cpp-snippet-2179" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5015" aria-controls="pas-snippet-5015" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2179" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2179 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_file</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5015" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5015 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromFile</span><span class="p">(</span><span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-from-string" data-anchor> JSON From String </h3>
+  <div class="sk-api-description">
+    <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object from a <code>String</code> in the JSON format.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>Returns a <a href="/api/json/#json"><code>JSON</code></a> object loaded with data from <code>String J String</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J String
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>A <code>String</code> in the JSON format.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7843" aria-controls="cpp-snippet-7843" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5935" aria-controls="pas-snippet-5935" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7843" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7843 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">j_string</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5935" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5935 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromString</span><span class="p">(</span><span class="k">const</span> <span class="n">jString</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-has-key" data-anchor> JSON Has Key </h3>
+  <div class="sk-api-description">
+    <p>Checks if the <a href="/api/json/#json"><code>JSON</code></a> object contains the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns <code>True</code> if the <code>JSON J</code> object contains a key for <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object to check for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key to be checked.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5343" aria-controls="cpp-snippet-5343" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6043" aria-controls="pas-snippet-6043" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5343" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5343 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">json_has_key</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6043" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6043 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonHasKey</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+  <div class="sk-api-description">
+    <p>Reads an array of <code>Double</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Out
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The array which will be filled with the data stored for <code>String</code> key.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9976" aria-controls="cpp-snippet-9976" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2518" aria-controls="pas-snippet-2518" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9976" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9976 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2518" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2518 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="k">out</span><span class="p">:</span> <span class="n">ArrayOfDouble</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+  <div class="sk-api-description">
+    <p>Reads an array of <a href="/api/json/#json"><code>JSON</code></a> object values from the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Out
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The array which will be filled with the data stored for <code>String</code> key.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6333" aria-controls="cpp-snippet-6333" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7209" aria-controls="pas-snippet-7209" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6333" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6333 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">json</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7209" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7209 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="k">out</span><span class="p">:</span> <span class="n">ArrayOfJson</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+  <div class="sk-api-description">
+    <p>Reads an array of <code>String</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Out
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The array which will be filled with the data stored for <code>String</code> key.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7630" aria-controls="cpp-snippet-7630" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3776" aria-controls="pas-snippet-3776" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7630" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7630 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3776" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3776 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="k">out</span><span class="p">:</span> <span class="n">ArrayOfString</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+  <div class="sk-api-description">
+    <p>Reads an array of <code>Boolean</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Out
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The array which will be filled with the data stored for <code>String</code> key.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8281" aria-controls="cpp-snippet-8281" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4207" aria-controls="pas-snippet-4207" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8281" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8281 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4207" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4207 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="k">out</span><span class="p">:</span> <span class="n">ArrayOfBoolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-boolean" data-anchor> JSON Read Boolean </h3>
+  <div class="sk-api-description">
+    <p>Reads a <code>Boolean</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns the <code>Boolean</code> value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5176" aria-controls="cpp-snippet-5176" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-261" aria-controls="pas-snippet-261" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5176" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5176 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">json_read_bool</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-261" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-261 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadBool</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-number" data-anchor> JSON Read Number </h3>
+  <div class="sk-api-description">
+    <p>Reads a <code>Float</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>Returns the <code>Float</code> value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4512" aria-controls="cpp-snippet-4512" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-329" aria-controls="pas-snippet-329" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4512" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4512 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">json_read_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-329" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-329 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-number-as-double" data-anchor> JSON Read Number As Double </h3>
+  <div class="sk-api-description">
+    <p>Reads a <code>Double</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Double</code></p>
+
+          </strong>
+          <p>Returns the <code>Double</code> value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5110" aria-controls="cpp-snippet-5110" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8112" aria-controls="pas-snippet-8112" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5110" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5110 pre">
+        <pre class="codehilite"><code><span class="kt">double</span> <span class="n">json_read_number_as_double</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8112" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8112 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumberAsDouble</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Double</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-number-as-integer" data-anchor> JSON Read Number As Integer </h3>
+  <div class="sk-api-description">
+    <p>Reads a <code>Integer</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>Returns the <code>Integer</code> value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7433" aria-controls="cpp-snippet-7433" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3364" aria-controls="pas-snippet-3364" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7433" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7433 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">json_read_number_as_int</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3364" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3364 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumberAsInt</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-object" data-anchor> JSON Read Object </h3>
+  <div class="sk-api-description">
+    <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+          </strong>
+          <p>Returns the <a href="/api/json/#json"><code>JSON</code></a> object value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8167" aria-controls="cpp-snippet-8167" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2096" aria-controls="pas-snippet-2096" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8167" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8167 pre">
+        <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_read_object</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2096" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2096 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadObject</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-string" data-anchor> JSON Read String </h3>
+  <div class="sk-api-description">
+    <p>Reads a <code>String</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns the <code>String</code> value stored at the <code>String</code> key.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object from which data will be returned for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key used to find data in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8000" aria-controls="cpp-snippet-8000" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9331" aria-controls="pas-snippet-9331" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8000" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8000 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">json_read_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9331" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9331 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+  <div class="sk-api-description">
+    <p>Adds an array of <code>String</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3185" aria-controls="cpp-snippet-3185" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5505" aria-controls="pas-snippet-5505" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3185" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3185 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5505" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5505 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfString</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+  <div class="sk-api-description">
+    <p>Adds an array of <code>Double</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1949" aria-controls="cpp-snippet-1949" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5716" aria-controls="pas-snippet-5716" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1949" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1949 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5716" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5716 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfDouble</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+  <div class="sk-api-description">
+    <p>Adds an array of <code>Boolean</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5771" aria-controls="cpp-snippet-5771" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9553" aria-controls="pas-snippet-9553" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5771" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5771 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9553" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9553 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfBoolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+  <div class="sk-api-description">
+    <p>Adds an array of <a href="/api/json/#json"><code>JSON</code></a> object values to the <a href="/api/json/#json"><code>JSON</code></a> object for
+the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Dynamic Array</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5799" aria-controls="cpp-snippet-5799" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7657" aria-controls="pas-snippet-7657" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5799" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5799 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">json</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7657" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7657 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfJson</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-boolean" data-anchor> JSON Set Boolean </h3>
+  <div class="sk-api-description">
+    <p>Adds a <code>Boolean</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2121" aria-controls="cpp-snippet-2121" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2811" aria-controls="pas-snippet-2811" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2121" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2121 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_bool</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2811" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2811 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetBool</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+  <div class="sk-api-description">
+    <p>Adds an <code>Integer</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3154" aria-controls="cpp-snippet-3154" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1060" aria-controls="pas-snippet-1060" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3154" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3154 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1060" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1060 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+  <div class="sk-api-description">
+    <p>Adds a <code>Double</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Double</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9399" aria-controls="cpp-snippet-9399" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8513" aria-controls="pas-snippet-8513" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9399" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9399 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8513" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8513 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+  <div class="sk-api-description">
+    <p>Adds a <code>Float</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-39" aria-controls="cpp-snippet-39" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9453" aria-controls="pas-snippet-9453" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-39" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-39 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9453" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9453 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-object" data-anchor> JSON Set Object </h3>
+  <div class="sk-api-description">
+    <p>Adds a <a href="/api/json/#json"><code>JSON</code></a> object to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Obj
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1005" aria-controls="cpp-snippet-1005" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2467" aria-controls="pas-snippet-2467" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1005" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1005 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_object</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">json</span> <span class="n">obj</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2467" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2467 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetObject</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Json</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-string" data-anchor> JSON Set String </h3>
+  <div class="sk-api-description">
+    <p>Adds a <code>String</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object where data will be inserted for the given key.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Key
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The <code>String</code> key where data will be stored in the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value to be inserted into the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5108" aria-controls="cpp-snippet-5108" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5681" aria-controls="pas-snippet-5681" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5108" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5108 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">string</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5681" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5681 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-to-color" data-anchor> JSON To Color </h3>
+  <div class="sk-api-description">
+    <p>Converts a <a href="/api/json/#json"><code>JSON</code></a> object to a <a href="/api/types/#color"><code>Color</code></a> object.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#color"><code>Color</code></a></p>
+
+          </strong>
+          <p>The <a href="/api/types/#color"><code>Color</code></a> deserialized from the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> to convert to a <a href="/api/types/#color"><code>Color</code></a>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1319" aria-controls="cpp-snippet-1319" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5021" aria-controls="pas-snippet-5021" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1319" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1319 pre">
+        <pre class="codehilite"><code><span class="n">color</span> <span class="n">json_to_color</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5021" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5021 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonToColor</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="n">Color</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-to-file" data-anchor> JSON To File </h3>
+  <div class="sk-api-description">
+    <p>Writes the <a href="/api/json/#json"><code>JSON</code></a> object to a JSON string stored in <code>Resources/json/filename</code>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object to be written to file.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Filename
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The filename of the file to be stored in <code>Resources/json/</code></p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1021" aria-controls="cpp-snippet-1021" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7626" aria-controls="pas-snippet-7626" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1021" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1021 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_to_file</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7626" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7626 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonToFile</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="json-to-string" data-anchor> JSON To String </h3>
+  <div class="sk-api-description">
+    <p>Converts and returns the <a href="/api/json/#json"><code>JSON</code></a> object as a <code>String</code>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>Returns the <a href="/api/json/#json"><code>JSON</code></a> object as a <code>String</code>.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    J
+                  </th>
+                  <td>
+                      <p><a href="/api/json/#json"><code>JSON</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/json/#json"><code>JSON</code></a> object to be converted to a <code>String</code>.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1872" aria-controls="cpp-snippet-1872" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3489" aria-controls="pas-snippet-3489" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1872" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1872 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">json_to_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3489" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3489 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonToString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="json" data-anchor> JSON </h3>
+  <div class="sk-api-description">
+    <p>The <a href="/api/json/#json"><code>JSON</code></a> type is used to refer to objects in the JSON format that can be
+manipulated by the SplashKit <a href="/api/json/#json"><code>JSON</code></a> functions and procedures.</p>
+
+<p>All <a href="/api/json/#json"><code>JSON</code></a> objects are:</p>
+
+<ul>
+<li><p>created with <code>Create JSON()</code> or <code>Create JSON(string S)</code> or
+<code>JSON From String(string S)</code> or <code>JSON From File(json J)</code></p></li>
+<li><p>and must be released using <code>Free JSON()</code> (to release a specific <code>json object)
+or</code>Free All JSON()<code>(to release all loaded</code>json objects).</p></li>
+</ul>
+
+  </div>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

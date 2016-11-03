@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Types</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_types api_types_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Types
+      </h1>
+        <p class="lead">
+          
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link active">
+          Types
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#animation" class="nav-link">
+        Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#animation-script" class="nav-link">
+        Animation Script
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#bitmap" class="nav-link">
+        Bitmap
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#circle" class="nav-link">
+        Circle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#color" class="nav-link">
+        Color
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#display" class="nav-link">
+        Display
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#drawing-dest" class="nav-link">
+        Drawing Dest
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#drawing-options" class="nav-link">
+        Drawing Options
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#font" class="nav-link">
+        Font
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#font-style" class="nav-link">
+        Font Style
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#http-status-code" class="nav-link">
+        HTTP Status Code
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#line" class="nav-link">
+        Line
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#point-2d" class="nav-link">
+        Point 2D
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#quad" class="nav-link">
+        Quad
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#rectangle" class="nav-link">
+        Rectangle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#triangle" class="nav-link">
+        Triangle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#vector-2d" class="nav-link">
+        Vector 2D
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="animation" data-anchor> Animation </h3>
+  <div class="sk-api-description">
+    <p>Animations are created from an <a href="/api/types/#animation-script"><code>Animation Script</code></a>. Each animation tracks
+the current frame for one animation sequence. You update this animation
+and draw with it. This allows you to have the one script being used to
+create lots of individual animations, where each animation is potentially
+at a different frame.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="animation-script" data-anchor> Animation Script </h3>
+  <div class="sk-api-description">
+    <p>Animations in SplashKit are controlled by an animation script. This
+script tells SplashKit how long to play each frame, which cell in the
+bitmap the frame relates to, and which is the next frame. You load these
+scripts from file and can then use them to create animations that are
+used with the drawing options when you draw a bitmap.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="bitmap" data-anchor> Bitmap </h3>
+  <div class="sk-api-description">
+    <p>Bitmaps represent image resources in SplashKit. You can load these from
+file, download them from the internet, or create and draw them yourself.
+Once created or loaded, you can draw the bitmap and you can draw onto
+the bitmap.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="circle" data-anchor> Circle </h3>
+  <div class="sk-api-description">
+    <p>Circles have a center point and a radius. This means that, unlike shapes
+like the <a href="/api/types/#rectangle"><code>Rectangle</code></a>, the circle extends out both left and right, and up
+and down from the point you position it at.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Center
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The center point of the circle</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Radius
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The radius of the circle</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="color" data-anchor> Color </h3>
+  <div class="sk-api-description">
+    <p>Colors can be used when drawing shapes and clearing surfaces. Color in
+splashkit does include a alpha value used for opacity, which allows you
+to have partially transparent colors.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    R
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The red component of the color (between 0 and 1.0)</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    G
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The green component of the color (between 0 and 1.0)</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    B
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The blue component of the color (between 0 and 1.0)</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    A
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The alpha component of the color (between 0 and 1.0)</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="display" data-anchor> Display </h3>
+  <div class="sk-api-description">
+    <p>Each display value represents a physical display attached to the
+computer. You can use this to query the displays position and size.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="drawing-dest" data-anchor> Drawing Dest </h3>
+  <div class="sk-api-description">
+    <p>Determines the effect of the camera on a drawing operation.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Draw To Screen
+                  </th>
+                  <td>
+                    <p>means camera has no affect.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Draw To World
+                  </th>
+                  <td>
+                    <p>means camera has an affect.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Draw Default
+                  </th>
+                  <td>
+                    <p>means camera has an affect only if drawn to a
+window.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="drawing-options" data-anchor> Drawing Options </h3>
+  <div class="sk-api-description">
+    <p>Drawing options allow you to customise drawing options. These should be
+initialised using the drawing option functions.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Dest
+                  </th>
+                  <td>
+                      <p><code>Void</code></p>
+
+                  </td>
+                  <td>
+                    <p>The destination of the drawing: a window or bitmap.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Scale X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>How much x values are scaled.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Scale Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>How much y values are scaled.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Angle
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>A rotation angle for bitmap drawing.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Anchor Offset X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The x location of the anchor point around which
+bitmap drawing will rotate.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Anchor Offset Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The y location of the anchor point around which
+bitmap drawing will rotate.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Flip X
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Should bitmaps be flipped horizontally</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Flip Y
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Should bitmaps be flipped vertically</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Is Part
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Indicates that part of a bitmap should be drawn</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Part
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The area of the bitmap to draw</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Camera
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#drawing-dest"><code>Drawing Dest</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>How the current window camera affects the drawing</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Line Width
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>How wide are lines (only lines at this stage)</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The animation to use, which overrides the part
+option</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="font" data-anchor> Font </h3>
+  <div class="sk-api-description">
+    <p>Fonts are used to draw text in SplashKit. These can be loaded from file
+or downloaded from the internet. Once you have a font you can use the
+draw text procedures to use that font when drawing.</p>
+
+  </div>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="font-style" data-anchor> Font Style </h3>
+  <div class="sk-api-description">
+    <p>Use font styles to set the style of a font. Setting the style is time
+consuming, so create alternative font variables for each different
+style you want to work with. Note that these values can be logical
+ORed together to combine styles, e.g. BoldFont or ItalicFont = both
+bold and italic.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Normal Font
+                  </th>
+                  <td>
+                    <p>Normal font.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Bold Font
+                  </th>
+                  <td>
+                    <p>Bold font.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Italic Font
+                  </th>
+                  <td>
+                    <p>Italic font.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Underline Font
+                  </th>
+                  <td>
+                    <p>Underlined font.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="http-status-code" data-anchor> HTTP Status Code </h3>
+  <div class="sk-api-description">
+    <p>Defines the HTTP status codes supported by SplashKit.
+Refer to <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">this article</a>
+for a detailed description of each code.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Constants
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    HTTP Status Ok
+                  </th>
+                  <td>
+                    <p>The server accepted the request.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Created
+                  </th>
+                  <td>
+                    <p>The request has been fulfilled, resulting in the creation of a new resource.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status No Content
+                  </th>
+                  <td>
+                    <p>The server successfully processed the request and is not returning any content.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Bad Request
+                  </th>
+                  <td>
+                    <p>The server cannot or will not process the request due to an apparent client error.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Unauthorized
+                  </th>
+                  <td>
+                    <p>The server requires authentication or has failed to process provided authentication.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Forbidden
+                  </th>
+                  <td>
+                    <p>The request was a valid request, but the server is refusing to respond to it.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Not Found
+                  </th>
+                  <td>
+                    <p>The requested resource could not be found but may be available in the future.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Method Not Allowed
+                  </th>
+                  <td>
+                    <p>The request method is not support for the requested resource.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Request Timeout
+                  </th>
+                  <td>
+                    <p>The server timed out waiting for the request.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Internal Server Error
+                  </th>
+                  <td>
+                    <p>The server encountered an unexpected condition.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Not Implemented
+                  </th>
+                  <td>
+                    <p>The server does not recognize or implement the request method.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    HTTP Status Service Unavailable
+                  </th>
+                  <td>
+                    <p>The server is currently unavailable.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="line" data-anchor> Line </h3>
+  <div class="sk-api-description">
+    <p>A line goes from a start point to an end point.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Start Point
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The start of the line</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    End Point
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The end of the line</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="point-2d" data-anchor> Point 2D </h3>
+  <div class="sk-api-description">
+    <p>A Point2D represents an location in Cartesian coordinates (x,y).
+The x value represents the distance from the left edge of the window or bitmap, increasing
+in value as you travel right. The y value represents the distance from the top
+edge of the window or bitmap, and increases as you travel down toward the bottom.</p>
+
+<p>Point2D is a great way to keep track of the location of something in a 2D space like
+a Window or Bitmap.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance from the left side of the bitmap or window (
+increasing as you go to the right)</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance from the top of a bitmap or window (increasing
+as you go down).</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="quad" data-anchor> Quad </h3>
+  <div class="sk-api-description">
+    <p>Quads (quadrilaterals) are shapes with 4 sides, but unlike <a href="/api/types/#rectangle"><code>Rectangle</code></a>,
+these shapes can have axis that do not line up with screen/bitmap axis.</p>
+
+<p>Points should be constructed with the top left as the first point, top
+right as the second, bottom left as the third, and bottom right as the
+last point. Other orders may give unexpected outcomes.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Points
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The array of points: top left, top right, bottom left,
+bottom right</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="rectangle" data-anchor> Rectangle </h3>
+  <div class="sk-api-description">
+    <p>Rectangles are simple rectangle shapes that exist at a point and have a
+set width and height. This means that the rectangle always has edges that
+follow the sides of the <a href="/api/graphics/#window"><code>Window</code></a> or <a href="/api/types/#bitmap"><code>Bitmap</code></a> (so they are aligned with
+the x and y axes). The rectangle&#39;s position is its top left corner - it
+then extends to the right and down from this position.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance to the left edge of the rectangle</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance to the top edge of the rectangle</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Width
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The width of the rectangle</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Height
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The height of the rectangle</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="triangle" data-anchor> Triangle </h3>
+  <div class="sk-api-description">
+    <p>A triangle consists of three points, being the three points of the
+triangle.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Points
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The points of the triangle</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+      <section class="sk-api-type sk-api-section">
+  <h3 id="vector-2d" data-anchor> Vector 2D </h3>
+  <div class="sk-api-description">
+    <p>Vectors represent a direction and distance, and can be visualised as an
+arrow from one point to another in 2 dimensional space. Internally, the
+<a href="/api/types/#vector-2d"><code>Vector 2D</code></a> is stored as its x and y components.</p>
+
+<p>Vector is a great way to represent movement or forces. You could use a
+<a href="/api/types/#vector-2d"><code>Vector 2D</code></a> to track how much a character moves each update (as the
+vector stores the direction and distance). Similarly, you could use a
+<a href="/api/types/#vector-2d"><code>Vector 2D</code></a> to represent gravity or other forces. You can then
+add a number of force vectors together to get a final force to be applied
+to a character.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Fields
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Double</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance to move horizontally</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Double</code></p>
+
+                  </td>
+                  <td>
+                    <p>The distance to move vertically</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+    </dl>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

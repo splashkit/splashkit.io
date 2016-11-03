@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Terminal</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_terminal api_terminal_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Terminal
+      </h1>
+        <p class="lead">
+          SplashKit Terminal allows you to read and write values to the
+terminal in a consistent manner.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link active">
+          Terminal
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#activate-advanced-terminal" class="nav-link">
+        Activate Advanced Terminal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#advanced-terminal-active" class="nav-link">
+        Advanced Terminal Active
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#clear-terminal" class="nav-link">
+        Clear Terminal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#end-advanced-terminal" class="nav-link">
+        End Advanced Terminal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-cursor-to" class="nav-link">
+        Move Cursor To
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#read-character" class="nav-link">
+        Read Character
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#read-line" class="nav-link">
+        Read Line
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#refresh-terminal" class="nav-link">
+        Refresh Terminal
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-terminal-bold" class="nav-link">
+        Set Terminal Bold
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-terminal-colors" class="nav-link">
+        Set Terminal Colors
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-terminal-echo-input" class="nav-link">
+        Set Terminal Echo Input
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#terminal-height" class="nav-link">
+        Terminal Height
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#terminal-width" class="nav-link">
+        Terminal Width
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#write" class="nav-link">
+        Write
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#write-at" class="nav-link">
+        Write At
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#write-line" class="nav-link">
+        Write Line
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#write-line" class="nav-link">
+        Write Line
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="activate-advanced-terminal" data-anchor> Activate Advanced Terminal </h3>
+  <div class="sk-api-description">
+    <p>Start using the advanced terminal. Once you call this you will need
+to make sure you call <a href="/api/terminal/#refresh-terminal"><code>Refresh Terminal</code></a> to show anything you have
+written. This will allow use of colors, bold, positioning, and other
+advanced options.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3161" aria-controls="cpp-snippet-3161" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1870" aria-controls="pas-snippet-1870" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3161" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3161 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">activate_advanced_terminal</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1870" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1870 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ActivateAdvancedTerminal</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="advanced-terminal-active" data-anchor> Advanced Terminal Active </h3>
+  <div class="sk-api-description">
+    <p>Is the terminal currently in advanced mode?</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the terminal is in advanced mode.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6867" aria-controls="cpp-snippet-6867" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4488" aria-controls="pas-snippet-4488" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6867" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6867 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">advanced_terminal_active</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4488" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4488 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AdvancedTerminalActive</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="clear-terminal" data-anchor> Clear Terminal </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this will clear the terminal to the background color
+you set in <code>Set Terminal Color</code>.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9482" aria-controls="cpp-snippet-9482" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7008" aria-controls="pas-snippet-7008" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9482" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9482 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">clear_terminal</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7008" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7008 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ClearTerminal</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="end-advanced-terminal" data-anchor> End Advanced Terminal </h3>
+  <div class="sk-api-description">
+    <p>Finish using advanced mode. The existing terminal display will be lost
+and the user will see what was in the terminal before you called
+<a href="/api/terminal/#activate-advanced-terminal"><code>Activate Advanced Terminal</code></a>.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8692" aria-controls="cpp-snippet-8692" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6955" aria-controls="pas-snippet-6955" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8692" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8692 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">end_advanced_terminal</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6955" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6955 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">EndAdvancedTerminal</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-cursor-to" data-anchor> Move Cursor To </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this will move the cursor to a given col, row of the
+terminal. You can check the terminal size using <a href="/api/terminal/#terminal-width"><code>Terminal Width</code></a> and
+<a href="/api/terminal/#terminal-height"><code>Terminal Height</code></a>. If you try to move outside this bounds then then move
+will not occur.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column to move to, must be between 0 and <a href="/api/terminal/#terminal-width"><code>Terminal Width</code></a></p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The row to move to, must be between 0 and <a href="/api/terminal/#terminal-height"><code>Terminal Height</code></a></p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5600" aria-controls="cpp-snippet-5600" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1004" aria-controls="pas-snippet-1004" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5600" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5600 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_cursor_to</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1004" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1004 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCursorTo</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="read-character" data-anchor> Read Character </h3>
+  <div class="sk-api-description">
+    <p>Get a single character input by the user. This works in both standard and
+advanced modes. In advanced mode, you can set if the character should
+also be echoed to the terminal using <a href="/api/terminal/#set-terminal-echo-input"><code>Set Terminal Echo Input</code></a>.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Character</code></p>
+
+          </strong>
+          <p>The character typed by the user.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5878" aria-controls="cpp-snippet-5878" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9456" aria-controls="pas-snippet-9456" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5878" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5878 pre">
+        <pre class="codehilite"><code><span class="kt">char</span> <span class="n">read_char</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9456" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9456 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadChar</span><span class="p">():</span> <span class="kt">Char</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="read-line" data-anchor> Read Line </h3>
+  <div class="sk-api-description">
+    <p>Read a line of text from the terminal. The user will see the text as
+they type it.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>String</code></p>
+
+          </strong>
+          <p>The text entered by the user.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9847" aria-controls="cpp-snippet-9847" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8327" aria-controls="pas-snippet-8327" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9847" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9847 pre">
+        <pre class="codehilite"><code><span class="n">string</span> <span class="n">read_line</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8327" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8327 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadLine</span><span class="p">():</span> <span class="k">String</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="refresh-terminal" data-anchor> Refresh Terminal </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this will display what has been written to the
+terminal. You need to call this for anything to be shown in advanced
+mode.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1485" aria-controls="cpp-snippet-1485" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7367" aria-controls="pas-snippet-7367" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1485" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1485 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">refresh_terminal</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7367" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7367 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RefreshTerminal</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-terminal-bold" data-anchor> Set Terminal Bold </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this allows you to set if the text should draw as bold.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Pass true to have the terminal write in bold</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2387" aria-controls="cpp-snippet-2387" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1299" aria-controls="pas-snippet-1299" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2387" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2387 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_terminal_bold</span><span class="p">(</span><span class="kt">bool</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1299" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1299 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetTerminalBold</span><span class="p">(</span><span class="k">value</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-terminal-colors" data-anchor> Set Terminal Colors </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode this allows you to set the color of the foreground and
+the background. The foreground is the color of the text.</p>
+
+<p>Note that only the following colors are guaranteed to work on all
+Terminals (others may work):</p>
+
+<ul>
+<li><p><a href="/api/color/#color-black"><code>Color Black</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-gray"><code>Color Dark Gray</code></a></p></li>
+<li><p><a href="/api/color/#color-gray"><code>Color Gray</code></a></p></li>
+<li><p><a href="/api/color/#color-white"><code>Color White</code></a></p></li>
+<li><p><a href="/api/color/#color-red"><code>Color Red</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-red"><code>Color Dark Red</code></a></p></li>
+<li><p><a href="/api/color/#color-green"><code>Color Green</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-green"><code>Color Dark Green</code></a></p></li>
+<li><p><a href="/api/color/#color-blue"><code>Color Blue</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-blue"><code>Color Dark Blue</code></a></p></li>
+<li><p><a href="/api/color/#color-cyan"><code>Color Cyan</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-cyan"><code>Color Dark Cyan</code></a></p></li>
+<li><p><a href="/api/color/#color-light-yellow"><code>Color Light Yellow</code></a></p></li>
+<li><p><a href="/api/color/#color-yellow"><code>Color Yellow</code></a></p></li>
+<li><p><a href="/api/color/#color-magenta"><code>Color Magenta</code></a></p></li>
+<li><p><a href="/api/color/#color-dark-magenta"><code>Color Dark Magenta</code></a></p></li>
+</ul>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Foreground
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#color"><code>Color</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The color of text that is drawn.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Background
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#color"><code>Color</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The color of the background behind drawn text.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8580" aria-controls="cpp-snippet-8580" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4855" aria-controls="pas-snippet-4855" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8580" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8580 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_terminal_colors</span><span class="p">(</span><span class="n">color</span> <span class="n">foreground</span><span class="p">,</span> <span class="n">color</span> <span class="n">background</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4855" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4855 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetTerminalColors</span><span class="p">(</span><span class="n">foreground</span><span class="p">:</span> <span class="n">Color</span><span class="p">;</span> <span class="n">background</span><span class="p">:</span> <span class="n">Color</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-terminal-echo-input" data-anchor> Set Terminal Echo Input </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this allows you to stop text read with <a href="/api/terminal/#read-character"><code>Read Character</code></a>
+appearing on the terminal. You can use this for reading passwords, or to
+control what is written.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Value
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Pass true if you want characters to appear as typed.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-471" aria-controls="cpp-snippet-471" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2996" aria-controls="pas-snippet-2996" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-471" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-471 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_terminal_echo_input</span><span class="p">(</span><span class="kt">bool</span> <span class="n">value</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2996" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2996 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetTerminalEchoInput</span><span class="p">(</span><span class="k">value</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="terminal-height" data-anchor> Terminal Height </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this gives you the number of rows in the terminal.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>The number of rows in the terminal</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8081" aria-controls="cpp-snippet-8081" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-917" aria-controls="pas-snippet-917" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8081" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8081 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">terminal_height</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-917" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-917 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TerminalHeight</span><span class="p">():</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="terminal-width" data-anchor> Terminal Width </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this gives you the number of columns in the terminal.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Integer</code></p>
+
+          </strong>
+          <p>The number of columns in the terminal</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1280" aria-controls="cpp-snippet-1280" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1899" aria-controls="pas-snippet-1899" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1280" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1280 pre">
+        <pre class="codehilite"><code><span class="kt">int</span> <span class="n">terminal_width</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1899" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1899 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TerminalWidth</span><span class="p">():</span> <span class="kt">Integer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="write" data-anchor> Write </h3>
+  <div class="sk-api-description">
+    <p>Write the supplied text to the Terminal.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Text
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The text to write</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2118" aria-controls="cpp-snippet-2118" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8022" aria-controls="pas-snippet-8022" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2118" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2118 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">write</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8022" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8022 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="k">Write</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="write-at" data-anchor> Write At </h3>
+  <div class="sk-api-description">
+    <p>In advanced mode, this will write the supplied text at the indicated
+column and row.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Text
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The text to write</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The row to position the text at</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The column to position the text at</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4888" aria-controls="cpp-snippet-4888" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6380" aria-controls="pas-snippet-6380" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4888" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4888 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">write_at</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6380" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6380 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">WriteAt</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">x</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="write-line" data-anchor> Write Line </h3>
+  <div class="sk-api-description">
+    <p>Move to the next line/row of the terminal.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2490" aria-controls="cpp-snippet-2490" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4988" aria-controls="pas-snippet-4988" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2490" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2490 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">write_line</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4988" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4988 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">WriteLine</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="write-line" data-anchor> Write Line </h3>
+  <div class="sk-api-description">
+    <p>Write the passed in text, then move to the next line/row of the terminal.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Line
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The text to write</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8695" aria-controls="cpp-snippet-8695" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9887" aria-controls="pas-snippet-9887" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8695" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8695 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">write_line</span><span class="p">(</span><span class="n">string</span> <span class="n">line</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9887" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9887 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">WriteLine</span><span class="p">(</span><span class="n">line</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

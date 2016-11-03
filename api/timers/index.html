@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Timers</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_timers api_timers_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Timers
+      </h1>
+        <p class="lead">
+          Timers in SplashKit can be used to track the passing of time.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link ">
+          Camera
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link active">
+          Timers
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#create-timer" class="nav-link">
+        Create Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-all-timers" class="nav-link">
+        Free All Timers
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#free-timer" class="nav-link">
+        Free Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#has-timer" class="nav-link">
+        Has Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#pause-timer" class="nav-link">
+        Pause Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#pause-timer" class="nav-link">
+        Pause Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reset-timer" class="nav-link">
+        Reset Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#reset-timer" class="nav-link">
+        Reset Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#resume-timer" class="nav-link">
+        Resume Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#resume-timer" class="nav-link">
+        Resume Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-timer" class="nav-link">
+        Start Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#start-timer" class="nav-link">
+        Start Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#stop-timer" class="nav-link">
+        Stop Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#stop-timer" class="nav-link">
+        Stop Timer
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-named" class="nav-link">
+        Timer Named
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-paused" class="nav-link">
+        Timer Paused
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-paused" class="nav-link">
+        Timer Paused
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-started" class="nav-link">
+        Timer Started
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-started" class="nav-link">
+        Timer Started
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-ticks" class="nav-link">
+        Timer Ticks
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#timer-ticks" class="nav-link">
+        Timer Ticks
+      </a>
+    </li>
+</ul>
+
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Types
+  </li>
+    <li class="nav-item">
+      <a href="#timer" class="nav-link">
+        Timer
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="create-timer" data-anchor> Create Timer </h3>
+  <div class="sk-api-description">
+    <p>Create and return a new Timer. The timer will not be started, and will have
+an initial &#39;ticks&#39; of 0.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+          </strong>
+          <p>A new timer.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer for resource tracking</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2648" aria-controls="cpp-snippet-2648" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1057" aria-controls="pas-snippet-1057" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2648" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2648 pre">
+        <pre class="codehilite"><code><span class="n">timer</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1057" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1057 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Timer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-all-timers" data-anchor> Free All Timers </h3>
+  <div class="sk-api-description">
+    <p>Free all of timers that have been created.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2495" aria-controls="cpp-snippet-2495" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9220" aria-controls="pas-snippet-9220" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2495" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2495 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_timers</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9220" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9220 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllTimers</span><span class="p">()</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="free-timer" data-anchor> Free Timer </h3>
+  <div class="sk-api-description">
+    <p>Free the memory used to store this timer.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Free
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The time to be released.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9715" aria-controls="cpp-snippet-9715" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1293" aria-controls="pas-snippet-1293" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9715" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9715 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_free</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1293" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1293 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeTimer</span><span class="p">(</span><span class="n">toFree</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="has-timer" data-anchor> Has Timer </h3>
+  <div class="sk-api-description">
+    <p>Checks if SplashKit has a timer with the indicated name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if SplashKit has created a timer with that name.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8" aria-controls="cpp-snippet-8" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1460" aria-controls="pas-snippet-1460" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1460" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1460 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="pause-timer" data-anchor> Pause Timer </h3>
+  <div class="sk-api-description">
+    <p>Pause the timer, getting ticks from a paused timer
+will continue to return the same time.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6350" aria-controls="cpp-snippet-6350" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2147" aria-controls="pas-snippet-2147" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6350" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6350 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">pause_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2147" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2147 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PauseTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="pause-timer" data-anchor> Pause Timer </h3>
+  <div class="sk-api-description">
+    <p>Pause the timer, getting ticks from a paused timer
+will continue to return the same time.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Pause
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2068" aria-controls="cpp-snippet-2068" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2960" aria-controls="pas-snippet-2960" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2068" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2068 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">pause_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_pause</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2960" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2960 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PauseTimer</span><span class="p">(</span><span class="n">toPause</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reset-timer" data-anchor> Reset Timer </h3>
+  <div class="sk-api-description">
+    <p>Resets the named timer</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2110" aria-controls="cpp-snippet-2110" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1046" aria-controls="pas-snippet-1046" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2110" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2110 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1046" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1046 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="reset-timer" data-anchor> Reset Timer </h3>
+  <div class="sk-api-description">
+    <p>Resets the time of a given timer</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Tmr
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5453" aria-controls="cpp-snippet-5453" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5085" aria-controls="pas-snippet-5085" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5453" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5453 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">tmr</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5085" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5085 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetTimer</span><span class="p">(</span><span class="n">tmr</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="resume-timer" data-anchor> Resume Timer </h3>
+  <div class="sk-api-description">
+    <p>Resumes the named timer.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3844" aria-controls="cpp-snippet-3844" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8879" aria-controls="pas-snippet-8879" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3844" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3844 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">resume_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8879" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8879 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResumeTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="resume-timer" data-anchor> Resume Timer </h3>
+  <div class="sk-api-description">
+    <p>Resumes a paused timer.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Resume
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6332" aria-controls="cpp-snippet-6332" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7422" aria-controls="pas-snippet-7422" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6332" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6332 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">resume_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_resume</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7422" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7422 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResumeTimer</span><span class="p">(</span><span class="n">toResume</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-timer" data-anchor> Start Timer </h3>
+  <div class="sk-api-description">
+    <p>Start a timer. The timer will then start recording the time that has passed.
+You can check how long has past since the timer was started using the
+<a href="/api/timers/#timer-ticks"><code>Timer Ticks</code></a> function.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6194" aria-controls="cpp-snippet-6194" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4412" aria-controls="pas-snippet-4412" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6194" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6194 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4412" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4412 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="start-timer" data-anchor> Start Timer </h3>
+  <div class="sk-api-description">
+    <p>Start a timer. The timer will then start recording the time that has passed.
+You can check how long has past since the timer was started using the
+<a href="/api/timers/#timer-ticks"><code>Timer Ticks</code></a> function.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Start
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2974" aria-controls="cpp-snippet-2974" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2690" aria-controls="pas-snippet-2690" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2974" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2974 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_start</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2690" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2690 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartTimer</span><span class="p">(</span><span class="n">toStart</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="stop-timer" data-anchor> Stop Timer </h3>
+  <div class="sk-api-description">
+    <p>Stop the timer. The time is reset to 0 and you must
+recall start to begin the timer ticking again.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3786" aria-controls="cpp-snippet-3786" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2188" aria-controls="pas-snippet-2188" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3786" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3786 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2188" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2188 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="stop-timer" data-anchor> Stop Timer </h3>
+  <div class="sk-api-description">
+    <p>Stop the timer. The time is reset to 0 and you must
+recall start to begin the timer ticking again.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Stop
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1408" aria-controls="cpp-snippet-1408" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9715" aria-controls="pas-snippet-9715" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1408" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1408 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_stop</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9715" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9715 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopTimer</span><span class="p">(</span><span class="n">toStop</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-named" data-anchor> Timer Named </h3>
+  <div class="sk-api-description">
+    <p>Get the timer created with the indicated name.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+          </strong>
+          <p>Returns the timer fetched from SplashKit</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer to fetch</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4860" aria-controls="cpp-snippet-4860" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8700" aria-controls="pas-snippet-8700" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4860" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4860 pre">
+        <pre class="codehilite"><code><span class="n">timer</span> <span class="n">timer_named</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8700" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8700 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerNamed</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Timer</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-paused" data-anchor> Timer Paused </h3>
+  <div class="sk-api-description">
+    <p>Indicates if the timer is paused.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the timer is paused</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-260" aria-controls="cpp-snippet-260" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3818" aria-controls="pas-snippet-3818" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-260" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-260 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_paused</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3818" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3818 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerPaused</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-paused" data-anchor> Timer Paused </h3>
+  <div class="sk-api-description">
+    <p>Indicates if the timer is paused.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the timer is paused</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Get
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3056" aria-controls="cpp-snippet-3056" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7539" aria-controls="pas-snippet-7539" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3056" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3056 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_paused</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7539" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7539 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerPaused</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-started" data-anchor> Timer Started </h3>
+  <div class="sk-api-description">
+    <p>Indicates if the timer is started.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the timer has been started</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-7139" aria-controls="cpp-snippet-7139" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9691" aria-controls="pas-snippet-9691" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-7139" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7139 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_started</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9691" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9691 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerStarted</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-started" data-anchor> Timer Started </h3>
+  <div class="sk-api-description">
+    <p>Indicates if the timer is started.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the timer has been started</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Get
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6749" aria-controls="cpp-snippet-6749" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1222" aria-controls="pas-snippet-1222" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6749" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6749 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_started</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1222" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1222 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerStarted</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-ticks" data-anchor> Timer Ticks </h3>
+  <div class="sk-api-description">
+    <p>Gets the number of ticks (milliseconds) that have passed since the timer
+was started/reset. When paused the timer&#39;s ticks will not advance until
+the timer is once again resumed.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Unsigned Integer</code></p>
+
+          </strong>
+          <p>The number of milliseconds that have passed since the
+timer was created (excluding the time the timer was
+paused)</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the Timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1793" aria-controls="cpp-snippet-1793" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1019" aria-controls="pas-snippet-1019" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1793" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1793 pre">
+        <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer_ticks</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1019" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1019 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerTicks</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Cardinal</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="timer-ticks" data-anchor> Timer Ticks </h3>
+  <div class="sk-api-description">
+    <p>Gets the number of ticks (milliseconds) that have passed since the timer
+was started/reset. When paused the timer&#39;s ticks will not advance until
+the timer is once again resumed.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Unsigned Integer</code></p>
+
+          </strong>
+          <p>The number of milliseconds that have passed since the
+timer was created (excluding the time the timer was
+paused)</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    To Get
+                  </th>
+                  <td>
+                      <p><a href="/api/timers/#timer"><code>Timer</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The timer</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8528" aria-controls="cpp-snippet-8528" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5263" aria-controls="pas-snippet-5263" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8528" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8528 pre">
+        <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer_ticks</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5263" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5263 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerTicks</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Cardinal</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+  <section class="sk-api-types">
+    <h2> Types </h2>
+      <section class="sk-api-type sk-api-section">
+  <h3 id="timer" data-anchor> Timer </h3>
+  <div class="sk-api-description">
+    <p>Timers in SplashKit can be used to track the passing of time. In general
+you will create a timer, start it, then use it to track time by asking
+for the timer&#39;s ticks (milliseconds).</p>
+
+  </div>
+</section>
+
+  </section>
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>

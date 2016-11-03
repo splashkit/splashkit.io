@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplashKit - API - Camera</title>
+
+    <link href="/stylesheets/main-106f6e39.css" rel="stylesheet" />
+  </head>
+  <body class="api api_camera api_camera_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link active" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/guides">Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <header class="sk-page-header">
+  <div class="container">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        Camera
+      </h1>
+        <p class="lead">
+          SplashKit camera functionality allows you to move a virtual camera
+around in your world.
+        </p>
+    </div>
+  </div>
+</header>
+
+  <div class="sk-api-root container">
+    <div class="row">
+      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+        <nav role="navigation">
+  <ul class="nav sk-api-nav-root">
+      <li class="nav-item">
+        <a href="/api/animations" class="nav-link ">
+          Animations
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/audio" class="nav-link ">
+          Audio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/camera" class="nav-link active">
+          Camera
+        </a>
+          <nav role="navigation">
+              <ul class="nav sk-api-nav-article">
+  <li class="nav-item nav-header">
+    Functions
+  </li>
+    <li class="nav-item">
+      <a href="#camera-position" class="nav-link">
+        Camera Position
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#camera-x" class="nav-link">
+        Camera X
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#camera-y" class="nav-link">
+        Camera Y
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#center-camera-on" class="nav-link">
+        Center Camera On
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#center-camera-on" class="nav-link">
+        Center Camera On
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-camera-by" class="nav-link">
+        Move Camera By
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-camera-by" class="nav-link">
+        Move Camera By
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-camera-to" class="nav-link">
+        Move Camera To
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#move-camera-to" class="nav-link">
+        Move Camera To
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#point-on-screen" class="nav-link">
+        Point On Screen
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#rect-on-screen" class="nav-link">
+        Rect On Screen
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#screen-center" class="nav-link">
+        Screen Center
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#screen-rectangle" class="nav-link">
+        Screen Rectangle
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-camera-position" class="nav-link">
+        Set Camera Position
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#set-camera-y" class="nav-link">
+        Set Camera Y
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-screen" class="nav-link">
+        To Screen
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-screen" class="nav-link">
+        To Screen
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-screen-x" class="nav-link">
+        To Screen X
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-screen-y" class="nav-link">
+        To Screen Y
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-world" class="nav-link">
+        To World
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-world-x" class="nav-link">
+        To World X
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#to-world-y" class="nav-link">
+        To World Y
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#vector-world-to-screen" class="nav-link">
+        Vector World To Screen
+      </a>
+    </li>
+</ul>
+
+          </nav>
+      </li>
+      <li class="nav-item">
+        <a href="/api/color" class="nav-link ">
+          Color
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/database" class="nav-link ">
+          Database
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/geometry" class="nav-link ">
+          Geometry
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/graphics" class="nav-link ">
+          Graphics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/input" class="nav-link ">
+          Input
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/json" class="nav-link ">
+          JSON
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/networking" class="nav-link ">
+          Networking
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/physics" class="nav-link ">
+          Physics
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resource-bundles" class="nav-link ">
+          Resource Bundles
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/resources" class="nav-link ">
+          Resources
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/sprites" class="nav-link ">
+          Sprites
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/terminal" class="nav-link ">
+          Terminal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/timers" class="nav-link ">
+          Timers
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/types" class="nav-link ">
+          Types
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/utilities" class="nav-link ">
+          Utilities
+        </a>
+      </li>
+  </ul>
+</nav>
+
+      </aside>
+      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+          <section class="sk-api-description">
+    <p>Splashkit camera functionality allows you to move a virtual camera around in
+your world. This camera projects to the users window, allowing you to
+draw things to the screen in your world coordinates.</p>
+
+  </section>
+
+  <section class="sk-api-functions">
+    <h2> Functions </h2>
+      <section class="sk-api-function sk-api-section">
+  <h3 id="camera-position" data-anchor> Camera Position </h3>
+  <div class="sk-api-description">
+    <p>Returns the position of the camera in game coordinates. This will be the
+coordinate of the upper left corner of the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+          </strong>
+          <p>The position of the camera as a point_2d.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2432" aria-controls="cpp-snippet-2432" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8844" aria-controls="pas-snippet-8844" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2432" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2432 pre">
+        <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">camera_position</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8844" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8844 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraPosition</span><span class="p">():</span> <span class="n">Point2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="camera-x" data-anchor> Camera X </h3>
+  <div class="sk-api-description">
+    <p>Returns the x location of the camera in game coordinates. This represents
+the left most x value shown on the screen, with the right of the screen
+being at camera x + screen width.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The x location of the camera in game coordinates.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5098" aria-controls="cpp-snippet-5098" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7274" aria-controls="pas-snippet-7274" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5098" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5098 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">camera_x</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7274" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7274 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraX</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="camera-y" data-anchor> Camera Y </h3>
+  <div class="sk-api-description">
+    <p>Returns the y location of the camera in game coordinates. This represents
+the stop most y value shown on the screen, with bottom of screen being
+at camera y + screen height.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The y location of the camera in game coordinates.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9891" aria-controls="cpp-snippet-9891" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7321" aria-controls="pas-snippet-7321" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9891" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9891 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">camera_y</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7321" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7321 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraY</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="center-camera-on" data-anchor> Center Camera On </h3>
+  <div class="sk-api-description">
+    <p>Set the camera view to be centered over the specific sprite. The offset
+vector allows you to move the sprite from the direct center of the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    S
+                  </th>
+                  <td>
+                      <p><a href="/api/sprites/#sprite"><code>Sprite</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The sprite to track.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Offset
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The amount to offset the camera, allowing you to position
+the sprite away from the center of the screen.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3267" aria-controls="cpp-snippet-3267" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5687" aria-controls="pas-snippet-5687" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3267" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3267 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">center_camera_on</span><span class="p">(</span><span class="n">sprite</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector_2d</span> <span class="o">&amp;</span><span class="n">offset</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5687" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5687 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CenterCameraOn</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Sprite</span><span class="p">;</span> <span class="k">const</span> <span class="n">offset</span><span class="p">:</span> <span class="n">Vector2d</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="center-camera-on" data-anchor> Center Camera On </h3>
+  <div class="sk-api-description">
+    <p>Set the camera view to be centered over the specific sprite. The offset
+vector allows you to move the sprite from the direct center of the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    S
+                  </th>
+                  <td>
+                      <p><a href="/api/sprites/#sprite"><code>Sprite</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The sprite to track.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Offset X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>An additional offset added to the camera, allowing you to
+position the sprite offset from the center of the screen.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Offset Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>An additional offset added to the camera, allowing you to
+position the sprite offset from the center of the screen.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-429" aria-controls="cpp-snippet-429" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7940" aria-controls="pas-snippet-7940" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-429" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-429 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">center_camera_on</span><span class="p">(</span><span class="n">sprite</span> <span class="n">s</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offset_x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offset_y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7940" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7940 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CenterCameraOn</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Sprite</span><span class="p">;</span> <span class="n">offsetX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">offsetY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-by" data-anchor> Move Camera By </h3>
+  <div class="sk-api-description">
+    <p>Move the camera (offset its world x and y values) using the specified
+vector. For example, if you move the camera by the same speed vector of
+a sprite the camera will &quot;track&quot; (be locked on to) the sprite as it moves.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Offset
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The amount to move the camera.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9692" aria-controls="cpp-snippet-9692" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9861" aria-controls="pas-snippet-9861" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9692" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9692 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_by</span><span class="p">(</span><span class="k">const</span> <span class="n">vector_2d</span> <span class="o">&amp;</span><span class="n">offset</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9861" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9861 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraBy</span><span class="p">(</span><span class="k">const</span> <span class="n">offset</span><span class="p">:</span> <span class="n">Vector2d</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-by" data-anchor> Move Camera By </h3>
+  <div class="sk-api-description">
+    <p>Move the camera (offset its world x and y values) using the specified
+dx (change in x) and dy (change in x) values.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Dx
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The amount to move the camera along the x axis.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Dy
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The amount to move the camera along the y axis.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8139" aria-controls="cpp-snippet-8139" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2399" aria-controls="pas-snippet-2399" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8139" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8139 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_by</span><span class="p">(</span><span class="kt">float</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">dy</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2399" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2399 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraBy</span><span class="p">(</span><span class="n">dx</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">dy</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-to" data-anchor> Move Camera To </h3>
+  <div class="sk-api-description">
+    <p>Move the camera view (screen top left) to a specified point in the world.
+This will be the new top left corner of the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Pt
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The new camera location</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5683" aria-controls="cpp-snippet-5683" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4664" aria-controls="pas-snippet-4664" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5683" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5683 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_to</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4664" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4664 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraTo</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-to" data-anchor> Move Camera To </h3>
+  <div class="sk-api-description">
+    <p>Move the camera view to a world location specified by the x and y values.
+This will be the new top left corner of the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The new camera x location</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The new camera y location</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8367" aria-controls="cpp-snippet-8367" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5214" aria-controls="pas-snippet-5214" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8367" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8367 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_to</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5214" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5214 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraTo</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="point-on-screen" data-anchor> Point On Screen </h3>
+  <div class="sk-api-description">
+    <p>Tests if the point is on the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if the point is on the screen.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Pt
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The point to check.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3701" aria-controls="cpp-snippet-3701" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6369" aria-controls="pas-snippet-6369" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3701" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3701 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">point_on_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6369" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6369 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">PointOnScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="rect-on-screen" data-anchor> Rect On Screen </h3>
+  <div class="sk-api-description">
+    <p>Tests if the rectangle is on the screen.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>True if any part of the rectangle is on the screen.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The rectangle to check.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2635" aria-controls="cpp-snippet-2635" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6519" aria-controls="pas-snippet-6519" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2635" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2635 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">rect_on_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">rectangle</span> <span class="o">&amp;</span><span class="n">rect</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6519" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6519 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">RectOnScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="screen-center" data-anchor> Screen Center </h3>
+  <div class="sk-api-description">
+    <p>Returns the center of the screen in world coordinates.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+          </strong>
+          <p>The center of the screen in world coordinates.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9940" aria-controls="cpp-snippet-9940" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7577" aria-controls="pas-snippet-7577" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9940" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9940 pre">
+        <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">screen_center</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7577" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7577 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ScreenCenter</span><span class="p">():</span> <span class="n">Point2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="screen-rectangle" data-anchor> Screen Rectangle </h3>
+  <div class="sk-api-description">
+    <p>Returns a rectangle that represents the dimensions of the window.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+          </strong>
+          <p>A rectangle representing the dimensions of the current window.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1914" aria-controls="cpp-snippet-1914" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5975" aria-controls="pas-snippet-5975" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1914" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1914 pre">
+        <pre class="codehilite"><code><span class="n">rectangle</span> <span class="n">screen_rectangle</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5975" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5975 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ScreenRectangle</span><span class="p">():</span> <span class="n">Rectangle</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-camera-position" data-anchor> Set Camera Position </h3>
+  <div class="sk-api-description">
+    <p>Change the position of the camera to a specified world coordinate. This
+will then be the new top left most position of the screen within the world.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Pos
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The new location of the camera.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8484" aria-controls="cpp-snippet-8484" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8589" aria-controls="pas-snippet-8589" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8484" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8484 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_camera_position</span><span class="p">(</span><span class="n">point_2d</span> <span class="n">pos</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8589" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8589 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetCameraPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="set-camera-y" data-anchor> Set Camera Y </h3>
+  <div class="sk-api-description">
+    <p>Change the Y position of the camera to a specified world coordinate. This
+will then be the new top most position of the screen within the world.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The new y coordinate for the camera</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5557" aria-controls="cpp-snippet-5557" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8934" aria-controls="pas-snippet-8934" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5557" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5557 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_camera_y</span><span class="p">(</span><span class="kt">float</span> <span class="n">y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8934" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8934 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetCameraY</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen" data-anchor> To Screen </h3>
+  <div class="sk-api-description">
+    <p>Convert the passed in world coordinates to screen coordinates.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+          </strong>
+          <p>A point that represents pt in screen coordinates.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Pt
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The point to convert - this should be in world coordinates.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8425" aria-controls="cpp-snippet-8425" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-844" aria-controls="pas-snippet-844" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8425" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8425 pre">
+        <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">to_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-844" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-844 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">):</span> <span class="n">Point2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen" data-anchor> To Screen </h3>
+  <div class="sk-api-description">
+    <p>Convert the rectangle in world coordinates to screen coordinates.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+          </strong>
+          <p>A rectangle that represents rect in screen coordinates.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Rect
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#rectangle"><code>Rectangle</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The rectangle to convert - this should be in world coordinates.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8146" aria-controls="cpp-snippet-8146" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-593" aria-controls="pas-snippet-593" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8146" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8146 pre">
+        <pre class="codehilite"><code><span class="n">rectangle</span> <span class="n">to_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">rectangle</span> <span class="o">&amp;</span><span class="n">rect</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-593" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-593 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">):</span> <span class="n">Rectangle</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen-x" data-anchor> To Screen X </h3>
+  <div class="sk-api-description">
+    <p>Translate a world x value to the current screen x value which is based on
+the camera position.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The x location of the world coordinate on the screen.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    World X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value of the x coordinate to translate to screen.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-6619" aria-controls="cpp-snippet-6619" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5066" aria-controls="pas-snippet-5066" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-6619" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6619 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_screen_x</span><span class="p">(</span><span class="kt">float</span> <span class="n">world_x</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5066" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5066 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreenX</span><span class="p">(</span><span class="n">worldX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen-y" data-anchor> To Screen Y </h3>
+  <div class="sk-api-description">
+    <p>Translate a world y value to the current screen y value set by the camera.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The y location of the world coordinate on the screen.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    World Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value of the y coordinate to translate to screen.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4545" aria-controls="cpp-snippet-4545" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9212" aria-controls="pas-snippet-9212" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4545" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4545 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_screen_y</span><span class="p">(</span><span class="kt">float</span> <span class="n">world_y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9212" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9212 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreenY</span><span class="p">(</span><span class="n">worldY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-world" data-anchor> To World </h3>
+  <div class="sk-api-description">
+    <p>Converts the passed in point from screen coordinates to world coordinates.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+          </strong>
+          <p>The same point in world coordinates.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Pt
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#point-2d"><code>Point 2D</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The point in screen coordinates.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-3431" aria-controls="cpp-snippet-3431" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9350" aria-controls="pas-snippet-9350" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-3431" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3431 pre">
+        <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">to_world</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9350" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9350 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorld</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2d</span><span class="p">):</span> <span class="n">Point2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-world-x" data-anchor> To World X </h3>
+  <div class="sk-api-description">
+    <p>Translate a screen x value (based on the camera) to a world x value</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The x location of the screen coordinate in the world.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Screen X
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value of the x coordinate on screen to translate to
+the world.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2975" aria-controls="cpp-snippet-2975" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-919" aria-controls="pas-snippet-919" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2975" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2975 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_world_x</span><span class="p">(</span><span class="kt">float</span> <span class="n">screen_x</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-919" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-919 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorldX</span><span class="p">(</span><span class="n">screenX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="to-world-y" data-anchor> To World Y </h3>
+  <div class="sk-api-description">
+    <p>Translate a screen y value (based on the camera) to a world y value</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Float</code></p>
+
+          </strong>
+          <p>The y location of the screen coordinate in the world.</p>
+
+        </dd>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Screen Y
+                  </th>
+                  <td>
+                      <p><code>Float</code></p>
+
+                  </td>
+                  <td>
+                    <p>The value of the y coordinate on screen to translate to
+the world.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5959" aria-controls="cpp-snippet-5959" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4019" aria-controls="pas-snippet-4019" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5959" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5959 pre">
+        <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_world_y</span><span class="p">(</span><span class="kt">float</span> <span class="n">screen_y</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4019" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4019 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorldY</span><span class="p">(</span><span class="n">screenY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="vector-world-to-screen" data-anchor> Vector World To Screen </h3>
+  <div class="sk-api-description">
+    <p>Returns a vector that can transform points from world to screen coordinates.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><a href="/api/types/#vector-2d"><code>Vector 2D</code></a></p>
+
+          </strong>
+          <p>A vector representing the distance and direction points need
+to move to map from world to screen coordinates.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-2501" aria-controls="cpp-snippet-2501" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9902" aria-controls="pas-snippet-9902" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-2501" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2501 pre">
+        <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">vector_world_to_screen</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9902" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9902 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">VectorWorldToScreen</span><span class="p">():</span> <span class="n">Vector2d</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+  </section>
+
+
+
+      </article>
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-ac18ead2.js"></script>
+  </body>
+</html>
