@@ -1,9 +1,12 @@
 body {
   position: relative;
-  height: 100%;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
 }
 main {
   background-color: #fff;
   padding-top: 1em;
   padding-bottom: 3em;
+  flex: 1;
 }
