@@ -9,11 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SplashKit - Home</title>
+    <title>SplashKit - Guides - Installation</title>
 
     <link href="/stylesheets/main-1661301b.css" rel="stylesheet" />
   </head>
-  <body class="index">
+  <body class="guides guides_Installation guides_Installation_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -45,7 +45,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/guides">Guides</a>
+        <a class="nav-link active" href="/guides">Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
@@ -70,23 +70,36 @@
 </nav>
 
     <main id="content">
-      <div class="container">
-  <div class="row">
-    <span class="sk-logo"></span>
-    <p class="lead">
-      SplashKit is a beginner's all-purpose software toolkit.
-    </p>
+        <div class="container">
+    <div class="row">
+      <article>
+        <h1>Getting SplashKit installed on your system.</h1>
+
+<h2>MacOS &amp; Linux</h2>
+
+<ol>
+<li>Open the terminal. <em>Applications/utilities/Terminal</em> on MacOS.</li>
+<li>In your Terminal, paste and run the following line: <code>bash &lt;(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)</code></li>
+<li>SplashKit and SKM will now install, it will take a few minutes.</li>
+</ol>
+
+<h2>Windows</h2>
+
+<ol>
+<li>Install MSYS2 on yor system. Installation instructions can be found at: <a href="http://www.msys2.org/">MSYS2.org</a></li>
+<li>Open MSYS2 and paste &amp; run: <code>bash &lt;(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)</code></li>
+<li>SplashKit and SKM will now install, it may take a few minutes.</li>
+</ol>
+
+<h2>What&rsquo;s next?</h2>
+
+<p>You can test that it has successfully install by running <code>skm</code> in your terminal. You should see a window appear.</p>
+
+<p>Now that SplashKit and SKM are installed, you should install a text editor. We recommend <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+
+      </article>
+    </div>
   </div>
-  <div class="row sk-install">
-    <h5>
-      Beta Release
-    </h5>
-    <p>
-      To install SplashKit Beta, <strong>copy and paste</strong> the following into your <strong>terminal</strong>:
-    </p>
-    <pre data-clipboard data-clipboard-target="#sk-install-script" id="sk-install-script" class="sk-install-script container">bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/develop/skm-install.sh)</pre>
-  </div>
-</div>
 
     </main>
     <footer class="sk-footer">
