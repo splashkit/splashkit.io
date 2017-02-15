@@ -40,12 +40,12 @@ $ bundle exec middleman
 
 Your website will be watched and hosted locally at **[http://localhost:4567/](http://localhost:4567/)**.
 
-## Deploying
+## Publishing
 
-Deploy using:
+Publish using:
 
 ```bash
-$ rake deploy
+$ rake publish
 ```
 
 ## License
