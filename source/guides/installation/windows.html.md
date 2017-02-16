@@ -1,6 +1,6 @@
 # Getting SplashKit installed on your system.
 
-1. Download the correct version of [MSYS@](www.msys2.org) (32bit or 64bit depending on your computer).
+1. Download the correct version of [MSYS](www.msys2.org) (32bit or 64bit depending on your computer).
 
     ![](../../images/install-gifs/Windows/1.gif)
 
