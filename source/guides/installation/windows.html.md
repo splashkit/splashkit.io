@@ -28,8 +28,7 @@
 
     ![](../../images/install-gifs/Windows/7.gif)
 
-1. go to the [dotnet core](https://www.microsoft.com/net/core) page. Select `command line` then go to `other downloads`.
-Once there, select `current` and select the MacOS download.
+1. go to the [dotnet core](https://www.microsoft.com/net/core) page. Select `windows`, `command line/other` then download the `.net core sdk`.
 
     ![](../../images/install-gifs/Windows/8.gif)
 
