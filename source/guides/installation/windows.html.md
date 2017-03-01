@@ -20,7 +20,7 @@
 
     ![](../../images/install-gifs/Windows/5.gif)
 
-1. In your MSYS2 Terminal, paste and run the following line: `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)`. Found at [splashkit](splashkit.io).
+1. In your MSYS2 Terminal, paste and run the following line: `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)`. Found at [splashkit](http://www.splashkit.io).
 
     ![](../../images/install-gifs/Windows/6.gif)
 
@@ -36,7 +36,7 @@
 
     ![](../../images/install-gifs/Windows/9.gif)
 
-1. Download [Visual Studio Code](code.visualstudio.com)
+1. Download [Visual Studio Code](https://code.visualstudio.com)
 
     ![](../../images/install-gifs/Windows/10.gif)
 

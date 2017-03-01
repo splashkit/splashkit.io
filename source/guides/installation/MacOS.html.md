@@ -4,7 +4,7 @@
 
     ![](../../images/install-gifs/MacOS/1.gif)
 
-1. In your Terminal, paste and run the following line: `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)`. Found at [splashkit](splashkit.io).
+1. In your Terminal, paste and run the following line: `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)`. Found at [splashkit](http://splashkit.io).
 
     ![](../../images/install-gifs/MacOS/2.gif)
 
