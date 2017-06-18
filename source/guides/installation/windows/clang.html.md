@@ -5,11 +5,11 @@
 
     `pacman -S mingw-w64-{x86_64,i686}-gcc`
 
-    ![](../../images/install-gifs/Windows/install-gpp-msys.gif)
+    ![](images/install-gifs/Windows/install-gpp-msys.gif)
 
 1. Run the compiler from either the **MSYS2 MinGW 64-bit** or **MSYS2 MinGW 32-bit** terminals
 
-    ![](../../images/install-gifs/Windows/demo-compiler.gif)
+    ![](images/install-gifs/Windows/demo-compiler.gif)
 
 1. In Visual Studio Code you should install the following extensions:
 

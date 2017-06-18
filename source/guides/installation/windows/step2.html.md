@@ -8,11 +8,11 @@ Once you have MSYS2 installed, you can install the SplashKit library:
     
     This can also be found on the [splashkit](http://www.splashkit.io).
 
-    ![](../../images/install-gifs/Windows/6.gif)
+    ![](images/install-gifs/Windows/6.gif)
 
 1. Restart your terminal, and test that SplashKit installed by executing `skm` in the MSYS2 terminal.
 
-    ![](../../images/install-gifs/Windows/7.gif)
+    ![](images/install-gifs/Windows/7.gif)
 
 [Next - Install Visual Studio Code](/guides/installation/windows/step3.html)
 
