@@ -9,11 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SplashKit - Guides - Installation - Macos - Step1</title>
+    <title>SplashKit - Guides - Installation - Mac - Dotnet - Install</title>
 
     <link href="/stylesheets/main-1661301b.css" rel="stylesheet" />
   </head>
-  <body class="guides guides_installation guides_installation_MacOS guides_installation_MacOS_step1 guides_installation_MacOS_step1_index">
+  <body class="guides guides_installation guides_installation_mac guides_installation_mac_dotnet guides_installation_mac_dotnet_install guides_installation_mac_dotnet_install_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -73,15 +73,44 @@
         <div class="container">
     <div class="row">
       <article>
-        <h1>Step 1 - Install Xcode tools</h1>
+        <h1>Install Dotnet Core Tools</h1>
 
-<p>Open the terminal, <em>Applications/utilities/Terminal</em>, and execute: <code>xcode-select --install</code>.</p>
+<ol>
+<li><p>Install the <a href="https://microsoft.com/net/core">dotnet core library</a>, and follow the installation steps. Firstly, we need to install the <a href="https://brew.sh">Brew Package Manager</a>.</p>
 
-<p><img src="/images/install-gifs/MacOS/1-33077c49.gif" alt="1" width="640" height="481" /></p>
+<p><img src="/images/install-gifs/MacOS/6-850b1f38.gif" alt="6" /></p></li>
+<li><p>And execute it in the terminal</p>
 
-<p>Once you have completed this step, move on to the <a href="/guides/installation/macos/step2.html">next step - installing SplashKit</a>.</p>
+<p><img src="/images/install-gifs/MacOS/7-7d6e634e.gif" alt="7" /></p></li>
+<li><p>Then copy each line of the install pre-requisites.</p>
 
-<p>Return to the <a href="/guides/installation/MacOS.html">overview of the macOS install</a>.</p>
+<p><img src="/images/install-gifs/MacOS/8-670416c5.gif" alt="8" /></p></li>
+<li><p>Continue on executing the install pre-requisites on the dotnet core page by copy-pasting the commands.</p>
+
+<p><img src="/images/install-gifs/MacOS/9-0ab43daa.gif" alt="9" /></p></li>
+<li><p>Install dotnet core SDK.</p>
+
+<p><img src="/images/install-gifs/MacOS/10-0159961d.gif" alt="10" /></p></li>
+<li><p>Run the installer.</p>
+
+<p><img src="/images/install-gifs/MacOS/11-f50b324c.gif" alt="11" /></p></li>
+<li><p>To test if dotnet was installed successfully, execute the command: <code>dotnet</code> into your terminal.</p>
+
+<p>If you see <code>command not found</code>, don&rsquo;t worry! Executing <code>ln -s /usr/local/share/dotnet/dotnet /usr/local/bin</code> should fix it.</p>
+
+<p><img src="/images/install-gifs/MacOS/12-8905d04e.gif" alt="12" /></p></li>
+<li><p>In Visual Studio Code you should install the following extensions:</p></li>
+</ol>
+
+<ul>
+<li>C# (search for <code>ms-vscode.csharp</code>)</li>
+<li>C# XML Documentation Comments (<code>k--kato.docomment</code>)</li>
+<li><p>vscode-icons (<code>robertohuertasm.vscode-icons</code>)</p>
+
+<p><img src="/images/install-gifs/extensions-5e65e032.gif" alt="Extensions" /></p></li>
+</ul>
+
+<p>Return to the <a href="/guides/installation/MacOS/">overview of the macOS install</a>.</p>
 
       </article>
     </div>
