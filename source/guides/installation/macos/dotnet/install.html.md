@@ -38,4 +38,4 @@
   
     ![](images/install-gifs/extensions.gif)
 
-Return to the [overview of the macOS install](/guides/installation/macos.html).
+Return to the [overview of the macOS install](/guides/installation/MacOS.html).
