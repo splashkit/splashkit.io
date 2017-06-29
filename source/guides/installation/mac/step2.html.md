@@ -12,6 +12,6 @@
 
     ![](images/install-gifs/MacOS/3.gif)
 
-[Next - Install Visual Studio Code](/guides/installation/macos/step3.html)
+[Next - Install Visual Studio Code](/guides/installation/mac/step3.html)
 
 Return to the [overview of the macOS install](/guides/installation/MacOS.html).

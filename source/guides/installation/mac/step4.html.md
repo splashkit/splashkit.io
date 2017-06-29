@@ -2,7 +2,7 @@
 
 SplashKit works with a number of programming languages. Each of these has its own set of tools you will need to install.
 
-* For C#, install the [Dotnet core](/guides/installation/macos/dotnet/install.html) tools.
+* For C#, install the [Dotnet core](/guides/installation/mac/dotnet/install.html) tools.
 * For C++, you are ready to go!
 
 

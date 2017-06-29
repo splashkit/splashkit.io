@@ -8,6 +8,6 @@
 
     ![](images/install-gifs/MacOS/5.gif)
 
-[Next - Install Language Tools](/guides/installation/macos/step4.html)
+[Next - Install Language Tools](/guides/installation/mac/step4.html)
 
 Return to the [overview of the macOS install](/guides/installation/MacOS.html).
