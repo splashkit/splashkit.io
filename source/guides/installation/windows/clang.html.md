@@ -3,7 +3,7 @@
 1. Open an MSYS2 terminal
 1. Run the following command:
 
-    `pacman -S mingw-w64-{x86_64,i686}-gcc`
+    `pacman -S mingw-w64-{x86_64,i686}-gcc mingw-w64-{i686,x86_64}-gdb`
 
     ![](images/install-gifs/Windows/install-gpp-msys.gif)
 
