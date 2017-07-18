@@ -9,11 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SplashKit - Home</title>
+    <title>SplashKit - Guides - Installation - Ubuntu - Step1</title>
 
     <link href="/stylesheets/main-96cb182a.css" rel="stylesheet" />
   </head>
-  <body class="index">
+  <body class="guides guides_installation guides_installation_ubuntu guides_installation_ubuntu_step1 guides_installation_ubuntu_step1_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -45,7 +45,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/guides">Guides</a>
+        <a class="nav-link active" href="/guides">Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
@@ -70,26 +70,44 @@
 </nav>
 
     <main id="content">
-      <div class="container">
-  <div class="row">
-    <span class="sk-logo"></span>
-    <p class="lead">
-      SplashKit is a beginner's all-purpose software toolkit.
-    </p>
+        <div class="container">
+    <div class="row">
+      <article class="sk-article">
+        <h1>Check that your version of Ubuntu is supported</h1>
+
+<p>SplashKit requires Ubuntu version 16.04 or greater to operate without
+manual intervention.</p>
+
+<p>To check which version of Ubuntu you are running, follow the steps below.</p>
+
+<ol>
+<li><p>Open up a terminal.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Check your Ubuntu version</p>
+
+<p>Copy and paste the code in the box below into your terminal and press enter.</p>
+<pre class="highlight shell"><code>lsb_release -a
+</code></pre>
+<p><img src="/images/install-gifs/Ubuntu/check-version-8bc70537.gif" alt="Executing lsa-release -a" /></p></li>
+<li><p>Compare your version with the supported version</p>
+
+<p>Check your release version by reading the &ldquo;Release:&rdquo; line presented.</p>
+
+<p>If your version is greater than or equal to 16.04, your version is supported.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/interpret-version-9e4bbc3c.jpg" alt="Checking verison compatibility" /></p></li>
+</ol>
+
+<p>Once you have confirmed that your version is supported, move on to the
+<a href="/guides/installation/ubuntu/step2/">next step - Install pre-requisites for SplashKit</a>.</p>
+
+<p>Return to the
+<a href="/guides/installation/ubuntu/">overview of the Ubuntu Linux install</a>.</p>
+
+      </article>
+    </div>
   </div>
-  <div class="row sk-install">
-    <h5>
-      Beta Release
-    </h5>
-    <p>
-      To install SplashKit Beta, <strong>copy and paste</strong> the following into your <strong>terminal</strong>:
-    </p>
-    <pre data-clipboard data-clipboard-target="#sk-install-script" id="sk-install-script" class="sk-install-script container">bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)</pre>
-    <p>
-      Checkout the <a href="/guides/installation/">Installation Guides</a> for more details.
-    </p>
-  </div>
-</div>
 
     </main>
     <footer class="sk-footer">

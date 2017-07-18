@@ -9,11 +9,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>SplashKit - Home</title>
+    <title>SplashKit - Guides - Installation - Ubuntu - Step3</title>
 
     <link href="/stylesheets/main-96cb182a.css" rel="stylesheet" />
   </head>
-  <body class="index">
+  <body class="guides guides_installation guides_installation_ubuntu guides_installation_ubuntu_step3 guides_installation_ubuntu_step3_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -45,7 +45,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/guides">Guides</a>
+        <a class="nav-link active" href="/guides">Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
@@ -70,26 +70,56 @@
 </nav>
 
     <main id="content">
-      <div class="container">
-  <div class="row">
-    <span class="sk-logo"></span>
-    <p class="lead">
-      SplashKit is a beginner's all-purpose software toolkit.
-    </p>
+        <div class="container">
+    <div class="row">
+      <article class="sk-article">
+        <h1>Install the SplashKit Library on Ubuntu</h1>
+
+<p>Once you have <a href="/guides/installation/ubuntu/step2/">installed the pre-requisite packages</a>, you can
+install the SplashKit library.</p>
+
+<ol>
+<li><p>Open up a terminal.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Execute the SplashKit library installation script.</p>
+
+<p>Copy and paste the code below into your terminal and press enter.</p>
+<pre class="highlight shell"><code>bash &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh<span class="o">)</span>
+</code></pre>
+<p><img src="/images/install-gifs/Ubuntu/install-splashkit-3d7cca8e.gif" alt="Installing SplashKit library" /></p>
+
+<p>When asked if you have installed the depenencies, type &ldquo;Y&rdquo; and press enter.</p></li>
+<li><p>Add SplashKit to your PATH environment variable.</p>
+
+<p>Copy and paste the code below into your terminal and press enter.</p>
+<pre class="highlight shell"><code><span class="nb">echo</span> -e <span class="s2">"</span><span class="se">\n</span><span class="s2">#SplashKit Library Path</span><span class="se">\n</span><span class="s2">PATH=</span><span class="se">\"</span><span class="nv">$HOME</span><span class="s2">/.splashkit/skm-linux-x64:</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="se">\"</span><span class="s2">"</span> &gt;&gt; ~/.profile
+</code></pre></li>
+<li><p>Restart your computer.</p>
+
+<p>To finalise the installation of SplashKit, you need to restart your computer.</p>
+
+<p>After your computer has reset, log back in and proceed to step five.</p></li>
+<li><p>Open up a terminal.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Confirm your installation was successfull.</p>
+
+<p>Enter the code below into your terminal and press enter. If your installation
+succeeded, a window should open taking you to the SplashKit home page.</p>
+<pre class="highlight shell"><code>skm
+</code></pre></li>
+</ol>
+
+<p>Once you have completed the installation of SplashKit, move on to the
+<a href="/guides/installation/ubuntu/step4/">next step - Install Visual Studio Code</a></p>
+
+<p>Return to the
+<a href="/guides/installation/ubuntu/">overview of the Ubuntu Linux install</a>.</p>
+
+      </article>
+    </div>
   </div>
-  <div class="row sk-install">
-    <h5>
-      Beta Release
-    </h5>
-    <p>
-      To install SplashKit Beta, <strong>copy and paste</strong> the following into your <strong>terminal</strong>:
-    </p>
-    <pre data-clipboard data-clipboard-target="#sk-install-script" id="sk-install-script" class="sk-install-script container">bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)</pre>
-    <p>
-      Checkout the <a href="/guides/installation/">Installation Guides</a> for more details.
-    </p>
-  </div>
-</div>
 
     </main>
     <footer class="sk-footer">
