@@ -37,11 +37,13 @@
             <a class="dropdown-item" href="/api/physics">Physics</a>
             <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
             <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
             <a class="dropdown-item" href="/api/sprites">Sprites</a>
             <a class="dropdown-item" href="/api/terminal">Terminal</a>
             <a class="dropdown-item" href="/api/timers">Timers</a>
             <a class="dropdown-item" href="/api/types">Types</a>
             <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
         </div>
       </li>
       <li class="nav-item">
@@ -279,6 +281,11 @@ manipulate a database.
         </a>
       </li>
       <li class="nav-item">
+        <a href="/api/social" class="nav-link ">
+          Social
+        </a>
+      </li>
+      <li class="nav-item">
         <a href="/api/sprites" class="nav-link ">
           Sprites
         </a>
@@ -301,6 +308,11 @@ manipulate a database.
       <li class="nav-item">
         <a href="/api/utilities" class="nav-link ">
           Utilities
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/windows" class="nav-link ">
+          Windows
         </a>
       </li>
   </ul>
@@ -373,22 +385,38 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1187" aria-controls="cpp-snippet-1187" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-670" aria-controls="cpp-snippet-670" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8998" aria-controls="pas-snippet-8998" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3525" aria-controls="cs-snippet-3525" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8693" aria-controls="pas-snippet-8693" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4692" aria-controls="py-snippet-4692" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1187" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1187 pre">
+      <div role="tabpanel" id="cpp-snippet-670" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-670 pre">
         <pre class="codehilite"><code><span class="n">database</span> <span class="n">database_named</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8998" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8998 pre">
+      <div role="tabpanel" id="cs-snippet-3525" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3525 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Database</span> <span class="nf">DatabaseNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8693" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8693 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">DatabaseNamed</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Database</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4692" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4692 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">database_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -410,22 +438,38 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5411" aria-controls="cpp-snippet-5411" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-366" aria-controls="cpp-snippet-366" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8560" aria-controls="pas-snippet-8560" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4873" aria-controls="cs-snippet-4873" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4672" aria-controls="pas-snippet-4672" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7815" aria-controls="py-snippet-7815" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5411" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5411 pre">
+      <div role="tabpanel" id="cpp-snippet-366" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-366 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_databases</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8560" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8560 pre">
+      <div role="tabpanel" id="cs-snippet-4873" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4873 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAllDatabases</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4672" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4672 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllDatabases</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7815" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7815 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_databases</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
@@ -447,22 +491,38 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7931" aria-controls="cpp-snippet-7931" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9207" aria-controls="cpp-snippet-9207" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7505" aria-controls="pas-snippet-7505" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6068" aria-controls="cs-snippet-6068" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6275" aria-controls="pas-snippet-6275" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7257" aria-controls="py-snippet-7257" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7931" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7931 pre">
+      <div role="tabpanel" id="cpp-snippet-9207" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9207 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_query_results</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7505" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7505 pre">
+      <div role="tabpanel" id="cs-snippet-6068" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6068 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAllQueryResults</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6275" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6275 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllQueryResults</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7257" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7257 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_query_results</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
@@ -513,22 +573,39 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7635" aria-controls="cpp-snippet-7635" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1087" aria-controls="cpp-snippet-1087" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-449" aria-controls="pas-snippet-449" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3428" aria-controls="cs-snippet-3428" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5569" aria-controls="pas-snippet-5569" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7748" aria-controls="py-snippet-7748" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7635" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7635 pre">
+      <div role="tabpanel" id="cpp-snippet-1087" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1087 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_database</span><span class="p">(</span><span class="n">database</span> <span class="n">db_to_close</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-449" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-449 pre">
+      <div role="tabpanel" id="cs-snippet-3428" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3428 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeDatabase</span><span class="p">(</span><span class="n">Database</span> <span class="n">dbToClose</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Database</span><span class="p">.</span><span class="nf">FreeDatabase</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5569" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5569 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeDatabase</span><span class="p">(</span><span class="n">dbToClose</span><span class="p">:</span> <span class="n">Database</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7748" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7748 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_database</span><span class="p">(</span><span class="n">db_to_close</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -579,22 +656,38 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7619" aria-controls="cpp-snippet-7619" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3346" aria-controls="cpp-snippet-3346" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9689" aria-controls="pas-snippet-9689" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3199" aria-controls="cs-snippet-3199" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2140" aria-controls="pas-snippet-2140" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-1955" aria-controls="py-snippet-1955" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7619" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7619 pre">
+      <div role="tabpanel" id="cpp-snippet-3346" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3346 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name_of_db_to_close</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9689" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9689 pre">
+      <div role="tabpanel" id="cs-snippet-3199" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3199 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeDatabase</span><span class="p">(</span><span class="kt">string</span> <span class="n">nameOfDbToClose</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2140" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2140 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeDatabase</span><span class="p">(</span><span class="n">nameOfDbToClose</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-1955" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1955 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_database_named</span><span class="p">(</span><span class="n">name_of_db_to_close</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -645,22 +738,39 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9553" aria-controls="cpp-snippet-9553" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8938" aria-controls="cpp-snippet-8938" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8657" aria-controls="pas-snippet-8657" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7798" aria-controls="cs-snippet-7798" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5303" aria-controls="pas-snippet-5303" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-6157" aria-controls="py-snippet-6157" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9553" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9553 pre">
+      <div role="tabpanel" id="cpp-snippet-8938" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8938 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_query_result</span><span class="p">(</span><span class="n">query_result</span> <span class="n">query</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8657" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8657 pre">
+      <div role="tabpanel" id="cs-snippet-7798" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7798 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeQueryResult</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">query</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">FreeQueryResult</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5303" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5303 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeQueryResult</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-6157" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6157 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_query_result</span><span class="p">(</span><span class="n">query</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -722,22 +832,39 @@ do this by calling the <code>Open Database(string Name)</code> function.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5973" aria-controls="cpp-snippet-5973" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6355" aria-controls="cpp-snippet-6355" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8189" aria-controls="pas-snippet-8189" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2315" aria-controls="cs-snippet-2315" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7278" aria-controls="pas-snippet-7278" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-2583" aria-controls="py-snippet-2583" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5973" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5973 pre">
+      <div role="tabpanel" id="cpp-snippet-6355" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6355 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">get_next_row</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8189" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8189 pre">
+      <div role="tabpanel" id="cs-snippet-2315" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2315 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">GetNextRow</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">GetNextRow</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7278" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7278 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">GetNextRow</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-2583" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2583 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">get_next_row</span><span class="p">(</span><span class="n">db_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -805,22 +932,38 @@ This will match the name you used when opening the database in open_database</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5441" aria-controls="cpp-snippet-5441" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1045" aria-controls="cpp-snippet-1045" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2353" aria-controls="pas-snippet-2353" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2978" aria-controls="cs-snippet-2978" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3701" aria-controls="pas-snippet-3701" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3492" aria-controls="py-snippet-3492" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5441" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5441 pre">
+      <div role="tabpanel" id="cpp-snippet-1045" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1045 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2353" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2353 pre">
+      <div role="tabpanel" id="cs-snippet-2978" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2978 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">HasDatabase</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3701" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3701 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasDatabase</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3492" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3492 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_database</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -882,22 +1025,39 @@ This will match the name you used when opening the database in open_database</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6280" aria-controls="cpp-snippet-6280" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7250" aria-controls="cpp-snippet-7250" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8502" aria-controls="pas-snippet-8502" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5982" aria-controls="cs-snippet-5982" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2993" aria-controls="pas-snippet-2993" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3513" aria-controls="py-snippet-3513" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6280" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6280 pre">
+      <div role="tabpanel" id="cpp-snippet-7250" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7250 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_row</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8502" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8502 pre">
+      <div role="tabpanel" id="cs-snippet-5982" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5982 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">HasRow</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">HasRow</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2993" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2993 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasRow</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3513" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3513 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_row</span><span class="p">(</span><span class="n">db_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -978,22 +1138,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7092" aria-controls="cpp-snippet-7092" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7918" aria-controls="cpp-snippet-7918" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8598" aria-controls="pas-snippet-8598" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1396" aria-controls="cs-snippet-1396" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8448" aria-controls="pas-snippet-8448" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9052" aria-controls="py-snippet-9052" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7092" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7092 pre">
+      <div role="tabpanel" id="cpp-snippet-7918" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7918 pre">
         <pre class="codehilite"><code><span class="n">database</span> <span class="n">open_database</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">string</span> <span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8598" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8598 pre">
+      <div role="tabpanel" id="cs-snippet-1396" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1396 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Database</span> <span class="nf">OpenDatabase</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">Database</span> <span class="n">Database</span><span class="p">.</span><span class="nf">OpenDatabase</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8448" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8448 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">OpenDatabase</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Database</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9052" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9052 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">open_database</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1068,22 +1245,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5423" aria-controls="cpp-snippet-5423" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7720" aria-controls="cpp-snippet-7720" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2349" aria-controls="pas-snippet-2349" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7409" aria-controls="cs-snippet-7409" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5273" aria-controls="pas-snippet-5273" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-8327" aria-controls="py-snippet-8327" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5423" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5423 pre">
+      <div role="tabpanel" id="cpp-snippet-7720" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7720 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">query_column_for_bool</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2349" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2349 pre">
+      <div role="tabpanel" id="cs-snippet-7409" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7409 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">QueryColumnForBool</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QueryColumnForBool</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5273" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5273 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForBool</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-8327" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8327 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_column_for_bool</span><span class="p">(</span><span class="n">db_result</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1158,22 +1352,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6568" aria-controls="cpp-snippet-6568" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6531" aria-controls="cpp-snippet-6531" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3925" aria-controls="pas-snippet-3925" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3856" aria-controls="cs-snippet-3856" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6283" aria-controls="pas-snippet-6283" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9527" aria-controls="py-snippet-9527" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6568" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6568 pre">
+      <div role="tabpanel" id="cpp-snippet-6531" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6531 pre">
         <pre class="codehilite"><code><span class="kt">double</span> <span class="n">query_column_for_double</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3925" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3925 pre">
+      <div role="tabpanel" id="cs-snippet-3856" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3856 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="nf">QueryColumnForDouble</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">double</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QueryColumnForDouble</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6283" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6283 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForDouble</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Double</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9527" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9527 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_column_for_double</span><span class="p">(</span><span class="n">db_result</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1248,22 +1459,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3366" aria-controls="cpp-snippet-3366" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3863" aria-controls="cpp-snippet-3863" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5420" aria-controls="pas-snippet-5420" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3253" aria-controls="cs-snippet-3253" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1631" aria-controls="pas-snippet-1631" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-5247" aria-controls="py-snippet-5247" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3366" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3366 pre">
+      <div role="tabpanel" id="cpp-snippet-3863" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3863 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">query_column_for_int</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5420" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5420 pre">
+      <div role="tabpanel" id="cs-snippet-3253" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3253 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">QueryColumnForInt</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">int</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QueryColumnForInt</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1631" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1631 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForInt</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-5247" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5247 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_column_for_int</span><span class="p">(</span><span class="n">db_result</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1338,22 +1566,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7058" aria-controls="cpp-snippet-7058" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-923" aria-controls="cpp-snippet-923" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5393" aria-controls="pas-snippet-5393" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1122" aria-controls="cs-snippet-1122" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8399" aria-controls="pas-snippet-8399" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3298" aria-controls="py-snippet-3298" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7058" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7058 pre">
+      <div role="tabpanel" id="cpp-snippet-923" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-923 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">query_column_for_string</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5393" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5393 pre">
+      <div role="tabpanel" id="cs-snippet-1122" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1122 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">QueryColumnForString</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QueryColumnForString</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8399" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8399 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryColumnForString</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3298" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3298 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_column_for_string</span><span class="p">(</span><span class="n">db_result</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1415,22 +1660,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4661" aria-controls="cpp-snippet-4661" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3878" aria-controls="cpp-snippet-3878" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4552" aria-controls="pas-snippet-4552" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8211" aria-controls="cs-snippet-8211" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4926" aria-controls="pas-snippet-4926" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9942" aria-controls="py-snippet-9942" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4661" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4661 pre">
+      <div role="tabpanel" id="cpp-snippet-3878" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3878 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">query_success</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4552" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4552 pre">
+      <div role="tabpanel" id="cs-snippet-8211" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8211 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">QuerySuccess</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QuerySuccess</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4926" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4926 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QuerySuccess</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9942" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9942 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_success</span><span class="p">(</span><span class="n">db_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1506,22 +1768,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3316" aria-controls="cpp-snippet-3316" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6964" aria-controls="cpp-snippet-6964" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2755" aria-controls="pas-snippet-2755" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7158" aria-controls="cs-snippet-7158" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2703" aria-controls="pas-snippet-2703" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4787" aria-controls="py-snippet-4787" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3316" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3316 pre">
+      <div role="tabpanel" id="cpp-snippet-6964" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6964 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">query_type_of_col</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2755" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2755 pre">
+      <div role="tabpanel" id="cs-snippet-7158" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7158 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">QueryTypeOfCol</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">,</span> <span class="kt">int</span> <span class="n">col</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">QueryTypeOfCol</span><span class="p">(</span><span class="kt">int</span> <span class="n">col</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2703" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2703 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QueryTypeOfCol</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">;</span> <span class="n">col</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4787" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4787 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">query_type_of_col</span><span class="p">(</span><span class="n">db_result</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1572,22 +1851,39 @@ will be created for you.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2667" aria-controls="cpp-snippet-2667" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7601" aria-controls="cpp-snippet-7601" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-514" aria-controls="pas-snippet-514" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5108" aria-controls="cs-snippet-5108" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4675" aria-controls="pas-snippet-4675" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-1086" aria-controls="py-snippet-1086" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2667" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2667 pre">
+      <div role="tabpanel" id="cpp-snippet-7601" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7601 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_query_result</span><span class="p">(</span><span class="n">query_result</span> <span class="n">db_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-514" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-514 pre">
+      <div role="tabpanel" id="cs-snippet-5108" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5108 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">ResetQueryResult</span><span class="p">(</span><span class="n">QueryResult</span> <span class="n">dbResult</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">QueryResult</span><span class="p">.</span><span class="nf">ResetQueryResult</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4675" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4675 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetQueryResult</span><span class="p">(</span><span class="n">dbResult</span><span class="p">:</span> <span class="n">QueryResult</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-1086" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1086 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reset_query_result</span><span class="p">(</span><span class="n">db_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1651,22 +1947,39 @@ in the database.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-672" aria-controls="cpp-snippet-672" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8240" aria-controls="cpp-snippet-8240" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4061" aria-controls="pas-snippet-4061" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8620" aria-controls="cs-snippet-8620" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6261" aria-controls="pas-snippet-6261" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-5127" aria-controls="py-snippet-5127" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-672" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-672 pre">
+      <div role="tabpanel" id="cpp-snippet-8240" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8240 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">rows_changed</span><span class="p">(</span><span class="n">database</span> <span class="n">db</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4061" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4061 pre">
+      <div role="tabpanel" id="cs-snippet-8620" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8620 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">RowsChanged</span><span class="p">(</span><span class="n">Database</span> <span class="n">db</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">int</span> <span class="n">Database</span><span class="p">.</span><span class="nf">RowsChanged</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6261" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6261 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">RowsChanged</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-5127" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5127 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">rows_changed</span><span class="p">(</span><span class="n">db</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1742,22 +2055,39 @@ the result of perfoming <code>Sql</code> on <code>Db</code>.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1099" aria-controls="cpp-snippet-1099" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6475" aria-controls="cpp-snippet-6475" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6629" aria-controls="pas-snippet-6629" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1255" aria-controls="cs-snippet-1255" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2158" aria-controls="pas-snippet-2158" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3554" aria-controls="py-snippet-3554" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1099" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1099 pre">
+      <div role="tabpanel" id="cpp-snippet-6475" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6475 pre">
         <pre class="codehilite"><code><span class="n">query_result</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">database</span> <span class="n">db</span><span class="p">,</span> <span class="n">string</span> <span class="n">sql</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6629" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6629 pre">
+      <div role="tabpanel" id="cs-snippet-1255" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1255 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">QueryResult</span> <span class="nf">RunSql</span><span class="p">(</span><span class="n">Database</span> <span class="n">db</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sql</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">QueryResult</span> <span class="n">Database</span><span class="p">.</span><span class="nf">RunSql</span><span class="p">(</span><span class="kt">string</span> <span class="n">sql</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2158" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2158 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">RunSql</span><span class="p">(</span><span class="n">db</span><span class="p">:</span> <span class="n">Database</span><span class="p">;</span> <span class="n">sql</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">QueryResult</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3554" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3554 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">run_sql</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">sql</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1833,22 +2163,38 @@ the result of perfoming <code>Sql</code> on the database at <code>Database Name<
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4056" aria-controls="cpp-snippet-4056" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5177" aria-controls="cpp-snippet-5177" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7935" aria-controls="pas-snippet-7935" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9890" aria-controls="cs-snippet-9890" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2675" aria-controls="pas-snippet-2675" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4811" aria-controls="py-snippet-4811" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4056" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4056 pre">
+      <div role="tabpanel" id="cpp-snippet-5177" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5177 pre">
         <pre class="codehilite"><code><span class="n">query_result</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">string</span> <span class="n">database_name</span><span class="p">,</span> <span class="n">string</span> <span class="n">sql</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7935" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7935 pre">
+      <div role="tabpanel" id="cs-snippet-9890" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9890 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">QueryResult</span> <span class="nf">RunSql</span><span class="p">(</span><span class="kt">string</span> <span class="n">databaseName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">sql</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2675" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2675 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">RunSql</span><span class="p">(</span><span class="n">databaseName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">sql</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">QueryResult</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4811" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4811 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">run_sql_from_name</span><span class="p">(</span><span class="n">database_name</span><span class="p">,</span> <span class="n">sql</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1922,6 +2268,6 @@ accessed using <a href="/api/database/#query-column-for-boolean"><code>Query Col
   </div>
 </footer>
 
-    <script src="/javascripts/main-ac18ead2.js"></script>
+    <script src="/javascripts/main-eeeef4a3.js"></script>
   </body>
 </html>

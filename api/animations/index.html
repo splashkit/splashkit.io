@@ -37,11 +37,13 @@
             <a class="dropdown-item" href="/api/physics">Physics</a>
             <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
             <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
             <a class="dropdown-item" href="/api/sprites">Sprites</a>
             <a class="dropdown-item" href="/api/terminal">Terminal</a>
             <a class="dropdown-item" href="/api/timers">Timers</a>
             <a class="dropdown-item" href="/api/types">Types</a>
             <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
         </div>
       </li>
       <li class="nav-item">
@@ -147,6 +149,26 @@ that can then be used when drawing bitmaps.
     <li class="nav-item">
       <a href="#animation-script-named" class="nav-link">
         Animation Script Named
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#assign-animation" class="nav-link">
+        Assign Animation
       </a>
     </li>
     <li class="nav-item">
@@ -329,6 +351,11 @@ that can then be used when drawing bitmaps.
         </a>
       </li>
       <li class="nav-item">
+        <a href="/api/social" class="nav-link ">
+          Social
+        </a>
+      </li>
+      <li class="nav-item">
         <a href="/api/sprites" class="nav-link ">
           Sprites
         </a>
@@ -351,6 +378,11 @@ that can then be used when drawing bitmaps.
       <li class="nav-item">
         <a href="/api/utilities" class="nav-link ">
           Utilities
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/api/windows" class="nav-link ">
+          Windows
         </a>
       </li>
   </ul>
@@ -418,22 +450,39 @@ that can then be used when drawing bitmaps.
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-826" aria-controls="cpp-snippet-826" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8811" aria-controls="cpp-snippet-8811" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1921" aria-controls="pas-snippet-1921" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6718" aria-controls="cs-snippet-6718" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8946" aria-controls="pas-snippet-8946" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-974" aria-controls="py-snippet-974" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-826" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-826 pre">
+      <div role="tabpanel" id="cpp-snippet-8811" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8811 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_count</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1921" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1921 pre">
+      <div role="tabpanel" id="cs-snippet-6718" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6718 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">AnimationCount</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">int</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">AnimationCount</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8946" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8946 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCount</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-974" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-974 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_count</span><span class="p">(</span><span class="n">script</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -496,22 +545,39 @@ animation. This can be used to animate an image or sprite.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2443" aria-controls="cpp-snippet-2443" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2532" aria-controls="cpp-snippet-2532" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4713" aria-controls="pas-snippet-4713" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1217" aria-controls="cs-snippet-1217" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2857" aria-controls="pas-snippet-2857" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7592" aria-controls="py-snippet-7592" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2443" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2443 pre">
+      <div role="tabpanel" id="cpp-snippet-2532" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2532 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_current_cell</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4713" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4713 pre">
+      <div role="tabpanel" id="cs-snippet-1217" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1217 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">AnimationCurrentCell</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">int</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationCurrentCell</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2857" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2857 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCurrentCell</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7592" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7592 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_current_cell</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -573,22 +639,39 @@ animation. This can be used to animate an image or sprite.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4180" aria-controls="cpp-snippet-4180" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-414" aria-controls="cpp-snippet-414" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6" aria-controls="pas-snippet-6" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6495" aria-controls="cs-snippet-6495" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9369" aria-controls="pas-snippet-9369" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4619" aria-controls="py-snippet-4619" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4180" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4180 pre">
+      <div role="tabpanel" id="cpp-snippet-414" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-414 pre">
         <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">animation_current_vector</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6 pre">
-        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCurrentVector</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="n">Vector2d</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6495" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6495 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="nf">AnimationCurrentVector</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">Vector2D</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationCurrentVector</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9369" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9369 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationCurrentVector</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="n">Vector2D</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4619" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4619 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_current_vector</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -650,22 +733,39 @@ animation. This can be used to animate an image or sprite.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8633" aria-controls="cpp-snippet-8633" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3980" aria-controls="cpp-snippet-3980" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1131" aria-controls="pas-snippet-1131" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4350" aria-controls="cs-snippet-4350" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-252" aria-controls="pas-snippet-252" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3936" aria-controls="py-snippet-3936" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8633" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8633 pre">
+      <div role="tabpanel" id="cpp-snippet-3980" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3980 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">animation_ended</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1131" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1131 pre">
+      <div role="tabpanel" id="cs-snippet-4350" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4350 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">AnimationEnded</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationEnded</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-252" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-252 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationEnded</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3936" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3936 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_ended</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -728,22 +828,39 @@ This can be used to trigger actions on frames within an animation.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2353" aria-controls="cpp-snippet-2353" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1856" aria-controls="cpp-snippet-1856" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4761" aria-controls="pas-snippet-4761" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9680" aria-controls="cs-snippet-9680" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3042" aria-controls="pas-snippet-3042" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-2283" aria-controls="py-snippet-2283" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2353" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2353 pre">
+      <div role="tabpanel" id="cpp-snippet-1856" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1856 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">animation_entered_frame</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4761" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4761 pre">
+      <div role="tabpanel" id="cs-snippet-9680" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9680 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">AnimationEnteredFrame</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationEnteredFrame</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3042" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3042 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationEnteredFrame</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-2283" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2283 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_entered_frame</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -806,22 +923,39 @@ exceeds the frames duration the animation moves to the next frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9914" aria-controls="cpp-snippet-9914" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4097" aria-controls="cpp-snippet-4097" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6852" aria-controls="pas-snippet-6852" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6383" aria-controls="cs-snippet-6383" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-798" aria-controls="pas-snippet-798" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3244" aria-controls="py-snippet-3244" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9914" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9914 pre">
+      <div role="tabpanel" id="cpp-snippet-4097" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4097 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">animation_frame_time</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6852" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6852 pre">
+      <div role="tabpanel" id="cs-snippet-6383" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6383 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="nf">AnimationFrameTime</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">float</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationFrameTime</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-798" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-798 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationFrameTime</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3244" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3244 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_frame_time</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -897,22 +1031,39 @@ index.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6278" aria-controls="cpp-snippet-6278" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1945" aria-controls="cpp-snippet-1945" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5498" aria-controls="pas-snippet-5498" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4044" aria-controls="cs-snippet-4044" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2219" aria-controls="pas-snippet-2219" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-656" aria-controls="py-snippet-656" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6278" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6278 pre">
+      <div role="tabpanel" id="cpp-snippet-1945" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1945 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">animation_index</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5498" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5498 pre">
+      <div role="tabpanel" id="cs-snippet-4044" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4044 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="nf">AnimationIndex</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">int</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">AnimationIndex</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2219" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2219 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationIndex</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-656" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-656 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_index</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -974,22 +1125,39 @@ index.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5172" aria-controls="cpp-snippet-5172" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3927" aria-controls="cpp-snippet-3927" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4547" aria-controls="pas-snippet-4547" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6569" aria-controls="cs-snippet-6569" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-86" aria-controls="pas-snippet-86" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-8750" aria-controls="py-snippet-8750" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5172" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5172 pre">
+      <div role="tabpanel" id="cpp-snippet-3927" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3927 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">animation_name</span><span class="p">(</span><span class="n">animation</span> <span class="n">temp</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4547" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4547 pre">
+      <div role="tabpanel" id="cs-snippet-6569" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6569 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">AnimationName</span><span class="p">(</span><span class="n">Animation</span> <span class="n">temp</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AnimationName</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-86" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-86 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationName</span><span class="p">(</span><span class="n">temp</span><span class="p">:</span> <span class="n">Animation</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-8750" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8750 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_name</span><span class="p">(</span><span class="n">temp</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1051,22 +1219,39 @@ index.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1945" aria-controls="cpp-snippet-1945" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1611" aria-controls="cpp-snippet-1611" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6982" aria-controls="pas-snippet-6982" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5102" aria-controls="cs-snippet-5102" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6010" aria-controls="pas-snippet-6010" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4275" aria-controls="py-snippet-4275" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1945" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1945 pre">
+      <div role="tabpanel" id="cpp-snippet-1611" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1611 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">animation_script_name</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6982" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6982 pre">
+      <div role="tabpanel" id="cs-snippet-5102" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5102 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="nf">AnimationScriptName</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">AnimationScriptName</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6010" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6010 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationScriptName</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">):</span> <span class="k">String</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4275" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4275 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_script_name</span><span class="p">(</span><span class="n">script</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1132,23 +1317,39 @@ the animation<em>script</em>named method.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-528" aria-controls="cpp-snippet-528" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6788" aria-controls="cpp-snippet-6788" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6873" aria-controls="pas-snippet-6873" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2250" aria-controls="cs-snippet-2250" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9611" aria-controls="pas-snippet-9611" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4633" aria-controls="py-snippet-4633" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-528" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-528 pre">
+      <div role="tabpanel" id="cpp-snippet-6788" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6788 pre">
         <pre class="codehilite"><code><span class="n">animation_script</span> <span class="n">animation_script_named</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6873" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6873 pre">
+      <div role="tabpanel" id="cs-snippet-2250" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2250 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">AnimationScript</span> <span class="nf">AnimationScriptNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9611" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9611 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnimationScriptNamed</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">AnimationScript</span></code></pre>
       </div>
+      <div role="tabpanel" id="py-snippet-4633" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4633 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">animation_script_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
+      </div>
   </div>
 </div>
 
@@ -1158,7 +1359,10 @@ the animation<em>script</em>named method.</p>
       <section class="sk-api-function sk-api-section">
   <h3 id="assign-animation" data-anchor> Assign Animation </h3>
   <div class="sk-api-description">
-    <p>Assigns an <a href="/api/types/#animation"><code>Animation</code></a> to an <a href="/api/types/#animation-script"><code>Animation Script</code></a>.</p>
+    <p>Setup an <a href="/api/types/#animation"><code>Animation</code></a> to follow the script from an indicated name.
+This will switch the animation to use the supplied script.
+It locates the name of the animation with the animation script and
+sets the <code>Anim</code> to start at that point in the script.</p>
 
   </div>
     <dl>
@@ -1224,22 +1428,39 @@ the animation<em>script</em>named method.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8777" aria-controls="cpp-snippet-8777" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1517" aria-controls="cpp-snippet-1517" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7017" aria-controls="pas-snippet-7017" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-895" aria-controls="cs-snippet-895" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-2664" aria-controls="pas-snippet-2664" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-567" aria-controls="py-snippet-567" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8777" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8777 pre">
+      <div role="tabpanel" id="cpp-snippet-1517" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1517 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7017" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7017 pre">
+      <div role="tabpanel" id="cs-snippet-895" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-895 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-2664" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2664 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-567" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-567 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_with_script</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1331,22 +1552,39 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7338" aria-controls="cpp-snippet-7338" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9947" aria-controls="cpp-snippet-9947" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4007" aria-controls="pas-snippet-4007" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6697" aria-controls="cs-snippet-6697" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5278" aria-controls="pas-snippet-5278" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9435" aria-controls="py-snippet-9435" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7338" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7338 pre">
+      <div role="tabpanel" id="cpp-snippet-9947" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9947 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4007" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4007 pre">
+      <div role="tabpanel" id="cs-snippet-6697" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6697 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5278" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5278 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9435" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9435 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_with_script_and_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1423,22 +1661,39 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5868" aria-controls="cpp-snippet-5868" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1340" aria-controls="cpp-snippet-1340" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2316" aria-controls="pas-snippet-2316" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7035" aria-controls="cs-snippet-7035" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1984" aria-controls="pas-snippet-1984" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4045" aria-controls="py-snippet-4045" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5868" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5868 pre">
+      <div role="tabpanel" id="cpp-snippet-1340" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1340 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2316" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2316 pre">
+      <div role="tabpanel" id="cs-snippet-7035" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7035 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1984" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1984 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4045" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4045 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_index_with_script</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1530,22 +1785,39 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9251" aria-controls="cpp-snippet-9251" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3883" aria-controls="cpp-snippet-3883" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7596" aria-controls="pas-snippet-7596" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-330" aria-controls="cs-snippet-330" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8196" aria-controls="pas-snippet-8196" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-5225" aria-controls="py-snippet-5225" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9251" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9251 pre">
+      <div role="tabpanel" id="cpp-snippet-3883" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3883 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7596" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7596 pre">
+      <div role="tabpanel" id="cs-snippet-330" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-330 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8196" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8196 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-5225" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5225 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_index_with_script_and_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1622,22 +1894,39 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2298" aria-controls="cpp-snippet-2298" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-621" aria-controls="cpp-snippet-621" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6784" aria-controls="pas-snippet-6784" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4438" aria-controls="cs-snippet-4438" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4779" aria-controls="pas-snippet-4779" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7687" aria-controls="py-snippet-7687" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2298" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2298 pre">
+      <div role="tabpanel" id="cpp-snippet-621" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-621 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6784" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6784 pre">
+      <div role="tabpanel" id="cs-snippet-4438" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4438 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4779" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4779 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7687" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7687 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_with_script_named</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script_name</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1729,22 +2018,457 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-90" aria-controls="cpp-snippet-90" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9895" aria-controls="cpp-snippet-9895" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2650" aria-controls="pas-snippet-2650" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2844" aria-controls="cs-snippet-2844" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1763" aria-controls="pas-snippet-1763" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-585" aria-controls="py-snippet-585" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-90" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-90 pre">
+      <div role="tabpanel" id="cpp-snippet-9895" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9895 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2650" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2650 pre">
+      <div role="tabpanel" id="cs-snippet-2844" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2844 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1763" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1763 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-585" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-585 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_with_script_named_and_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">script_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Setup an <a href="/api/types/#animation"><code>Animation</code></a> to follow the script from an indicated index.
+This uses the index from the current animation script and
+sets the supplied animation to start at that point in the script.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Idx
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The index of the animation to use from its current script.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1125" aria-controls="cpp-snippet-1125" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-8006" aria-controls="cs-snippet-8006" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8110" aria-controls="pas-snippet-8110" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-8024" aria-controls="py-snippet-8024" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1125" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1125 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-8006" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8006 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8110" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8110 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-8024" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8024 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_index</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Setup an <a href="/api/types/#animation"><code>Animation</code></a> to follow the script from an indicated index.
+This uses the index from the current animation script and
+sets the supplied animation to start at that point in the script.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Idx
+                  </th>
+                  <td>
+                      <p><code>Integer</code></p>
+
+                  </td>
+                  <td>
+                    <p>The index of the animation to use from its current script.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-1627" aria-controls="cpp-snippet-1627" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-4415" aria-controls="cs-snippet-4415" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4264" aria-controls="pas-snippet-4264" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-2577" aria-controls="py-snippet-2577" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-1627" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1627 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-4415" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4415 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4264" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4264 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-2577" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2577 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_index_with_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Setup an <a href="/api/types/#animation"><code>Animation</code></a> to follow the script from an indicated name.
+This locates the name of the animation from the current animation script and
+sets the supplied animation to start at that point in the script.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the animation to use from its current script.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8561" aria-controls="cpp-snippet-8561" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-90" aria-controls="cs-snippet-90" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6954" aria-controls="pas-snippet-6954" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-5042" aria-controls="py-snippet-5042" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8561" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8561 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-90" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-90 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6954" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6954 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-5042" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5042 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+</section>
+
+      <section class="sk-api-function sk-api-section">
+  <h3 id="assign-animation" data-anchor> Assign Animation </h3>
+  <div class="sk-api-description">
+    <p>Setup an <a href="/api/types/#animation"><code>Animation</code></a> to follow the script from an indicated name.
+This locates the name of the animation from the current animation script and
+sets the supplied animation to start at that point in the script.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Parameters
+        </dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th class="sk-table-fixed-header">Name</th>
+                <th class="sk-table-fixed-header">Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th>
+                    Anim
+                  </th>
+                  <td>
+                      <p><a href="/api/types/#animation"><code>Animation</code></a></p>
+
+                  </td>
+                  <td>
+                    <p>The <a href="/api/types/#animation"><code>Animation</code></a> to be assigned.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <td>
+                      <p><code>String</code></p>
+
+                  </td>
+                  <td>
+                    <p>The name of the animation to use from its current script.</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    With Sound
+                  </th>
+                  <td>
+                      <p><code>Boolean</code></p>
+
+                  </td>
+                  <td>
+                    <p>Denotes whether the <a href="/api/types/#animation"><code>Animation</code></a> should play audio.</p>
+
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-5129" aria-controls="cpp-snippet-5129" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-5270" aria-controls="cs-snippet-5270" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1423" aria-controls="pas-snippet-1423" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4633" aria-controls="py-snippet-4633" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-5129" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5129 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">assign_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-5270" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5270 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">AssignAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">AssignAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1423" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1423 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">AssignAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4633" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4633 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">assign_animation_with_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1834,22 +2558,38 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5000" aria-controls="cpp-snippet-5000" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1725" aria-controls="cpp-snippet-1725" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8700" aria-controls="pas-snippet-8700" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5242" aria-controls="cs-snippet-5242" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8671" aria-controls="pas-snippet-8671" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9962" aria-controls="py-snippet-9962" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5000" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5000 pre">
+      <div role="tabpanel" id="cpp-snippet-1725" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1725 pre">
         <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8700" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8700 pre">
+      <div role="tabpanel" id="cs-snippet-5242" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5242 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Animation</span> <span class="nf">CreateAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">int</span> <span class="n">idx</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8671" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8671 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="n">idx</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9962" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9962 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_animation_from_index_with_sound</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -1924,22 +2664,39 @@ first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1829" aria-controls="cpp-snippet-1829" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9225" aria-controls="cpp-snippet-9225" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2706" aria-controls="pas-snippet-2706" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2431" aria-controls="cs-snippet-2431" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4056" aria-controls="pas-snippet-4056" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4692" aria-controls="py-snippet-4692" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1829" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1829 pre">
+      <div role="tabpanel" id="cpp-snippet-9225" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9225 pre">
         <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2706" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2706 pre">
+      <div role="tabpanel" id="cs-snippet-2431" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2431 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Animation</span> <span class="nf">CreateAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">Animation</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">CreateAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4056" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4056 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4692" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4692 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_animation</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2029,22 +2786,39 @@ its first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4911" aria-controls="cpp-snippet-4911" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9192" aria-controls="cpp-snippet-9192" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6636" aria-controls="pas-snippet-6636" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8515" aria-controls="cs-snippet-8515" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-1185" aria-controls="pas-snippet-1185" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4634" aria-controls="py-snippet-4634" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4911" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4911 pre">
+      <div role="tabpanel" id="cpp-snippet-9192" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9192 pre">
         <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6636" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6636 pre">
+      <div role="tabpanel" id="cs-snippet-8515" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8515 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Animation</span> <span class="nf">CreateAnimation</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">Animation</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">CreateAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-1185" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1185 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4634" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4634 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_animation_with_sound</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2121,22 +2895,38 @@ on its first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9914" aria-controls="cpp-snippet-9914" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3653" aria-controls="cpp-snippet-3653" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7117" aria-controls="pas-snippet-7117" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3751" aria-controls="cs-snippet-3751" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3822" aria-controls="pas-snippet-3822" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-1523" aria-controls="py-snippet-1523" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9914" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9914 pre">
+      <div role="tabpanel" id="cpp-snippet-3653" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3653 pre">
         <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7117" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7117 pre">
+      <div role="tabpanel" id="cs-snippet-3751" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3751 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Animation</span> <span class="nf">CreateAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3822" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3822 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-1523" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1523 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_animation_from_script_named</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2226,22 +3016,38 @@ on its first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8520" aria-controls="cpp-snippet-8520" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9839" aria-controls="cpp-snippet-9839" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-67" aria-controls="pas-snippet-67" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6647" aria-controls="cs-snippet-6647" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-6691" aria-controls="pas-snippet-6691" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9156" aria-controls="py-snippet-9156" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8520" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8520 pre">
+      <div role="tabpanel" id="cpp-snippet-9839" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9839 pre">
         <pre class="codehilite"><code><span class="n">animation</span> <span class="n">create_animation</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">script_name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-67" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-67 pre">
+      <div role="tabpanel" id="cs-snippet-6647" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6647 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Animation</span> <span class="nf">CreateAnimation</span><span class="p">(</span><span class="kt">string</span> <span class="n">scriptName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-6691" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6691 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateAnimation</span><span class="p">(</span><span class="k">const</span> <span class="n">scriptName</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">):</span> <span class="n">Animation</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9156" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9156 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_animation_from_script_named_with_sound</span><span class="p">(</span><span class="n">script_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2263,22 +3069,38 @@ on its first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7099" aria-controls="cpp-snippet-7099" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6825" aria-controls="cpp-snippet-6825" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4630" aria-controls="pas-snippet-4630" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-709" aria-controls="cs-snippet-709" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-373" aria-controls="pas-snippet-373" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-8309" aria-controls="py-snippet-8309" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7099" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7099 pre">
+      <div role="tabpanel" id="cpp-snippet-6825" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6825 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_animation_scripts</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4630" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4630 pre">
+      <div role="tabpanel" id="cs-snippet-709" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-709 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAllAnimationScripts</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-373" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-373 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllAnimationScripts</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-8309" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8309 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_animation_scripts</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
@@ -2329,22 +3151,39 @@ on its first frame.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5508" aria-controls="cpp-snippet-5508" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6725" aria-controls="cpp-snippet-6725" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-235" aria-controls="pas-snippet-235" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8745" aria-controls="cs-snippet-8745" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7302" aria-controls="pas-snippet-7302" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-5872" aria-controls="py-snippet-5872" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5508" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5508 pre">
+      <div role="tabpanel" id="cpp-snippet-6725" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6725 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">ani</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-235" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-235 pre">
+      <div role="tabpanel" id="cs-snippet-8745" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8745 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">ani</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">FreeAnimation</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7302" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7302 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimation</span><span class="p">(</span><span class="n">ani</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-5872" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5872 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_animation</span><span class="p">(</span><span class="n">ani</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2397,22 +3236,39 @@ sprite.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4339" aria-controls="cpp-snippet-4339" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7147" aria-controls="cpp-snippet-7147" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4374" aria-controls="pas-snippet-4374" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5655" aria-controls="cs-snippet-5655" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-4312" aria-controls="pas-snippet-4312" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-4844" aria-controls="py-snippet-4844" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4339" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4339 pre">
+      <div role="tabpanel" id="cpp-snippet-7147" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7147 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation_script</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script_to_free</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4374" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4374 pre">
+      <div role="tabpanel" id="cs-snippet-5655" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5655 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAnimationScript</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">scriptToFree</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">FreeAnimationScript</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-4312" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4312 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimationScript</span><span class="p">(</span><span class="n">scriptToFree</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-4844" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4844 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_animation_script</span><span class="p">(</span><span class="n">script_to_free</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2465,22 +3321,38 @@ sprite.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4667" aria-controls="cpp-snippet-4667" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9982" aria-controls="cpp-snippet-9982" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6985" aria-controls="pas-snippet-6985" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5183" aria-controls="cs-snippet-5183" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9981" aria-controls="pas-snippet-9981" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-6867" aria-controls="py-snippet-6867" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4667" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4667 pre">
+      <div role="tabpanel" id="cpp-snippet-9982" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9982 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6985" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6985 pre">
+      <div role="tabpanel" id="cs-snippet-5183" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5183 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">FreeAnimationScript</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9981" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9981 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-6867" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6867 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_animation_script_with_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2556,22 +3428,39 @@ given name.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3246" aria-controls="cpp-snippet-3246" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4423" aria-controls="cpp-snippet-4423" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5948" aria-controls="pas-snippet-5948" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8669" aria-controls="cs-snippet-8669" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-9221" aria-controls="pas-snippet-9221" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3796" aria-controls="py-snippet-3796" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3246" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3246 pre">
+      <div role="tabpanel" id="cpp-snippet-4423" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4423 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_animation_named</span><span class="p">(</span><span class="n">animation_script</span> <span class="n">script</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5948" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5948 pre">
+      <div role="tabpanel" id="cs-snippet-8669" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8669 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">HasAnimationNamed</span><span class="p">(</span><span class="n">AnimationScript</span> <span class="n">script</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">public</span> <span class="kt">bool</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">HasAnimationNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-9221" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9221 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasAnimationNamed</span><span class="p">(</span><span class="n">script</span><span class="p">:</span> <span class="n">AnimationScript</span><span class="p">;</span> <span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3796" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3796 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_animation_named</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2635,22 +3524,38 @@ those loaded without a name are assigned the filename as a default.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2616" aria-controls="cpp-snippet-2616" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7768" aria-controls="cpp-snippet-7768" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5168" aria-controls="pas-snippet-5168" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4886" aria-controls="cs-snippet-4886" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-8230" aria-controls="pas-snippet-8230" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-2688" aria-controls="py-snippet-2688" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2616" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2616 pre">
+      <div role="tabpanel" id="cpp-snippet-7768" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7768 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5168" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5168 pre">
+      <div role="tabpanel" id="cs-snippet-4886" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4886 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="nf">HasAnimationScript</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-8230" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8230 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-2688" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2688 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_animation_script</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2725,22 +3630,39 @@ those loaded without a name are assigned the filename as a default.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7235" aria-controls="cpp-snippet-7235" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9437" aria-controls="cpp-snippet-9437" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-855" aria-controls="pas-snippet-855" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6657" aria-controls="cs-snippet-6657" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7246" aria-controls="pas-snippet-7246" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7759" aria-controls="py-snippet-7759" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7235" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7235 pre">
+      <div role="tabpanel" id="cpp-snippet-9437" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9437 pre">
         <pre class="codehilite"><code><span class="n">animation_script</span> <span class="n">load_animation_script</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-855" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-855 pre">
+      <div role="tabpanel" id="cs-snippet-6657" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6657 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">AnimationScript</span> <span class="nf">LoadAnimationScript</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="k">public</span> <span class="n">AnimationScript</span> <span class="n">AnimationScript</span><span class="p">.</span><span class="nf">LoadAnimationScript</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7246" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7246 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">LoadAnimationScript</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">AnimationScript</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7759" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7759 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">load_animation_script</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2791,22 +3713,39 @@ those loaded without a name are assigned the filename as a default.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4547" aria-controls="cpp-snippet-4547" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8712" aria-controls="cpp-snippet-8712" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5657" aria-controls="pas-snippet-5657" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9051" aria-controls="cs-snippet-9051" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5959" aria-controls="pas-snippet-5959" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3993" aria-controls="py-snippet-3993" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4547" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4547 pre">
+      <div role="tabpanel" id="cpp-snippet-8712" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8712 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">restart_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5657" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5657 pre">
+      <div role="tabpanel" id="cs-snippet-9051" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9051 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">RestartAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">RestartAnimation</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5959" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5959 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RestartAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3993" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3993 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">restart_animation</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2871,22 +3810,39 @@ frame triggers a sound.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9568" aria-controls="cpp-snippet-9568" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2616" aria-controls="cpp-snippet-2616" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9735" aria-controls="pas-snippet-9735" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3461" aria-controls="cs-snippet-3461" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5402" aria-controls="pas-snippet-5402" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7908" aria-controls="py-snippet-7908" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9568" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9568 pre">
+      <div role="tabpanel" id="cpp-snippet-2616" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2616 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">restart_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9735" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9735 pre">
+      <div role="tabpanel" id="cs-snippet-3461" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3461 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">RestartAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">RestartAnimation</span><span class="p">(</span><span class="kt">bool</span> <span class="n">withSound</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5402" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5402 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RestartAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7908" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7908 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">restart_animation_with_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -2965,22 +3921,38 @@ frame triggers a sound.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6973" aria-controls="cpp-snippet-6973" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5741" aria-controls="cpp-snippet-5741" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-233" aria-controls="pas-snippet-233" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6537" aria-controls="cs-snippet-6537" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3041" aria-controls="pas-snippet-3041" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-7725" aria-controls="py-snippet-7725" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6973" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6973 pre">
+      <div role="tabpanel" id="cpp-snippet-5741" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5741 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">with_sound</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-233" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-233 pre">
+      <div role="tabpanel" id="cs-snippet-6537" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6537 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">UpdateAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">withSound</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3041" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3041 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">pct</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">withSound</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-7725" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7725 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">update_animation_percent_with_sound</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">pct</span><span class="p">,</span> <span class="n">with_sound</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -3033,22 +4005,39 @@ frame triggers a sound.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6541" aria-controls="cpp-snippet-6541" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9010" aria-controls="cpp-snippet-9010" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1156" aria-controls="pas-snippet-1156" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4399" aria-controls="cs-snippet-4399" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5501" aria-controls="pas-snippet-5501" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-6962" aria-controls="py-snippet-6962" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6541" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6541 pre">
+      <div role="tabpanel" id="cpp-snippet-9010" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9010 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1156" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1156 pre">
+      <div role="tabpanel" id="cs-snippet-4399" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4399 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">UpdateAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">UpdateAnimation</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5501" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5501 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-6962" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6962 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">update_animation</span><span class="p">(</span><span class="n">anim</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -3114,22 +4103,39 @@ frame triggers a sound.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2560" aria-controls="cpp-snippet-2560" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5703" aria-controls="cpp-snippet-5703" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6030" aria-controls="pas-snippet-6030" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3814" aria-controls="cs-snippet-3814" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-3269" aria-controls="pas-snippet-3269" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-2190" aria-controls="py-snippet-2190" role="tab" data-toggle="tab" class="nav-link ">
+          Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2560" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2560 pre">
+      <div role="tabpanel" id="cpp-snippet-5703" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5703 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">update_animation</span><span class="p">(</span><span class="n">animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6030" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6030 pre">
+      <div role="tabpanel" id="cs-snippet-3814" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3814 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">UpdateAnimation</span><span class="p">(</span><span class="n">Animation</span> <span class="n">anim</span><span class="p">,</span> <span class="kt">float</span> <span class="n">pct</span><span class="p">)</span>
+<span class="k">public</span> <span class="k">void</span> <span class="n">Animation</span><span class="p">.</span><span class="nf">UpdateAnimation</span><span class="p">(</span><span class="kt">float</span> <span class="n">pct</span><span class="p">);</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-3269" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3269 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">UpdateAnimation</span><span class="p">(</span><span class="n">anim</span><span class="p">:</span> <span class="n">Animation</span><span class="p">;</span> <span class="n">pct</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-2190" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2190 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">update_animation_percent</span><span class="p">(</span><span class="n">anim</span><span class="p">,</span> <span class="n">pct</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
@@ -3168,6 +4174,6 @@ frame triggers a sound.</p>
   </div>
 </footer>
 
-    <script src="/javascripts/main-ac18ead2.js"></script>
+    <script src="/javascripts/main-eeeef4a3.js"></script>
   </body>
 </html>
