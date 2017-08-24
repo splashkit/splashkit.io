@@ -37,6 +37,20 @@ for SplashKit to operate on Ubuntu.
     The pre-requisite packages will now be downloaded and installed. Wait
     for the installation process to finish before continuing to the next step.
 
+4. Install libpng12 (Ubuntu 17.04 users only)
+
+    If your [version of Ubuntu](/guides/installation/ubuntu/step1.html) is less than 17.04, you may skip this step.
+
+    To install libpng12, copy and paste the code below into your terminal, one line at a time.
+
+    ```bash
+    cd /tmp
+    wget http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+    sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+    cd -
+    ```
+
+
 Once you have completed this step, move on to the 
 [next step - Install SplashKit library](/guides/installation/ubuntu/step3.html).
 
