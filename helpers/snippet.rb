@@ -22,9 +22,10 @@ def snippet(filename_or_hash, path = nil)
     cpp:        '.cpp',
     pascal:     '.pas',
     java:       '.java',
-    javascript: '.pas',
+    javascript: '.js',
     python:     '.py',
-    swift:      '.swift'
+    swift:      '.swift',
+    csharp:     '.cs'
   }
 
   # Check for path, otherwise use current page
@@ -42,6 +43,9 @@ def snippet(filename_or_hash, path = nil)
       title = ext_to_title[extname]
       lexer = Rouge::Lexer.guess(filename: "file.#{extname}")
       src = data
+      if src.respond_to? :join
+        src = src.join "\n"
+      end
       formatter = src.lines.count < 5 ? formatter : formatter_table
       html = formatter.format(lexer.lex(src))
       id = "#{extname[/[a-z]+/]}-snippet-#{rand(0..9999)}"
