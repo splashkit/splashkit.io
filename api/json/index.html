@@ -11,7 +11,7 @@
 
     <title>SplashKit - API - JSON</title>
 
-    <link href="/stylesheets/main-96cb182a.css" rel="stylesheet" />
+    <link href="/stylesheets/main-4d7d293d.css" rel="stylesheet" />
   </head>
   <body class="api api_json api_json_index">
     <nav class="navbar navbar-dark sk-navbar">
@@ -87,7 +87,7 @@
 
   <div class="sk-api-root container">
     <div class="row">
-      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
         <nav role="navigation">
   <ul class="nav sk-api-nav-root">
       <li class="nav-item">
@@ -140,12 +140,7 @@
     Functions
   </li>
     <li class="nav-item">
-      <a href="#create-json" class="nav-link">
-        Create JSON
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#create-json" class="nav-link">
+      <a href="#group-create-json" class="nav-link">
         Create JSON
       </a>
     </li>
@@ -185,22 +180,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#json-read-array" class="nav-link">
-        JSON Read Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-read-array" class="nav-link">
-        JSON Read Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-read-array" class="nav-link">
-        JSON Read Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-read-array" class="nav-link">
+      <a href="#group-json-read-array" class="nav-link">
         JSON Read Array
       </a>
     </li>
@@ -235,22 +215,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#json-set-array" class="nav-link">
-        JSON Set Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-set-array" class="nav-link">
-        JSON Set Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-set-array" class="nav-link">
-        JSON Set Array
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-set-array" class="nav-link">
+      <a href="#group-json-set-array" class="nav-link">
         JSON Set Array
       </a>
     </li>
@@ -260,17 +225,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#json-set-number" class="nav-link">
-        JSON Set Number
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-set-number" class="nav-link">
-        JSON Set Number
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#json-set-number" class="nav-link">
+      <a href="#group-json-set-number" class="nav-link">
         JSON Set Number
       </a>
     </li>
@@ -386,7 +341,25 @@ read or write data to it by calling methods like
 
   <section class="sk-api-functions">
     <h2> Functions </h2>
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-create-json" data-anchor> Create JSON </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Create JSON:
+          <ul>
+              <li>
+                <a href="/api/json/#create-json">
+                  Create JSON (  )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#create-json-from-string">
+                  Create JSON ( String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="create-json" data-anchor> Create JSON </h3>
   <div class="sk-api-description">
     <p>The empty <a href="/api/json/#json"><code>JSON</code></a> object returned can be filled with data and read by the
@@ -412,38 +385,38 @@ functions and procedures prefixed with <code>JSON Add</code> and <code>JSON Read
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5564" aria-controls="cpp-snippet-5564" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2317" aria-controls="cpp-snippet-2317" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6275" aria-controls="cs-snippet-6275" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1078" aria-controls="cs-snippet-1078" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7923" aria-controls="pas-snippet-7923" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9327" aria-controls="pas-snippet-9327" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8089" aria-controls="py-snippet-8089" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9448" aria-controls="py-snippet-9448" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5564" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5564 pre">
+      <div role="tabpanel" id="cpp-snippet-2317" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2317 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">create_json</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6275" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6275 pre">
+      <div role="tabpanel" id="cs-snippet-1078" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1078 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CreateJson</span><span class="p">();</span>
 <span class="k">public</span> <span class="nf">Json</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7923" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7923 pre">
+      <div role="tabpanel" id="pas-snippet-9327" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9327 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateJson</span><span class="p">():</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8089" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8089 pre">
+      <div role="tabpanel" id="py-snippet-9448" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9448 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_json</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -452,8 +425,8 @@ functions and procedures prefixed with <code>JSON Add</code> and <code>JSON Read
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="create-json" data-anchor> Create JSON </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="create-json-from-string" data-anchor> Create JSON </h3>
   <div class="sk-api-description">
     <p><code>String JSON String</code> must be valid JSON.
 The <a href="/api/json/#json"><code>JSON</code></a> object returned can be filled with data and read by the functions
@@ -508,38 +481,38 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5001" aria-controls="cpp-snippet-5001" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5269" aria-controls="cpp-snippet-5269" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2503" aria-controls="cs-snippet-2503" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1978" aria-controls="cs-snippet-1978" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4483" aria-controls="pas-snippet-4483" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6068" aria-controls="pas-snippet-6068" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8478" aria-controls="py-snippet-8478" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4647" aria-controls="py-snippet-4647" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5001" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5001 pre">
+      <div role="tabpanel" id="cpp-snippet-5269" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5269 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">create_json</span><span class="p">(</span><span class="n">string</span> <span class="n">json_string</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2503" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2503 pre">
+      <div role="tabpanel" id="cs-snippet-1978" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1978 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CreateJson</span><span class="p">(</span><span class="kt">string</span> <span class="n">jsonString</span><span class="p">);</span>
 <span class="k">public</span> <span class="nf">Json</span><span class="p">(</span><span class="kt">string</span> <span class="n">jsonString</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4483" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4483 pre">
+      <div role="tabpanel" id="pas-snippet-6068" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6068 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateJson</span><span class="p">(</span><span class="n">jsonString</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8478" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8478 pre">
+      <div role="tabpanel" id="py-snippet-4647" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4647 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_json_from_string</span><span class="p">(</span><span class="n">json_string</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -548,7 +521,20 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-free-all-json" data-anchor> Free All JSON </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Free All JSON:
+          <ul>
+              <li>
+                <a href="/api/json/#free-all-json">
+                  Free All JSON (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="free-all-json" data-anchor> Free All JSON </h3>
   <div class="sk-api-description">
     <p>Releases all of the <a href="/api/json/#json"><code>JSON</code></a> objects which have been loaded.</p>
@@ -562,37 +548,38 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5831" aria-controls="cpp-snippet-5831" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2089" aria-controls="cpp-snippet-2089" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-151" aria-controls="cs-snippet-151" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7230" aria-controls="cs-snippet-7230" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1712" aria-controls="pas-snippet-1712" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1603" aria-controls="pas-snippet-1603" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8550" aria-controls="py-snippet-8550" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6314" aria-controls="py-snippet-6314" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5831" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5831 pre">
+      <div role="tabpanel" id="cpp-snippet-2089" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2089 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_json</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-151" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-151 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeAllJson</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7230" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7230 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">FreeAllJson</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeAllJson</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1712" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1712 pre">
+      <div role="tabpanel" id="pas-snippet-1603" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1603 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllJson</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8550" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8550 pre">
+      <div role="tabpanel" id="py-snippet-6314" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6314 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_json</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -601,7 +588,20 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-free-json" data-anchor> Free JSON </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Free JSON:
+          <ul>
+              <li>
+                <a href="/api/json/#free-json">
+                  Free JSON ( JSON )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="free-json" data-anchor> Free JSON </h3>
   <div class="sk-api-description">
     <p>Frees the SplashKit resources associated with the <a href="/api/json/#json"><code>JSON</code></a> object.</p>
@@ -644,38 +644,38 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4815" aria-controls="cpp-snippet-4815" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6464" aria-controls="cpp-snippet-6464" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1825" aria-controls="cs-snippet-1825" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8520" aria-controls="cs-snippet-8520" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8357" aria-controls="pas-snippet-8357" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4583" aria-controls="pas-snippet-4583" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8276" aria-controls="py-snippet-8276" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7919" aria-controls="py-snippet-7919" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4815" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4815 pre">
+      <div role="tabpanel" id="cpp-snippet-6464" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6464 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_json</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1825" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1825 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeJson</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">FreeJson</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-8520" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8520 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">FreeJson</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeJson</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8357" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8357 pre">
+      <div role="tabpanel" id="pas-snippet-4583" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4583 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeJson</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8276" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8276 pre">
+      <div role="tabpanel" id="py-snippet-7919" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7919 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_json</span><span class="p">(</span><span class="n">j</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -684,7 +684,20 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-count-keys" data-anchor> JSON Count Keys </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Count Keys:
+          <ul>
+              <li>
+                <a href="/api/json/#json-count-keys">
+                  JSON Count Keys ( JSON )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-count-keys" data-anchor> JSON Count Keys </h3>
   <div class="sk-api-description">
     <p>Returns the count of keys in the top-level <a href="/api/json/#json"><code>JSON</code></a> object.</p>
@@ -738,38 +751,38 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2561" aria-controls="cpp-snippet-2561" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5021" aria-controls="cpp-snippet-5021" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1290" aria-controls="cs-snippet-1290" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9372" aria-controls="cs-snippet-9372" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8259" aria-controls="pas-snippet-8259" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3932" aria-controls="pas-snippet-3932" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5229" aria-controls="py-snippet-5229" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7386" aria-controls="py-snippet-7386" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2561" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2561 pre">
+      <div role="tabpanel" id="cpp-snippet-5021" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5021 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">json_count_keys</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1290" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1290 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonCountKeys</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">int</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonCountKeys</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-9372" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9372 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">int</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonCountKeys</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonCountKeys</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8259" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8259 pre">
+      <div role="tabpanel" id="pas-snippet-3932" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3932 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonCountKeys</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5229" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5229 pre">
+      <div role="tabpanel" id="py-snippet-7386" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7386 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_count_keys</span><span class="p">(</span><span class="n">j</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -778,7 +791,20 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-from-color" data-anchor> JSON From Color </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON From Color:
+          <ul>
+              <li>
+                <a href="/api/json/#json-from-color">
+                  JSON From Color ( Color )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-from-color" data-anchor> JSON From Color </h3>
   <div class="sk-api-description">
     <p>Converts a <a href="/api/types/#color"><code>Color</code></a> to a <a href="/api/json/#json"><code>JSON</code></a> object.</p>
@@ -832,37 +858,38 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9233" aria-controls="cpp-snippet-9233" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4148" aria-controls="cpp-snippet-4148" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3319" aria-controls="cs-snippet-3319" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2141" aria-controls="cs-snippet-2141" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6139" aria-controls="pas-snippet-6139" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2290" aria-controls="pas-snippet-2290" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4038" aria-controls="py-snippet-4038" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7587" aria-controls="py-snippet-7587" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9233" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9233 pre">
+      <div role="tabpanel" id="cpp-snippet-4148" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4148 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_color</span><span class="p">(</span><span class="n">color</span> <span class="n">clr</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3319" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3319 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromColor</span><span class="p">(</span><span class="n">Color</span> <span class="n">clr</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2141" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2141 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonFromColor</span><span class="p">(</span><span class="n">Color</span> <span class="n">clr</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromColor</span><span class="p">(</span><span class="n">Color</span> <span class="n">clr</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6139" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6139 pre">
+      <div role="tabpanel" id="pas-snippet-2290" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2290 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromColor</span><span class="p">(</span><span class="n">clr</span><span class="p">:</span> <span class="n">Color</span><span class="p">):</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4038" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4038 pre">
+      <div role="tabpanel" id="py-snippet-7587" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7587 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_from_color</span><span class="p">(</span><span class="n">clr</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -871,7 +898,20 @@ and procedures prefixed with <code>JSON Add</code> and <code>JSON Read</code></p
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-from-file" data-anchor> JSON From File </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON From File:
+          <ul>
+              <li>
+                <a href="/api/json/#json-from-file">
+                  JSON From File ( String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-from-file" data-anchor> JSON From File </h3>
   <div class="sk-api-description">
     <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object from a JSON string stored in <code>Resources/json/filename</code>
@@ -926,37 +966,38 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7257" aria-controls="cpp-snippet-7257" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2305" aria-controls="cpp-snippet-2305" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5322" aria-controls="cs-snippet-5322" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4156" aria-controls="cs-snippet-4156" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8728" aria-controls="pas-snippet-8728" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3950" aria-controls="pas-snippet-3950" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2432" aria-controls="py-snippet-2432" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5366" aria-controls="py-snippet-5366" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7257" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7257 pre">
+      <div role="tabpanel" id="cpp-snippet-2305" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2305 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_file</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5322" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5322 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-4156" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4156 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonFromFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8728" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8728 pre">
+      <div role="tabpanel" id="pas-snippet-3950" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3950 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromFile</span><span class="p">(</span><span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2432" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2432 pre">
+      <div role="tabpanel" id="py-snippet-5366" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5366 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -965,7 +1006,20 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-from-string" data-anchor> JSON From String </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON From String:
+          <ul>
+              <li>
+                <a href="/api/json/#json-from-string">
+                  JSON From String ( String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-from-string" data-anchor> JSON From String </h3>
   <div class="sk-api-description">
     <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object from a <code>String</code> in the JSON format.</p>
@@ -1019,37 +1073,38 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2671" aria-controls="cpp-snippet-2671" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3328" aria-controls="cpp-snippet-3328" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6659" aria-controls="cs-snippet-6659" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7021" aria-controls="cs-snippet-7021" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3527" aria-controls="pas-snippet-3527" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6573" aria-controls="pas-snippet-6573" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1478" aria-controls="py-snippet-1478" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5094" aria-controls="py-snippet-5094" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2671" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2671 pre">
+      <div role="tabpanel" id="cpp-snippet-3328" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3328 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_from_string</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">j_string</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6659" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6659 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromString</span><span class="p">(</span><span class="kt">string</span> <span class="n">jString</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7021" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7021 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonFromString</span><span class="p">(</span><span class="kt">string</span> <span class="n">jString</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonFromString</span><span class="p">(</span><span class="kt">string</span> <span class="n">jString</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3527" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3527 pre">
+      <div role="tabpanel" id="pas-snippet-6573" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6573 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonFromString</span><span class="p">(</span><span class="k">const</span> <span class="n">jString</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1478" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1478 pre">
+      <div role="tabpanel" id="py-snippet-5094" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5094 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_from_string</span><span class="p">(</span><span class="n">j_string</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1058,7 +1113,20 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-has-key" data-anchor> JSON Has Key </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Has Key:
+          <ul>
+              <li>
+                <a href="/api/json/#json-has-key">
+                  JSON Has Key ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-has-key" data-anchor> JSON Has Key </h3>
   <div class="sk-api-description">
     <p>Checks if the <a href="/api/json/#json"><code>JSON</code></a> object contains the given <code>String</code> key.</p>
@@ -1125,38 +1193,38 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6265" aria-controls="cpp-snippet-6265" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9662" aria-controls="cpp-snippet-9662" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8745" aria-controls="cs-snippet-8745" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1849" aria-controls="cs-snippet-1849" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4622" aria-controls="pas-snippet-4622" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6651" aria-controls="pas-snippet-6651" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9936" aria-controls="py-snippet-9936" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8653" aria-controls="py-snippet-8653" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6265" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6265 pre">
+      <div role="tabpanel" id="cpp-snippet-9662" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9662 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">json_has_key</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8745" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8745 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonHasKey</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">bool</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonHasKey</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1849" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1849 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonHasKey</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonHasKey</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4622" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4622 pre">
+      <div role="tabpanel" id="pas-snippet-6651" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6651 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonHasKey</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9936" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9936 pre">
+      <div role="tabpanel" id="py-snippet-8653" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8653 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_has_key</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1165,8 +1233,36 @@ and loads the data into the returned <a href="/api/json/#json"><code>JSON</code>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-json-read-array" data-anchor> JSON Read Array </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Array:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-array-of-double">
+                  JSON Read Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-read-array-of-json">
+                  JSON Read Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-read-array-of-string">
+                  JSON Read Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-read-array-of-boolean">
+                  JSON Read Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array-of-double" data-anchor> JSON Read Array </h3>
   <div class="sk-api-description">
     <p>Reads an array of <code>Double</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -1235,38 +1331,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1656" aria-controls="cpp-snippet-1656" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9222" aria-controls="cpp-snippet-9222" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1739" aria-controls="cs-snippet-1739" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1481" aria-controls="cs-snippet-1481" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1698" aria-controls="pas-snippet-1698" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-923" aria-controls="pas-snippet-923" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2480" aria-controls="py-snippet-2480" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8437" aria-controls="py-snippet-8437" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1656" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1656 pre">
+      <div role="tabpanel" id="cpp-snippet-9222" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9222 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1739" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1739 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1481" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1481 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1698" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1698 pre">
+      <div role="tabpanel" id="pas-snippet-923" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-923 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="n">outResult</span><span class="p">:</span> <span class="n">ArrayOfDouble</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2480" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2480 pre">
+      <div role="tabpanel" id="py-snippet-8437" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8437 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_array_of_double</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">out_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1275,8 +1371,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array-of-json" data-anchor> JSON Read Array </h3>
   <div class="sk-api-description">
     <p>Reads an array of <a href="/api/json/#json"><code>JSON</code></a> object values from the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -1345,38 +1441,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4895" aria-controls="cpp-snippet-4895" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2901" aria-controls="cpp-snippet-2901" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2167" aria-controls="cs-snippet-2167" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-183" aria-controls="cs-snippet-183" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3757" aria-controls="pas-snippet-3757" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9688" aria-controls="pas-snippet-9688" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9142" aria-controls="py-snippet-9142" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-697" aria-controls="py-snippet-697" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4895" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4895 pre">
+      <div role="tabpanel" id="cpp-snippet-2901" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2901 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">json</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2167" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2167 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-183" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-183 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3757" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3757 pre">
+      <div role="tabpanel" id="pas-snippet-9688" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9688 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="n">outResult</span><span class="p">:</span> <span class="n">ArrayOfJson</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9142" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9142 pre">
+      <div role="tabpanel" id="py-snippet-697" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-697 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_array_of_json</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">out_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1385,8 +1481,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array-of-string" data-anchor> JSON Read Array </h3>
   <div class="sk-api-description">
     <p>Reads an array of <code>String</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -1455,38 +1551,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-444" aria-controls="cpp-snippet-444" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6180" aria-controls="cpp-snippet-6180" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9561" aria-controls="cs-snippet-9561" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1884" aria-controls="cs-snippet-1884" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7139" aria-controls="pas-snippet-7139" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8041" aria-controls="pas-snippet-8041" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1632" aria-controls="py-snippet-1632" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6632" aria-controls="py-snippet-6632" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-444" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-444 pre">
+      <div role="tabpanel" id="cpp-snippet-6180" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6180 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9561" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9561 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1884" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1884 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7139" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7139 pre">
+      <div role="tabpanel" id="pas-snippet-8041" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8041 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="n">outResult</span><span class="p">:</span> <span class="n">ArrayOfString</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1632" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1632 pre">
+      <div role="tabpanel" id="py-snippet-6632" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6632 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_array_of_string</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">out_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1495,8 +1591,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-read-array" data-anchor> JSON Read Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-read-array-of-boolean" data-anchor> JSON Read Array </h3>
   <div class="sk-api-description">
     <p>Reads an array of <code>Boolean</code> values from the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -1565,38 +1661,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8329" aria-controls="cpp-snippet-8329" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3565" aria-controls="cpp-snippet-3565" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4169" aria-controls="cs-snippet-4169" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1283" aria-controls="cs-snippet-1283" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9321" aria-controls="pas-snippet-9321" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9642" aria-controls="pas-snippet-9642" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9805" aria-controls="py-snippet-9805" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3035" aria-controls="py-snippet-3035" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8329" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8329 pre">
+      <div role="tabpanel" id="cpp-snippet-3565" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3565 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_read_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">out_result</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4169" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4169 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1283" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1283 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="k">ref</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="n">outResult</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9321" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9321 pre">
+      <div role="tabpanel" id="pas-snippet-9642" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9642 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonReadArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">var</span> <span class="n">outResult</span><span class="p">:</span> <span class="n">ArrayOfBoolean</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9805" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9805 pre">
+      <div role="tabpanel" id="py-snippet-3035" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3035 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_array_of_bool</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">out_result</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1605,7 +1701,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-boolean" data-anchor> JSON Read Boolean </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Boolean:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-boolean">
+                  JSON Read Boolean ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-boolean" data-anchor> JSON Read Boolean </h3>
   <div class="sk-api-description">
     <p>Reads a <code>Boolean</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -1672,38 +1781,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5891" aria-controls="cpp-snippet-5891" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1559" aria-controls="cpp-snippet-1559" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5487" aria-controls="cs-snippet-5487" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5990" aria-controls="cs-snippet-5990" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1004" aria-controls="pas-snippet-1004" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2997" aria-controls="pas-snippet-2997" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7723" aria-controls="py-snippet-7723" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3935" aria-controls="py-snippet-3935" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5891" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5891 pre">
+      <div role="tabpanel" id="cpp-snippet-1559" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1559 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">json_read_bool</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5487" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5487 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadBool</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">bool</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadBool</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5990" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5990 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadBool</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadBool</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1004" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1004 pre">
+      <div role="tabpanel" id="pas-snippet-2997" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2997 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadBool</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7723" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7723 pre">
+      <div role="tabpanel" id="py-snippet-3935" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3935 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_bool</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1712,7 +1821,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-number" data-anchor> JSON Read Number </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Number:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-number">
+                  JSON Read Number ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-number" data-anchor> JSON Read Number </h3>
   <div class="sk-api-description">
     <p>Reads a <code>Float</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -1779,38 +1901,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7721" aria-controls="cpp-snippet-7721" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4383" aria-controls="cpp-snippet-4383" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1839" aria-controls="cs-snippet-1839" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7618" aria-controls="cs-snippet-7618" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2150" aria-controls="pas-snippet-2150" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5186" aria-controls="pas-snippet-5186" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-452" aria-controls="py-snippet-452" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-221" aria-controls="py-snippet-221" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7721" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7721 pre">
+      <div role="tabpanel" id="cpp-snippet-4383" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4383 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">json_read_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1839" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1839 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">float</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7618" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7618 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">float</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2150" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2150 pre">
+      <div role="tabpanel" id="pas-snippet-5186" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5186 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-452" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-452 pre">
+      <div role="tabpanel" id="py-snippet-221" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-221 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_number</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1819,7 +1941,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-number-as-double" data-anchor> JSON Read Number As Double </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Number As Double:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-number-as-double">
+                  JSON Read Number As Double ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-number-as-double" data-anchor> JSON Read Number As Double </h3>
   <div class="sk-api-description">
     <p>Reads a <code>Double</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -1886,38 +2021,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3867" aria-controls="cpp-snippet-3867" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1527" aria-controls="cpp-snippet-1527" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1944" aria-controls="cs-snippet-1944" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3251" aria-controls="cs-snippet-3251" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8106" aria-controls="pas-snippet-8106" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2418" aria-controls="pas-snippet-2418" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9360" aria-controls="py-snippet-9360" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8051" aria-controls="py-snippet-8051" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3867" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3867 pre">
+      <div role="tabpanel" id="cpp-snippet-1527" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1527 pre">
         <pre class="codehilite"><code><span class="kt">double</span> <span class="n">json_read_number_as_double</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1944" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1944 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumberAsDouble</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">double</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumberAsDouble</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-3251" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3251 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">double</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumberAsDouble</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">double</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumberAsDouble</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8106" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8106 pre">
+      <div role="tabpanel" id="pas-snippet-2418" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2418 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumberAsDouble</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Double</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9360" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9360 pre">
+      <div role="tabpanel" id="py-snippet-8051" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8051 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_number_as_double</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1926,7 +2061,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-number-as-integer" data-anchor> JSON Read Number As Integer </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Number As Integer:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-number-as-integer">
+                  JSON Read Number As Integer ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-number-as-integer" data-anchor> JSON Read Number As Integer </h3>
   <div class="sk-api-description">
     <p>Reads a <code>Integer</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -1993,38 +2141,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2622" aria-controls="cpp-snippet-2622" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8037" aria-controls="cpp-snippet-8037" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3441" aria-controls="cs-snippet-3441" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-803" aria-controls="cs-snippet-803" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-254" aria-controls="pas-snippet-254" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5756" aria-controls="pas-snippet-5756" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8572" aria-controls="py-snippet-8572" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8439" aria-controls="py-snippet-8439" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2622" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2622 pre">
+      <div role="tabpanel" id="cpp-snippet-8037" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8037 pre">
         <pre class="codehilite"><code><span class="kt">int</span> <span class="n">json_read_number_as_int</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3441" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3441 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumberAsInt</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">int</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumberAsInt</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-803" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-803 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">int</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadNumberAsInt</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">int</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadNumberAsInt</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-254" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-254 pre">
+      <div role="tabpanel" id="pas-snippet-5756" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5756 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadNumberAsInt</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Integer</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8572" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8572 pre">
+      <div role="tabpanel" id="py-snippet-8439" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8439 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_number_as_int</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2033,7 +2181,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-object" data-anchor> JSON Read Object </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read Object:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-object">
+                  JSON Read Object ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-object" data-anchor> JSON Read Object </h3>
   <div class="sk-api-description">
     <p>Reads a <a href="/api/json/#json"><code>JSON</code></a> object value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -2100,38 +2261,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6401" aria-controls="cpp-snippet-6401" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4405" aria-controls="cpp-snippet-4405" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9526" aria-controls="cs-snippet-9526" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4861" aria-controls="cs-snippet-4861" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5643" aria-controls="pas-snippet-5643" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6126" aria-controls="pas-snippet-6126" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1989" aria-controls="py-snippet-1989" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3832" aria-controls="py-snippet-3832" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6401" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6401 pre">
+      <div role="tabpanel" id="cpp-snippet-4405" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4405 pre">
         <pre class="codehilite"><code><span class="n">json</span> <span class="n">json_read_object</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9526" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9526 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadObject</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="n">Json</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadObject</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-4861" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4861 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="n">Json</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadObject</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Json</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadObject</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5643" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5643 pre">
+      <div role="tabpanel" id="pas-snippet-6126" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6126 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadObject</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Json</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1989" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1989 pre">
+      <div role="tabpanel" id="py-snippet-3832" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3832 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_object</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2140,7 +2301,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-read-string" data-anchor> JSON Read String </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Read String:
+          <ul>
+              <li>
+                <a href="/api/json/#json-read-string">
+                  JSON Read String ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-read-string" data-anchor> JSON Read String </h3>
   <div class="sk-api-description">
     <p>Reads a <code>String</code> value from the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -2207,38 +2381,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4398" aria-controls="cpp-snippet-4398" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1778" aria-controls="cpp-snippet-1778" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9161" aria-controls="cs-snippet-9161" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1495" aria-controls="cs-snippet-1495" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4381" aria-controls="pas-snippet-4381" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9035" aria-controls="pas-snippet-9035" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1683" aria-controls="py-snippet-1683" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9845" aria-controls="py-snippet-9845" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4398" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4398 pre">
+      <div role="tabpanel" id="cpp-snippet-1778" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1778 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">json_read_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9161" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9161 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadString</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1495" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1495 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonReadString</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonReadString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4381" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4381 pre">
+      <div role="tabpanel" id="pas-snippet-9035" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9035 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonReadString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1683" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1683 pre">
+      <div role="tabpanel" id="py-snippet-9845" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9845 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_read_string</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2247,8 +2421,36 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-json-set-array" data-anchor> JSON Set Array </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Set Array:
+          <ul>
+              <li>
+                <a href="/api/json/#json-set-array-of-string">
+                  JSON Set Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-set-array-of-double">
+                  JSON Set Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-set-array-of-boolean">
+                  JSON Set Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-set-array-of-json">
+                  JSON Set Array ( JSON, String, Dynamic Array )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array-of-string" data-anchor> JSON Set Array </h3>
   <div class="sk-api-description">
     <p>Adds an array of <code>String</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -2317,38 +2519,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4953" aria-controls="cpp-snippet-4953" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5257" aria-controls="cpp-snippet-5257" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1456" aria-controls="cs-snippet-1456" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8260" aria-controls="cs-snippet-8260" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9396" aria-controls="pas-snippet-9396" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8509" aria-controls="pas-snippet-8509" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5365" aria-controls="py-snippet-5365" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2623" aria-controls="py-snippet-2623" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4953" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4953 pre">
+      <div role="tabpanel" id="cpp-snippet-5257" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5257 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1456" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1456 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-8260" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8260 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9396" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9396 pre">
+      <div role="tabpanel" id="pas-snippet-8509" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8509 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfString</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5365" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5365 pre">
+      <div role="tabpanel" id="py-snippet-2623" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2623 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_array_of_string</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2357,8 +2559,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array-of-double" data-anchor> JSON Set Array </h3>
   <div class="sk-api-description">
     <p>Adds an array of <code>Double</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -2427,38 +2629,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3585" aria-controls="cpp-snippet-3585" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7201" aria-controls="cpp-snippet-7201" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5419" aria-controls="cs-snippet-5419" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1456" aria-controls="cs-snippet-1456" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8752" aria-controls="pas-snippet-8752" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-135" aria-controls="pas-snippet-135" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1318" aria-controls="py-snippet-1318" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6417" aria-controls="py-snippet-6417" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3585" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3585 pre">
+      <div role="tabpanel" id="cpp-snippet-7201" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7201 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5419" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5419 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1456" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1456 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8752" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8752 pre">
+      <div role="tabpanel" id="pas-snippet-135" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-135 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfDouble</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1318" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1318 pre">
+      <div role="tabpanel" id="py-snippet-6417" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6417 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_array_of_double</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2467,8 +2669,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array-of-boolean" data-anchor> JSON Set Array </h3>
   <div class="sk-api-description">
     <p>Adds an array of <code>Boolean</code> values to the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -2537,38 +2739,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4661" aria-controls="cpp-snippet-4661" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5144" aria-controls="cpp-snippet-5144" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9902" aria-controls="cs-snippet-9902" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9377" aria-controls="cs-snippet-9377" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5134" aria-controls="pas-snippet-5134" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8531" aria-controls="pas-snippet-8531" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8776" aria-controls="py-snippet-8776" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1042" aria-controls="py-snippet-1042" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4661" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4661 pre">
+      <div role="tabpanel" id="cpp-snippet-5144" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5144 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9902" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9902 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-9377" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9377 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5134" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5134 pre">
+      <div role="tabpanel" id="pas-snippet-8531" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8531 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfBoolean</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8776" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8776 pre">
+      <div role="tabpanel" id="py-snippet-1042" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1042 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_array_of_bool</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2577,8 +2779,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-array" data-anchor> JSON Set Array </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-array-of-json" data-anchor> JSON Set Array </h3>
   <div class="sk-api-description">
     <p>Adds an array of <a href="/api/json/#json"><code>JSON</code></a> object values to the <a href="/api/json/#json"><code>JSON</code></a> object for
 the given <code>String</code> key.</p>
@@ -2647,38 +2849,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1458" aria-controls="cpp-snippet-1458" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6660" aria-controls="cpp-snippet-6660" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8391" aria-controls="cs-snippet-8391" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2658" aria-controls="cs-snippet-2658" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1527" aria-controls="pas-snippet-1527" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2136" aria-controls="pas-snippet-2136" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3013" aria-controls="py-snippet-3013" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5706" aria-controls="py-snippet-5706" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1458" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1458 pre">
+      <div role="tabpanel" id="cpp-snippet-6660" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6660 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_array</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">json</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8391" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8391 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2658" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2658 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetArray</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Json</span><span class="p">&gt;</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1527" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1527 pre">
+      <div role="tabpanel" id="pas-snippet-2136" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2136 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetArray</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="n">ArrayOfJson</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3013" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3013 pre">
+      <div role="tabpanel" id="py-snippet-5706" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5706 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_array_of_json</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2687,7 +2889,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-set-boolean" data-anchor> JSON Set Boolean </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Set Boolean:
+          <ul>
+              <li>
+                <a href="/api/json/#json-set-boolean">
+                  JSON Set Boolean ( JSON, String, Boolean )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-set-boolean" data-anchor> JSON Set Boolean </h3>
   <div class="sk-api-description">
     <p>Adds a <code>Boolean</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -2756,38 +2971,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7250" aria-controls="cpp-snippet-7250" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1776" aria-controls="cpp-snippet-1776" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-334" aria-controls="cs-snippet-334" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6369" aria-controls="cs-snippet-6369" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6630" aria-controls="pas-snippet-6630" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9291" aria-controls="pas-snippet-9291" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5432" aria-controls="py-snippet-5432" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-950" aria-controls="py-snippet-950" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7250" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7250 pre">
+      <div role="tabpanel" id="cpp-snippet-1776" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1776 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_bool</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-334" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-334 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetBool</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetBool</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6369" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6369 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetBool</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetBool</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">bool</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6630" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6630 pre">
+      <div role="tabpanel" id="pas-snippet-9291" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9291 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetBool</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5432" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5432 pre">
+      <div role="tabpanel" id="py-snippet-950" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-950 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_bool</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2796,8 +3011,31 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-json-set-number" data-anchor> JSON Set Number </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Set Number:
+          <ul>
+              <li>
+                <a href="/api/json/#json-set-number-integer">
+                  JSON Set Number ( JSON, String, Integer )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-set-number-double">
+                  JSON Set Number ( JSON, String, Double )
+                </a>
+              </li>
+              <li>
+                <a href="/api/json/#json-set-number-float">
+                  JSON Set Number ( JSON, String, Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number-integer" data-anchor> JSON Set Number </h3>
   <div class="sk-api-description">
     <p>Adds an <code>Integer</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
 
@@ -2865,38 +3103,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9638" aria-controls="cpp-snippet-9638" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2212" aria-controls="cpp-snippet-2212" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-389" aria-controls="cs-snippet-389" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1201" aria-controls="cs-snippet-1201" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1202" aria-controls="pas-snippet-1202" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1697" aria-controls="pas-snippet-1697" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3013" aria-controls="py-snippet-3013" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7642" aria-controls="py-snippet-7642" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9638" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9638 pre">
+      <div role="tabpanel" id="cpp-snippet-2212" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2212 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-389" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-389 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1201" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1201 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">int</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1202" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1202 pre">
+      <div role="tabpanel" id="pas-snippet-1697" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1697 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3013" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3013 pre">
+      <div role="tabpanel" id="py-snippet-7642" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7642 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_number_integer</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2905,8 +3143,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number-double" data-anchor> JSON Set Number </h3>
   <div class="sk-api-description">
     <p>Adds a <code>Double</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
 
@@ -2974,38 +3212,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7786" aria-controls="cpp-snippet-7786" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7660" aria-controls="cpp-snippet-7660" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9482" aria-controls="cs-snippet-9482" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-626" aria-controls="cs-snippet-626" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2751" aria-controls="pas-snippet-2751" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7039" aria-controls="pas-snippet-7039" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5684" aria-controls="py-snippet-5684" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7216" aria-controls="py-snippet-7216" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7786" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7786 pre">
+      <div role="tabpanel" id="cpp-snippet-7660" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7660 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9482" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9482 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-626" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-626 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">double</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2751" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2751 pre">
+      <div role="tabpanel" id="pas-snippet-7039" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7039 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5684" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5684 pre">
+      <div role="tabpanel" id="py-snippet-7216" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7216 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_number_double</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3014,8 +3252,8 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="json-set-number" data-anchor> JSON Set Number </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="json-set-number-float" data-anchor> JSON Set Number </h3>
   <div class="sk-api-description">
     <p>Adds a <code>Float</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
 
@@ -3083,38 +3321,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2288" aria-controls="cpp-snippet-2288" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4384" aria-controls="cpp-snippet-4384" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7886" aria-controls="cs-snippet-7886" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3591" aria-controls="cs-snippet-3591" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4118" aria-controls="pas-snippet-4118" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4518" aria-controls="pas-snippet-4518" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4247" aria-controls="py-snippet-4247" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7685" aria-controls="py-snippet-7685" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2288" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2288 pre">
+      <div role="tabpanel" id="cpp-snippet-4384" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4384 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_number</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7886" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7886 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-3591" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3591 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetNumber</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">float</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4118" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4118 pre">
+      <div role="tabpanel" id="pas-snippet-4518" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4518 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetNumber</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4247" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4247 pre">
+      <div role="tabpanel" id="py-snippet-7685" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7685 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_number_float</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3123,7 +3361,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-set-object" data-anchor> JSON Set Object </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Set Object:
+          <ul>
+              <li>
+                <a href="/api/json/#json-set-object">
+                  JSON Set Object ( JSON, String, JSON )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-set-object" data-anchor> JSON Set Object </h3>
   <div class="sk-api-description">
     <p>Adds a <a href="/api/json/#json"><code>JSON</code></a> object to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -3192,38 +3443,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1541" aria-controls="cpp-snippet-1541" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9733" aria-controls="cpp-snippet-9733" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9764" aria-controls="cs-snippet-9764" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5118" aria-controls="cs-snippet-5118" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8952" aria-controls="pas-snippet-8952" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9743" aria-controls="pas-snippet-9743" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6116" aria-controls="py-snippet-6116" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8" aria-controls="py-snippet-8" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1541" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1541 pre">
+      <div role="tabpanel" id="cpp-snippet-9733" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9733 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_object</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">json</span> <span class="n">obj</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9764" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9764 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetObject</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">Json</span> <span class="n">obj</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetObject</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">Json</span> <span class="n">obj</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5118" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5118 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetObject</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">Json</span> <span class="n">obj</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetObject</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">Json</span> <span class="n">obj</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8952" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8952 pre">
+      <div role="tabpanel" id="pas-snippet-9743" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9743 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetObject</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Json</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6116" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6116 pre">
+      <div role="tabpanel" id="py-snippet-8" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_object</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3232,7 +3483,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-set-string" data-anchor> JSON Set String </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON Set String:
+          <ul>
+              <li>
+                <a href="/api/json/#json-set-string">
+                  JSON Set String ( JSON, String, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-set-string" data-anchor> JSON Set String </h3>
   <div class="sk-api-description">
     <p>Adds a <code>String</code> value to the <a href="/api/json/#json"><code>JSON</code></a> object for the given <code>String</code> key.</p>
@@ -3301,38 +3565,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1063" aria-controls="cpp-snippet-1063" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9941" aria-controls="cpp-snippet-9941" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1466" aria-controls="cs-snippet-1466" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5035" aria-controls="cs-snippet-5035" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3776" aria-controls="pas-snippet-3776" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5551" aria-controls="pas-snippet-5551" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8792" aria-controls="py-snippet-8792" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9997" aria-controls="py-snippet-9997" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1063" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1063 pre">
+      <div role="tabpanel" id="cpp-snippet-9941" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9941 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_set_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="n">string</span> <span class="n">key</span><span class="p">,</span> <span class="n">string</span> <span class="n">value</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1466" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1466 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">);</span>
-<span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetString</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5035" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5035 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonSetString</span><span class="p">(</span><span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonSetString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">key</span><span class="p">,</span> <span class="kt">string</span> <span class="k">value</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3776" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3776 pre">
+      <div role="tabpanel" id="pas-snippet-5551" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5551 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonSetString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="n">key</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">value</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8792" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8792 pre">
+      <div role="tabpanel" id="py-snippet-9997" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9997 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_set_string</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3341,7 +3605,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-to-color" data-anchor> JSON To Color </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON To Color:
+          <ul>
+              <li>
+                <a href="/api/json/#json-to-color">
+                  JSON To Color ( JSON )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-to-color" data-anchor> JSON To Color </h3>
   <div class="sk-api-description">
     <p>Converts a <a href="/api/json/#json"><code>JSON</code></a> object to a <a href="/api/types/#color"><code>Color</code></a> object.</p>
@@ -3395,37 +3672,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3081" aria-controls="cpp-snippet-3081" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2912" aria-controls="cpp-snippet-2912" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6225" aria-controls="cs-snippet-6225" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9176" aria-controls="cs-snippet-9176" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3218" aria-controls="pas-snippet-3218" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3373" aria-controls="pas-snippet-3373" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-51" aria-controls="py-snippet-51" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8978" aria-controls="py-snippet-8978" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3081" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3081 pre">
+      <div role="tabpanel" id="cpp-snippet-2912" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2912 pre">
         <pre class="codehilite"><code><span class="n">color</span> <span class="n">json_to_color</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6225" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6225 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Color</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToColor</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-9176" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9176 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Color</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonToColor</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Color</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToColor</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3218" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3218 pre">
+      <div role="tabpanel" id="pas-snippet-3373" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3373 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonToColor</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="n">Color</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-51" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-51 pre">
+      <div role="tabpanel" id="py-snippet-8978" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8978 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_to_color</span><span class="p">(</span><span class="n">j</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3434,7 +3712,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-to-file" data-anchor> JSON To File </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON To File:
+          <ul>
+              <li>
+                <a href="/api/json/#json-to-file">
+                  JSON To File ( JSON, String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-to-file" data-anchor> JSON To File </h3>
   <div class="sk-api-description">
     <p>Writes the <a href="/api/json/#json"><code>JSON</code></a> object to a JSON string stored in <code>Resources/json/filename</code>.</p>
@@ -3490,37 +3781,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-959" aria-controls="cpp-snippet-959" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4324" aria-controls="cpp-snippet-4324" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6903" aria-controls="cs-snippet-6903" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3802" aria-controls="cs-snippet-3802" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8133" aria-controls="pas-snippet-8133" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1211" aria-controls="pas-snippet-1211" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6965" aria-controls="py-snippet-6965" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8732" aria-controls="py-snippet-8732" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-959" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-959 pre">
+      <div role="tabpanel" id="cpp-snippet-4324" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4324 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">json_to_file</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6903" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6903 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToFile</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-3802" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3802 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonToFile</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToFile</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8133" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8133 pre">
+      <div role="tabpanel" id="pas-snippet-1211" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1211 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">JsonToFile</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6965" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6965 pre">
+      <div role="tabpanel" id="py-snippet-8732" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8732 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_to_file</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3529,7 +3821,20 @@ the given <code>String</code> key.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-json-to-string" data-anchor> JSON To String </h3>
+        <div class="sk-api-description">
+          There are multiple versions of JSON To String:
+          <ul>
+              <li>
+                <a href="/api/json/#json-to-string">
+                  JSON To String ( JSON )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="json-to-string" data-anchor> JSON To String </h3>
   <div class="sk-api-description">
     <p>Converts and returns the <a href="/api/json/#json"><code>JSON</code></a> object as a <code>String</code>.</p>
@@ -3583,37 +3888,38 @@ the given <code>String</code> key.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-517" aria-controls="cpp-snippet-517" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9620" aria-controls="cpp-snippet-9620" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2351" aria-controls="cs-snippet-2351" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8358" aria-controls="cs-snippet-8358" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6481" aria-controls="pas-snippet-6481" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6310" aria-controls="pas-snippet-6310" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-188" aria-controls="py-snippet-188" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1408" aria-controls="py-snippet-1408" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-517" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-517 pre">
+      <div role="tabpanel" id="cpp-snippet-9620" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9620 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">json_to_string</span><span class="p">(</span><span class="n">json</span> <span class="n">j</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2351" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2351 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-8358" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8358 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">Json</span><span class="p">.</span><span class="nf">JsonToString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">JsonToString</span><span class="p">(</span><span class="n">Json</span> <span class="n">j</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6481" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6481 pre">
+      <div role="tabpanel" id="pas-snippet-6310" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6310 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">JsonToString</span><span class="p">(</span><span class="n">j</span><span class="p">:</span> <span class="n">Json</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-188" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-188 pre">
+      <div role="tabpanel" id="py-snippet-1408" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1408 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">json_to_string</span><span class="p">(</span><span class="n">j</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3646,7 +3952,6 @@ or</code>Free All JSON()<code>(to release all loaded</code>json objects).</p></l
 
   </section>
 
-
       </article>
     </div>
   </div>
@@ -3674,6 +3979,6 @@ or</code>Free All JSON()<code>(to release all loaded</code>json objects).</p></l
   </div>
 </footer>
 
-    <script src="/javascripts/main-eeeef4a3.js"></script>
+    <script src="/javascripts/main-2c341741.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@
 
     <title>SplashKit - API - Resources</title>
 
-    <link href="/stylesheets/main-96cb182a.css" rel="stylesheet" />
+    <link href="/stylesheets/main-4d7d293d.css" rel="stylesheet" />
   </head>
   <body class="api api_resources api_resources_index">
     <nav class="navbar navbar-dark sk-navbar">
@@ -88,7 +88,7 @@ project's `Resources` folder.
 
   <div class="sk-api-root container">
     <div class="row">
-      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
         <nav role="navigation">
   <ul class="nav sk-api-nav-root">
       <li class="nav-item">
@@ -171,12 +171,7 @@ project's `Resources` folder.
       </a>
     </li>
     <li class="nav-item">
-      <a href="#path-to-resources" class="nav-link">
-        Path To Resources
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#path-to-resources" class="nav-link">
+      <a href="#group-path-to-resources" class="nav-link">
         Path To Resources
       </a>
     </li>
@@ -256,7 +251,20 @@ project's `Resources` folder.
 
   <section class="sk-api-functions">
     <h2> Functions </h2>
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-deregister-free-notifier" data-anchor> Deregister Free Notifier </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Deregister Free Notifier:
+          <ul>
+              <li>
+                <a href="/api/resources/#deregister-free-notifier">
+                  Deregister Free Notifier ( Free Notifier )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="deregister-free-notifier" data-anchor> Deregister Free Notifier </h3>
   <div class="sk-api-description">
     <p>Remove the function from the list of functions receiving notification
@@ -300,37 +308,38 @@ of resource freeing.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6746" aria-controls="cpp-snippet-6746" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5933" aria-controls="cpp-snippet-5933" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-152" aria-controls="cs-snippet-152" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-450" aria-controls="cs-snippet-450" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9" aria-controls="pas-snippet-9" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-618" aria-controls="pas-snippet-618" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9804" aria-controls="py-snippet-9804" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4491" aria-controls="py-snippet-4491" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6746" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6746 pre">
+      <div role="tabpanel" id="cpp-snippet-5933" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5933 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_free_notifier</span><span class="p">(</span><span class="n">free_notifier</span> <span class="o">*</span><span class="n">handler</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-152" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-152 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DeregisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">handler</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-450" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-450 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">DeregisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">handler</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DeregisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">handler</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9 pre">
+      <div role="tabpanel" id="pas-snippet-618" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-618 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterFreeNotifier</span><span class="p">(</span><span class="n">handler</span><span class="p">:</span> <span class="n">FreeNotifier</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9804" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9804 pre">
+      <div role="tabpanel" id="py-snippet-4491" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4491 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">deregister_free_notifier</span><span class="p">(</span><span class="n">handler</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -339,7 +348,20 @@ of resource freeing.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-path-to-resource" data-anchor> Path To Resource </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Path To Resource:
+          <ul>
+              <li>
+                <a href="/api/resources/#path-to-resource">
+                  Path To Resource ( String, Resource Kind )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="path-to-resource" data-anchor> Path To Resource </h3>
   <div class="sk-api-description">
     <p>Gets the path to a give file of a certain resource kind.</p>
@@ -406,37 +428,38 @@ of resource freeing.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1565" aria-controls="cpp-snippet-1565" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7587" aria-controls="cpp-snippet-7587" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5079" aria-controls="cs-snippet-5079" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9039" aria-controls="cs-snippet-9039" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4029" aria-controls="pas-snippet-4029" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1572" aria-controls="pas-snippet-1572" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6648" aria-controls="py-snippet-6648" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4979" aria-controls="py-snippet-4979" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1565" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1565 pre">
+      <div role="tabpanel" id="cpp-snippet-7587" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7587 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resource</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">,</span> <span class="n">resource_kind</span> <span class="n">kind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5079" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5079 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResource</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-9039" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9039 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">PathToResource</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResource</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">,</span> <span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4029" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4029 pre">
+      <div role="tabpanel" id="pas-snippet-1572" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1572 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResource</span><span class="p">(</span><span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">kind</span><span class="p">:</span> <span class="n">ResourceKind</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6648" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6648 pre">
+      <div role="tabpanel" id="py-snippet-4979" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4979 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">path_to_resource</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">kind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -445,7 +468,25 @@ of resource freeing.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-path-to-resources" data-anchor> Path To Resources </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Path To Resources:
+          <ul>
+              <li>
+                <a href="/api/resources/#path-to-resources">
+                  Path To Resources (  )
+                </a>
+              </li>
+              <li>
+                <a href="/api/resources/#path-to-resources-for-kind">
+                  Path To Resources ( Resource Kind )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="path-to-resources" data-anchor> Path To Resources </h3>
   <div class="sk-api-description">
     <p>Returns the path to the resources folder for the SplashKit program. This
@@ -472,37 +513,38 @@ will be auto detected at startup, but can be changed using
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4195" aria-controls="cpp-snippet-4195" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3709" aria-controls="cpp-snippet-3709" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5875" aria-controls="cs-snippet-5875" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2535" aria-controls="cs-snippet-2535" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-564" aria-controls="pas-snippet-564" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6710" aria-controls="pas-snippet-6710" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5920" aria-controls="py-snippet-5920" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-723" aria-controls="py-snippet-723" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4195" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4195 pre">
+      <div role="tabpanel" id="cpp-snippet-3709" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3709 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resources</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5875" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5875 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2535" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2535 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-564" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-564 pre">
+      <div role="tabpanel" id="pas-snippet-6710" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6710 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResources</span><span class="p">():</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5920" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5920 pre">
+      <div role="tabpanel" id="py-snippet-723" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-723 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">path_to_resources</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -511,8 +553,8 @@ will be auto detected at startup, but can be changed using
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="path-to-resources" data-anchor> Path To Resources </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="path-to-resources-for-kind" data-anchor> Path To Resources </h3>
   <div class="sk-api-description">
     <p>Returns the path to the folder containing a given resource kind. This is
 the path SplashkKit will search when you load a resource.</p>
@@ -566,37 +608,38 @@ the path SplashkKit will search when you load a resource.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-936" aria-controls="cpp-snippet-936" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9415" aria-controls="cpp-snippet-9415" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9555" aria-controls="cs-snippet-9555" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1034" aria-controls="cs-snippet-1034" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9082" aria-controls="pas-snippet-9082" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6463" aria-controls="pas-snippet-6463" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9494" aria-controls="py-snippet-9494" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6669" aria-controls="py-snippet-6669" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-936" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-936 pre">
+      <div role="tabpanel" id="cpp-snippet-9415" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9415 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">path_to_resources</span><span class="p">(</span><span class="n">resource_kind</span> <span class="n">kind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9555" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9555 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">(</span><span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1034" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1034 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">(</span><span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PathToResources</span><span class="p">(</span><span class="n">ResourceKind</span> <span class="n">kind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9082" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9082 pre">
+      <div role="tabpanel" id="pas-snippet-6463" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6463 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">PathToResources</span><span class="p">(</span><span class="n">kind</span><span class="p">:</span> <span class="n">ResourceKind</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9494" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9494 pre">
+      <div role="tabpanel" id="py-snippet-6669" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6669 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">path_to_resources_for_kind</span><span class="p">(</span><span class="n">kind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -605,7 +648,20 @@ the path SplashkKit will search when you load a resource.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-register-free-notifier" data-anchor> Register Free Notifier </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Register Free Notifier:
+          <ul>
+              <li>
+                <a href="/api/resources/#register-free-notifier">
+                  Register Free Notifier ( Free Notifier )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="register-free-notifier" data-anchor> Register Free Notifier </h3>
   <div class="sk-api-description">
     <p>Register a function to be called when any resource is freed.</p>
@@ -648,37 +704,38 @@ the path SplashkKit will search when you load a resource.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8405" aria-controls="cpp-snippet-8405" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5951" aria-controls="cpp-snippet-5951" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7082" aria-controls="cs-snippet-7082" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7704" aria-controls="cs-snippet-7704" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8217" aria-controls="pas-snippet-8217" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4602" aria-controls="pas-snippet-4602" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1956" aria-controls="py-snippet-1956" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7385" aria-controls="py-snippet-7385" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8405" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8405 pre">
+      <div role="tabpanel" id="cpp-snippet-5951" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5951 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_free_notifier</span><span class="p">(</span><span class="n">free_notifier</span> <span class="o">*</span><span class="n">fn</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7082" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7082 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RegisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">fn</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7704" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7704 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">RegisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">fn</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RegisterFreeNotifier</span><span class="p">(</span><span class="n">FreeNotifier</span> <span class="n">fn</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8217" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8217 pre">
+      <div role="tabpanel" id="pas-snippet-4602" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4602 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterFreeNotifier</span><span class="p">(</span><span class="n">fn</span><span class="p">:</span> <span class="n">FreeNotifier</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1956" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1956 pre">
+      <div role="tabpanel" id="py-snippet-7385" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7385 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">register_free_notifier</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -687,7 +744,20 @@ the path SplashkKit will search when you load a resource.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-set-resources-path" data-anchor> Set Resources Path </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Set Resources Path:
+          <ul>
+              <li>
+                <a href="/api/resources/#set-resources-path">
+                  Set Resources Path ( String )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="set-resources-path" data-anchor> Set Resources Path </h3>
   <div class="sk-api-description">
     <p>Sets the path to the SplashKit resources folder. Resource paths are then
@@ -731,37 +801,38 @@ located within this folder.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9025" aria-controls="cpp-snippet-9025" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9414" aria-controls="cpp-snippet-9414" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8643" aria-controls="cs-snippet-8643" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2045" aria-controls="cs-snippet-2045" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4637" aria-controls="pas-snippet-4637" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5921" aria-controls="pas-snippet-5921" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3715" aria-controls="py-snippet-3715" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6360" aria-controls="py-snippet-6360" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9025" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9025 pre">
+      <div role="tabpanel" id="cpp-snippet-9414" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9414 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_resources_path</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">path</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8643" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8643 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetResourcesPath</span><span class="p">(</span><span class="kt">string</span> <span class="n">path</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2045" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2045 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Resources</span><span class="p">.</span><span class="nf">SetResourcesPath</span><span class="p">(</span><span class="kt">string</span> <span class="n">path</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetResourcesPath</span><span class="p">(</span><span class="kt">string</span> <span class="n">path</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4637" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4637 pre">
+      <div role="tabpanel" id="pas-snippet-5921" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5921 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetResourcesPath</span><span class="p">(</span><span class="k">const</span> <span class="n">path</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3715" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3715 pre">
+      <div role="tabpanel" id="py-snippet-6360" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6360 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">set_resources_path</span><span class="p">(</span><span class="n">path</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -927,7 +998,6 @@ located directly in these project&#39;s
 
   </section>
 
-
       </article>
     </div>
   </div>
@@ -955,6 +1025,6 @@ located directly in these project&#39;s
   </div>
 </footer>
 
-    <script src="/javascripts/main-eeeef4a3.js"></script>
+    <script src="/javascripts/main-2c341741.js"></script>
   </body>
 </html>

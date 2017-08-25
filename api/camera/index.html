@@ -11,7 +11,7 @@
 
     <title>SplashKit - API - Camera</title>
 
-    <link href="/stylesheets/main-96cb182a.css" rel="stylesheet" />
+    <link href="/stylesheets/main-4d7d293d.css" rel="stylesheet" />
   </head>
   <body class="api api_camera api_camera_index">
     <nav class="navbar navbar-dark sk-navbar">
@@ -88,7 +88,7 @@ around in your world.
 
   <div class="sk-api-root container">
     <div class="row">
-      <aside class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
         <nav role="navigation">
   <ul class="nav sk-api-nav-root">
       <li class="nav-item">
@@ -126,32 +126,17 @@ around in your world.
       </a>
     </li>
     <li class="nav-item">
-      <a href="#center-camera-on" class="nav-link">
+      <a href="#group-center-camera-on" class="nav-link">
         Center Camera On
       </a>
     </li>
     <li class="nav-item">
-      <a href="#center-camera-on" class="nav-link">
-        Center Camera On
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#move-camera-by" class="nav-link">
+      <a href="#group-move-camera-by" class="nav-link">
         Move Camera By
       </a>
     </li>
     <li class="nav-item">
-      <a href="#move-camera-by" class="nav-link">
-        Move Camera By
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#move-camera-to" class="nav-link">
-        Move Camera To
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#move-camera-to" class="nav-link">
+      <a href="#group-move-camera-to" class="nav-link">
         Move Camera To
       </a>
     </li>
@@ -196,12 +181,7 @@ around in your world.
       </a>
     </li>
     <li class="nav-item">
-      <a href="#to-screen" class="nav-link">
-        To Screen
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#to-screen" class="nav-link">
+      <a href="#group-to-screen" class="nav-link">
         To Screen
       </a>
     </li>
@@ -343,7 +323,20 @@ draw things to the screen in your world coordinates.</p>
 
   <section class="sk-api-functions">
     <h2> Functions </h2>
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-camera-position" data-anchor> Camera Position </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Camera Position:
+          <ul>
+              <li>
+                <a href="/api/camera/#camera-position">
+                  Camera Position (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="camera-position" data-anchor> Camera Position </h3>
   <div class="sk-api-description">
     <p>Returns the position of the camera in game coordinates. This will be the
@@ -369,37 +362,38 @@ coordinate of the upper left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3023" aria-controls="cpp-snippet-3023" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9292" aria-controls="cpp-snippet-9292" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5648" aria-controls="cs-snippet-5648" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2752" aria-controls="cs-snippet-2752" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3831" aria-controls="pas-snippet-3831" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1733" aria-controls="pas-snippet-1733" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4125" aria-controls="py-snippet-4125" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7682" aria-controls="py-snippet-7682" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3023" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3023 pre">
+      <div role="tabpanel" id="cpp-snippet-9292" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9292 pre">
         <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">camera_position</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5648" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5648 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraPosition</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2752" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2752 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">Camera</span><span class="p">.</span><span class="n">CameraPosition</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraPosition</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3831" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3831 pre">
+      <div role="tabpanel" id="pas-snippet-1733" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1733 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraPosition</span><span class="p">():</span> <span class="n">Point2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4125" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4125 pre">
+      <div role="tabpanel" id="py-snippet-7682" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7682 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">camera_position</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -408,7 +402,20 @@ coordinate of the upper left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-camera-x" data-anchor> Camera X </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Camera X:
+          <ul>
+              <li>
+                <a href="/api/camera/#camera-x">
+                  Camera X (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="camera-x" data-anchor> Camera X </h3>
   <div class="sk-api-description">
     <p>Returns the x location of the camera in game coordinates. This represents
@@ -435,37 +442,38 @@ being at camera x + screen width.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5789" aria-controls="cpp-snippet-5789" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-305" aria-controls="cpp-snippet-305" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7688" aria-controls="cs-snippet-7688" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6853" aria-controls="cs-snippet-6853" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-530" aria-controls="pas-snippet-530" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8331" aria-controls="pas-snippet-8331" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8472" aria-controls="py-snippet-8472" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3736" aria-controls="py-snippet-3736" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5789" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5789 pre">
+      <div role="tabpanel" id="cpp-snippet-305" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-305 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">camera_x</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7688" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7688 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraX</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6853" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6853 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="n">CameraX</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraX</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-530" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-530 pre">
+      <div role="tabpanel" id="pas-snippet-8331" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8331 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraX</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8472" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8472 pre">
+      <div role="tabpanel" id="py-snippet-3736" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3736 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">camera_x</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -474,7 +482,20 @@ being at camera x + screen width.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-camera-y" data-anchor> Camera Y </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Camera Y:
+          <ul>
+              <li>
+                <a href="/api/camera/#camera-y">
+                  Camera Y (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="camera-y" data-anchor> Camera Y </h3>
   <div class="sk-api-description">
     <p>Returns the y location of the camera in game coordinates. This represents
@@ -501,37 +522,38 @@ at camera y + screen height.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7668" aria-controls="cpp-snippet-7668" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4007" aria-controls="cpp-snippet-4007" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2460" aria-controls="cs-snippet-2460" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4136" aria-controls="cs-snippet-4136" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8273" aria-controls="pas-snippet-8273" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1246" aria-controls="pas-snippet-1246" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6331" aria-controls="py-snippet-6331" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5998" aria-controls="py-snippet-5998" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7668" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7668 pre">
+      <div role="tabpanel" id="cpp-snippet-4007" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4007 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">camera_y</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2460" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2460 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraY</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-4136" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4136 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="n">CameraY</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CameraY</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8273" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8273 pre">
+      <div role="tabpanel" id="pas-snippet-1246" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1246 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CameraY</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6331" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6331 pre">
+      <div role="tabpanel" id="py-snippet-5998" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5998 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">camera_y</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -540,8 +562,26 @@ at camera y + screen height.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="center-camera-on" data-anchor> Center Camera On </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-center-camera-on" data-anchor> Center Camera On </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Center Camera On:
+          <ul>
+              <li>
+                <a href="/api/camera/#center-camera-on-vector">
+                  Center Camera On ( Sprite, Vector 2D )
+                </a>
+              </li>
+              <li>
+                <a href="/api/camera/#center-camera-on">
+                  Center Camera On ( Sprite, Float, Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="center-camera-on-vector" data-anchor> Center Camera On </h3>
   <div class="sk-api-description">
     <p>Set the camera view to be centered over the specific sprite. The offset
 vector allows you to move the sprite from the direct center of the screen.</p>
@@ -598,37 +638,38 @@ the sprite away from the center of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9289" aria-controls="cpp-snippet-9289" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9896" aria-controls="cpp-snippet-9896" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1705" aria-controls="cs-snippet-1705" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1939" aria-controls="cs-snippet-1939" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8013" aria-controls="pas-snippet-8013" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7723" aria-controls="pas-snippet-7723" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9072" aria-controls="py-snippet-9072" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1718" aria-controls="py-snippet-1718" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9289" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9289 pre">
+      <div role="tabpanel" id="cpp-snippet-9896" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9896 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">center_camera_on</span><span class="p">(</span><span class="n">sprite</span> <span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector_2d</span> <span class="o">&amp;</span><span class="n">offset</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1705" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1705 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1939" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1939 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8013" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8013 pre">
+      <div role="tabpanel" id="pas-snippet-7723" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7723 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CenterCameraOn</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Sprite</span><span class="p">;</span> <span class="k">const</span> <span class="n">offset</span><span class="p">:</span> <span class="n">Vector2D</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9072" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9072 pre">
+      <div role="tabpanel" id="py-snippet-1718" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1718 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">center_camera_on_vector</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -637,7 +678,7 @@ the sprite away from the center of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+        <section class="sk-api-function sk-api-section">
   <h3 id="center-camera-on" data-anchor> Center Camera On </h3>
   <div class="sk-api-description">
     <p>Set the camera view to be centered over the specific sprite. The offset
@@ -709,37 +750,38 @@ position the sprite offset from the center of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7864" aria-controls="cpp-snippet-7864" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9936" aria-controls="cpp-snippet-9936" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5641" aria-controls="cs-snippet-5641" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4857" aria-controls="cs-snippet-4857" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3398" aria-controls="pas-snippet-3398" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9412" aria-controls="pas-snippet-9412" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3636" aria-controls="py-snippet-3636" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3780" aria-controls="py-snippet-3780" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7864" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7864 pre">
+      <div role="tabpanel" id="cpp-snippet-9936" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9936 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">center_camera_on</span><span class="p">(</span><span class="n">sprite</span> <span class="n">s</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offset_x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offset_y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5641" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5641 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetX</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetY</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-4857" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4857 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetX</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetY</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CenterCameraOn</span><span class="p">(</span><span class="n">Sprite</span> <span class="n">s</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetX</span><span class="p">,</span> <span class="kt">float</span> <span class="n">offsetY</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3398" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3398 pre">
+      <div role="tabpanel" id="pas-snippet-9412" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9412 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CenterCameraOn</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="n">Sprite</span><span class="p">;</span> <span class="n">offsetX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">offsetY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3636" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3636 pre">
+      <div role="tabpanel" id="py-snippet-3780" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3780 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">center_camera_on</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -748,8 +790,26 @@ position the sprite offset from the center of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="move-camera-by" data-anchor> Move Camera By </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-move-camera-by" data-anchor> Move Camera By </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Move Camera By:
+          <ul>
+              <li>
+                <a href="/api/camera/#move-camera-by-vector">
+                  Move Camera By ( Vector 2D )
+                </a>
+              </li>
+              <li>
+                <a href="/api/camera/#move-camera-by">
+                  Move Camera By ( Float, Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-by-vector" data-anchor> Move Camera By </h3>
   <div class="sk-api-description">
     <p>Move the camera (offset its world x and y values) using the specified
 vector. For example, if you move the camera by the same speed vector of
@@ -793,37 +853,38 @@ a sprite the camera will &quot;track&quot; (be locked on to) the sprite as it mo
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4249" aria-controls="cpp-snippet-4249" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4164" aria-controls="cpp-snippet-4164" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2715" aria-controls="cs-snippet-2715" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1141" aria-controls="cs-snippet-1141" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7100" aria-controls="pas-snippet-7100" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5174" aria-controls="pas-snippet-5174" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5895" aria-controls="py-snippet-5895" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2378" aria-controls="py-snippet-2378" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4249" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4249 pre">
+      <div role="tabpanel" id="cpp-snippet-4164" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4164 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_by</span><span class="p">(</span><span class="k">const</span> <span class="n">vector_2d</span> <span class="o">&amp;</span><span class="n">offset</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2715" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2715 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1141" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1141 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="n">Vector2D</span> <span class="n">offset</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7100" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7100 pre">
+      <div role="tabpanel" id="pas-snippet-5174" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5174 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraBy</span><span class="p">(</span><span class="k">const</span> <span class="n">offset</span><span class="p">:</span> <span class="n">Vector2D</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5895" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5895 pre">
+      <div role="tabpanel" id="py-snippet-2378" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2378 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_camera_by_vector</span><span class="p">(</span><span class="n">offset</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -832,7 +893,7 @@ a sprite the camera will &quot;track&quot; (be locked on to) the sprite as it mo
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+        <section class="sk-api-function sk-api-section">
   <h3 id="move-camera-by" data-anchor> Move Camera By </h3>
   <div class="sk-api-description">
     <p>Move the camera (offset its world x and y values) using the specified
@@ -889,37 +950,38 @@ dx (change in x) and dy (change in x) values.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8777" aria-controls="cpp-snippet-8777" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1985" aria-controls="cpp-snippet-1985" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5891" aria-controls="cs-snippet-5891" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6759" aria-controls="cs-snippet-6759" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6444" aria-controls="pas-snippet-6444" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8883" aria-controls="pas-snippet-8883" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4050" aria-controls="py-snippet-4050" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3031" aria-controls="py-snippet-3031" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8777" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8777 pre">
+      <div role="tabpanel" id="cpp-snippet-1985" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1985 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_by</span><span class="p">(</span><span class="kt">float</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">dy</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5891" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5891 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="kt">float</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">dy</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6759" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6759 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="kt">float</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">dy</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraBy</span><span class="p">(</span><span class="kt">float</span> <span class="n">dx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">dy</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6444" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6444 pre">
+      <div role="tabpanel" id="pas-snippet-8883" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8883 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraBy</span><span class="p">(</span><span class="n">dx</span><span class="p">:</span> <span class="kt">Single</span><span class="p">;</span> <span class="n">dy</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4050" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4050 pre">
+      <div role="tabpanel" id="py-snippet-3031" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3031 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_camera_by</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -928,8 +990,26 @@ dx (change in x) and dy (change in x) values.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="move-camera-to" data-anchor> Move Camera To </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-move-camera-to" data-anchor> Move Camera To </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Move Camera To:
+          <ul>
+              <li>
+                <a href="/api/camera/#move-camera-to-point">
+                  Move Camera To ( Point 2D )
+                </a>
+              </li>
+              <li>
+                <a href="/api/camera/#move-camera-to">
+                  Move Camera To ( Double, Double )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="move-camera-to-point" data-anchor> Move Camera To </h3>
   <div class="sk-api-description">
     <p>Move the camera view (screen top left) to a specified point in the world.
 This will be the new top left corner of the screen.</p>
@@ -972,37 +1052,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8328" aria-controls="cpp-snippet-8328" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5439" aria-controls="cpp-snippet-5439" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3123" aria-controls="cs-snippet-3123" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8185" aria-controls="cs-snippet-8185" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6415" aria-controls="pas-snippet-6415" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-125" aria-controls="pas-snippet-125" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9132" aria-controls="py-snippet-9132" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2261" aria-controls="py-snippet-2261" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8328" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8328 pre">
+      <div role="tabpanel" id="cpp-snippet-5439" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5439 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_to</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3123" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3123 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-8185" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8185 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6415" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6415 pre">
+      <div role="tabpanel" id="pas-snippet-125" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-125 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraTo</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9132" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9132 pre">
+      <div role="tabpanel" id="py-snippet-2261" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2261 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_camera_to_point</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1011,7 +1092,7 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+        <section class="sk-api-function sk-api-section">
   <h3 id="move-camera-to" data-anchor> Move Camera To </h3>
   <div class="sk-api-description">
     <p>Move the camera view to a world location specified by the x and y values.
@@ -1068,37 +1149,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1870" aria-controls="cpp-snippet-1870" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5180" aria-controls="cpp-snippet-5180" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8312" aria-controls="cs-snippet-8312" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1527" aria-controls="cs-snippet-1527" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-159" aria-controls="pas-snippet-159" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2686" aria-controls="pas-snippet-2686" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3736" aria-controls="py-snippet-3736" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3139" aria-controls="py-snippet-3139" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1870" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1870 pre">
+      <div role="tabpanel" id="cpp-snippet-5180" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5180 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_camera_to</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8312" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8312 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1527" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1527 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveCameraTo</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-159" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-159 pre">
+      <div role="tabpanel" id="pas-snippet-2686" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2686 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveCameraTo</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3736" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3736 pre">
+      <div role="tabpanel" id="py-snippet-3139" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3139 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_camera_to</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1107,7 +1189,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-point-in-window" data-anchor> Point In Window </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Point In Window:
+          <ul>
+              <li>
+                <a href="/api/camera/#point-in-window">
+                  Point In Window ( Window, Point 2D )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="point-in-window" data-anchor> Point In Window </h3>
   <div class="sk-api-description">
     <p>Tests if the point is in the window.</p>
@@ -1174,37 +1269,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8272" aria-controls="cpp-snippet-8272" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-381" aria-controls="cpp-snippet-381" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2770" aria-controls="cs-snippet-2770" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7920" aria-controls="cs-snippet-7920" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3357" aria-controls="pas-snippet-3357" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6615" aria-controls="pas-snippet-6615" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8411" aria-controls="py-snippet-8411" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1122" aria-controls="py-snippet-1122" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8272" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8272 pre">
+      <div role="tabpanel" id="cpp-snippet-381" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-381 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">point_in_window</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2770" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2770 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PointInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7920" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7920 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">PointInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PointInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3357" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3357 pre">
+      <div role="tabpanel" id="pas-snippet-6615" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6615 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">PointInWindow</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8411" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8411 pre">
+      <div role="tabpanel" id="py-snippet-1122" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1122 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">point_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">,</span> <span class="n">pt</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1213,7 +1309,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-point-on-screen" data-anchor> Point On Screen </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Point On Screen:
+          <ul>
+              <li>
+                <a href="/api/camera/#point-on-screen">
+                  Point On Screen ( Point 2D )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="point-on-screen" data-anchor> Point On Screen </h3>
   <div class="sk-api-description">
     <p>Tests if the point is on the screen.</p>
@@ -1267,37 +1376,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7812" aria-controls="cpp-snippet-7812" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5757" aria-controls="cpp-snippet-5757" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4655" aria-controls="cs-snippet-4655" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5816" aria-controls="cs-snippet-5816" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-645" aria-controls="pas-snippet-645" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7003" aria-controls="pas-snippet-7003" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9727" aria-controls="py-snippet-9727" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6409" aria-controls="py-snippet-6409" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7812" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7812 pre">
+      <div role="tabpanel" id="cpp-snippet-5757" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5757 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">point_on_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4655" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4655 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PointOnScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5816" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5816 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">PointOnScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PointOnScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-645" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-645 pre">
+      <div role="tabpanel" id="pas-snippet-7003" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7003 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">PointOnScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9727" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9727 pre">
+      <div role="tabpanel" id="py-snippet-6409" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6409 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">point_on_screen</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1306,7 +1416,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-rect-in-window" data-anchor> Rect In Window </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Rect In Window:
+          <ul>
+              <li>
+                <a href="/api/camera/#rect-in-window">
+                  Rect In Window ( Window, Rectangle )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="rect-in-window" data-anchor> Rect In Window </h3>
   <div class="sk-api-description">
     <p>Tests if the rectangle is within the bounds of the window.</p>
@@ -1373,37 +1496,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4865" aria-controls="cpp-snippet-4865" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8638" aria-controls="cpp-snippet-8638" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5297" aria-controls="cs-snippet-5297" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7897" aria-controls="cs-snippet-7897" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8618" aria-controls="pas-snippet-8618" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2805" aria-controls="pas-snippet-2805" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9330" aria-controls="py-snippet-9330" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4580" aria-controls="py-snippet-4580" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4865" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4865 pre">
+      <div role="tabpanel" id="cpp-snippet-8638" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8638 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">rect_in_window</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="k">const</span> <span class="n">rectangle</span> <span class="o">&amp;</span><span class="n">rect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5297" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5297 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RectInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7897" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7897 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">RectInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RectInWindow</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8618" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8618 pre">
+      <div role="tabpanel" id="pas-snippet-2805" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2805 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">RectInWindow</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="k">const</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9330" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9330 pre">
+      <div role="tabpanel" id="py-snippet-4580" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4580 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">rect_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">,</span> <span class="n">rect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1412,7 +1536,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-rect-on-screen" data-anchor> Rect On Screen </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Rect On Screen:
+          <ul>
+              <li>
+                <a href="/api/camera/#rect-on-screen">
+                  Rect On Screen ( Rectangle )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="rect-on-screen" data-anchor> Rect On Screen </h3>
   <div class="sk-api-description">
     <p>Tests if the rectangle is on the screen.</p>
@@ -1466,37 +1603,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7804" aria-controls="cpp-snippet-7804" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2007" aria-controls="cpp-snippet-2007" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1" aria-controls="cs-snippet-1" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3114" aria-controls="cs-snippet-3114" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1450" aria-controls="pas-snippet-1450" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9377" aria-controls="pas-snippet-9377" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7174" aria-controls="py-snippet-7174" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5660" aria-controls="py-snippet-5660" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7804" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7804 pre">
+      <div role="tabpanel" id="cpp-snippet-2007" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2007 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">rect_on_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">rectangle</span> <span class="o">&amp;</span><span class="n">rect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RectOnScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-3114" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3114 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">RectOnScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RectOnScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1450" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1450 pre">
+      <div role="tabpanel" id="pas-snippet-9377" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9377 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">RectOnScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7174" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7174 pre">
+      <div role="tabpanel" id="py-snippet-5660" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5660 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">rect_on_screen</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1505,7 +1643,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-screen-center" data-anchor> Screen Center </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Screen Center:
+          <ul>
+              <li>
+                <a href="/api/camera/#screen-center">
+                  Screen Center (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="screen-center" data-anchor> Screen Center </h3>
   <div class="sk-api-description">
     <p>Returns the center of the screen in world coordinates.</p>
@@ -1530,37 +1681,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-192" aria-controls="cpp-snippet-192" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9782" aria-controls="cpp-snippet-9782" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3121" aria-controls="cs-snippet-3121" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-47" aria-controls="cs-snippet-47" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9069" aria-controls="pas-snippet-9069" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1815" aria-controls="pas-snippet-1815" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1388" aria-controls="py-snippet-1388" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7113" aria-controls="py-snippet-7113" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-192" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-192 pre">
+      <div role="tabpanel" id="cpp-snippet-9782" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9782 pre">
         <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">screen_center</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3121" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3121 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ScreenCenter</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-47" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-47 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">Camera</span><span class="p">.</span><span class="n">ScreenCenter</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ScreenCenter</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9069" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9069 pre">
+      <div role="tabpanel" id="pas-snippet-1815" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1815 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ScreenCenter</span><span class="p">():</span> <span class="n">Point2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1388" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1388 pre">
+      <div role="tabpanel" id="py-snippet-7113" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7113 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">screen_center</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1569,7 +1721,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-screen-rectangle" data-anchor> Screen Rectangle </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Screen Rectangle:
+          <ul>
+              <li>
+                <a href="/api/camera/#screen-rectangle">
+                  Screen Rectangle (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="screen-rectangle" data-anchor> Screen Rectangle </h3>
   <div class="sk-api-description">
     <p>Returns a rectangle that represents the dimensions of the window.</p>
@@ -1594,37 +1759,38 @@ This will be the new top left corner of the screen.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3260" aria-controls="cpp-snippet-3260" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2520" aria-controls="cpp-snippet-2520" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8077" aria-controls="cs-snippet-8077" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1933" aria-controls="cs-snippet-1933" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7628" aria-controls="pas-snippet-7628" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9994" aria-controls="pas-snippet-9994" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1184" aria-controls="py-snippet-1184" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2611" aria-controls="py-snippet-2611" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3260" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3260 pre">
+      <div role="tabpanel" id="cpp-snippet-2520" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2520 pre">
         <pre class="codehilite"><code><span class="n">rectangle</span> <span class="n">screen_rectangle</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8077" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8077 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ScreenRectangle</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1933" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1933 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">Camera</span><span class="p">.</span><span class="n">ScreenRectangle</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ScreenRectangle</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7628" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7628 pre">
+      <div role="tabpanel" id="pas-snippet-9994" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9994 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ScreenRectangle</span><span class="p">():</span> <span class="n">Rectangle</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1184" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1184 pre">
+      <div role="tabpanel" id="py-snippet-2611" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2611 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">screen_rectangle</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1633,7 +1799,20 @@ This will be the new top left corner of the screen.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-set-camera-position" data-anchor> Set Camera Position </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Set Camera Position:
+          <ul>
+              <li>
+                <a href="/api/camera/#set-camera-position">
+                  Set Camera Position ( Point 2D )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="set-camera-position" data-anchor> Set Camera Position </h3>
   <div class="sk-api-description">
     <p>Change the position of the camera to a specified world coordinate. This
@@ -1677,37 +1856,38 @@ will then be the new top left most position of the screen within the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2407" aria-controls="cpp-snippet-2407" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1356" aria-controls="cpp-snippet-1356" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2685" aria-controls="cs-snippet-2685" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7811" aria-controls="cs-snippet-7811" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9240" aria-controls="pas-snippet-9240" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5962" aria-controls="pas-snippet-5962" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6492" aria-controls="py-snippet-6492" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3911" aria-controls="py-snippet-3911" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2407" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2407 pre">
+      <div role="tabpanel" id="cpp-snippet-1356" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1356 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_camera_position</span><span class="p">(</span><span class="n">point_2d</span> <span class="n">pos</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2685" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2685 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetCameraPosition</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pos</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7811" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7811 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="n">SetCameraPosition</span> <span class="p">{</span> <span class="k">set</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetCameraPosition</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pos</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9240" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9240 pre">
+      <div role="tabpanel" id="pas-snippet-5962" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5962 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetCameraPosition</span><span class="p">(</span><span class="n">pos</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6492" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6492 pre">
+      <div role="tabpanel" id="py-snippet-3911" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3911 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">set_camera_position</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1716,7 +1896,20 @@ will then be the new top left most position of the screen within the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-set-camera-y" data-anchor> Set Camera Y </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Set Camera Y:
+          <ul>
+              <li>
+                <a href="/api/camera/#set-camera-y">
+                  Set Camera Y ( Double )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="set-camera-y" data-anchor> Set Camera Y </h3>
   <div class="sk-api-description">
     <p>Change the Y position of the camera to a specified world coordinate. This
@@ -1760,37 +1953,38 @@ will then be the new top most position of the screen within the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4929" aria-controls="cpp-snippet-4929" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7225" aria-controls="cpp-snippet-7225" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4435" aria-controls="cs-snippet-4435" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7779" aria-controls="cs-snippet-7779" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-65" aria-controls="pas-snippet-65" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9699" aria-controls="pas-snippet-9699" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9456" aria-controls="py-snippet-9456" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-921" aria-controls="py-snippet-921" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4929" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4929 pre">
+      <div role="tabpanel" id="cpp-snippet-7225" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7225 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_camera_y</span><span class="p">(</span><span class="kt">double</span> <span class="n">y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4435" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4435 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetCameraY</span><span class="p">(</span><span class="kt">double</span> <span class="n">y</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-7779" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7779 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Camera</span><span class="p">.</span><span class="n">SetCameraY</span> <span class="p">{</span> <span class="k">set</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetCameraY</span><span class="p">(</span><span class="kt">double</span> <span class="n">y</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-65" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-65 pre">
+      <div role="tabpanel" id="pas-snippet-9699" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9699 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetCameraY</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9456" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9456 pre">
+      <div role="tabpanel" id="py-snippet-921" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-921 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">set_camera_y</span><span class="p">(</span><span class="n">y</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1799,8 +1993,26 @@ will then be the new top most position of the screen within the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="to-screen" data-anchor> To Screen </h3>
+      <section class="sk-api-function sk-api-section" >
+        <h3 id="group-to-screen" data-anchor> To Screen </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To Screen:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-screen-point">
+                  To Screen ( Point 2D )
+                </a>
+              </li>
+              <li>
+                <a href="/api/camera/#to-screen-rectangle">
+                  To Screen ( Rectangle )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen-point" data-anchor> To Screen </h3>
   <div class="sk-api-description">
     <p>Convert the passed in world coordinates to screen coordinates.</p>
 
@@ -1853,37 +2065,38 @@ will then be the new top most position of the screen within the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-503" aria-controls="cpp-snippet-503" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4072" aria-controls="cpp-snippet-4072" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9303" aria-controls="cs-snippet-9303" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5178" aria-controls="cs-snippet-5178" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4932" aria-controls="pas-snippet-4932" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1634" aria-controls="pas-snippet-1634" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3669" aria-controls="py-snippet-3669" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6060" aria-controls="py-snippet-6060" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-503" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-503 pre">
+      <div role="tabpanel" id="cpp-snippet-4072" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4072 pre">
         <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">to_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9303" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9303 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5178" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5178 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4932" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4932 pre">
+      <div role="tabpanel" id="pas-snippet-1634" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1634 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">):</span> <span class="n">Point2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3669" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3669 pre">
+      <div role="tabpanel" id="py-snippet-6060" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6060 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_screen_point</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1892,8 +2105,8 @@ will then be the new top most position of the screen within the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
-  <h3 id="to-screen" data-anchor> To Screen </h3>
+        <section class="sk-api-function sk-api-section">
+  <h3 id="to-screen-rectangle" data-anchor> To Screen </h3>
   <div class="sk-api-description">
     <p>Convert the rectangle in world coordinates to screen coordinates.</p>
 
@@ -1946,37 +2159,38 @@ will then be the new top most position of the screen within the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1708" aria-controls="cpp-snippet-1708" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2257" aria-controls="cpp-snippet-2257" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6100" aria-controls="cs-snippet-6100" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4707" aria-controls="cs-snippet-4707" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1314" aria-controls="pas-snippet-1314" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8248" aria-controls="pas-snippet-8248" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9745" aria-controls="py-snippet-9745" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8612" aria-controls="py-snippet-8612" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1708" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1708 pre">
+      <div role="tabpanel" id="cpp-snippet-2257" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2257 pre">
         <pre class="codehilite"><code><span class="n">rectangle</span> <span class="n">to_screen</span><span class="p">(</span><span class="k">const</span> <span class="n">rectangle</span> <span class="o">&amp;</span><span class="n">rect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6100" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6100 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-4707" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4707 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreen</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1314" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1314 pre">
+      <div role="tabpanel" id="pas-snippet-8248" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8248 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreen</span><span class="p">(</span><span class="k">const</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">):</span> <span class="n">Rectangle</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9745" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9745 pre">
+      <div role="tabpanel" id="py-snippet-8612" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8612 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_screen_rectangle</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1985,7 +2199,20 @@ will then be the new top most position of the screen within the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-to-screen-x" data-anchor> To Screen X </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To Screen X:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-screen-x">
+                  To Screen X ( Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="to-screen-x" data-anchor> To Screen X </h3>
   <div class="sk-api-description">
     <p>Translate a world x value to the current screen x value which is based on
@@ -2040,37 +2267,38 @@ the camera position.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1966" aria-controls="cpp-snippet-1966" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8560" aria-controls="cpp-snippet-8560" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9321" aria-controls="cs-snippet-9321" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6022" aria-controls="cs-snippet-6022" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2560" aria-controls="pas-snippet-2560" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4878" aria-controls="pas-snippet-4878" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6823" aria-controls="py-snippet-6823" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8591" aria-controls="py-snippet-8591" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1966" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1966 pre">
+      <div role="tabpanel" id="cpp-snippet-8560" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8560 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_screen_x</span><span class="p">(</span><span class="kt">float</span> <span class="n">world_x</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9321" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9321 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreenX</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldX</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6022" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6022 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToScreenX</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldX</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreenX</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldX</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2560" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2560 pre">
+      <div role="tabpanel" id="pas-snippet-4878" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4878 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreenX</span><span class="p">(</span><span class="n">worldX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6823" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6823 pre">
+      <div role="tabpanel" id="py-snippet-8591" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8591 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_screen_x</span><span class="p">(</span><span class="n">world_x</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2079,7 +2307,20 @@ the camera position.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-to-screen-y" data-anchor> To Screen Y </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To Screen Y:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-screen-y">
+                  To Screen Y ( Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="to-screen-y" data-anchor> To Screen Y </h3>
   <div class="sk-api-description">
     <p>Translate a world y value to the current screen y value set by the camera.</p>
@@ -2133,37 +2374,38 @@ the camera position.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9878" aria-controls="cpp-snippet-9878" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4347" aria-controls="cpp-snippet-4347" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6928" aria-controls="cs-snippet-6928" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5205" aria-controls="cs-snippet-5205" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1126" aria-controls="pas-snippet-1126" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9701" aria-controls="pas-snippet-9701" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1094" aria-controls="py-snippet-1094" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2501" aria-controls="py-snippet-2501" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9878" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9878 pre">
+      <div role="tabpanel" id="cpp-snippet-4347" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4347 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_screen_y</span><span class="p">(</span><span class="kt">float</span> <span class="n">world_y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6928" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6928 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreenY</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldY</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5205" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5205 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToScreenY</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldY</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToScreenY</span><span class="p">(</span><span class="kt">float</span> <span class="n">worldY</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1126" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1126 pre">
+      <div role="tabpanel" id="pas-snippet-9701" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9701 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToScreenY</span><span class="p">(</span><span class="n">worldY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1094" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1094 pre">
+      <div role="tabpanel" id="py-snippet-2501" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2501 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_screen_y</span><span class="p">(</span><span class="n">world_y</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2172,7 +2414,20 @@ the camera position.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-to-world" data-anchor> To World </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To World:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-world">
+                  To World ( Point 2D )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="to-world" data-anchor> To World </h3>
   <div class="sk-api-description">
     <p>Converts the passed in point from screen coordinates to world coordinates.</p>
@@ -2226,37 +2481,38 @@ the camera position.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3449" aria-controls="cpp-snippet-3449" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2081" aria-controls="cpp-snippet-2081" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7937" aria-controls="cs-snippet-7937" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9674" aria-controls="cs-snippet-9674" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9081" aria-controls="pas-snippet-9081" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2888" aria-controls="pas-snippet-2888" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-988" aria-controls="py-snippet-988" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2868" aria-controls="py-snippet-2868" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3449" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3449 pre">
+      <div role="tabpanel" id="cpp-snippet-2081" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2081 pre">
         <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">to_world</span><span class="p">(</span><span class="k">const</span> <span class="n">point_2d</span> <span class="o">&amp;</span><span class="n">pt</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7937" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7937 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorld</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-9674" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9674 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToWorld</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorld</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">pt</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9081" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9081 pre">
+      <div role="tabpanel" id="pas-snippet-2888" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2888 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorld</span><span class="p">(</span><span class="k">const</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">):</span> <span class="n">Point2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-988" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-988 pre">
+      <div role="tabpanel" id="py-snippet-2868" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2868 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_world</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2265,7 +2521,20 @@ the camera position.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-to-world-x" data-anchor> To World X </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To World X:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-world-x">
+                  To World X ( Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="to-world-x" data-anchor> To World X </h3>
   <div class="sk-api-description">
     <p>Translate a screen x value (based on the camera) to a world x value</p>
@@ -2320,37 +2589,38 @@ the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3560" aria-controls="cpp-snippet-3560" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-446" aria-controls="cpp-snippet-446" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6756" aria-controls="cs-snippet-6756" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2191" aria-controls="cs-snippet-2191" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1258" aria-controls="pas-snippet-1258" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4733" aria-controls="pas-snippet-4733" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5145" aria-controls="py-snippet-5145" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6150" aria-controls="py-snippet-6150" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3560" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3560 pre">
+      <div role="tabpanel" id="cpp-snippet-446" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-446 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_world_x</span><span class="p">(</span><span class="kt">float</span> <span class="n">screen_x</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6756" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6756 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorldX</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenX</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-2191" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2191 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToWorldX</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenX</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorldX</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenX</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1258" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1258 pre">
+      <div role="tabpanel" id="pas-snippet-4733" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4733 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorldX</span><span class="p">(</span><span class="n">screenX</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5145" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5145 pre">
+      <div role="tabpanel" id="py-snippet-6150" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6150 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_world_x</span><span class="p">(</span><span class="n">screen_x</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2359,7 +2629,20 @@ the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-to-world-y" data-anchor> To World Y </h3>
+        <div class="sk-api-description">
+          There are multiple versions of To World Y:
+          <ul>
+              <li>
+                <a href="/api/camera/#to-world-y">
+                  To World Y ( Float )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="to-world-y" data-anchor> To World Y </h3>
   <div class="sk-api-description">
     <p>Translate a screen y value (based on the camera) to a world y value</p>
@@ -2414,37 +2697,38 @@ the world.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7876" aria-controls="cpp-snippet-7876" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3678" aria-controls="cpp-snippet-3678" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8664" aria-controls="cs-snippet-8664" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1667" aria-controls="cs-snippet-1667" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7166" aria-controls="pas-snippet-7166" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2602" aria-controls="pas-snippet-2602" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5257" aria-controls="py-snippet-5257" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5306" aria-controls="py-snippet-5306" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7876" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7876 pre">
+      <div role="tabpanel" id="cpp-snippet-3678" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3678 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">to_world_y</span><span class="p">(</span><span class="kt">float</span> <span class="n">screen_y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8664" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8664 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorldY</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenY</span><span class="p">);</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-1667" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1667 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Camera</span><span class="p">.</span><span class="nf">ToWorldY</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenY</span><span class="p">);</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ToWorldY</span><span class="p">(</span><span class="kt">float</span> <span class="n">screenY</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7166" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7166 pre">
+      <div role="tabpanel" id="pas-snippet-2602" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2602 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ToWorldY</span><span class="p">(</span><span class="n">screenY</span><span class="p">:</span> <span class="kt">Single</span><span class="p">):</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5257" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5257 pre">
+      <div role="tabpanel" id="py-snippet-5306" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5306 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">to_world_y</span><span class="p">(</span><span class="n">screen_y</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2453,7 +2737,20 @@ the world.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-vector-world-to-screen" data-anchor> Vector World To Screen </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Vector World To Screen:
+          <ul>
+              <li>
+                <a href="/api/camera/#vector-world-to-screen">
+                  Vector World To Screen (  )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="vector-world-to-screen" data-anchor> Vector World To Screen </h3>
   <div class="sk-api-description">
     <p>Returns a vector that can transform points from world to screen coordinates.</p>
@@ -2479,37 +2776,38 @@ to move to map from world to screen coordinates.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4381" aria-controls="cpp-snippet-4381" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5644" aria-controls="cpp-snippet-5644" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-504" aria-controls="cs-snippet-504" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5381" aria-controls="cs-snippet-5381" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7018" aria-controls="pas-snippet-7018" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9498" aria-controls="pas-snippet-9498" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1657" aria-controls="py-snippet-1657" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2382" aria-controls="py-snippet-2382" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4381" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4381 pre">
+      <div role="tabpanel" id="cpp-snippet-5644" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5644 pre">
         <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">vector_world_to_screen</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-504" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-504 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">VectorWorldToScreen</span><span class="p">();</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-5381" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5381 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">Camera</span><span class="p">.</span><span class="n">VectorWorldToScreen</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">VectorWorldToScreen</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7018" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7018 pre">
+      <div role="tabpanel" id="pas-snippet-9498" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9498 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">VectorWorldToScreen</span><span class="p">():</span> <span class="n">Vector2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1657" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1657 pre">
+      <div role="tabpanel" id="py-snippet-2382" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2382 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">vector_world_to_screen</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2518,7 +2816,20 @@ to move to map from world to screen coordinates.</p>
       </dd>
 </section>
 
-      <section class="sk-api-function sk-api-section">
+      <section class="sk-api-function sk-api-section" style='display:none'>
+        <h3 id="group-window-area" data-anchor> Window Area </h3>
+        <div class="sk-api-description">
+          There are multiple versions of Window Area:
+          <ul>
+              <li>
+                <a href="/api/camera/#window-area">
+                  Window Area ( Window )
+                </a>
+              </li>
+          </ul>
+        </div>
+      </section>
+        <section class="sk-api-function sk-api-section">
   <h3 id="window-area" data-anchor> Window Area </h3>
   <div class="sk-api-description">
     <p>Returns a rectangle that represents the dimensions of the window based
@@ -2573,38 +2884,38 @@ on the camera.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9110" aria-controls="cpp-snippet-9110" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9272" aria-controls="cpp-snippet-9272" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7930" aria-controls="cs-snippet-7930" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6283" aria-controls="cs-snippet-6283" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9015" aria-controls="pas-snippet-9015" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3320" aria-controls="pas-snippet-3320" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7855" aria-controls="py-snippet-7855" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6042" aria-controls="py-snippet-6042" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9110" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9110 pre">
+      <div role="tabpanel" id="cpp-snippet-9272" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9272 pre">
         <pre class="codehilite"><code><span class="n">rectangle</span> <span class="n">window_area</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7930" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7930 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">WindowArea</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span>
-<span class="k">public</span> <span class="n">Rectangle</span> <span class="n">Window</span><span class="p">.</span><span class="n">WindowArea</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+      <div role="tabpanel" id="cs-snippet-6283" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6283 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="n">Rectangle</span> <span class="n">Window</span><span class="p">.</span><span class="n">WindowArea</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="n">Rectangle</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">WindowArea</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9015" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9015 pre">
+      <div role="tabpanel" id="pas-snippet-3320" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3320 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">WindowArea</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="n">Rectangle</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7855" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7855 pre">
+      <div role="tabpanel" id="py-snippet-6042" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6042 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">window_area</span><span class="p">(</span><span class="n">wind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2614,7 +2925,6 @@ on the camera.</p>
 </section>
 
   </section>
-
 
 
       </article>
@@ -2644,6 +2954,6 @@ on the camera.</p>
   </div>
 </footer>
 
-    <script src="/javascripts/main-eeeef4a3.js"></script>
+    <script src="/javascripts/main-2c341741.js"></script>
   </body>
 </html>
