@@ -47,7 +47,14 @@ def register_slug(data, group)
 end
 
 def slug_for(data)
-  name = data.is_a?(String) ? data : data.name
+  if data.respond_to? :unique_global_name
+    name = data.unique_global_name
+  elsif data.is_a?(String)
+    name = data
+  else
+    name = data.name
+  end
+
   name.to_kebab_case
 end
 
