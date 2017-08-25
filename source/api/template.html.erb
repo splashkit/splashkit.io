@@ -40,13 +40,3 @@
     <% end %>
   </section>
 <% end %>
-
-<%# Macros %>
-<% if !defines.empty? %>
-  <section class="sk-api-defines">
-    <h2> Macros </h2>
-    <% defines.each do |define| %>
-      <%= partial 'partials/api/defines', locals: { define: define } %>
-    <% end %>
-  </section>
-<% end %>
