@@ -6,6 +6,11 @@ body > footer.sk-footer {
   font-size: 85%;
   color: $footer-color;
   background-color: $footer-background-color;
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem;
+    text-align: center;
+  }
+
   a {
     color: #fff;
     font-weight: 500;

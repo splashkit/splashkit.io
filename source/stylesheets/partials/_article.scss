@@ -1,3 +1,12 @@
 .sk-article {
-     margin: 40px auto;
+     margin: 4rem auto 2.5em;
+
+     @include media-breakpoint-down(sm) {
+       padding: 1.5rem 1.5rem 0;
+       margin: 0 auto;
+     }
+}
+
+.sk-text-center {
+    text-align: center;
 }
