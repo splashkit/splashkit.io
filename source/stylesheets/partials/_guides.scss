@@ -1,0 +1,70 @@
+.sk-guides-grid {
+
+  .guide-row {
+    margin: 0 0 40px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    margin: 0 0 0.75em;
+    @include media-breakpoint-down(md) {
+      margin: 0 0 0.25em;
+    }
+  }
+
+  .coming-soon {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #aaa;
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .guide {
+    padding: 10px;
+    display: block;
+    &:hover {
+      text-decoration: none;
+    }
+
+    .inner {
+      background: #f4f4f4;
+      padding: 40px;
+      color: #444;
+      text-align: center;
+
+      &:hover {
+        background: #eaeaea;
+        color: $brand-primary;
+      }
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 20px;
+    }
+
+    h5 {
+      color: #999;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+  }
+
+  .guide.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .inner {
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+
+}
