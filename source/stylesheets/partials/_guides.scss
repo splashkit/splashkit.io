@@ -10,6 +10,9 @@
 
   h3 {
     margin: 0 0 0.75em;
+    @include media-breakpoint-down(md) {
+      margin: 0 0 0.25em;
+    }
   }
 
   .coming-soon {
@@ -23,6 +26,7 @@
 
   .guide {
     padding: 10px;
+    display: block;
     &:hover {
       text-decoration: none;
     }
@@ -51,6 +55,16 @@
       font-size: 14px;
     }
 
+  }
+
+  .guide.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .inner {
+      &:hover {
+        color: #444;
+      }
+    }
   }
 
 }
