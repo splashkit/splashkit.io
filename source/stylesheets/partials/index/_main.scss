@@ -20,8 +20,11 @@ body.index > main {
   .sk-install {
     p {
       font-weight: 300;
-      strong {
+      strong, a {
         font-weight: 500;
+      }
+      a {
+        color: white;
       }
     }
   }
