@@ -32,9 +32,12 @@ def find_guides_in_category(path = nil)
   files = Dir.glob(path).map do |f|
     extname = File.extname(f)
     name = File.basename(f, extname)
+    src = Nokogiri::HTML(open(f))
+    doc_title = src.xpath("//meta[@name='guide_title']/@content")
     {
       name: name,
-      uri: base_uri <<  name.gsub('.html', '')
+      uri: base_uri <<  name.gsub('.html', ''),
+      doc_title: doc_title
     }
   end
 

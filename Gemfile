@@ -40,3 +40,6 @@ gem 'middleman-gh-pages', '~>0.3.0'
 
 # Rake tasks
 gem 'rake', '10.5.0'
+
+# Nokogiri for parsing HTML tags
+gem 'nokogiri'

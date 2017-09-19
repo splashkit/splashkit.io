@@ -1,6 +1,6 @@
 <h3>JSON Guides</h3>
 <div class="list-group">
   <% find_guides_in_category('code-examples/json').each do |f| %>
-    <a class="list-group-item" href="/<%= f[:uri] %>"><%= f[:name].capitalize %></a>
+    <a class="list-group-item" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
   <% end %>
 </div>
