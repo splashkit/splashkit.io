@@ -47,6 +47,14 @@
       width: 90px;
       height: 90px;
       margin: 0 auto 20px;
+
+      span {
+        text-align: center;
+        font-weight: 300;
+        font-size: 32px;
+        opacity: 0.5;
+        line-height: 90px;
+      }
     }
 
     h5 {
