@@ -69,6 +69,10 @@ end
 page '/index.html', layout: :index
 # Article layout
 page '/articles/*', layout: :'articles/index'
+
+# Specific code guide layout
+page '/guides/code-examples/**/*.html', layout: :'articles/code-guide'
+
 # Guides layout (use article)
 page '/guides/*', layout: :'articles/index'
 
