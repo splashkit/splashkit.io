@@ -33,11 +33,15 @@ def find_guides_in_category(path = nil)
     extname = File.extname(f)
     name = File.basename(f, extname)
     src = Nokogiri::HTML(open(f))
-    doc_title = src.xpath("//meta[@name='guide_title']/@content")
+    doc_title = src.at('meta[name="guide-title"]')['content']
+    api_linked_groups = src.at('meta[name="api-link-groups"]')['content'].split(",")
+    api_linked_functions = src.at('meta[name="api-link-functions"]')['content'].split(",")
     {
       name: name,
       uri: base_uri <<  name.gsub('.html', ''),
-      doc_title: doc_title
+      doc_title: doc_title,
+      api_linked_groups: api_linked_groups,
+      api_linked_functions: api_linked_functions
     }
   end
 

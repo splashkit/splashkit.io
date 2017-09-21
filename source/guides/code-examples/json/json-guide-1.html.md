@@ -1,6 +1,6 @@
-<meta name="guide_title" content="Using JSON in SplashKit" />
-<meta name="api_group" content="json" />
-<meta name="api_functions" content="create_json,create_json_from_string,json_set_string,json_set_number,free_json" />
+<meta name="guide-title" content="Using JSON in SplashKit" />
+<meta name="api-link-groups" content="json" />
+<meta name="api-link-functions" content="create_json,create_json_from_string,json_set_string,json_set_number,free_json" />
 
 # Using JSON in SplashKit
 
