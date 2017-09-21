@@ -20,7 +20,6 @@ end
 # Finds guides within a category by searching for files in a subdirectory
 #
 def find_guides_in_category(path = nil)
-
   if path == nil
     return {}
   end
@@ -38,7 +37,7 @@ def find_guides_in_category(path = nil)
     api_linked_functions = src.at('meta[name="api-link-functions"]')['content'].split(",")
     {
       name: name,
-      uri: base_uri <<  name.gsub('.html', ''),
+      uri: base_uri + name.sub('.html', ''),
       doc_title: doc_title,
       api_linked_groups: api_linked_groups,
       api_linked_functions: api_linked_functions
