@@ -66,22 +66,20 @@
       </dd>
 
       <% if !guides.empty? %>
+        <dt>
+          Guides
+        </dt>
+        <dd>
         <% guides.each do |g| %>
-
           <% if !g[:api_linked_functions].empty? %>
             <% g[:api_linked_functions].each do |f| %>
               <% if function.unique_global_name.downcase == f.downcase %>
-                <dt>
-                  Guides
-                </dt>
-                <dd>
-                  <a class="btn btn-primary btn-sm" target="_blank" href="/<%= g[:uri] %>"><%= g[:doc_title] %></a>
-                </dd>
+                  <a class="btn btn-primary btn-sm guide-button" target="_blank" href="/<%= g[:uri] %>"><%= g[:doc_title] %></a>
               <% end # if function match %>
             <% end # each function %>
           <% end # if linked functions %>
-
         <% end # each guide %>
+        </dd>
       <% end # if guides  %>
 
   <% end # if params || return %>
