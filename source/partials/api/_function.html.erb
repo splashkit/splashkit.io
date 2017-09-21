@@ -64,8 +64,10 @@
       <dd>
         <%= snippet function.signatures %>
       </dd>
+
       <% if !guides.empty? %>
         <% guides.each do |g| %>
+
           <% if !g[:api_linked_functions].empty? %>
             <% g[:api_linked_functions].each do |f| %>
               <% if function.unique_global_name.downcase == f.downcase %>
@@ -75,11 +77,12 @@
                 <dd>
                   <a class="btn btn-primary btn-sm" href="/<%= g[:uri] %>"><%= g[:doc_title] %></a>
                 </dd>
-              <% end %>
-            <% %>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% end %>
+              <% end # if function match %>
+            <% end # each function %>
+          <% end # if linked functions %>
+
+        <% end # each guide %>
+      <% end # if guides  %>
+
   <% end # if params || return %>
 </section>
