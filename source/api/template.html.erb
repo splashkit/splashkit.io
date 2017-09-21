@@ -10,11 +10,9 @@
     <% if !guides.empty? %>
     <section class="sk-api-guides">
       <h2><%= name %> Guides</h2>
-      <div class="list-group">
-        <% guides.each do |f| %>
-          <a class="list-group-item" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
-        <% end %>
-      </div>
+      <% guides.each do |f| %>
+        <a class="btn btn-primary btn-sm" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
+      <% end %>
     </section>
     <% end %>
     <h2> Functions </h2>
