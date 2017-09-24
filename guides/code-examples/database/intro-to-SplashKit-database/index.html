@@ -133,21 +133,21 @@ This statement ran the sql statement provided to the given database, pretty simp
 <span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);"</span><span class="p">);</span>
 <span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"INSERT INTO friends VALUES (10001, </span><span class="se">\"</span><span class="s">Jake Renzella</span><span class="se">\"</span><span class="s">;"</span><span class="p">);</span>
 <span class="c1">//Of course we could have just executed this in one large SQL statement!
-</span><span class="n">result</span> <span class="o">=</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">select</span> <span class="o">*</span> <span class="n">from</span> <span class="n">friends</span><span class="p">;</span><span class="s">");</span><span class="err">
+</span><span class="n">result</span> <span class="o">=</span> <span class="n">run_sql</span><span class="p">(</span><span class="s">"select * from friends;"</span><span class="p">);</span>
 
-</span><span class="s">//at this point (if all goes well), the data is added to the database, so let's read it.</span><span class="err">
+<span class="c1">//at this point (if all goes well), the data is added to the database, so let's read it.
+</span>
+<span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">query_column_for_int</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 
-</span><span class="s">int data = query_column_for_int(result, 0);</span><span class="err">
+<span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="o">==</span> <span class="mi">10001</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"WOOHOO"</span><span class="p">);</span>
+<span class="p">}</span>
 
-</span><span class="s">if (data == 10001)</span><span class="err">
-</span><span class="s">{</span><span class="err">
-</span><span class="s">  printf("</span><span class="n">WOOHOO</span><span class="s">");</span><span class="err">
-</span><span class="s">}</span><span class="err">
-
-</span><span class="s">///remember to clean up after yourself...</span><span class="err">
-</span><span class="s">free_all_query_results();</span><span class="err">
-</span><span class="s">free_database(my_db);</span><span class="err">
-</span></code></pre>
+<span class="c1">///remember to clean up after yourself...
+</span><span class="n">free_all_query_results</span><span class="p">();</span>
+<span class="n">free_database</span><span class="p">(</span><span class="n">my_db</span><span class="p">);</span>
+</code></pre>
 <h3>Notes</h3>
 
 <ul>
