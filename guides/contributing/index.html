@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="img/ico" href="../images/favicon.ico">
 
-    <title>SplashKit - Guides - Installation - Windows - Clang</title>
+    <title>SplashKit - Guides - Contributing</title>
 
     <link href="/stylesheets/main-c04ca02d.css" rel="stylesheet" />
   </head>
-  <body class="guides guides_installation guides_installation_windows guides_installation_windows_clang guides_installation_windows_clang_index">
+  <body class="guides guides_contributing guides_contributing_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -76,29 +76,54 @@
         <div class="container">
     <div class="row">
       <article class="sk-article">
-        <h1>Install clang in MSYS2</h1>
+        <h1>How to Write A SplashKit Guide</h1>
+
+<p>This tutorial will cover the details of how to write a SplashKit guide for the SplashKit website.</p>
+
+<p>Tools needed:</p>
 
 <ol>
-<li>Open an MSYS2 terminal</li>
-<li><p>Run the following command:</p>
-
-<p><code>pacman -S mingw-w64-{x86_64,i686}-gcc mingw-w64-{i686,x86_64}-gdb</code></p>
-
-<p><img src="/images/install-gifs/Windows/install-gpp-msys-b3f06616.gif" alt="Install gpp msys" /></p></li>
-<li><p>Run the compiler from either the <strong>MSYS2 MinGW 64-bit</strong> or <strong>MSYS2 MinGW 32-bit</strong> terminals</p>
-
-<p><img src="/images/install-gifs/Windows/demo-compiler-25a3f953.gif" alt="Demo compiler" /></p></li>
-<li><p>In Visual Studio Code you should install the following extensions:</p></li>
+<li>A GitHub account.</li>
+<li>Ruby development envioronment (for building the SplashKit website)</li>
+<li>An awesome idea for a guide.</li>
 </ol>
 
-<ul>
-<li>C++ (search for <code>ms-vscode.cpptools</code>)</li>
-<li><p>vscode-icons (<code>robertohuertasm.vscode-icons</code>)</p>
+<h2>Getting Ready</h2>
 
-<p><img src="/images/install-gifs/extensions-5e65e032.gif" alt="Extensions" /></p></li>
-</ul>
+<ol>
+<li><p>In order to test your guide in the SplashKit website, you need to download the source code for the website. To do this, make sure you are logged into GitHub, and then create a <code>fork</code> of the SplashKit io repository on GitHub. Visit the <a href="https://github.com/splashkit/splashkit.io">SplashKit.io Github</a> link and select <code>fork</code> on the top right.</p></li>
+<li><p>Clone your fork by selecting <code>clone or download</code>, copying the link and cloning it to your computer. You can do this via git on the terminal, or using GitHub Desktop.</p></li>
+<li><p>Check the <code>Readme.md</code> of the cloned SplashKit website to ensure you have the correct version of the Ruby tools installed.</p></li>
+</ol>
 
-<p>Return to the <a href="/guides/installation/windows/">overview of the Windows install</a>.</p>
+<h2>Writing The Guide.</h2>
+
+<ol>
+<li><p>In the project, locate the directory <code>source/guides/code-examples</code> and determine if you need to create a new directory for your guide. If you do, create the directory and name it appropriately, and make sure you create the file <code>index.html.erb</code> for that directory - and modify it appropriately.</p></li>
+<li><p>Create a file in the format <code>title.html.md</code> and add the following to the top of the file:</p>
+<pre class="highlight plaintext"><code>&lt;meta name="guide-title" content="Awesome JSON guide" /&gt;
+&lt;meta name="api-link-groups" content="json" /&gt;
+&lt;meta name="api-link-functions" content="create_json,create_json_from_string,json_set_string,json_set_number,free_json" /&gt;
+</code></pre>
+<p>This is an example of JSON tags, make sure you link your guide to the appropriate api groups and functions.</p>
+
+<p><em>note: these tags are not rendered in the guide, they are used for parsing the api documentation</em>.</p></li>
+<li><p>Write your guide! Remember to keep the language friendly, include examples and ensure it is high quality.</p></li>
+</ol>
+
+<h2>Test the guide.</h2>
+
+<p>Time to make sure everything looks right. Run <code>bundle exec middleman</code> and visit localhost to see the website. Naviate to the guides to <em>hopefully</em> see your awesome guide. Make sure it all looks good. Also ensure that all links to the API were successful by visiting the relevant api section.</p>
+
+<h2>Merging your guides into the SplashKit website</h2>
+
+<p>If it&rsquo;s all looking good, it&rsquo;s time to submit a <code>pull request</code> so that a member of the SplashKit team can view your proposed guide and get it published!</p>
+
+<p>To do this, push your changes via github, and visit the github webiste for your fork. View this <a href="https://help.github.com/articles/creating-a-pull-request/">GitHub tutorial</a> for more details on how to do this. A member of the SplashKit team will view your guide, give feedback, and otherwise make sure everything looks good. Finally, they will then publish your guide!</p>
+
+<p>SplashKit is completely open source, and free to use - so any contributions to the project are appreciated!</p>
+
+<p>If at any stage of this process you run into any issues, feel free to contact Jake at <code>jake.renzella@deakin.edu.au</code></p>
 
       </article>
     </div>
