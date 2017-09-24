@@ -42,7 +42,8 @@ Databases are powerful tools for persisting, and querying data. In this guide, w
   this method looks at a query_result and checks what data is in the current row's given column. We expect our id of *10001* to be returned and stored in `data`.
 
 Putting that together, here's a basic example of how to use a database:
-```cpp
+
+```c
 database my_db = open_database("jakes_database", "database_V0.3");
 query_result result;
 
