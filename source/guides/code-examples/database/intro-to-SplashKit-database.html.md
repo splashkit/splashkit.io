@@ -43,26 +43,26 @@ Databases are powerful tools for persisting, and querying data. In this guide, w
 
 Putting that together, here's a basic example of how to use a database:
 ```cpp
-  database my_db = open_database("jakes_database", "database_V0.3");
-  query_result result;
+database my_db = open_database("jakes_database", "database_V0.3");
+query_result result;
 
-  run_sql(my_db, "CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);");
-  run_sql(my_db, "INSERT INTO friends VALUES (10001, \"Jake Renzella\";");
-  //Of course we could have just executed this in one large SQL statement!
-  result = run_sql(select * from friends;");
+run_sql(my_db, "CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);");
+run_sql(my_db, "INSERT INTO friends VALUES (10001, \"Jake Renzella\";");
+//Of course we could have just executed this in one large SQL statement!
+result = run_sql(select * from friends;");
 
-  //at this point (if all goes well), the data is added to the database, so let's read it.
+//at this point (if all goes well), the data is added to the database, so let's read it.
 
-  int data = query_column_for_int(result, 0);
+int data = query_column_for_int(result, 0);
 
-  if (data == 10001)
-  {
-    printf("WOOHOO");
-  }
+if (data == 10001)
+{
+  printf("WOOHOO");
+}
 
-  ///remember to clean up after yourself...
-  free_all_query_results();
-  free_database(my_db);
+///remember to clean up after yourself...
+free_all_query_results();
+free_database(my_db);
 ```
 
 ### Notes
