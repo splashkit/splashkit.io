@@ -50,7 +50,7 @@ query_result result;
 run_sql(my_db, "CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);");
 run_sql(my_db, "INSERT INTO friends VALUES (10001, \"Jake Renzella\";");
 //Of course we could have just executed this in one large SQL statement!
-result = run_sql(select * from friends;");
+result = run_sql("select * from friends;");
 
 //at this point (if all goes well), the data is added to the database, so let's read it.
 
