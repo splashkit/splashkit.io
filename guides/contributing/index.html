@@ -84,31 +84,46 @@
 
 <ol>
 <li>A GitHub account.</li>
-<li>Ruby development envioronment (for building the SplashKit website)</li>
+<li>Ruby development environment (for building the SplashKit website).</li>
 <li>An awesome idea for a guide.</li>
 </ol>
 
 <h2>Getting Ready</h2>
 
 <ol>
-<li><p>In order to test your guide in the SplashKit website, you need to download the source code for the website. To do this, make sure you are logged into GitHub, and then create a <code>fork</code> of the SplashKit io repository on GitHub. Visit the <a href="https://github.com/splashkit/splashkit.io">SplashKit.io Github</a> link and select <code>fork</code> on the top right.</p></li>
-<li><p>Clone your fork by selecting <code>clone or download</code>, copying the link and cloning it to your computer. You can do this via git on the terminal, or using GitHub Desktop.</p></li>
-<li><p>Check the <code>Readme.md</code> of the cloned SplashKit website to ensure you have the correct version of the Ruby tools installed.</p></li>
+<li><p>In order to test your guide in the SplashKit website, you need to download the source code for the website. To do this, make sure you are logged into GitHub, and then <a href="https://help.github.com/articles/fork-a-repo/">create a fork</a> of the SplashKit io repository on GitHub. Visit the <a href="https://github.com/splashkit/splashkit.io">SplashKit.io Github</a> link and select <code>fork</code> on the top right.</p></li>
+<li><p><a href="https://help.github.com/articles/cloning-a-repository/">Clone your fork</a> by selecting <code>clone or download</code>, copying the link and cloning it to your computer. You can do this via git on the terminal, or using GitHub Desktop.</p></li>
+<li><p>Check the <code>README.md</code> of the cloned SplashKit website to ensure you have the correct version of the Ruby tools installed.</p></li>
 </ol>
 
 <h2>Writing The Guide.</h2>
 
 <ol>
-<li><p>In the project, locate the directory <code>source/guides/code-examples</code> and determine if you need to create a new directory for your guide. If you do, create the directory and name it appropriately, and make sure you create the file <code>index.html.erb</code> for that directory - and modify it appropriately.</p></li>
-<li><p>Create a file in the format <code>title.html.md</code> and add the following to the top of the file:</p>
-<pre class="highlight plaintext"><code>&lt;meta name="guide-title" content="Awesome JSON guide" /&gt;
-&lt;meta name="api-link-groups" content="json" /&gt;
-&lt;meta name="api-link-functions" content="create_json,create_json_from_string,json_set_string,json_set_number,free_json" /&gt;
+<li><p>In the project, locate the directory <code>source/guides/code-examples</code> and determine if you need to create a new directory for your guide. If you do, create the directory and name it appropriately, and make sure you create a file <code>index.html.erb</code> for that directory, using the template below (ensuring you replace [category] with your directories new name).</p>
+<pre class="highlight erb"><code><span class="nt">&lt;h3&gt;</span>[category] Guides<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+  <span class="cp">&lt;%</span> <span class="n">find_guides_in_category</span><span class="p">(</span><span class="s1">'code-examples/[category]'</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="cp">%&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"list-group-item"</span> <span class="na">href=</span><span class="s">"/</span><span class="cp">&lt;%=</span> <span class="n">f</span><span class="p">[</span><span class="ss">:uri</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">f</span><span class="p">[</span><span class="ss">:doc_title</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/a&gt;</span>
+  <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></li>
+<li><p>Create a file in the format <code>title.html.md</code> and add the following <code>meta</code> tags to the top of the file:</p>
+<pre class="highlight html"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"guide-title"</span> <span class="na">content=</span><span class="s">"Awesome JSON guide"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"api-link-groups"</span> <span class="na">content=</span><span class="s">"json"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"api-link-functions"</span> <span class="na">content=</span><span class="s">"create_json,create_json_from_string,json_set_string,json_set_number,free_json"</span> <span class="nt">/&gt;</span>
 </code></pre>
-<p>This is an example of JSON tags, make sure you link your guide to the appropriate api groups and functions.</p>
+<p>Typically, the value of the <code>api-link-groups</code> should be the category in which the guide is in.</p>
 
-<p><em>note: these tags are not rendered in the guide, they are used for parsing the api documentation</em>.</p></li>
-<li><p>Write your guide! Remember to keep the language friendly, include examples and ensure it is high quality.</p></li>
+<p>The <code>api-link-functions</code> should contain a comma seperated list of all of the functions used within the guide.</p>
+
+<p>The above is an example for a guide named &ldquo;Awesome JSON guide&rdquo;, which will appear in the <code>json</code> group, attached to a list of related <code>json</code> functions.</p>
+
+<p>Make sure you link your guide to the appropriate api groups and functions.</p>
+
+<div class="alert alert-warning">
+  Note: these tags are not rendered in the guide, they are used for parsing the api documentation.
+</div></li>
+<li><p>Write your guide! Remember to keep the language friendly, include examples and ensure it is high quality. All guides should be written in <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a>.</p></li>
 </ol>
 
 <h2>Test the guide.</h2>
@@ -119,7 +134,7 @@
 
 <p>If it&rsquo;s all looking good, it&rsquo;s time to submit a <code>pull request</code> so that a member of the SplashKit team can view your proposed guide and get it published!</p>
 
-<p>To do this, push your changes via github, and visit the github webiste for your fork. View this <a href="https://help.github.com/articles/creating-a-pull-request/">GitHub tutorial</a> for more details on how to do this. A member of the SplashKit team will view your guide, give feedback, and otherwise make sure everything looks good. Finally, they will then publish your guide!</p>
+<p>To do this, push your changes via GitHub, and visit the GitHub webiste for your fork. View this <a href="https://help.github.com/articles/creating-a-pull-request/">GitHub tutorial</a> for more details on how to do this. A member of the SplashKit team will view your guide, give feedback, and otherwise make sure everything looks good. Finally, they will then publish your guide!</p>
 
 <p>SplashKit is completely open source, and free to use - so any contributions to the project are appreciated!</p>
 
