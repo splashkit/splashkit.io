@@ -126,30 +126,28 @@ This statement ran the sql statement provided to the given database, pretty simp
 
 <p>this method looks at a query_result and checks what data is in the current row&rsquo;s given column. We expect our id of <em>10001</em> to be returned and stored in <code>data</code>.</p>
 
-<p>Putting that together, here&rsquo;s a basic example of how to use a database:
-&ldquo;`cpp
-  database my<em>db = open</em>database(&quot;jakes<em>database&rdquo;, &ldquo;database</em>V0.3&rdquo;);
-  query_result result;</p>
+<p>Putting that together, here&rsquo;s a basic example of how to use a database:</p>
+<pre class="highlight c"><code><span class="n">database</span> <span class="n">my_db</span> <span class="o">=</span> <span class="n">open_database</span><span class="p">(</span><span class="s">"jakes_database"</span><span class="p">,</span> <span class="s">"database_V0.3"</span><span class="p">);</span>
+<span class="n">query_result</span> <span class="n">result</span><span class="p">;</span>
 
-<p>run<em>sql(my</em>db, &ldquo;CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);&rdquo;);
-  run<em>sql(my</em>db, &ldquo;INSERT INTO friends VALUES (10001, \&quot;Jake Renzella\&rdquo;;&ldquo;);
-  //Of course we could have just executed this in one large SQL statement!
-  result = run_sql(select * from friends;&rdquo;);</p>
+<span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);"</span><span class="p">);</span>
+<span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"INSERT INTO friends VALUES (10001, </span><span class="se">\"</span><span class="s">Jake Renzella</span><span class="se">\"</span><span class="s">;"</span><span class="p">);</span>
+<span class="c1">//Of course we could have just executed this in one large SQL statement!
+</span><span class="n">result</span> <span class="o">=</span> <span class="n">run_sql</span><span class="p">(</span><span class="n">select</span> <span class="o">*</span> <span class="n">from</span> <span class="n">friends</span><span class="p">;</span><span class="s">");</span><span class="err">
 
-<p>//at this point (if all goes well), the data is added to the database, so let&rsquo;s read it.</p>
+</span><span class="s">//at this point (if all goes well), the data is added to the database, so let's read it.</span><span class="err">
 
-<p>int data = query<em>column</em>for_int(result, 0);</p>
+</span><span class="s">int data = query_column_for_int(result, 0);</span><span class="err">
 
-<p>if (data == 10001)
-  {
-    printf(&ldquo;WOOHOO&rdquo;);
-  }</p>
+</span><span class="s">if (data == 10001)</span><span class="err">
+</span><span class="s">{</span><span class="err">
+</span><span class="s">  printf("</span><span class="n">WOOHOO</span><span class="s">");</span><span class="err">
+</span><span class="s">}</span><span class="err">
 
-<p>///remember to clean up after yourself&hellip;
-  free<em>all</em>query<em>results();
-  free</em>database(my_db);
-&ldquo;`</p>
-
+</span><span class="s">///remember to clean up after yourself...</span><span class="err">
+</span><span class="s">free_all_query_results();</span><span class="err">
+</span><span class="s">free_database(my_db);</span><span class="err">
+</span></code></pre>
 <h3>Notes</h3>
 
 <ul>
