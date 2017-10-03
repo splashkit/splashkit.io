@@ -14,6 +14,9 @@ section.sk-api-section {
     margin-bottom: 1.2rem;
   }
   dl {
+    dd a.guide-button {
+      margin: 0rem 0.5rem 0.5rem 0rem;
+    }
     dt {
       color: $text-muted;
       font-weight: 600;
@@ -38,4 +41,12 @@ section.sk-api-section {
       }
     }
   }
+}
+
+section.sk-api-guides {
+  margin-bottom: 2rem;
+}
+
+section.sk-api-guides a {
+  margin: 0.5rem 0.5rem 0rem 0rem;
 }

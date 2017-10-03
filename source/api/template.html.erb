@@ -7,6 +7,14 @@
 <%# Functions %>
 <% if !functions.empty? %>
   <section class="sk-api-functions">
+    <% if !guides.empty? %>
+    <section class="sk-api-guides">
+      <h2><%= name %> Guides</h2>
+      <% guides.each do |f| %>
+        <a class="btn btn-primary btn-sm" target="_blank" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
+      <% end %>
+    </section>
+    <% end %>
     <h2> Functions </h2>
     <% functions.group_by { |fn| fn.name }.each do |group, functions| %>
       <section class="sk-api-function sk-api-section" <%= "style='display:none'" unless functions.length > 1 %>>

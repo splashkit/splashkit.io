@@ -47,6 +47,18 @@
       width: 90px;
       height: 90px;
       margin: 0 auto 20px;
+
+      span {
+        text-align: center;
+        font-weight: 300;
+        font-size: 32px;
+        opacity: 0.5;
+        line-height: 90px;
+      }
+    }
+
+    .icon-text {
+      width: 100%;
     }
 
     h5 {
@@ -67,4 +79,13 @@
     }
   }
 
+}
+
+.sk-guide-sidebar {
+  margin: 4rem auto 2.5em;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.5rem 1.5rem 0;
+    margin: 0 auto;
+  }
 }
