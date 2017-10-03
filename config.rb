@@ -13,8 +13,14 @@
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
-# Automaic image compression
-activate :imageoptim
+
+# Activate 'blogging' to generate guides
+activate :blog do |guide|
+  guide.prefix = 'articles/guides'
+  guide.default_extension = '.md'
+  guide.layout = :'articles/guide'
+  # guide.permalink = "articles/{category}/{title}"
+end
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -69,26 +75,27 @@ end
 
 # Root Layout
 page '/index.html', layout: :index
+
 # Article layout
 page '/articles/*', layout: :'articles/index'
 
-# Specific code guide layout
-page '/guides/code-examples/**/*.html', layout: :'articles/code-guide'
+# Specific layout for installation steps'
+page '/articles/installation', layout: :'articles/installation'
 
-# Guides layout (use article)
-page '/guides/*', layout: :'articles/index'
+# Specific code guide layout
+page '/articles/guides/*', layout: :'articles/guides'
 
 # API proxy pages
 data.api.each do |api_group, data|
   name = api_group.to_human_case
-  guides = find_guides_in_category('code-examples/' << name.downcase)
+  #guides = find_guides_in_category("examples/#{name.downcase}")
   types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
   locals = {
     raw_api_data: data,
     name: name,
     types: types,
     functions: data.functions,
-    guides: guides,
+    guides: [],
     defines: data.defines,
     description: data.description,
     brief: data.brief

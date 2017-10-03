@@ -1,0 +1,74 @@
+ul.sk-grid {
+  list-style: none;
+
+  // TODO: Move away from pixels
+  li.sk-grid-item:not(:last-child) {
+    margin-right: 1.5rem;
+    // TODO: apply col-md-4 col-lg-3 to each item
+  }
+
+  a.sk-grid-btn.coming-soon {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #aaa;
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  a.sk-grid-btn {
+    padding: 10px;
+    display: block;
+    &:hover {
+      text-decoration: none;
+    }
+
+    .inner {
+      background: #f4f4f4;
+      padding: 40px;
+      color: #444;
+      text-align: center;
+
+      &:hover {
+        background: #eaeaea;
+        color: $brand-primary;
+      }
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 20px;
+
+      span {
+        text-align: center;
+        font-weight: 300;
+        font-size: 32px;
+        opacity: 0.5;
+        line-height: 90px;
+      }
+    }
+
+    .icon-text {
+      width: 100%;
+    }
+
+    h5 {
+      color: #999;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+  }
+
+  a.sk-grid-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .inner {
+      &:hover {
+        color: #444;
+      }
+    }
+  }
+
+}

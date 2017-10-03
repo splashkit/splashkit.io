@@ -23,6 +23,9 @@ gem 'middleman-autoprefixer', '~>2.7.0'
 gem 'middleman-sprockets', '4.0.0'
 gem 'middleman-compass', '4.0.1'
 
+# Generating articles
+gem "middleman-blog", "~> 4.0"
+
 # Boostrap as SASS
 gem 'sass', '3.4.19'
 gem 'bootstrap', '~> 4.0.0.alpha4'
@@ -43,6 +46,3 @@ gem 'rake', '10.5.0'
 
 # Nokogiri for parsing HTML tags
 gem 'nokogiri'
-
-# Optimise images
-gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"

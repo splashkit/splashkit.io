@@ -1,0 +1,10 @@
+<% wrap_layout :'articles/index' do %>
+  <article class="col-md-9 sk-article">
+    <h1><%= current_page.title %></h1>
+    <p class="lead"><%= current_page.step %></p>
+    <hr>
+    <%= yield %>
+    <hr>
+    <%# Next page pls %>
+  </article>
+<% end %>
