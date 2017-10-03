@@ -1,7 +1,6 @@
 ---
 
 title: Installing MSYS2
-step: 1
 tags: installation,windows
 
 ---

@@ -1,7 +1,6 @@
 ---
 
 title: Installing SplashKit on macOS
-step: 0
 tags: installation,mac
 
 ---

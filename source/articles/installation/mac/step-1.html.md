@@ -1,7 +1,6 @@
 ---
 
 title: Installing Xcode Command Line Tools
-step: 1
 tags: installation,mac
 
 ---
@@ -27,4 +26,4 @@ to execute it.
 xcode-select --install
 ```
 
-<%= img '/install-gifs/mac/installing-cmd-line-tools.gif' >
+![Installing Command Line Tools](/install-gifs/mac/installing-cmd-line-tools.gif)

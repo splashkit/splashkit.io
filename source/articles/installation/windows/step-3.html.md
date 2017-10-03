@@ -1,7 +1,6 @@
 ---
 
 title: Installing Visual Studio Code
-step: 3
 tags: installation,windows
 
 ---

@@ -1,7 +1,6 @@
 ---
 
 title: Installing SplashKit on Windows
-step: 0
 tags: installation,windows
 
 ---
@@ -22,4 +21,4 @@ start building SplashKit applications in the language of your choice.
   parts of the installation or building process with SplashKit. If you have
   issues installing or using SplashKit on Windows, please consider disabling
   any third party virus scanners.
-<strong>
+</div>

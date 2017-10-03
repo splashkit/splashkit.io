@@ -1,7 +1,6 @@
 ---
 
 title: Installing the SplashKit SDK
-step: 2
 tags: installation,mac
 
 ---

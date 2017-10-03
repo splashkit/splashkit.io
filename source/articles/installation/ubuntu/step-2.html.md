@@ -1,7 +1,6 @@
 ---
 
 title: Installing Prerequsites for SplashKit
-step: 2
 tags: installation,ubuntu
 
 ---

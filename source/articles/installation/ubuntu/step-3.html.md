@@ -1,7 +1,6 @@
 ---
 
 title: Installing the SplashKit SDK
-step: 3
 tags: installation,ubuntu
 
 ---

@@ -80,7 +80,7 @@ end
 page '/index.html', layout: :index
 
 # Specify layouts for subdirectories of articles _in order_ of application
-page '/articles/installation/*', layout: :'articles/installation'
+page '/articles/installation/**/step*', layout: :'articles/installation'
 page '/articles/guides/*', layout: :'articles/guides'
 page '/articles/*', layout: :'articles/index'
 

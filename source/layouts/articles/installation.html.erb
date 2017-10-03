@@ -1,16 +1,33 @@
+<%
+  # Get the current step from the URL. Now find the next and previous
+  # pages from the siblings of this current page.
+  this_step = current_page.url.match(/step-(\d)+/)[1].to_i
+  prev_page = current_page.siblings.find { |p| p.url.end_with?("step-#{this_step - 1}/") }
+  next_page = current_page.siblings.find { |p| p.url.end_with?("step-#{this_step + 1}/") }
+%>
 <% wrap_layout :'articles/index' do %>
-  <heading>
-    <h1>
-      <%= current_page.data.title %>
-    </h1>
-    <p class="lead">
-      Step <%= current_page.data.step %>
-    </p>
-  </heading>
+  <p class="lead">
+    Step <%= this_step %> of <%= current_page.siblings.length + 1 %>
+  </p>
   <hr>
-  <article class="col-md-9 sk-article">
+  <article class="sk-article">
     <%= yield %>
   </article>
+  <hr>
   <nav>
+    <% unless prev_page.nil? %>
+      <% content_tag :a, href: prev_page.url, class: "btn btn-sm btn-primary" do %>
+        <i class="fa fa-chevron-left"></i>
+        <strong>Previous Step:</strong>
+        <%= prev_page.data.title %>
+      <% end %>
+    <% end %>
+    <% unless next_page.nil? %>
+      <% content_tag :a, href: next_page.url, class: "btn btn-sm btn-primary pull-right" do %>
+        <strong>Next Step:</strong>
+        <%= next_page.data.title %>
+        <i class="fa fa-chevron-right"></i>
+      <% end %>
+    <% end %>
   </nav>
 <% end %>

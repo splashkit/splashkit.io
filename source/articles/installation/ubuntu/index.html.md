@@ -1,7 +1,6 @@
 ---
 
 title: Installing SplashKit on Ubuntu
-step: 0
 tags: installation,ubuntu
 
 ---

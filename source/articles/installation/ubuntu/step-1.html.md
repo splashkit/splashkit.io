@@ -1,7 +1,6 @@
 ---
 
 title: Ensuring your version of Ubuntu is supported
-step: 1
 tags: installation,ubuntu
 
 ---

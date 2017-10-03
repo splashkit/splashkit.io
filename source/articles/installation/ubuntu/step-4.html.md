@@ -1,7 +1,6 @@
 ---
 
 title: Installing Visual Studio Code
-step: 4
 tags: installation,ubuntu
 
 ---

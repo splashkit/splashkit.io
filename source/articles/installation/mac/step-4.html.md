@@ -1,7 +1,6 @@
 ---
 
 title: Installing Language-Specific Tools
-step: 4
 tags: installation,mac
 
 ---

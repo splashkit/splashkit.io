@@ -2,7 +2,7 @@ body.articles main#content .container {
   margin-top: 3.5rem;
 }
 
-.sk-article {
+.sk-article:first-child {
   margin: 4rem auto 2.5em;
 
   @include media-breakpoint-down(sm) {
