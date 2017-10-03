@@ -80,10 +80,10 @@ page '/index.html', layout: :index
 page '/articles/*', layout: :'articles/index'
 
 # Specific layout for installation steps'
-page '/articles/installation', layout: :'articles/installation'
+#page '/articles/installation/*', layout: :'articles/installation'
 
 # Specific code guide layout
-page '/articles/guides/*', layout: :'articles/guides'
+#page '/articles/guides/*', layout: :'articles/guides'
 
 # API proxy pages
 data.api.each do |api_group, data|

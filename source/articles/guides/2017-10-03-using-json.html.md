@@ -4,7 +4,7 @@ title: Using JSON
 date: 2017-10-03 06:21 UTC
 author: Jake Renzella
 tags: json
-funcs:
+related_funcs:
   - create_json
   - create_json
   - create_json_from_string
@@ -14,14 +14,13 @@ funcs:
 
 ---
 
-JSON (Javascript Object Notation) if a human-readable text format consisting
+JSON (JavaScript Object Notation) if a human-readable text format consisting
 of key-value (or attribute-value) pairs and arrays.
 
 SplashKit's [JSON library](/api/json) provides methods and procedures for working with
 JSON objects in C++.
 
 ## SplashKit JSON code usage example
-
 
 ```c++
 #include "splashkit.h"

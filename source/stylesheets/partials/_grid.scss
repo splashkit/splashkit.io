@@ -1,74 +1,40 @@
 ul.sk-grid {
   list-style: none;
 
-  // TODO: Move away from pixels
   li {
     @extend .col-md-4;
     @extend .col-md-3;
   }
 
-  a.sk-grid-btn.coming-soon {
-    text-align: center;
-    text-transform: uppercase;
-    font-style: italic;
-    color: #aaa;
-    font-size: 14px;
-    padding: 20px 0;
-  }
-
   a.sk-grid-btn {
-    padding: 10px;
-    display: block;
+    padding: 3.5rem;
+    width: 100%;
+    display: inline-block;
+    background-color: $gray-lighter;
+    color: $body-color;
+    text-align: center;
+    text-decoration: none;
     &:hover {
-      text-decoration: none;
-    }
-
-    .inner {
-      background: #f4f4f4;
-      padding: 40px;
-      color: #444;
-      text-align: center;
-
-      &:hover {
-        background: #eaeaea;
+      background-color: darken($gray-lighter, 3%);
+      i, header {
         color: $brand-primary;
       }
     }
-
-    .icon {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 20px;
-
-      span {
-        text-align: center;
-        font-weight: 300;
-        font-size: 32px;
-        opacity: 0.5;
-        line-height: 90px;
-      }
+    header {
+      font-size: 1.5rem;
     }
-
-    .icon-text {
-      width: 100%;
-    }
-
-    h5 {
-      color: #999;
+    small {
       text-transform: uppercase;
-      font-size: 14px;
+      color: lighten($body-color, 40%);
     }
-
-  }
-
-  a.sk-grid-btn.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    .inner {
-      &:hover {
-        color: #444;
-      }
+    header, small {
+      font-weight: 500;
+    }
+    i {
+      @extend .fa-5x;
+      width: 100%;
+      display: block;
+      margin-bottom: 0.5rem;
     }
   }
-
 }
