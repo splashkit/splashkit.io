@@ -43,3 +43,6 @@ gem 'rake', '10.5.0'
 
 # Nokogiri for parsing HTML tags
 gem 'nokogiri'
+
+# Optimise images
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
