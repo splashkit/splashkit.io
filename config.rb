@@ -49,6 +49,9 @@ set :js_dir, 'javascripts'
 # Set the image directory to be ./images
 set :images_dir, 'images'
 
+# Partials must be from partials directory
+set :partials_dir, 'partials'
+
 # Activate markdown using Redcarpet parsing engine and syntax highlighting
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
@@ -73,17 +76,13 @@ end
 # Page options, layouts, aliases and proxies
 ###
 
-# Root Layout
+# Specify the root layout to index
 page '/index.html', layout: :index
 
-# Article layout
+# Specify layouts for subdirectories of articles _in order_ of application
+page '/articles/installation/*', layout: :'articles/installation'
+page '/articles/guides/*', layout: :'articles/guides'
 page '/articles/*', layout: :'articles/index'
-
-# Specific layout for installation steps'
-#page '/articles/installation/*', layout: :'articles/installation'
-
-# Specific code guide layout
-#page '/articles/guides/*', layout: :'articles/guides'
 
 # API proxy pages
 data.api.each do |api_group, data|

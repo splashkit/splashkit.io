@@ -1,24 +1,29 @@
-<ul class="sk-grid">
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/installation/windows">
-      <i class="fa fa-windows"></i>
-      <header>Windows</header>
-      <small>Installation Guide</small>
-    </a>
-  </li><!--/windows-->
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/installation/mac">
-      <i class="fa fa-apple"></i>
-      <header>macOS</header>
-      <small>Installation Guide</small>
-    </a>
-  </li><!--/windows-->
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/installation/ubuntu">
-      <i class="fa fa-linux"></i>
-      <header>Ubuntu</header>
-      <small>Installation Guide</small>
+---
+# Override the layout not to be an 'install' layout (i.e., with navigation
+# and steps) but with just a standard index article page.
+layout: :'articles/index'
+# Store platforms as just a key/value pair respective to what the
+# platform name is and its icon
+platforms:
+  -
+    title:        Windows
+    description:  Installation Guide
+    icon:         fa-windows
+    href:         /articles/installation/windows
+  -
+    title:        macOS
+    description:  Installation Guide
+    icon:         fa-apple
+    href:         /articles/installation/mac
+  -
+    title:        Ubuntu
+    description:  Installation Guide
+    icon:         fa-linux
+    href:         /articles/installation/ubuntu
+---
 
-    </a>
-  </li><!--ubuntu-->
+<ul class="sk-grid">
+  <% current_page.data.platforms.each do |platform| %>
+    <%= partial 'partials/grid_item', locals: platform %>
+  <% end %>
 </ul>

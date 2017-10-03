@@ -1,23 +1,26 @@
+---
+# Store article categories as a list containing the category, its name,
+# description and icon.
+categories:
+  -
+    title:        Installing SplashKit
+    description:  Installation Guides
+    icon:         fa-download
+    href:         /articles/installation
+  -
+    title:        Using SplashKit
+    description:  Coding Examples
+    icon:         fa-code
+    href:         /articles/guides
+  -
+    title:        Contributing
+    description:  Extend SplashKit
+    icon:         fa-plus
+    href:         /articles/contributing
+---
+
 <ul class="sk-grid">
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/installation">
-      <i class="fa fa-download"></i>
-      <header>Installing SplashKit</header>
-      <small>Installation Guides</small>
-    </a><!--/installing-->
-  </li>
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/examples/">
-      <i class="fa fa-code"></i>
-      <header>Using SplashKit</header>
-      <small>Code Examples</small>
-    </a><!--/examples-->
-  </li>
-  <li class="sk-grid-item">
-    <a class="sk-grid-btn" href="/articles/contributing/">
-      <i class="fa fa-plus"></i>
-      <header>Contributing</header>
-      <small>Extend SplashKit</small>
-    </a><!--/contributing-->
-  </li>
+  <% current_page.data.categories.each do |category| %>
+    <%= partial 'partials/grid_item', locals: category %>
+  <% end %>
 </ul>
