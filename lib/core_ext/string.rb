@@ -1,4 +1,4 @@
-require 'helpers/slug'
+require 'lib/helpers/slug'
 
 HUMANIZED_STRINGS = YAML.load_file('data/humanize.yml').freeze
 

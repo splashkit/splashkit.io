@@ -30,11 +30,11 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
   # Require all functions in the helpers directory
-  require_all 'helpers'
+  require_all 'lib/helpers'
 end
 
-# Helpers for string
-require 'lib/core_ext/string'
+# All overrides for core extensions
+require_all 'lib/core_ext'
 
 # Activate sprokets + compass
 activate :sprockets
