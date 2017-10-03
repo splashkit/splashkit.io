@@ -11,16 +11,16 @@
 
 // Import global partials - applies to components such as a class or element
 @import "partials/anchor";
+@import "partials/article";
 @import "partials/body";
 @import "partials/footer";
+@import "partials/grid";
 @import "partials/navbar";
 @import "partials/main";
 @import "partials/page-header";
 @import "partials/search";
 @import "partials/snippet";
 @import "partials/splashkit-logo";
-@import "partials/_article";
-@import "partials/_article-grid";
 
 // Index partials
 @import "partials/index/main";

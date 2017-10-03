@@ -2,9 +2,9 @@ ul.sk-grid {
   list-style: none;
 
   // TODO: Move away from pixels
-  li.sk-grid-item:not(:last-child) {
-    margin-right: 1.5rem;
-    // TODO: apply col-md-4 col-lg-3 to each item
+  li {
+    @extend .col-md-4;
+    @extend .col-md-3;
   }
 
   a.sk-grid-btn.coming-soon {
