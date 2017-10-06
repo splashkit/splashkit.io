@@ -1,0 +1,6 @@
+<h3>input Guides</h3>
+<div class="list-group">
+  <% find_guides_in_category('code-examples/input').each do |f| %>
+    <a class="list-group-item" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
+  <% end %>
+</div>
