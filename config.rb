@@ -19,7 +19,8 @@ activate :blog do |guide|
   guide.prefix = 'articles/guides'
   guide.default_extension = '.md'
   guide.layout = :'articles/guide'
-  # guide.permalink = "articles/{category}/{title}"
+  guide.sources = '{year}-{month}-{day}-{title}.html'
+  guide.permalink = 'articles/guides/{tags}/{title}.html'
 end
 
 # Reload the browser automatically whenever files change
@@ -81,7 +82,8 @@ page '/index.html', layout: :index
 
 # Specify layouts for subdirectories of articles _in order_ of application
 page '/articles/installation/**/step*', layout: :'articles/installation'
-page '/articles/guides/*', layout: :'articles/guides'
+page '/articles/guides/index.html', layout: :'articles/index'
+page '/articles/guides/*', layout: :'articles/guide'
 page '/articles/*', layout: :'articles/index'
 
 # API proxy pages

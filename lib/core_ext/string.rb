@@ -13,6 +13,10 @@ module CoreExtensions
       selff.tr('_', ' ')
     end
 
+    def to_title_case
+      split(/[_\s]/).map(&:capitalize).join(' ')
+    end
+
     def to_kebab_case
       to_human_case.downcase.tr(' ', '-')
     end
