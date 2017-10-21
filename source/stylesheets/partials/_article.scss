@@ -11,6 +11,10 @@ body.articles main#content .container {
   }
 }
 
+.sk-article img {
+  @extend .img-thumbnail;
+}
+
 .sk-text-center {
   text-align: center;
 }
