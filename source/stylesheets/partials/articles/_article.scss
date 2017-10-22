@@ -1,0 +1,53 @@
+body.articles main#content .container {
+  margin-top: 3.5rem;
+}
+
+.sk-article + .sk-sidebar {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.sk-article:first-child {
+  margin: 4rem auto 2.5em;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.5rem 1.5rem 0;
+    margin: 0 auto;
+  }
+}
+
+.sk-article img {
+  @extend .img-thumbnail;
+}
+
+.sk-text-center {
+  text-align: center;
+}
+
+.sk-article-nav-root {
+  // Just use the API nav root style
+  @extend .sk-api-nav-root;
+}
+
+a.sk-article-link {
+  color: unset;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 1rem;
+  &:hover {
+    text-decoration: none;
+    background-color: $gray-lightest;
+    span.sk-read-more {
+      color: $link-hover-color;
+    }
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  span.sk-read-more {
+    color: $link-color;
+  }
+}

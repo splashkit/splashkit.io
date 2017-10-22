@@ -18,9 +18,9 @@ activate :automatic_image_sizes
 activate :blog do |guide|
   guide.prefix = 'articles/guides'
   guide.default_extension = '.md'
-  guide.layout = :'articles/guide'
-  guide.sources = '{year}-{month}-{day}-{title}.html'
-  guide.permalink = 'articles/guides/{tags}/{title}.html'
+  guide.permalink = 'tags/{tags}/{title}.html'
+  guide.layout = :'articles/guides'
+  guide.tag_template = "#{guide.prefix}/tag_template.html"
 end
 
 # Reload the browser automatically whenever files change
@@ -82,21 +82,23 @@ page '/index.html', layout: :index
 
 # Specify layouts for subdirectories of articles _in order_ of application
 page '/articles/installation/**/step*', layout: :'articles/installation'
+page '/articles/installation/*', layout: :'articles/index'
 page '/articles/guides/index.html', layout: :'articles/index'
-page '/articles/guides/*', layout: :'articles/guide'
-page '/articles/*', layout: :'articles/index'
+page '/articles/guides/tags/*', layout: :'articles/guides'
+page '/articles/guides/tags/**/*', layout: :'articles/guides'
+page '/articles/contributing/*', layout: :'articles/index'
+page '/articles/index.html', layout: :'articles/index'
 
 # API proxy pages
 data.api.each do |api_group, data|
   name = api_group.to_human_case
-  #guides = find_guides_in_category("examples/#{name.downcase}")
   types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
   locals = {
     raw_api_data: data,
+    api_group: api_group,
     name: name,
     types: types,
     functions: data.functions,
-    guides: [],
     defines: data.defines,
     description: data.description,
     brief: data.brief

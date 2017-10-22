@@ -7,33 +7,53 @@
 <%# Functions %>
 <% if !functions.empty? %>
   <section class="sk-api-functions">
-    <% if !guides.empty? %>
+    <% guides = guides_for_api_group(api_group) %>
+    <% unless guides.empty? %>
     <section class="sk-api-guides">
       <h2><%= name %> Guides</h2>
-      <% guides.each do |f| %>
-        <a class="btn btn-primary btn-sm" target="_blank" href="/<%= f[:uri] %>"><%= f[:doc_title] %></a>
+      <% guides.each do |guide| %>
+        <%= link_to guide.title, guide, class: 'btn btn-primary btn-sm', target: '_blank' %>
       <% end %>
     </section>
     <% end %>
     <h2> Functions </h2>
+    <%# Group by functions %>
     <% functions.group_by { |fn| fn.name }.each do |group, functions| %>
-      <section class="sk-api-function sk-api-section" <%= "style='display:none'" unless functions.length > 1 %>>
-        <h3 id="group-<%= slug_for group %>" data-anchor> <%= group.to_human_case %> </h3>
-        <div class="sk-api-description">
-          There are multiple versions of <%= group.to_human_case %>:
-          <ul>
-            <% functions.each do |function| %>
-              <li>
-                <a href="<%= slug_url_for(function) %>">
-                  <%= group.to_human_case %> ( <%= function.parameters.map {|param_name, param_data| param_data.type.to_human_case }.join(", ") %> )
-                </a>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </section>
+      <% if functions.length > 1 %>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-<%= slug_for group %>" data-anchor>
+            <%= group.to_human_case %>
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                <% functions.each do |function| %>
+                  <li class="list-group-item">
+                    <% link_to slug_url_for(function) do %>
+                      <strong><%= group.to_human_case %></strong>
+                      (
+                        <% function.parameters.each do |param_name, param_data| %>
+                          <em><%= param_name %></em>
+                          :
+                          <code><%= param_data.type.to_human_case %></code>
+                        <% end %>
+                      )
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </section>
+      <% end %>
       <% functions.each do |function| %>
-        <%= partial 'partials/api/function', locals: { function: function } %>
+        <%= partial 'partials/api/function', locals: { function: function, guides: guides } %>
       <% end %>
     <% end %>
   </section>

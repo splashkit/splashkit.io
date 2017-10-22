@@ -1,3 +1,8 @@
+section.sk-api-section:first-of-type {
+  h3 {
+    padding-top: 0;
+  }
+}
 section.sk-api-section {
   & + section.sk-api-section {
     margin-top: 2rem;
@@ -9,14 +14,33 @@ section.sk-api-section {
     font-weight: 300;
     padding-top: 1.5em;
   }
+  .sk-api-overloaded {
+    margin-top: 1.5rem;
+    .list-group-item {
+      border: none;
+      padding: 0;
+    }
+    .list-group-item a {
+      padding: 0.75rem 1.25rem;
+      display: block;
+      &:hover {
+        background-color: lighten($gray-lightest, 2%);
+        text-decoration: none;
+      }
+      code:not(:last-child) {
+        margin-right: 1.5ex;
+      }
+    }
+    .list-group-item:not(:first-child) {
+      border-top: 1px solid #ddd;
+    }
+
+  }
   .sk-api-description {
     font-size: 1rem;
     margin-bottom: 1.2rem;
   }
   dl {
-    dd a.guide-button {
-      margin: 0rem 0.5rem 0.5rem 0rem;
-    }
     dt {
       color: $text-muted;
       font-weight: 600;

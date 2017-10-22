@@ -1,0 +1,33 @@
+<% wrap_layout :'articles/index' do %>
+  <aside class="sk-sidebar">
+    <h3>All Guides</h3>
+    <nav role="navigation">
+      <ul class="nav sk-article-nav-root">
+        <% blog.tags.keys.each do |tag| %>
+          <li class="nav-item">
+            <% link_to "/articles/guides/tags/#{tag}",
+               class: "nav-link #{current_page.path.downcase.end_with?(tag + '.html') ? 'active' : ''}"  do %>
+              <%= tag.to_title_case.to_human_case %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </aside>
+  <article class="sk-content">
+    <%# Author has written the guide %>
+    <% unless current_page.data[:author].nil? %>
+      <p class="lead">
+        Written by
+          <% if current_page.data[:author_url] %>
+            <%= link_to current_page.data[:author],
+                current_page.data[:author_url] %>
+          <% else %>
+            <%= current_page.data[:author] %>
+          <% end %>
+        on <%= current_page.date.strftime("%b %e %Y") %>
+      </p>
+    <% end %>
+    <%= yield %>
+  </article>
+<% end %>

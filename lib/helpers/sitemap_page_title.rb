@@ -13,7 +13,7 @@ def sitemap_page_title
   # (i.e. getting started/foo/index.html -> getting started - foo)
   dest_path = dest_path.split('/')[0...-1].join(' - ')
   # Capitalize every word
-  page_title = dest_path.split.map { |s| s.to_human_case }.join(' ')
+  page_title = dest_path.split.map(&:to_human_case).join(' ')
   # Return nil if no page title, or the page_title
   !page_title.strip.empty? ? page_title : nil
 end

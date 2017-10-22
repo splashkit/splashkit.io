@@ -2,8 +2,13 @@
 
 title: Using JSON
 date: 2017-10-03 06:21 UTC
-author: Jake Renzella
+author: Richard Denton
+author_url:
 tags: json
+summary: |
+  JSON is a human-readable text format consisting of key/value pairs and arrays.
+  SplashKit allows us to read through these files and create our own. This
+  article explains the basics of doing so with SplashKit.
 related_funcs:
   - create_json
   - create_json

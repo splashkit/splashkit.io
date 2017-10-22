@@ -2,10 +2,10 @@
   <%= partial 'partials/page_header', locals: { title: name, brief: brief } %>
   <div class="sk-api-root container">
     <div class="row">
-      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside class="sk-sidebar sk-sticky-sidebar">
         <%= partial 'partials/api/nav' %>
       </aside>
-      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+      <article class="sk-content">
         <%= yield %>
       </article>
     </div>

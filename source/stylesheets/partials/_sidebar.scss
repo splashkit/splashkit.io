@@ -1,0 +1,34 @@
+aside.sk-sidebar {
+  @include media-breakpoint-down(xs) {
+    @include make-col(12);
+    padding: 2rem;
+    &::before {
+      content: "Contents";
+      font-size: 2rem;
+    }
+    &::after {
+      // Horizontal rule
+      margin-top: 2rem;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: block;
+      width: 100%;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+    @include make-col-push(9);
+    float: right;
+    padding-left: 2rem;
+  }
+}
+article.sk-content {
+  @include media-breakpoint-down(xs) {
+    @include make-col(12);
+    padding: 2rem;
+  }
+  @include media-breakpoint-up(md) {
+    @include make-col(9);
+    @include make-col-pull(3);
+  }
+}

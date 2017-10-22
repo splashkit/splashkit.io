@@ -2,10 +2,19 @@
 
 title: Useful Utilities
 date: 2017-10-03 06:20 UTC
-author: Jake Renzella
+author: Richard Denton
 tags: utilities
+summary: |
+  In this article, we discuss useful utilities that you can use to convert,
+  check and manipulate common data types in SplashKit programs.
 related_funcs:
-  -
+  - convert_to_integer
+  - convert_to_double
+  - is_integer
+  - is_number
+  - to_uppercase
+  - to_lowercase
+  - trim
 
 ---
 
