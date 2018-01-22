@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+
+    <title>SplashKit - Articles - Contributing</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_contributing articles_contributing_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+      <h1>Writing a SplashKit Guide</h1>
+
+<p>This tutorial will cover the details of how to write a SplashKit guide for the SplashKit website.</p>
+
+<p>You will need:</p>
+
+<ol>
+<li>a <a href="http://github.com">GitHub</a> account,</li>
+<li>a Ruby development environment (v2.3.1) to build the website,</li>
+<li>an awesome idea for a guide!</li>
+</ol>
+
+<h2>Getting Ready</h2>
+
+<p>In order to test your guide in the SplashKit website, you need to download the source code for the website. To do this, make sure you are logged into GitHub, and then <a href="http://github.com/splashkit/splashkit.io/fork">create a fork</a> of the SplashKit.io website repository onto your own personal GitHub account.</p>
+
+<p>Once you have forked the website repository, you should then <a href="https://help.github.com/articles/cloning-a-repository/">clone your fork</a> of the repository to your local machine by selecting &ldquo;clone or download&rdquo; and copying the link. You can do this via the <code>git clone &lt;link&gt;</code> command in the terminal, or by using <a href="https://desktop.github.com">GitHub Desktop</a>.</p>
+
+<p>Once you have cloned your forked repository, follow the instructions posted in the website&rsquo;s <a href="https://github.com/splashkit/splashkit.io/blob/master/README.md">readme</a>.</p>
+
+<h2>Creating The Guide</h2>
+
+<p>To create a new guide, navigate to the directory where you cloned the repository:</p>
+<pre class="highlight plaintext"><code>cd /path/to/splashkit.io
+</code></pre>
+<p>Guides are categorised using a <em>tag</em>, which must relate to a member in the API group. The following keys can be used to relate your article to a specific API group:</p>
+
+<ul>
+<li><strong><code>animations</code></strong>: Animations</li>
+<li><strong><code>audio</code></strong>: Audio</li>
+<li><strong><code>camera</code></strong>: Camera</li>
+<li><strong><code>color</code></strong>: Color</li>
+<li><strong><code>database</code></strong>: Database</li>
+<li><strong><code>geometry</code></strong>: Geometry</li>
+<li><strong><code>graphics</code></strong>: Graphics</li>
+<li><strong><code>input</code></strong>: Input</li>
+<li><strong><code>json</code></strong>: JSON</li>
+<li><strong><code>networking</code></strong>: Networking</li>
+<li><strong><code>physics</code></strong>: Physics</li>
+<li><strong><code>resource_bundles</code></strong>: Resource Bundles</li>
+<li><strong><code>resources</code></strong>: Resources</li>
+<li><strong><code>social</code></strong>: Social</li>
+<li><strong><code>sprites</code></strong>: Sprites</li>
+<li><strong><code>terminal</code></strong>: Terminal</li>
+<li><strong><code>timers</code></strong>: Timers</li>
+<li><strong><code>types</code></strong>: Types</li>
+<li><strong><code>utilities</code></strong>: Utilities</li>
+<li><strong><code>windows</code></strong>: Windows</li>
+</ul>
+
+<p>Once you have decided a name for your guide and which API group(s) it should relate, execute the following command:</p>
+<pre class="highlight plaintext"><code>bundle exec middleman article "[Name of Guide]" -t [tags]
+</code></pre>
+<p>You can associate multiple tags to one guide by separating tags using a comma. For example, if you wanted to write a <code>graphics</code> and <code>window</code>-related guide entitled &ldquo;Drawing simple shapes&rdquo;, you would execute:</p>
+<pre class="highlight plaintext"><code>bundle exec middleman article "Drawing simple shapes" -t graphics,window
+</code></pre>
+<p>Once you execute this command, you will see that the guide you have named appears under <code>source/articles/guides</code> using the current day&rsquo;s date. For example, the command above would create <code>source/articles/guides/20XX-XX-XX-drawing-simple-shapes.html.md</code>.</p>
+
+<h2>Adding Required Frontmatter</h2>
+
+<p>Open this file in a text editor and you will see the following:</p>
+<pre class="highlight yaml"><code><span class="nn">---</span>
+
+<span class="na">title</span><span class="pi">:</span> <span class="s">Drawing simple shapes</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2017-12-11 06:44 UTC</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">graphics,window</span>
+
+<span class="nn">---</span>
+</code></pre>
+<p>The data separated by the three dashes (<code>---</code>) is known as the <em>frontmatter</em> of the guide. This contains metadata about the guide, which (by default) includes the guide name, date created, and associated tags.</p>
+
+<div class="alert alert-warning">
+  <strong>Note:</strong> You <strong>must</strong> add the following keys to the frontmatter:
+  <ul>
+    <li>
+      <strong><code>author</code></strong>:
+      your full name,
+    </li>
+    <li>
+      <strong><code>author_url</code></strong>:
+      a URL to your GitHub profile or personal website,
+    </li>
+    <li>
+      <strong><code>summary</code></strong>:
+      a summary of the guide that should be no more than two to three lines and should embody the gist of the guide,
+    </li>
+    <li>
+      <strong><code>related_funcs</code></strong>:
+      a list of related functions in snake_case.
+    </li>
+  </ul>
+  <strong>If you do not do this you may break the API documentation generation!</strong>
+</div>
+
+<p>We suggest you copy and paste the following example to add it to the frontmatter to ensure no mistakes:</p>
+<pre class="highlight yaml"><code><span class="nn">---</span>
+
+<span class="na">title</span><span class="pi">:</span> <span class="s">Drawing simple shapes</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2017-12-11 06:44 UTC</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="s">graphics,window</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Fred Smith</span>
+<span class="na">author_url</span><span class="pi">:</span> <span class="s">http://github.com/fsmith</span>
+<span class="na">summary</span><span class="pi">:</span> <span class="pi">|</span>
+  <span class="no">This guide discusses how you can open a window to draw some simple</span>
+  <span class="no">shapes in order to start playing around with graphics in SplashKit.</span>
+<span class="na">related_funcs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">create_window</span>
+  <span class="pi">-</span> <span class="s">draw_rectangle</span>
+  <span class="pi">-</span> <span class="s">refresh_screen</span>
+  <span class="pi">-</span> <span class="s">clear_screen</span>
+
+<span class="nn">---</span>
+
+</code></pre>
+<p>If you are unsure what functions keys to use, refer to the C++ snake_case name in the website. For example, for the &ldquo;Free Music&rdquo; function:</p>
+
+<p><img src="https://i.imgur.com/TiTmcd3.png" alt="Example of name to use for function" /></p>
+
+<h2>Write the guide</h2>
+
+<p>Underneath the bottom three dashes, you may begin writing your guide using <a href="https://guides.github.com/features/mastering-markdown/">Github-flavoured Markdown</a>. You won&rsquo;t need to add the title of the guide as a Heading 1 (<code>&lt;h1&gt;</code> or <code>#</code>) as this is automatically added for you.</p>
+
+<div class="alert alert-warning">
+  <strong>Note:</strong> When writing your guide, ensure you only use
+  Heading 2 to Heading 6 (<code>&lt;h2&gt;</code> &hellip; <code>&lt;h6&gt;</code> or <code>##</code> &hellip; <code>######</code>).
+  This is because Heading 1 is reserved for the guide&rsquo;s title.
+</div>
+
+<p>Remember to keep the language friendly, include examples and ensure it is high quality.</p>
+
+<p>If you would like to include images in your guide, <strong>host them on <a href="http://imgur.com">Imgur</a></strong> as this will ensure they exist permanently (unlike temporary image hosting services such as <a href="http://puush.me/">puush</a>).</p>
+
+<h2>Test the guide</h2>
+
+<p>After you have finished writing, it&rsquo;s time to make sure everything looks right!</p>
+
+<p>From your terminal, where you created the guide, run the following command to start running the website locally:</p>
+<pre class="highlight plaintext"><code>bundle exec middleman
+</code></pre>
+<p>Now, visit <a href="http://localhost:4567"><code>http://localhost:4567</code></a> to see the website.</p>
+
+<p>Run through the following checklist to make sure:</p>
+
+<ol>
+<li>that you can navigate to the guides and see your guide your guide indexed in the <em>right</em> API groups that you tagged your guide under,</li>
+<li>make sure it all looks good (i.e., no visual errors),</li>
+<li>make sure that relevant API function links appear under the respective functions in the API documentation. For example, if you wrote a <code>json</code>-tagged guide related to the <code>create_json</code> function, you would want to see the guides appear under the JSON API docs and the respective function:
+<img src="https://i.imgur.com/cPKwNgx.png" alt="JSON Guide Home" />
+<img src="https://i.imgur.com/KNhJIJn.png" alt="JSON Guide Function" /></li>
+</ol>
+
+<h2>Merging your guides into the SplashKit website</h2>
+
+<p>If it&rsquo;s all looking good, it&rsquo;s time to submit a &ldquo;pull request&rdquo; so that a core member of the SplashKit team can review your proposed guide and get it published.</p>
+
+<p>To do this, push your changes via GitHub, and visit the GitHub webiste for your fork. View this <a href="https://help.github.com/guides/creating-a-pull-request/">GitHub tutorial</a> for more details on how to do this. A member of the SplashKit team will view your guide, give feedback, and otherwise make sure everything looks good. Finally, they will then publish your guide!</p>
+
+<p>SplashKit is completely open source, and free to use &mdash; any contributions to the project are appreciated!</p>
+
+<p>If at any stage of this process you run into any issues, feel free to raise an issue on GitHub.</p>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-2c341741.js"></script>
+  </body>
+</html>

@@ -12,7 +12,7 @@
 
     <title>SplashKit - API - Timers</title>
 
-    <link href="/stylesheets/main-c04ca02d.css" rel="stylesheet" />
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
   </head>
   <body class="api api_timers api_timers_index">
     <nav class="navbar navbar-dark sk-navbar">
@@ -48,7 +48,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/guides">Guides</a>
+        <a class="nav-link " href="/articles">Articles &amp; Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
@@ -88,7 +88,7 @@
 
   <div class="sk-api-root container">
     <div class="row">
-      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside class="sk-sidebar sk-sticky-sidebar">
         <nav role="navigation">
   <ul class="nav sk-api-nav-root">
       <li class="nav-item">
@@ -279,26 +279,13 @@
 </nav>
 
       </aside>
-      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+      <article class="sk-content">
           <section class="sk-api-description">
     
   </section>
 
   <section class="sk-api-functions">
     <h2> Functions </h2>
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-create-timer" data-anchor> Create Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Create Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#create-timer">
-                  Create Timer ( String )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="create-timer" data-anchor> Create Timer </h3>
   <div class="sk-api-description">
@@ -354,38 +341,38 @@ an initial &#39;ticks&#39; of 0.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-72" aria-controls="cpp-snippet-72" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5215" aria-controls="cpp-snippet-5215" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4842" aria-controls="cs-snippet-4842" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2191" aria-controls="cs-snippet-2191" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1201" aria-controls="pas-snippet-1201" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3098" aria-controls="pas-snippet-3098" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6407" aria-controls="py-snippet-6407" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-948" aria-controls="py-snippet-948" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-72" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-72 pre">
+      <div role="tabpanel" id="cpp-snippet-5215" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5215 pre">
         <pre class="codehilite"><code><span class="n">timer</span> <span class="n">create_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4842" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4842 pre">
+      <div role="tabpanel" id="cs-snippet-2191" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2191 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Timer</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CreateTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="nf">Timer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1201" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1201 pre">
+      <div role="tabpanel" id="pas-snippet-3098" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3098 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">CreateTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Timer</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6407" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6407 pre">
+      <div role="tabpanel" id="py-snippet-948" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-948 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">create_timer</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -393,22 +380,8 @@ an initial &#39;ticks&#39; of 0.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-free-all-timers" data-anchor> Free All Timers </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Free All Timers:
-          <ul>
-              <li>
-                <a href="/api/timers/#free-all-timers">
-                  Free All Timers (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="free-all-timers" data-anchor> Free All Timers </h3>
   <div class="sk-api-description">
@@ -423,38 +396,38 @@ an initial &#39;ticks&#39; of 0.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5681" aria-controls="cpp-snippet-5681" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6536" aria-controls="cpp-snippet-6536" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9080" aria-controls="cs-snippet-9080" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8163" aria-controls="cs-snippet-8163" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5241" aria-controls="pas-snippet-5241" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9559" aria-controls="pas-snippet-9559" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6220" aria-controls="py-snippet-6220" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1242" aria-controls="py-snippet-1242" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5681" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5681 pre">
+      <div role="tabpanel" id="cpp-snippet-6536" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6536 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_timers</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9080" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9080 pre">
+      <div role="tabpanel" id="cs-snippet-8163" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8163 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">FreeAllTimers</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeAllTimers</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5241" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5241 pre">
+      <div role="tabpanel" id="pas-snippet-9559" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9559 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllTimers</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6220" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6220 pre">
+      <div role="tabpanel" id="py-snippet-1242" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1242 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_timers</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -462,22 +435,8 @@ an initial &#39;ticks&#39; of 0.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-free-timer" data-anchor> Free Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Free Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#free-timer">
-                  Free Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="free-timer" data-anchor> Free Timer </h3>
   <div class="sk-api-description">
@@ -521,38 +480,38 @@ an initial &#39;ticks&#39; of 0.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9769" aria-controls="cpp-snippet-9769" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4118" aria-controls="cpp-snippet-4118" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5038" aria-controls="cs-snippet-5038" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6025" aria-controls="cs-snippet-6025" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9299" aria-controls="pas-snippet-9299" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7747" aria-controls="pas-snippet-7747" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1103" aria-controls="py-snippet-1103" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2589" aria-controls="py-snippet-2589" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9769" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9769 pre">
+      <div role="tabpanel" id="cpp-snippet-4118" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4118 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_free</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5038" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5038 pre">
+      <div role="tabpanel" id="cs-snippet-6025" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6025 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">FreeTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toFree</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9299" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9299 pre">
+      <div role="tabpanel" id="pas-snippet-7747" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7747 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeTimer</span><span class="p">(</span><span class="n">toFree</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1103" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1103 pre">
+      <div role="tabpanel" id="py-snippet-2589" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2589 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_timer</span><span class="p">(</span><span class="n">to_free</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -560,22 +519,8 @@ an initial &#39;ticks&#39; of 0.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-has-timer" data-anchor> Has Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Has Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#has-timer--named">
-                  Has Timer ( String )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="has-timer--named" data-anchor> Has Timer </h3>
   <div class="sk-api-description">
@@ -630,38 +575,38 @@ an initial &#39;ticks&#39; of 0.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-7773" aria-controls="cpp-snippet-7773" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7313" aria-controls="cpp-snippet-7313" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8564" aria-controls="cs-snippet-8564" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2638" aria-controls="cs-snippet-2638" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9538" aria-controls="pas-snippet-9538" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5044" aria-controls="pas-snippet-5044" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5760" aria-controls="py-snippet-5760" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9918" aria-controls="py-snippet-9918" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-7773" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7773 pre">
+      <div role="tabpanel" id="cpp-snippet-7313" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7313 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8564" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8564 pre">
+      <div role="tabpanel" id="cs-snippet-2638" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2638 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">HasTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">HasTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9538" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9538 pre">
+      <div role="tabpanel" id="pas-snippet-5044" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5044 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5760" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5760 pre">
+      <div role="tabpanel" id="py-snippet-9918" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9918 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -669,27 +614,41 @@ an initial &#39;ticks&#39; of 0.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-pause-timer" data-anchor> Pause Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Pause Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#pause-timer--named">
-                  Pause Timer ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#pause-timer">
-                  Pause Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-pause-timer" data-anchor>
+            Pause Timer
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#pause-timer--named">                      <strong>Pause Timer</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#pause-timer">                      <strong>Pause Timer</strong>
+                      (
+                          <em>to_pause</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="pause-timer--named" data-anchor> Pause Timer </h3>
   <div class="sk-api-description">
@@ -734,45 +693,44 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5960" aria-controls="cpp-snippet-5960" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2615" aria-controls="cpp-snippet-2615" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6455" aria-controls="cs-snippet-6455" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-238" aria-controls="cs-snippet-238" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3049" aria-controls="pas-snippet-3049" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8404" aria-controls="pas-snippet-8404" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3809" aria-controls="py-snippet-3809" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2049" aria-controls="py-snippet-2049" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5960" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5960 pre">
+      <div role="tabpanel" id="cpp-snippet-2615" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2615 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">pause_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6455" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6455 pre">
+      <div role="tabpanel" id="cs-snippet-238" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-238 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">PauseTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PauseTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3049" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3049 pre">
+      <div role="tabpanel" id="pas-snippet-8404" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8404 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PauseTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3809" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3809 pre">
+      <div role="tabpanel" id="py-snippet-2049" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2049 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">pause_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -820,38 +778,38 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8815" aria-controls="cpp-snippet-8815" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-396" aria-controls="cpp-snippet-396" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-628" aria-controls="cs-snippet-628" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-906" aria-controls="cs-snippet-906" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3612" aria-controls="pas-snippet-3612" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7196" aria-controls="pas-snippet-7196" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6733" aria-controls="py-snippet-6733" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6536" aria-controls="py-snippet-6536" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8815" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8815 pre">
+      <div role="tabpanel" id="cpp-snippet-396" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-396 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">pause_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_pause</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-628" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-628 pre">
+      <div role="tabpanel" id="cs-snippet-906" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-906 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">PauseTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PauseTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toPause</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3612" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3612 pre">
+      <div role="tabpanel" id="pas-snippet-7196" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7196 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PauseTimer</span><span class="p">(</span><span class="n">toPause</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6733" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6733 pre">
+      <div role="tabpanel" id="py-snippet-6536" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6536 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">pause_timer</span><span class="p">(</span><span class="n">to_pause</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -859,27 +817,41 @@ will continue to return the same time.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-reset-timer" data-anchor> Reset Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Reset Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#reset-timer--named">
-                  Reset Timer ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#reset-timer">
-                  Reset Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-reset-timer" data-anchor>
+            Reset Timer
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#reset-timer--named">                      <strong>Reset Timer</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#reset-timer">                      <strong>Reset Timer</strong>
+                      (
+                          <em>tmr</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="reset-timer--named" data-anchor> Reset Timer </h3>
   <div class="sk-api-description">
@@ -923,45 +895,44 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3345" aria-controls="cpp-snippet-3345" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3878" aria-controls="cpp-snippet-3878" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7904" aria-controls="cs-snippet-7904" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-792" aria-controls="cs-snippet-792" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8835" aria-controls="pas-snippet-8835" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9145" aria-controls="pas-snippet-9145" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5944" aria-controls="py-snippet-5944" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7322" aria-controls="py-snippet-7322" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3345" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3345 pre">
+      <div role="tabpanel" id="cpp-snippet-3878" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3878 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7904" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7904 pre">
+      <div role="tabpanel" id="cs-snippet-792" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-792 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">ResetTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResetTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8835" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8835 pre">
+      <div role="tabpanel" id="pas-snippet-9145" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9145 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5944" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5944 pre">
+      <div role="tabpanel" id="py-snippet-7322" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7322 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reset_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -1008,38 +979,38 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2491" aria-controls="cpp-snippet-2491" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5033" aria-controls="cpp-snippet-5033" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8028" aria-controls="cs-snippet-8028" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2087" aria-controls="cs-snippet-2087" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7146" aria-controls="pas-snippet-7146" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-673" aria-controls="pas-snippet-673" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2180" aria-controls="py-snippet-2180" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5608" aria-controls="py-snippet-5608" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2491" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2491 pre">
+      <div role="tabpanel" id="cpp-snippet-5033" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5033 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">tmr</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8028" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8028 pre">
+      <div role="tabpanel" id="cs-snippet-2087" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2087 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">ResetTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResetTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">tmr</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7146" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7146 pre">
+      <div role="tabpanel" id="pas-snippet-673" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-673 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetTimer</span><span class="p">(</span><span class="n">tmr</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2180" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2180 pre">
+      <div role="tabpanel" id="py-snippet-5608" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5608 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reset_timer</span><span class="p">(</span><span class="n">tmr</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1047,27 +1018,41 @@ will continue to return the same time.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-resume-timer" data-anchor> Resume Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Resume Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#resume-timer--named">
-                  Resume Timer ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#resume-timer">
-                  Resume Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-resume-timer" data-anchor>
+            Resume Timer
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#resume-timer--named">                      <strong>Resume Timer</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#resume-timer">                      <strong>Resume Timer</strong>
+                      (
+                          <em>to_resume</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="resume-timer--named" data-anchor> Resume Timer </h3>
   <div class="sk-api-description">
@@ -1111,45 +1096,44 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5776" aria-controls="cpp-snippet-5776" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7828" aria-controls="cpp-snippet-7828" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1713" aria-controls="cs-snippet-1713" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2214" aria-controls="cs-snippet-2214" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4404" aria-controls="pas-snippet-4404" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5213" aria-controls="pas-snippet-5213" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1818" aria-controls="py-snippet-1818" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3538" aria-controls="py-snippet-3538" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5776" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5776 pre">
+      <div role="tabpanel" id="cpp-snippet-7828" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7828 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">resume_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1713" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1713 pre">
+      <div role="tabpanel" id="cs-snippet-2214" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2214 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">ResumeTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResumeTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4404" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4404 pre">
+      <div role="tabpanel" id="pas-snippet-5213" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5213 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResumeTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1818" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1818 pre">
+      <div role="tabpanel" id="py-snippet-3538" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3538 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">resume_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -1196,38 +1180,38 @@ will continue to return the same time.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8296" aria-controls="cpp-snippet-8296" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5921" aria-controls="cpp-snippet-5921" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4791" aria-controls="cs-snippet-4791" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8809" aria-controls="cs-snippet-8809" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4388" aria-controls="pas-snippet-4388" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6490" aria-controls="pas-snippet-6490" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3136" aria-controls="py-snippet-3136" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5042" aria-controls="py-snippet-5042" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8296" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8296 pre">
+      <div role="tabpanel" id="cpp-snippet-5921" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5921 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">resume_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_resume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4791" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4791 pre">
+      <div role="tabpanel" id="cs-snippet-8809" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8809 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">ResumeTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResumeTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toResume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4388" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4388 pre">
+      <div role="tabpanel" id="pas-snippet-6490" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6490 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResumeTimer</span><span class="p">(</span><span class="n">toResume</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3136" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3136 pre">
+      <div role="tabpanel" id="py-snippet-5042" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5042 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">resume_timer</span><span class="p">(</span><span class="n">to_resume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1235,27 +1219,41 @@ will continue to return the same time.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-start-timer" data-anchor> Start Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Start Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#start-timer--named">
-                  Start Timer ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#start-timer">
-                  Start Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-start-timer" data-anchor>
+            Start Timer
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#start-timer--named">                      <strong>Start Timer</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#start-timer">                      <strong>Start Timer</strong>
+                      (
+                          <em>to_start</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="start-timer--named" data-anchor> Start Timer </h3>
   <div class="sk-api-description">
@@ -1301,45 +1299,44 @@ You can check how long has past since the timer was started using the
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-347" aria-controls="cpp-snippet-347" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9008" aria-controls="cpp-snippet-9008" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4721" aria-controls="cs-snippet-4721" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7429" aria-controls="cs-snippet-7429" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1441" aria-controls="pas-snippet-1441" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-736" aria-controls="pas-snippet-736" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5580" aria-controls="py-snippet-5580" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5432" aria-controls="py-snippet-5432" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-347" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-347 pre">
+      <div role="tabpanel" id="cpp-snippet-9008" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9008 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4721" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4721 pre">
+      <div role="tabpanel" id="cs-snippet-7429" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7429 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">StartTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1441" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1441 pre">
+      <div role="tabpanel" id="pas-snippet-736" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-736 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5580" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5580 pre">
+      <div role="tabpanel" id="py-snippet-5432" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5432 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -1388,38 +1385,38 @@ You can check how long has past since the timer was started using the
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2737" aria-controls="cpp-snippet-2737" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6219" aria-controls="cpp-snippet-6219" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5894" aria-controls="cs-snippet-5894" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5742" aria-controls="cs-snippet-5742" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2472" aria-controls="pas-snippet-2472" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-47" aria-controls="pas-snippet-47" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4979" aria-controls="py-snippet-4979" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9268" aria-controls="py-snippet-9268" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2737" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2737 pre">
+      <div role="tabpanel" id="cpp-snippet-6219" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6219 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_start</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5894" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5894 pre">
+      <div role="tabpanel" id="cs-snippet-5742" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5742 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">StartTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toStart</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2472" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2472 pre">
+      <div role="tabpanel" id="pas-snippet-47" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-47 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartTimer</span><span class="p">(</span><span class="n">toStart</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4979" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4979 pre">
+      <div role="tabpanel" id="py-snippet-9268" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9268 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_timer</span><span class="p">(</span><span class="n">to_start</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1427,27 +1424,41 @@ You can check how long has past since the timer was started using the
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-stop-timer" data-anchor> Stop Timer </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Stop Timer:
-          <ul>
-              <li>
-                <a href="/api/timers/#stop-timer--named">
-                  Stop Timer ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#stop-timer">
-                  Stop Timer ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-stop-timer" data-anchor>
+            Stop Timer
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#stop-timer--named">                      <strong>Stop Timer</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#stop-timer">                      <strong>Stop Timer</strong>
+                      (
+                          <em>to_stop</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="stop-timer--named" data-anchor> Stop Timer </h3>
   <div class="sk-api-description">
@@ -1492,45 +1503,44 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6945" aria-controls="cpp-snippet-6945" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-471" aria-controls="cpp-snippet-471" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7444" aria-controls="cs-snippet-7444" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9192" aria-controls="cs-snippet-9192" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7024" aria-controls="pas-snippet-7024" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1679" aria-controls="pas-snippet-1679" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1594" aria-controls="py-snippet-1594" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1832" aria-controls="py-snippet-1832" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6945" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6945 pre">
+      <div role="tabpanel" id="cpp-snippet-471" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-471 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_timer</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7444" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7444 pre">
+      <div role="tabpanel" id="cs-snippet-9192" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9192 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">StopTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StopTimer</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7024" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7024 pre">
+      <div role="tabpanel" id="pas-snippet-1679" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1679 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopTimer</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1594" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1594 pre">
+      <div role="tabpanel" id="py-snippet-1832" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1832 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">stop_timer__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -1578,38 +1588,38 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6859" aria-controls="cpp-snippet-6859" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-129" aria-controls="cpp-snippet-129" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1106" aria-controls="cs-snippet-1106" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9951" aria-controls="cs-snippet-9951" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6650" aria-controls="pas-snippet-6650" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9459" aria-controls="pas-snippet-9459" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-93" aria-controls="py-snippet-93" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3501" aria-controls="py-snippet-3501" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6859" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6859 pre">
+      <div role="tabpanel" id="cpp-snippet-129" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-129 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_timer</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_stop</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1106" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1106 pre">
+      <div role="tabpanel" id="cs-snippet-9951" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9951 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Timer</span><span class="p">.</span><span class="nf">StopTimer</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StopTimer</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toStop</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6650" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6650 pre">
+      <div role="tabpanel" id="pas-snippet-9459" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9459 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopTimer</span><span class="p">(</span><span class="n">toStop</span><span class="p">:</span> <span class="n">Timer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-93" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-93 pre">
+      <div role="tabpanel" id="py-snippet-3501" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3501 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">stop_timer</span><span class="p">(</span><span class="n">to_stop</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1617,22 +1627,8 @@ recall start to begin the timer ticking again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-timer-named" data-anchor> Timer Named </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Timer Named:
-          <ul>
-              <li>
-                <a href="/api/timers/#timer-named">
-                  Timer Named ( String )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="timer-named" data-anchor> Timer Named </h3>
   <div class="sk-api-description">
@@ -1687,38 +1683,38 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2557" aria-controls="cpp-snippet-2557" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2366" aria-controls="cpp-snippet-2366" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9922" aria-controls="cs-snippet-9922" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1416" aria-controls="cs-snippet-1416" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1358" aria-controls="pas-snippet-1358" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2316" aria-controls="pas-snippet-2316" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2142" aria-controls="py-snippet-2142" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7434" aria-controls="py-snippet-7434" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2557" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2557 pre">
+      <div role="tabpanel" id="cpp-snippet-2366" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2366 pre">
         <pre class="codehilite"><code><span class="n">timer</span> <span class="n">timer_named</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9922" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9922 pre">
+      <div role="tabpanel" id="cs-snippet-1416" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1416 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Timer</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">TimerNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Timer</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1358" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1358 pre">
+      <div role="tabpanel" id="pas-snippet-2316" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2316 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerNamed</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Timer</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2142" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2142 pre">
+      <div role="tabpanel" id="py-snippet-7434" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7434 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1726,27 +1722,41 @@ recall start to begin the timer ticking again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-timer-paused" data-anchor> Timer Paused </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Timer Paused:
-          <ul>
-              <li>
-                <a href="/api/timers/#timer-paused--named">
-                  Timer Paused ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#timer-paused">
-                  Timer Paused ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-timer-paused" data-anchor>
+            Timer Paused
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-paused--named">                      <strong>Timer Paused</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-paused">                      <strong>Timer Paused</strong>
+                      (
+                          <em>to_get</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="timer-paused--named" data-anchor> Timer Paused </h3>
   <div class="sk-api-description">
@@ -1801,45 +1811,44 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2525" aria-controls="cpp-snippet-2525" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7321" aria-controls="cpp-snippet-7321" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7989" aria-controls="cs-snippet-7989" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4992" aria-controls="cs-snippet-4992" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5948" aria-controls="pas-snippet-5948" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4580" aria-controls="pas-snippet-4580" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8045" aria-controls="py-snippet-8045" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3511" aria-controls="py-snippet-3511" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2525" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2525 pre">
+      <div role="tabpanel" id="cpp-snippet-7321" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7321 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_paused</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7989" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7989 pre">
+      <div role="tabpanel" id="cs-snippet-4992" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4992 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">TimerPaused</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerPaused</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5948" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5948 pre">
+      <div role="tabpanel" id="pas-snippet-4580" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4580 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerPaused</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8045" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8045 pre">
+      <div role="tabpanel" id="py-snippet-3511" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3511 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_paused__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -1897,38 +1906,38 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2724" aria-controls="cpp-snippet-2724" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1738" aria-controls="cpp-snippet-1738" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6374" aria-controls="cs-snippet-6374" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5127" aria-controls="cs-snippet-5127" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1807" aria-controls="pas-snippet-1807" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4123" aria-controls="pas-snippet-4123" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7493" aria-controls="py-snippet-7493" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8266" aria-controls="py-snippet-8266" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2724" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2724 pre">
+      <div role="tabpanel" id="cpp-snippet-1738" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1738 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_paused</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6374" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6374 pre">
+      <div role="tabpanel" id="cs-snippet-5127" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5127 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">Timer</span><span class="p">.</span><span class="n">TimerPaused</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerPaused</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toGet</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1807" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1807 pre">
+      <div role="tabpanel" id="pas-snippet-4123" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4123 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerPaused</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7493" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7493 pre">
+      <div role="tabpanel" id="py-snippet-8266" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8266 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_paused</span><span class="p">(</span><span class="n">to_get</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1936,27 +1945,41 @@ recall start to begin the timer ticking again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-timer-started" data-anchor> Timer Started </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Timer Started:
-          <ul>
-              <li>
-                <a href="/api/timers/#timer-started--named">
-                  Timer Started ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#timer-started">
-                  Timer Started ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-timer-started" data-anchor>
+            Timer Started
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-started--named">                      <strong>Timer Started</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-started">                      <strong>Timer Started</strong>
+                      (
+                          <em>to_get</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="timer-started--named" data-anchor> Timer Started </h3>
   <div class="sk-api-description">
@@ -2011,45 +2034,44 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1277" aria-controls="cpp-snippet-1277" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8534" aria-controls="cpp-snippet-8534" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3820" aria-controls="cs-snippet-3820" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8349" aria-controls="cs-snippet-8349" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7500" aria-controls="pas-snippet-7500" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8660" aria-controls="pas-snippet-8660" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4898" aria-controls="py-snippet-4898" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8557" aria-controls="py-snippet-8557" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1277" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1277 pre">
+      <div role="tabpanel" id="cpp-snippet-8534" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8534 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_started</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3820" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3820 pre">
+      <div role="tabpanel" id="cs-snippet-8349" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8349 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">TimerStarted</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerStarted</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7500" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7500 pre">
+      <div role="tabpanel" id="pas-snippet-8660" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8660 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerStarted</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4898" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4898 pre">
+      <div role="tabpanel" id="py-snippet-8557" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8557 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_started__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -2107,38 +2129,38 @@ recall start to begin the timer ticking again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5310" aria-controls="cpp-snippet-5310" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5256" aria-controls="cpp-snippet-5256" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8550" aria-controls="cs-snippet-8550" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1947" aria-controls="cs-snippet-1947" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1211" aria-controls="pas-snippet-1211" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9609" aria-controls="pas-snippet-9609" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6223" aria-controls="py-snippet-6223" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8973" aria-controls="py-snippet-8973" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5310" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5310 pre">
+      <div role="tabpanel" id="cpp-snippet-5256" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5256 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">timer_started</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8550" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8550 pre">
+      <div role="tabpanel" id="cs-snippet-1947" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1947 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">Timer</span><span class="p">.</span><span class="n">TimerStarted</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerStarted</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toGet</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1211" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1211 pre">
+      <div role="tabpanel" id="pas-snippet-9609" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9609 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerStarted</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6223" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6223 pre">
+      <div role="tabpanel" id="py-snippet-8973" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8973 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_started</span><span class="p">(</span><span class="n">to_get</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2146,27 +2168,41 @@ recall start to begin the timer ticking again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-timer-ticks" data-anchor> Timer Ticks </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Timer Ticks:
-          <ul>
-              <li>
-                <a href="/api/timers/#timer-ticks--named">
-                  Timer Ticks ( String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/timers/#timer-ticks">
-                  Timer Ticks ( Timer )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-timer-ticks" data-anchor>
+            Timer Ticks
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-ticks--named">                      <strong>Timer Ticks</strong>
+                      (
+                          <em>name</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/timers/#timer-ticks">                      <strong>Timer Ticks</strong>
+                      (
+                          <em>to_get</em>
+                          :
+                          <code>Timer</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="timer-ticks--named" data-anchor> Timer Ticks </h3>
   <div class="sk-api-description">
@@ -2225,45 +2261,44 @@ paused)</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2205" aria-controls="cpp-snippet-2205" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5610" aria-controls="cpp-snippet-5610" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5464" aria-controls="cs-snippet-5464" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-103" aria-controls="cs-snippet-103" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6029" aria-controls="pas-snippet-6029" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2164" aria-controls="pas-snippet-2164" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7084" aria-controls="py-snippet-7084" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7679" aria-controls="py-snippet-7679" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2205" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2205 pre">
+      <div role="tabpanel" id="cpp-snippet-5610" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5610 pre">
         <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer_ticks</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5464" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5464 pre">
+      <div role="tabpanel" id="cs-snippet-103" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-103 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">uint</span> <span class="n">Timers</span><span class="p">.</span><span class="nf">TimerTicks</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">uint</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerTicks</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6029" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6029 pre">
+      <div role="tabpanel" id="pas-snippet-2164" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2164 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerTicks</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Cardinal</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7084" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7084 pre">
+      <div role="tabpanel" id="py-snippet-7679" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7679 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_ticks__named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -2325,45 +2360,44 @@ paused)</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1086" aria-controls="cpp-snippet-1086" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2823" aria-controls="cpp-snippet-2823" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5941" aria-controls="cs-snippet-5941" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5405" aria-controls="cs-snippet-5405" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3177" aria-controls="pas-snippet-3177" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2927" aria-controls="pas-snippet-2927" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5868" aria-controls="py-snippet-5868" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7624" aria-controls="py-snippet-7624" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1086" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1086 pre">
+      <div role="tabpanel" id="cpp-snippet-2823" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2823 pre">
         <pre class="codehilite"><code><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">timer_ticks</span><span class="p">(</span><span class="n">timer</span> <span class="n">to_get</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5941" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5941 pre">
+      <div role="tabpanel" id="cs-snippet-5405" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5405 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="kt">uint</span> <span class="n">Timer</span><span class="p">.</span><span class="n">TimerTicks</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">uint</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TimerTicks</span><span class="p">(</span><span class="n">Timer</span> <span class="n">toGet</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3177" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3177 pre">
+      <div role="tabpanel" id="pas-snippet-2927" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2927 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TimerTicks</span><span class="p">(</span><span class="n">toGet</span><span class="p">:</span> <span class="n">Timer</span><span class="p">):</span> <span class="kt">Cardinal</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5868" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5868 pre">
+      <div role="tabpanel" id="py-snippet-7624" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7624 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">timer_ticks</span><span class="p">(</span><span class="n">to_get</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 

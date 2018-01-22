@@ -12,7 +12,7 @@
 
     <title>SplashKit - API - Input</title>
 
-    <link href="/stylesheets/main-c04ca02d.css" rel="stylesheet" />
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
   </head>
   <body class="api api_input api_input_index">
     <nav class="navbar navbar-dark sk-navbar">
@@ -48,7 +48,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="/guides">Guides</a>
+        <a class="nav-link " href="/articles">Articles &amp; Guides</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
@@ -88,7 +88,7 @@
 
   <div class="sk-api-root container">
     <div class="row">
-      <aside id="sticky-nav" class="col-xs-12 col-md-3 push-md-9 sk-sidebar">
+      <aside class="sk-sidebar sk-sticky-sidebar">
         <nav role="navigation">
   <ul class="nav sk-api-nav-root">
       <li class="nav-item">
@@ -394,26 +394,13 @@
 </nav>
 
       </aside>
-      <article class="col-xs-12 col-md-9 pull-md-3 sk-content">
+      <article class="sk-content">
           <section class="sk-api-description">
     
   </section>
 
   <section class="sk-api-functions">
     <h2> Functions </h2>
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-process-events" data-anchor> Process Events </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Process Events:
-          <ul>
-              <li>
-                <a href="/api/input/#process-events">
-                  Process Events (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="process-events" data-anchor> Process Events </h3>
   <div class="sk-api-description">
@@ -434,38 +421,38 @@ called once within your game loop to check user interaction.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8113" aria-controls="cpp-snippet-8113" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7025" aria-controls="cpp-snippet-7025" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-528" aria-controls="cs-snippet-528" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-659" aria-controls="cs-snippet-659" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6448" aria-controls="pas-snippet-6448" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-853" aria-controls="pas-snippet-853" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9199" aria-controls="py-snippet-9199" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5520" aria-controls="py-snippet-5520" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8113" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8113 pre">
+      <div role="tabpanel" id="cpp-snippet-7025" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7025 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">process_events</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-528" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-528 pre">
+      <div role="tabpanel" id="cs-snippet-659" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-659 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Input</span><span class="p">.</span><span class="nf">ProcessEvents</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ProcessEvents</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6448" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6448 pre">
+      <div role="tabpanel" id="pas-snippet-853" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-853 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ProcessEvents</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9199" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9199 pre">
+      <div role="tabpanel" id="py-snippet-5520" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5520 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">process_events</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -473,22 +460,8 @@ called once within your game loop to check user interaction.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-quit-requested" data-anchor> Quit Requested </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Quit Requested:
-          <ul>
-              <li>
-                <a href="/api/input/#quit-requested">
-                  Quit Requested (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="quit-requested" data-anchor> Quit Requested </h3>
   <div class="sk-api-description">
@@ -516,38 +489,38 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4585" aria-controls="cpp-snippet-4585" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5008" aria-controls="cpp-snippet-5008" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5232" aria-controls="cs-snippet-5232" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8706" aria-controls="cs-snippet-8706" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5332" aria-controls="pas-snippet-5332" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2202" aria-controls="pas-snippet-2202" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8247" aria-controls="py-snippet-8247" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2239" aria-controls="py-snippet-2239" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4585" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4585 pre">
+      <div role="tabpanel" id="cpp-snippet-5008" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5008 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">quit_requested</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5232" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5232 pre">
+      <div role="tabpanel" id="cs-snippet-8706" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8706 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Input</span><span class="p">.</span><span class="nf">QuitRequested</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">QuitRequested</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5332" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5332 pre">
+      <div role="tabpanel" id="pas-snippet-2202" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2202 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">QuitRequested</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8247" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8247 pre">
+      <div role="tabpanel" id="py-snippet-2239" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2239 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">quit_requested</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -555,22 +528,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-reset-quit" data-anchor> Reset Quit </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Reset Quit:
-          <ul>
-              <li>
-                <a href="/api/input/#reset-quit">
-                  Reset Quit (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="reset-quit" data-anchor> Reset Quit </h3>
   <div class="sk-api-description">
@@ -585,38 +544,38 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3757" aria-controls="cpp-snippet-3757" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8824" aria-controls="cpp-snippet-8824" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2779" aria-controls="cs-snippet-2779" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4060" aria-controls="cs-snippet-4060" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8561" aria-controls="pas-snippet-8561" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7700" aria-controls="pas-snippet-7700" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6186" aria-controls="py-snippet-6186" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8081" aria-controls="py-snippet-8081" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3757" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3757 pre">
+      <div role="tabpanel" id="cpp-snippet-8824" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8824 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">reset_quit</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2779" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2779 pre">
+      <div role="tabpanel" id="cs-snippet-4060" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4060 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Input</span><span class="p">.</span><span class="nf">ResetQuit</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResetQuit</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8561" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8561 pre">
+      <div role="tabpanel" id="pas-snippet-7700" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7700 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResetQuit</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6186" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6186 pre">
+      <div role="tabpanel" id="py-snippet-8081" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8081 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reset_quit</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -624,22 +583,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-any-key-pressed" data-anchor> Any Key Pressed </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Any Key Pressed:
-          <ul>
-              <li>
-                <a href="/api/input/#any-key-pressed">
-                  Any Key Pressed (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="any-key-pressed" data-anchor> Any Key Pressed </h3>
   <div class="sk-api-description">
@@ -666,37 +611,37 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4096" aria-controls="cpp-snippet-4096" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9170" aria-controls="cpp-snippet-9170" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4743" aria-controls="cs-snippet-4743" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3567" aria-controls="cs-snippet-3567" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2895" aria-controls="pas-snippet-2895" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9293" aria-controls="pas-snippet-9293" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8909" aria-controls="py-snippet-8909" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7200" aria-controls="py-snippet-7200" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4096" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4096 pre">
+      <div role="tabpanel" id="cpp-snippet-9170" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9170 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">any_key_pressed</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4743" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4743 pre">
+      <div role="tabpanel" id="cs-snippet-3567" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3567 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">AnyKeyPressed</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2895" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2895 pre">
+      <div role="tabpanel" id="pas-snippet-9293" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9293 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">AnyKeyPressed</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8909" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8909 pre">
+      <div role="tabpanel" id="py-snippet-7200" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7200 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">any_key_pressed</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -704,22 +649,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-deregister-callback-on-key-down" data-anchor> Deregister Callback On Key Down </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Deregister Callback On Key Down:
-          <ul>
-              <li>
-                <a href="/api/input/#deregister-callback-on-key-down">
-                  Deregister Callback On Key Down ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="deregister-callback-on-key-down" data-anchor> Deregister Callback On Key Down </h3>
   <div class="sk-api-description">
@@ -763,37 +694,37 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2795" aria-controls="cpp-snippet-2795" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3956" aria-controls="cpp-snippet-3956" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2507" aria-controls="cs-snippet-2507" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2077" aria-controls="cs-snippet-2077" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-363" aria-controls="pas-snippet-363" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5470" aria-controls="pas-snippet-5470" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1057" aria-controls="py-snippet-1057" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-583" aria-controls="py-snippet-583" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2795" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2795 pre">
+      <div role="tabpanel" id="cpp-snippet-3956" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3956 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_down</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2507" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2507 pre">
+      <div role="tabpanel" id="cs-snippet-2077" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2077 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DeregisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-363" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-363 pre">
+      <div role="tabpanel" id="pas-snippet-5470" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5470 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1057" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1057 pre">
+      <div role="tabpanel" id="py-snippet-583" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-583 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">deregister_callback_on_key_down</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -801,22 +732,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-deregister-callback-on-key-typed" data-anchor> Deregister Callback On Key Typed </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Deregister Callback On Key Typed:
-          <ul>
-              <li>
-                <a href="/api/input/#deregister-callback-on-key-typed">
-                  Deregister Callback On Key Typed ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="deregister-callback-on-key-typed" data-anchor> Deregister Callback On Key Typed </h3>
   <div class="sk-api-description">
@@ -860,37 +777,37 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9558" aria-controls="cpp-snippet-9558" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7192" aria-controls="cpp-snippet-7192" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2709" aria-controls="cs-snippet-2709" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9802" aria-controls="cs-snippet-9802" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3030" aria-controls="pas-snippet-3030" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6935" aria-controls="pas-snippet-6935" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7768" aria-controls="py-snippet-7768" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8714" aria-controls="py-snippet-8714" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9558" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9558 pre">
+      <div role="tabpanel" id="cpp-snippet-7192" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7192 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_typed</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2709" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2709 pre">
+      <div role="tabpanel" id="cs-snippet-9802" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9802 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DeregisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3030" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3030 pre">
+      <div role="tabpanel" id="pas-snippet-6935" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6935 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7768" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7768 pre">
+      <div role="tabpanel" id="py-snippet-8714" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8714 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">deregister_callback_on_key_typed</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -898,22 +815,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-deregister-callback-on-key-up" data-anchor> Deregister Callback On Key Up </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Deregister Callback On Key Up:
-          <ul>
-              <li>
-                <a href="/api/input/#deregister-callback-on-key-up">
-                  Deregister Callback On Key Up ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="deregister-callback-on-key-up" data-anchor> Deregister Callback On Key Up </h3>
   <div class="sk-api-description">
@@ -957,37 +860,37 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1667" aria-controls="cpp-snippet-1667" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7747" aria-controls="cpp-snippet-7747" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1226" aria-controls="cs-snippet-1226" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4382" aria-controls="cs-snippet-4382" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7627" aria-controls="pas-snippet-7627" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6626" aria-controls="pas-snippet-6626" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-94" aria-controls="py-snippet-94" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9990" aria-controls="py-snippet-9990" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1667" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1667 pre">
+      <div role="tabpanel" id="cpp-snippet-7747" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7747 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">deregister_callback_on_key_up</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1226" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1226 pre">
+      <div role="tabpanel" id="cs-snippet-4382" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4382 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DeregisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7627" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7627 pre">
+      <div role="tabpanel" id="pas-snippet-6626" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6626 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DeregisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-94" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-94 pre">
+      <div role="tabpanel" id="py-snippet-9990" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9990 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">deregister_callback_on_key_up</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -995,22 +898,8 @@ value is updated by the <a href="/api/input/#process-events"><code>Process Event
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-key-down" data-anchor> Key Down </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Key Down:
-          <ul>
-              <li>
-                <a href="/api/input/#key-down">
-                  Key Down ( Key Code )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="key-down" data-anchor> Key Down </h3>
   <div class="sk-api-description">
@@ -1067,37 +956,37 @@ to specify the key to be checked.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2064" aria-controls="cpp-snippet-2064" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9478" aria-controls="cpp-snippet-9478" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7450" aria-controls="cs-snippet-7450" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-581" aria-controls="cs-snippet-581" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5389" aria-controls="pas-snippet-5389" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8342" aria-controls="pas-snippet-8342" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7831" aria-controls="py-snippet-7831" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5613" aria-controls="py-snippet-5613" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2064" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2064 pre">
+      <div role="tabpanel" id="cpp-snippet-9478" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9478 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_down</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7450" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7450 pre">
+      <div role="tabpanel" id="cs-snippet-581" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-581 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyDown</span><span class="p">(</span><span class="n">KeyCode</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5389" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5389 pre">
+      <div role="tabpanel" id="pas-snippet-8342" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8342 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyDown</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7831" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7831 pre">
+      <div role="tabpanel" id="py-snippet-5613" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5613 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">key_down</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1105,22 +994,8 @@ to specify the key to be checked.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-key-name" data-anchor> Key Name </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Key Name:
-          <ul>
-              <li>
-                <a href="/api/input/#key-name">
-                  Key Name ( Key Code )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="key-name" data-anchor> Key Name </h3>
   <div class="sk-api-description">
@@ -1177,37 +1052,37 @@ to display more meaningful key names for configuring game controls, etc.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1599" aria-controls="cpp-snippet-1599" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-591" aria-controls="cpp-snippet-591" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7718" aria-controls="cs-snippet-7718" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6621" aria-controls="cs-snippet-6621" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5607" aria-controls="pas-snippet-5607" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4928" aria-controls="pas-snippet-4928" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3583" aria-controls="py-snippet-3583" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8980" aria-controls="py-snippet-8980" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1599" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1599 pre">
+      <div role="tabpanel" id="cpp-snippet-591" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-591 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">key_name</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7718" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7718 pre">
+      <div role="tabpanel" id="cs-snippet-6621" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6621 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyName</span><span class="p">(</span><span class="n">KeyCode</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5607" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5607 pre">
+      <div role="tabpanel" id="pas-snippet-4928" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4928 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyName</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3583" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3583 pre">
+      <div role="tabpanel" id="py-snippet-8980" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8980 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">key_name</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1215,22 +1090,8 @@ to display more meaningful key names for configuring game controls, etc.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-key-released" data-anchor> Key Released </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Key Released:
-          <ul>
-              <li>
-                <a href="/api/input/#key-released">
-                  Key Released ( Key Code )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="key-released" data-anchor> Key Released </h3>
   <div class="sk-api-description">
@@ -1288,37 +1149,37 @@ released again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5799" aria-controls="cpp-snippet-5799" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9305" aria-controls="cpp-snippet-9305" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2774" aria-controls="cs-snippet-2774" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3738" aria-controls="cs-snippet-3738" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3117" aria-controls="pas-snippet-3117" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1235" aria-controls="pas-snippet-1235" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2078" aria-controls="py-snippet-2078" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3672" aria-controls="py-snippet-3672" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5799" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5799 pre">
+      <div role="tabpanel" id="cpp-snippet-9305" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9305 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_released</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2774" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2774 pre">
+      <div role="tabpanel" id="cs-snippet-3738" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3738 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyReleased</span><span class="p">(</span><span class="n">KeyCode</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3117" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3117 pre">
+      <div role="tabpanel" id="pas-snippet-1235" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1235 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyReleased</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2078" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2078 pre">
+      <div role="tabpanel" id="py-snippet-3672" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3672 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">key_released</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1326,22 +1187,8 @@ released again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-key-typed" data-anchor> Key Typed </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Key Typed:
-          <ul>
-              <li>
-                <a href="/api/input/#key-typed">
-                  Key Typed ( Key Code )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="key-typed" data-anchor> Key Typed </h3>
   <div class="sk-api-description">
@@ -1399,37 +1246,37 @@ pressed and will not return true again until the key is released and presssed do
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-177" aria-controls="cpp-snippet-177" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7073" aria-controls="cpp-snippet-7073" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3888" aria-controls="cs-snippet-3888" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6767" aria-controls="cs-snippet-6767" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1182" aria-controls="pas-snippet-1182" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-245" aria-controls="pas-snippet-245" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3599" aria-controls="py-snippet-3599" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8803" aria-controls="py-snippet-8803" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-177" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-177 pre">
+      <div role="tabpanel" id="cpp-snippet-7073" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7073 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_typed</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3888" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3888 pre">
+      <div role="tabpanel" id="cs-snippet-6767" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6767 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyTyped</span><span class="p">(</span><span class="n">KeyCode</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1182" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1182 pre">
+      <div role="tabpanel" id="pas-snippet-245" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-245 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyTyped</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3599" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3599 pre">
+      <div role="tabpanel" id="py-snippet-8803" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8803 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">key_typed</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1437,22 +1284,8 @@ pressed and will not return true again until the key is released and presssed do
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-key-up" data-anchor> Key Up </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Key Up:
-          <ul>
-              <li>
-                <a href="/api/input/#key-up">
-                  Key Up ( Key Code )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="key-up" data-anchor> Key Up </h3>
   <div class="sk-api-description">
@@ -1509,37 +1342,37 @@ to specify the key to be checked.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2195" aria-controls="cpp-snippet-2195" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5807" aria-controls="cpp-snippet-5807" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4679" aria-controls="cs-snippet-4679" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8822" aria-controls="cs-snippet-8822" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4693" aria-controls="pas-snippet-4693" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1908" aria-controls="pas-snippet-1908" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9913" aria-controls="py-snippet-9913" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8892" aria-controls="py-snippet-8892" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2195" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2195 pre">
+      <div role="tabpanel" id="cpp-snippet-5807" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5807 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">key_up</span><span class="p">(</span><span class="n">key_code</span> <span class="n">key</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4679" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4679 pre">
+      <div role="tabpanel" id="cs-snippet-8822" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8822 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyUp</span><span class="p">(</span><span class="n">KeyCode</span> <span class="n">key</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4693" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4693 pre">
+      <div role="tabpanel" id="pas-snippet-1908" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1908 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">KeyUp</span><span class="p">(</span><span class="n">key</span><span class="p">:</span> <span class="n">KeyCode</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9913" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9913 pre">
+      <div role="tabpanel" id="py-snippet-8892" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8892 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">key_up</span><span class="p">(</span><span class="n">key</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1547,22 +1380,8 @@ to specify the key to be checked.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-register-callback-on-key-down" data-anchor> Register Callback On Key Down </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Register Callback On Key Down:
-          <ul>
-              <li>
-                <a href="/api/input/#register-callback-on-key-down">
-                  Register Callback On Key Down ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="register-callback-on-key-down" data-anchor> Register Callback On Key Down </h3>
   <div class="sk-api-description">
@@ -1608,37 +1427,37 @@ the user presses down.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1726" aria-controls="cpp-snippet-1726" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9544" aria-controls="cpp-snippet-9544" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3917" aria-controls="cs-snippet-3917" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7964" aria-controls="cs-snippet-7964" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-359" aria-controls="pas-snippet-359" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-21" aria-controls="pas-snippet-21" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1592" aria-controls="py-snippet-1592" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-440" aria-controls="py-snippet-440" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1726" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1726 pre">
+      <div role="tabpanel" id="cpp-snippet-9544" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9544 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_down</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3917" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3917 pre">
+      <div role="tabpanel" id="cs-snippet-7964" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7964 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RegisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-359" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-359 pre">
+      <div role="tabpanel" id="pas-snippet-21" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-21 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyDown</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1592" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1592 pre">
+      <div role="tabpanel" id="py-snippet-440" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-440 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">register_callback_on_key_down</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1646,22 +1465,8 @@ the user presses down.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-register-callback-on-key-typed" data-anchor> Register Callback On Key Typed </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Register Callback On Key Typed:
-          <ul>
-              <li>
-                <a href="/api/input/#register-callback-on-key-typed">
-                  Register Callback On Key Typed ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="register-callback-on-key-typed" data-anchor> Register Callback On Key Typed </h3>
   <div class="sk-api-description">
@@ -1707,37 +1512,37 @@ presses a key down.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3133" aria-controls="cpp-snippet-3133" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5515" aria-controls="cpp-snippet-5515" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8403" aria-controls="cs-snippet-8403" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1248" aria-controls="cs-snippet-1248" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2892" aria-controls="pas-snippet-2892" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8668" aria-controls="pas-snippet-8668" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1447" aria-controls="py-snippet-1447" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7502" aria-controls="py-snippet-7502" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3133" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3133 pre">
+      <div role="tabpanel" id="cpp-snippet-5515" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5515 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_typed</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8403" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8403 pre">
+      <div role="tabpanel" id="cs-snippet-1248" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1248 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RegisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2892" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2892 pre">
+      <div role="tabpanel" id="pas-snippet-8668" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8668 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyTyped</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1447" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1447 pre">
+      <div role="tabpanel" id="py-snippet-7502" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7502 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">register_callback_on_key_typed</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1745,22 +1550,8 @@ presses a key down.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-register-callback-on-key-up" data-anchor> Register Callback On Key Up </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Register Callback On Key Up:
-          <ul>
-              <li>
-                <a href="/api/input/#register-callback-on-key-up">
-                  Register Callback On Key Up ( Key Callback )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="register-callback-on-key-up" data-anchor> Register Callback On Key Up </h3>
   <div class="sk-api-description">
@@ -1806,37 +1597,37 @@ the user releases.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9299" aria-controls="cpp-snippet-9299" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8208" aria-controls="cpp-snippet-8208" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1411" aria-controls="cs-snippet-1411" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4080" aria-controls="cs-snippet-4080" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3583" aria-controls="pas-snippet-3583" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5160" aria-controls="pas-snippet-5160" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1493" aria-controls="py-snippet-1493" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1016" aria-controls="py-snippet-1016" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9299" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9299 pre">
+      <div role="tabpanel" id="cpp-snippet-8208" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8208 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">register_callback_on_key_up</span><span class="p">(</span><span class="n">key_callback</span> <span class="o">*</span><span class="n">callback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1411" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1411 pre">
+      <div role="tabpanel" id="cs-snippet-4080" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4080 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">RegisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">KeyCallback</span> <span class="n">callback</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3583" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3583 pre">
+      <div role="tabpanel" id="pas-snippet-5160" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5160 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">RegisterCallbackOnKeyUp</span><span class="p">(</span><span class="n">callback</span><span class="p">:</span> <span class="n">KeyCallback</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1493" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1493 pre">
+      <div role="tabpanel" id="py-snippet-1016" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1016 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">register_callback_on_key_up</span><span class="p">(</span><span class="n">callback</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1844,22 +1635,8 @@ the user releases.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-hide-mouse" data-anchor> Hide Mouse </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Hide Mouse:
-          <ul>
-              <li>
-                <a href="/api/input/#hide-mouse">
-                  Hide Mouse (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="hide-mouse" data-anchor> Hide Mouse </h3>
   <div class="sk-api-description">
@@ -1875,37 +1652,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8440" aria-controls="cpp-snippet-8440" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3210" aria-controls="cpp-snippet-3210" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5123" aria-controls="cs-snippet-5123" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-797" aria-controls="cs-snippet-797" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3518" aria-controls="pas-snippet-3518" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9566" aria-controls="pas-snippet-9566" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2830" aria-controls="py-snippet-2830" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5335" aria-controls="py-snippet-5335" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8440" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8440 pre">
+      <div role="tabpanel" id="cpp-snippet-3210" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3210 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">hide_mouse</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5123" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5123 pre">
+      <div role="tabpanel" id="cs-snippet-797" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-797 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">HideMouse</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3518" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3518 pre">
+      <div role="tabpanel" id="pas-snippet-9566" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9566 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">HideMouse</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2830" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2830 pre">
+      <div role="tabpanel" id="py-snippet-5335" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5335 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">hide_mouse</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1913,22 +1690,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-clicked" data-anchor> Mouse Clicked </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Clicked:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-clicked">
-                  Mouse Clicked ( Mouse Button )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-clicked" data-anchor> Mouse Clicked </h3>
   <div class="sk-api-description">
@@ -1984,37 +1747,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1506" aria-controls="cpp-snippet-1506" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-883" aria-controls="cpp-snippet-883" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5211" aria-controls="cs-snippet-5211" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7494" aria-controls="cs-snippet-7494" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-64" aria-controls="pas-snippet-64" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5279" aria-controls="pas-snippet-5279" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2266" aria-controls="py-snippet-2266" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2408" aria-controls="py-snippet-2408" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1506" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1506 pre">
+      <div role="tabpanel" id="cpp-snippet-883" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-883 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_clicked</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5211" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5211 pre">
+      <div role="tabpanel" id="cs-snippet-7494" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7494 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseClicked</span><span class="p">(</span><span class="n">MouseButton</span> <span class="n">button</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-64" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-64 pre">
+      <div role="tabpanel" id="pas-snippet-5279" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5279 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseClicked</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2266" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2266 pre">
+      <div role="tabpanel" id="py-snippet-2408" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2408 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_clicked</span><span class="p">(</span><span class="n">button</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2022,22 +1785,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-down" data-anchor> Mouse Down </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Down:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-down">
-                  Mouse Down ( Mouse Button )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-down" data-anchor> Mouse Down </h3>
   <div class="sk-api-description">
@@ -2092,37 +1841,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9630" aria-controls="cpp-snippet-9630" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8417" aria-controls="cpp-snippet-8417" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6030" aria-controls="cs-snippet-6030" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4489" aria-controls="cs-snippet-4489" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4998" aria-controls="pas-snippet-4998" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9940" aria-controls="pas-snippet-9940" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7939" aria-controls="py-snippet-7939" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4786" aria-controls="py-snippet-4786" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9630" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9630 pre">
+      <div role="tabpanel" id="cpp-snippet-8417" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8417 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_down</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6030" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6030 pre">
+      <div role="tabpanel" id="cs-snippet-4489" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4489 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseDown</span><span class="p">(</span><span class="n">MouseButton</span> <span class="n">button</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4998" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4998 pre">
+      <div role="tabpanel" id="pas-snippet-9940" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9940 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseDown</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7939" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7939 pre">
+      <div role="tabpanel" id="py-snippet-4786" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4786 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_down</span><span class="p">(</span><span class="n">button</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2130,22 +1879,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-movement" data-anchor> Mouse Movement </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Movement:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-movement">
-                  Mouse Movement (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-movement" data-anchor> Mouse Movement </h3>
   <div class="sk-api-description">
@@ -2172,37 +1907,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9239" aria-controls="cpp-snippet-9239" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5513" aria-controls="cpp-snippet-5513" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8343" aria-controls="cs-snippet-8343" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1584" aria-controls="cs-snippet-1584" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9955" aria-controls="pas-snippet-9955" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8581" aria-controls="pas-snippet-8581" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9850" aria-controls="py-snippet-9850" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9812" aria-controls="py-snippet-9812" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9239" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9239 pre">
+      <div role="tabpanel" id="cpp-snippet-5513" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5513 pre">
         <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_movement</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8343" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8343 pre">
+      <div role="tabpanel" id="cs-snippet-1584" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1584 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseMovement</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9955" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9955 pre">
+      <div role="tabpanel" id="pas-snippet-8581" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8581 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseMovement</span><span class="p">():</span> <span class="n">Vector2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9850" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9850 pre">
+      <div role="tabpanel" id="py-snippet-9812" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9812 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_movement</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2210,22 +1945,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-position" data-anchor> Mouse Position </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Position:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-position">
-                  Mouse Position (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-position" data-anchor> Mouse Position </h3>
   <div class="sk-api-description">
@@ -2251,37 +1972,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8003" aria-controls="cpp-snippet-8003" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8409" aria-controls="cpp-snippet-8409" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7526" aria-controls="cs-snippet-7526" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1014" aria-controls="cs-snippet-1014" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8664" aria-controls="pas-snippet-8664" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9430" aria-controls="pas-snippet-9430" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5516" aria-controls="py-snippet-5516" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5680" aria-controls="py-snippet-5680" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8003" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8003 pre">
+      <div role="tabpanel" id="cpp-snippet-8409" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8409 pre">
         <pre class="codehilite"><code><span class="n">point_2d</span> <span class="n">mouse_position</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7526" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7526 pre">
+      <div role="tabpanel" id="cs-snippet-1014" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1014 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Point2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MousePosition</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8664" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8664 pre">
+      <div role="tabpanel" id="pas-snippet-9430" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9430 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MousePosition</span><span class="p">():</span> <span class="n">Point2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5516" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5516 pre">
+      <div role="tabpanel" id="py-snippet-5680" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5680 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_position</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2289,22 +2010,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-position-vector" data-anchor> Mouse Position Vector </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Position Vector:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-position-vector">
-                  Mouse Position Vector (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-position-vector" data-anchor> Mouse Position Vector </h3>
   <div class="sk-api-description">
@@ -2330,37 +2037,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2218" aria-controls="cpp-snippet-2218" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5679" aria-controls="cpp-snippet-5679" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4294" aria-controls="cs-snippet-4294" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4134" aria-controls="cs-snippet-4134" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4746" aria-controls="pas-snippet-4746" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9064" aria-controls="pas-snippet-9064" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1552" aria-controls="py-snippet-1552" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-221" aria-controls="py-snippet-221" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2218" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2218 pre">
+      <div role="tabpanel" id="cpp-snippet-5679" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5679 pre">
         <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_position_vector</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4294" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4294 pre">
+      <div role="tabpanel" id="cs-snippet-4134" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4134 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MousePositionVector</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4746" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4746 pre">
+      <div role="tabpanel" id="pas-snippet-9064" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9064 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MousePositionVector</span><span class="p">():</span> <span class="n">Vector2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1552" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1552 pre">
+      <div role="tabpanel" id="py-snippet-221" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-221 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_position_vector</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2368,22 +2075,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-shown" data-anchor> Mouse Shown </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Shown:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-shown">
-                  Mouse Shown (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-shown" data-anchor> Mouse Shown </h3>
   <div class="sk-api-description">
@@ -2409,37 +2102,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8456" aria-controls="cpp-snippet-8456" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-20" aria-controls="cpp-snippet-20" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2321" aria-controls="cs-snippet-2321" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7737" aria-controls="cs-snippet-7737" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6702" aria-controls="pas-snippet-6702" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2529" aria-controls="pas-snippet-2529" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9163" aria-controls="py-snippet-9163" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7097" aria-controls="py-snippet-7097" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8456" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8456 pre">
+      <div role="tabpanel" id="cpp-snippet-20" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-20 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_shown</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2321" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2321 pre">
+      <div role="tabpanel" id="cs-snippet-7737" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7737 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseShown</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6702" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6702 pre">
+      <div role="tabpanel" id="pas-snippet-2529" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2529 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseShown</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9163" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9163 pre">
+      <div role="tabpanel" id="py-snippet-7097" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7097 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_shown</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2447,22 +2140,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-up" data-anchor> Mouse Up </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Up:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-up">
-                  Mouse Up ( Mouse Button )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-up" data-anchor> Mouse Up </h3>
   <div class="sk-api-description">
@@ -2517,37 +2196,37 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6716" aria-controls="cpp-snippet-6716" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3575" aria-controls="cpp-snippet-3575" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7775" aria-controls="cs-snippet-7775" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6157" aria-controls="cs-snippet-6157" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5416" aria-controls="pas-snippet-5416" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6890" aria-controls="pas-snippet-6890" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-751" aria-controls="py-snippet-751" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7775" aria-controls="py-snippet-7775" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6716" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6716 pre">
+      <div role="tabpanel" id="cpp-snippet-3575" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3575 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">mouse_up</span><span class="p">(</span><span class="n">mouse_button</span> <span class="n">button</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7775" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7775 pre">
+      <div role="tabpanel" id="cs-snippet-6157" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6157 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseUp</span><span class="p">(</span><span class="n">MouseButton</span> <span class="n">button</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5416" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5416 pre">
+      <div role="tabpanel" id="pas-snippet-6890" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6890 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseUp</span><span class="p">(</span><span class="n">button</span><span class="p">:</span> <span class="n">MouseButton</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-751" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-751 pre">
+      <div role="tabpanel" id="py-snippet-7775" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7775 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_up</span><span class="p">(</span><span class="n">button</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2555,22 +2234,8 @@ showing. Use <code>Showmouse</code> to make the mouse cursor visible again.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-wheel-scroll" data-anchor> Mouse Wheel Scroll </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Wheel Scroll:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-wheel-scroll">
-                  Mouse Wheel Scroll (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-wheel-scroll" data-anchor> Mouse Wheel Scroll </h3>
   <div class="sk-api-description">
@@ -2601,37 +2266,37 @@ Note that on MacOS the directions may be inverted by OS settings.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3924" aria-controls="cpp-snippet-3924" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6973" aria-controls="cpp-snippet-6973" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7186" aria-controls="cs-snippet-7186" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6975" aria-controls="cs-snippet-6975" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2325" aria-controls="pas-snippet-2325" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7251" aria-controls="pas-snippet-7251" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9192" aria-controls="py-snippet-9192" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-924" aria-controls="py-snippet-924" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3924" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3924 pre">
+      <div role="tabpanel" id="cpp-snippet-6973" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6973 pre">
         <pre class="codehilite"><code><span class="n">vector_2d</span> <span class="n">mouse_wheel_scroll</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7186" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7186 pre">
+      <div role="tabpanel" id="cs-snippet-6975" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6975 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Vector2D</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseWheelScroll</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2325" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2325 pre">
+      <div role="tabpanel" id="pas-snippet-7251" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7251 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseWheelScroll</span><span class="p">():</span> <span class="n">Vector2D</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9192" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9192 pre">
+      <div role="tabpanel" id="py-snippet-924" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-924 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_wheel_scroll</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2639,22 +2304,8 @@ Note that on MacOS the directions may be inverted by OS settings.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-x" data-anchor> Mouse X </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse X:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-x">
-                  Mouse X (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-x" data-anchor> Mouse X </h3>
   <div class="sk-api-description">
@@ -2681,37 +2332,37 @@ window location</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4613" aria-controls="cpp-snippet-4613" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2825" aria-controls="cpp-snippet-2825" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-159" aria-controls="cs-snippet-159" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2063" aria-controls="cs-snippet-2063" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6556" aria-controls="pas-snippet-6556" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7358" aria-controls="pas-snippet-7358" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1719" aria-controls="py-snippet-1719" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1131" aria-controls="py-snippet-1131" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4613" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4613 pre">
+      <div role="tabpanel" id="cpp-snippet-2825" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2825 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">mouse_x</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-159" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-159 pre">
+      <div role="tabpanel" id="cs-snippet-2063" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2063 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseX</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6556" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6556 pre">
+      <div role="tabpanel" id="pas-snippet-7358" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7358 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseX</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1719" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1719 pre">
+      <div role="tabpanel" id="py-snippet-1131" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1131 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_x</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2719,22 +2370,8 @@ window location</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-mouse-y" data-anchor> Mouse Y </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Mouse Y:
-          <ul>
-              <li>
-                <a href="/api/input/#mouse-y">
-                  Mouse Y (  )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="mouse-y" data-anchor> Mouse Y </h3>
   <div class="sk-api-description">
@@ -2761,37 +2398,37 @@ window location</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1134" aria-controls="cpp-snippet-1134" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9510" aria-controls="cpp-snippet-9510" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5794" aria-controls="cs-snippet-5794" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8043" aria-controls="cs-snippet-8043" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4055" aria-controls="pas-snippet-4055" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5534" aria-controls="pas-snippet-5534" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5033" aria-controls="py-snippet-5033" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7825" aria-controls="py-snippet-7825" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1134" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1134 pre">
+      <div role="tabpanel" id="cpp-snippet-9510" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9510 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">mouse_y</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5794" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5794 pre">
+      <div role="tabpanel" id="cs-snippet-8043" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8043 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MouseY</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4055" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4055 pre">
+      <div role="tabpanel" id="pas-snippet-5534" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5534 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MouseY</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5033" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5033 pre">
+      <div role="tabpanel" id="py-snippet-7825" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7825 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">mouse_y</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2799,27 +2436,44 @@ window location</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-move-mouse" data-anchor> Move Mouse </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Move Mouse:
-          <ul>
-              <li>
-                <a href="/api/input/#move-mouse">
-                  Move Mouse ( Double, Double )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#move-mouse-to-point">
-                  Move Mouse ( Point 2D )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-move-mouse" data-anchor>
+            Move Mouse
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#move-mouse">                      <strong>Move Mouse</strong>
+                      (
+                          <em>x</em>
+                          :
+                          <code>Double</code>
+                          <em>y</em>
+                          :
+                          <code>Double</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#move-mouse-to-point">                      <strong>Move Mouse</strong>
+                      (
+                          <em>point</em>
+                          :
+                          <code>Point 2D</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="move-mouse" data-anchor> Move Mouse </h3>
   <div class="sk-api-description">
@@ -2876,44 +2530,43 @@ window location</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6782" aria-controls="cpp-snippet-6782" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-808" aria-controls="cpp-snippet-808" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8653" aria-controls="cs-snippet-8653" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9042" aria-controls="cs-snippet-9042" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6023" aria-controls="pas-snippet-6023" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-340" aria-controls="pas-snippet-340" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6139" aria-controls="py-snippet-6139" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8179" aria-controls="py-snippet-8179" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6782" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6782 pre">
+      <div role="tabpanel" id="cpp-snippet-808" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-808 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_mouse</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8653" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8653 pre">
+      <div role="tabpanel" id="cs-snippet-9042" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9042 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveMouse</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6023" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6023 pre">
+      <div role="tabpanel" id="pas-snippet-340" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-340 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveMouse</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="kt">Double</span><span class="p">;</span> <span class="n">y</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6139" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6139 pre">
+      <div role="tabpanel" id="py-snippet-8179" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8179 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_mouse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -2960,37 +2613,37 @@ window location</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6701" aria-controls="cpp-snippet-6701" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-50" aria-controls="cpp-snippet-50" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9484" aria-controls="cs-snippet-9484" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1378" aria-controls="cs-snippet-1378" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5128" aria-controls="pas-snippet-5128" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9461" aria-controls="pas-snippet-9461" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8736" aria-controls="py-snippet-8736" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4898" aria-controls="py-snippet-4898" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6701" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6701 pre">
+      <div role="tabpanel" id="cpp-snippet-50" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-50 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">move_mouse</span><span class="p">(</span><span class="n">point_2d</span> <span class="n">point</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9484" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9484 pre">
+      <div role="tabpanel" id="cs-snippet-1378" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1378 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MoveMouse</span><span class="p">(</span><span class="n">Point2D</span> <span class="n">point</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5128" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5128 pre">
+      <div role="tabpanel" id="pas-snippet-9461" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9461 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">MoveMouse</span><span class="p">(</span><span class="n">point</span><span class="p">:</span> <span class="n">Point2D</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8736" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8736 pre">
+      <div role="tabpanel" id="py-snippet-4898" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4898 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">move_mouse_to_point</span><span class="p">(</span><span class="n">point</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2998,27 +2651,38 @@ window location</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-show-mouse" data-anchor> Show Mouse </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Show Mouse:
-          <ul>
-              <li>
-                <a href="/api/input/#show-mouse">
-                  Show Mouse (  )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#show-mouse-with-boolean">
-                  Show Mouse ( Boolean )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-show-mouse" data-anchor>
+            Show Mouse
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#show-mouse">                      <strong>Show Mouse</strong>
+                      (
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#show-mouse-with-boolean">                      <strong>Show Mouse</strong>
+                      (
+                          <em>show</em>
+                          :
+                          <code>Boolean</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="show-mouse" data-anchor> Show Mouse </h3>
   <div class="sk-api-description">
@@ -3034,44 +2698,43 @@ by a <code>Hidemouse</code> or <code>Setmousevisible</code>(False) call.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9583" aria-controls="cpp-snippet-9583" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1850" aria-controls="cpp-snippet-1850" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1194" aria-controls="cs-snippet-1194" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1711" aria-controls="cs-snippet-1711" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7769" aria-controls="pas-snippet-7769" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7031" aria-controls="pas-snippet-7031" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5454" aria-controls="py-snippet-5454" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2163" aria-controls="py-snippet-2163" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9583" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9583 pre">
+      <div role="tabpanel" id="cpp-snippet-1850" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1850 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">show_mouse</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1194" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1194 pre">
+      <div role="tabpanel" id="cs-snippet-1711" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1711 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ShowMouse</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7769" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7769 pre">
+      <div role="tabpanel" id="pas-snippet-7031" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7031 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ShowMouse</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5454" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5454 pre">
+      <div role="tabpanel" id="py-snippet-2163" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2163 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">show_mouse</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -3119,37 +2782,37 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1465" aria-controls="cpp-snippet-1465" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1739" aria-controls="cpp-snippet-1739" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-331" aria-controls="cs-snippet-331" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-689" aria-controls="cs-snippet-689" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1903" aria-controls="pas-snippet-1903" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8119" aria-controls="pas-snippet-8119" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8932" aria-controls="py-snippet-8932" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3250" aria-controls="py-snippet-3250" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1465" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1465 pre">
+      <div role="tabpanel" id="cpp-snippet-1739" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1739 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">show_mouse</span><span class="p">(</span><span class="kt">bool</span> <span class="n">show</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-331" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-331 pre">
+      <div role="tabpanel" id="cs-snippet-689" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-689 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ShowMouse</span><span class="p">(</span><span class="kt">bool</span> <span class="n">show</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1903" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1903 pre">
+      <div role="tabpanel" id="pas-snippet-8119" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8119 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ShowMouse</span><span class="p">(</span><span class="n">show</span><span class="p">:</span> <span class="kt">Boolean</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8932" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8932 pre">
+      <div role="tabpanel" id="py-snippet-3250" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3250 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">show_mouse_with_boolean</span><span class="p">(</span><span class="n">show</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3157,22 +2820,8 @@ in the window or not) based on the show parameter.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" style='display:none'>
-        <h3 id="group-draw-collected-text" data-anchor> Draw Collected Text </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Draw Collected Text:
-          <ul>
-              <li>
-                <a href="/api/input/#draw-collected-text">
-                  Draw Collected Text ( Color, Font, Integer, Drawing Options )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="draw-collected-text" data-anchor> Draw Collected Text </h3>
   <div class="sk-api-description">
@@ -3255,37 +2904,37 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8868" aria-controls="cpp-snippet-8868" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5108" aria-controls="cpp-snippet-5108" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3441" aria-controls="cs-snippet-3441" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2257" aria-controls="cs-snippet-2257" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6669" aria-controls="pas-snippet-6669" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2455" aria-controls="pas-snippet-2455" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3258" aria-controls="py-snippet-3258" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3811" aria-controls="py-snippet-3811" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8868" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8868 pre">
+      <div role="tabpanel" id="cpp-snippet-5108" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5108 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">draw_collected_text</span><span class="p">(</span><span class="n">color</span> <span class="n">clr</span><span class="p">,</span> <span class="n">font</span> <span class="n">fnt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">font_size</span><span class="p">,</span> <span class="k">const</span> <span class="n">drawing_options</span> <span class="o">&amp;</span><span class="n">opts</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3441" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3441 pre">
+      <div role="tabpanel" id="cs-snippet-2257" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2257 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">DrawCollectedText</span><span class="p">(</span><span class="n">Color</span> <span class="n">clr</span><span class="p">,</span> <span class="n">Font</span> <span class="n">fnt</span><span class="p">,</span> <span class="kt">int</span> <span class="n">fontSize</span><span class="p">,</span> <span class="n">DrawingOptions</span> <span class="n">opts</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6669" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6669 pre">
+      <div role="tabpanel" id="pas-snippet-2455" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2455 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">DrawCollectedText</span><span class="p">(</span><span class="n">clr</span><span class="p">:</span> <span class="n">Color</span><span class="p">;</span> <span class="n">fnt</span><span class="p">:</span> <span class="n">Font</span><span class="p">;</span> <span class="n">fontSize</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="k">const</span> <span class="n">opts</span><span class="p">:</span> <span class="n">DrawingOptions</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3258" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3258 pre">
+      <div role="tabpanel" id="py-snippet-3811" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3811 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">draw_collected_text</span><span class="p">(</span><span class="n">clr</span><span class="p">,</span> <span class="n">fnt</span><span class="p">,</span> <span class="n">font_size</span><span class="p">,</span> <span class="n">opts</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3293,27 +2942,38 @@ in the window or not) based on the show parameter.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-end-reading-text" data-anchor> End Reading Text </h3>
-        <div class="sk-api-description">
-          There are multiple versions of End Reading Text:
-          <ul>
-              <li>
-                <a href="/api/input/#end-reading-text">
-                  End Reading Text (  )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#end-reading-text-in-window">
-                  End Reading Text ( Window )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-end-reading-text" data-anchor>
+            End Reading Text
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#end-reading-text">                      <strong>End Reading Text</strong>
+                      (
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#end-reading-text-in-window">                      <strong>End Reading Text</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="end-reading-text" data-anchor> End Reading Text </h3>
   <div class="sk-api-description">
@@ -3328,44 +2988,43 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8451" aria-controls="cpp-snippet-8451" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-268" aria-controls="cpp-snippet-268" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7181" aria-controls="cs-snippet-7181" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4396" aria-controls="cs-snippet-4396" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8860" aria-controls="pas-snippet-8860" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3977" aria-controls="pas-snippet-3977" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9486" aria-controls="py-snippet-9486" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5573" aria-controls="py-snippet-5573" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8451" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8451 pre">
+      <div role="tabpanel" id="cpp-snippet-268" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-268 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">end_reading_text</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7181" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7181 pre">
+      <div role="tabpanel" id="cs-snippet-4396" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4396 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">EndReadingText</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8860" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8860 pre">
+      <div role="tabpanel" id="pas-snippet-3977" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3977 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">EndReadingText</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9486" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9486 pre">
+      <div role="tabpanel" id="py-snippet-5573" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5573 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">end_reading_text</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -3412,37 +3071,37 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-658" aria-controls="cpp-snippet-658" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6366" aria-controls="cpp-snippet-6366" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9048" aria-controls="cs-snippet-9048" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7666" aria-controls="cs-snippet-7666" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5940" aria-controls="pas-snippet-5940" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9903" aria-controls="pas-snippet-9903" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9711" aria-controls="py-snippet-9711" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-646" aria-controls="py-snippet-646" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-658" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-658 pre">
+      <div role="tabpanel" id="cpp-snippet-6366" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6366 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">end_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9048" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9048 pre">
+      <div role="tabpanel" id="cs-snippet-7666" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7666 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">EndReadingText</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5940" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5940 pre">
+      <div role="tabpanel" id="pas-snippet-9903" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9903 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">EndReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9711" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9711 pre">
+      <div role="tabpanel" id="py-snippet-646" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-646 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">end_reading_text_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3450,27 +3109,38 @@ in the window or not) based on the show parameter.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-reading-text" data-anchor> Reading Text </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Reading Text:
-          <ul>
-              <li>
-                <a href="/api/input/#reading-text">
-                  Reading Text (  )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#reading-text-in-window">
-                  Reading Text ( Window )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-reading-text" data-anchor>
+            Reading Text
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#reading-text">                      <strong>Reading Text</strong>
+                      (
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#reading-text-in-window">                      <strong>Reading Text</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="reading-text" data-anchor> Reading Text </h3>
   <div class="sk-api-description">
@@ -3496,44 +3166,43 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2594" aria-controls="cpp-snippet-2594" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6129" aria-controls="cpp-snippet-6129" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-282" aria-controls="cs-snippet-282" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5988" aria-controls="cs-snippet-5988" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9960" aria-controls="pas-snippet-9960" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5881" aria-controls="pas-snippet-5881" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1180" aria-controls="py-snippet-1180" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5043" aria-controls="py-snippet-5043" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2594" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2594 pre">
+      <div role="tabpanel" id="cpp-snippet-6129" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6129 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">reading_text</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-282" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-282 pre">
+      <div role="tabpanel" id="cs-snippet-5988" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5988 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ReadingText</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9960" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9960 pre">
+      <div role="tabpanel" id="pas-snippet-5881" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5881 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadingText</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1180" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1180 pre">
+      <div role="tabpanel" id="py-snippet-5043" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5043 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reading_text</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -3591,37 +3260,37 @@ in the window or not) based on the show parameter.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1928" aria-controls="cpp-snippet-1928" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9250" aria-controls="cpp-snippet-9250" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6283" aria-controls="cs-snippet-6283" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9844" aria-controls="cs-snippet-9844" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9289" aria-controls="pas-snippet-9289" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9467" aria-controls="pas-snippet-9467" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1122" aria-controls="py-snippet-1122" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8767" aria-controls="py-snippet-8767" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1928" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1928 pre">
+      <div role="tabpanel" id="cpp-snippet-9250" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9250 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6283" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6283 pre">
+      <div role="tabpanel" id="cs-snippet-9844" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9844 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ReadingText</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9289" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9289 pre">
+      <div role="tabpanel" id="pas-snippet-9467" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9467 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">ReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1122" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1122 pre">
+      <div role="tabpanel" id="py-snippet-8767" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8767 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">reading_text_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3629,37 +3298,69 @@ in the window or not) based on the show parameter.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-start-reading-text" data-anchor> Start Reading Text </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Start Reading Text:
-          <ul>
-              <li>
-                <a href="/api/input/#start-reading-text">
-                  Start Reading Text ( Rectangle )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#start-reading-text-with-initial-text">
-                  Start Reading Text ( Rectangle, String )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#start-reading-text-in-window">
-                  Start Reading Text ( Window, Rectangle )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#start-reading-text-in-window-with-initial-text">
-                  Start Reading Text ( Window, Rectangle, String )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-start-reading-text" data-anchor>
+            Start Reading Text
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#start-reading-text">                      <strong>Start Reading Text</strong>
+                      (
+                          <em>rect</em>
+                          :
+                          <code>Rectangle</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#start-reading-text-with-initial-text">                      <strong>Start Reading Text</strong>
+                      (
+                          <em>rect</em>
+                          :
+                          <code>Rectangle</code>
+                          <em>initial_text</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#start-reading-text-in-window">                      <strong>Start Reading Text</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                          <em>rect</em>
+                          :
+                          <code>Rectangle</code>
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#start-reading-text-in-window-with-initial-text">                      <strong>Start Reading Text</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                          <em>rect</em>
+                          :
+                          <code>Rectangle</code>
+                          <em>initial_text</em>
+                          :
+                          <code>String</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="start-reading-text" data-anchor> Start Reading Text </h3>
   <div class="sk-api-description">
@@ -3704,44 +3405,43 @@ supplied rectangle.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4007" aria-controls="cpp-snippet-4007" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4917" aria-controls="cpp-snippet-4917" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8754" aria-controls="cs-snippet-8754" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6074" aria-controls="cs-snippet-6074" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8987" aria-controls="pas-snippet-8987" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2823" aria-controls="pas-snippet-2823" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3448" aria-controls="py-snippet-3448" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3416" aria-controls="py-snippet-3416" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4007" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4007 pre">
+      <div role="tabpanel" id="cpp-snippet-4917" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4917 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">rectangle</span> <span class="n">rect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8754" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8754 pre">
+      <div role="tabpanel" id="cs-snippet-6074" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6074 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartReadingText</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8987" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8987 pre">
+      <div role="tabpanel" id="pas-snippet-2823" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2823 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3448" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3448 pre">
+      <div role="tabpanel" id="py-snippet-3416" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3416 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_reading_text</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -3802,44 +3502,43 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1020" aria-controls="cpp-snippet-1020" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-905" aria-controls="cpp-snippet-905" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3981" aria-controls="cs-snippet-3981" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5815" aria-controls="cs-snippet-5815" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4743" aria-controls="pas-snippet-4743" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-258" aria-controls="pas-snippet-258" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7039" aria-controls="py-snippet-7039" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7722" aria-controls="py-snippet-7722" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1020" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1020 pre">
+      <div role="tabpanel" id="cpp-snippet-905" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-905 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="n">string</span> <span class="n">initial_text</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3981" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3981 pre">
+      <div role="tabpanel" id="cs-snippet-5815" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5815 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartReadingText</span><span class="p">(</span><span class="n">Rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="kt">string</span> <span class="n">initialText</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4743" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4743 pre">
+      <div role="tabpanel" id="pas-snippet-258" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-258 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">;</span> <span class="n">initialText</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7039" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7039 pre">
+      <div role="tabpanel" id="py-snippet-7722" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7722 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_reading_text_with_initial_text</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="n">initial_text</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -3900,44 +3599,43 @@ supplied rectangle.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9880" aria-controls="cpp-snippet-9880" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9591" aria-controls="cpp-snippet-9591" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3248" aria-controls="cs-snippet-3248" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5647" aria-controls="cs-snippet-5647" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1520" aria-controls="pas-snippet-1520" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5032" aria-controls="pas-snippet-5032" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3883" aria-controls="py-snippet-3883" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7118" aria-controls="py-snippet-7118" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9880" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9880 pre">
+      <div role="tabpanel" id="cpp-snippet-9591" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9591 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">rectangle</span> <span class="n">rect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3248" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3248 pre">
+      <div role="tabpanel" id="cs-snippet-5647" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5647 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartReadingText</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="n">rect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1520" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1520 pre">
+      <div role="tabpanel" id="pas-snippet-5032" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5032 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3883" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3883 pre">
+      <div role="tabpanel" id="py-snippet-7118" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7118 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_reading_text_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">,</span> <span class="n">rect</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -4011,37 +3709,37 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6435" aria-controls="cpp-snippet-6435" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2230" aria-controls="cpp-snippet-2230" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5847" aria-controls="cs-snippet-5847" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9603" aria-controls="cs-snippet-9603" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5424" aria-controls="pas-snippet-5424" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8329" aria-controls="pas-snippet-8329" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1243" aria-controls="py-snippet-1243" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-208" aria-controls="py-snippet-208" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6435" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6435 pre">
+      <div role="tabpanel" id="cpp-snippet-2230" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2230 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">start_reading_text</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="n">string</span> <span class="n">initial_text</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5847" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5847 pre">
+      <div role="tabpanel" id="cs-snippet-9603" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9603 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StartReadingText</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">,</span> <span class="n">Rectangle</span> <span class="n">rect</span><span class="p">,</span> <span class="kt">string</span> <span class="n">initialText</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5424" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5424 pre">
+      <div role="tabpanel" id="pas-snippet-8329" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8329 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StartReadingText</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">;</span> <span class="n">rect</span><span class="p">:</span> <span class="n">Rectangle</span><span class="p">;</span> <span class="n">initialText</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1243" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1243 pre">
+      <div role="tabpanel" id="py-snippet-208" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-208 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">start_reading_text_in_window_with_initial_text</span><span class="p">(</span><span class="n">wind</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">initial_text</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4049,27 +3747,38 @@ supplied rectangle. The text will start with an initial value.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-text-entry-cancelled" data-anchor> Text Entry Cancelled </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Text Entry Cancelled:
-          <ul>
-              <li>
-                <a href="/api/input/#text-entry-cancelled">
-                  Text Entry Cancelled (  )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#text-entry-cancelled-in-window">
-                  Text Entry Cancelled ( Window )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-text-entry-cancelled" data-anchor>
+            Text Entry Cancelled
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#text-entry-cancelled">                      <strong>Text Entry Cancelled</strong>
+                      (
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#text-entry-cancelled-in-window">                      <strong>Text Entry Cancelled</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="text-entry-cancelled" data-anchor> Text Entry Cancelled </h3>
   <div class="sk-api-description">
@@ -4095,44 +3804,43 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-258" aria-controls="cpp-snippet-258" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8325" aria-controls="cpp-snippet-8325" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3250" aria-controls="cs-snippet-3250" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8773" aria-controls="cs-snippet-8773" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7064" aria-controls="pas-snippet-7064" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9846" aria-controls="pas-snippet-9846" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7116" aria-controls="py-snippet-7116" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9911" aria-controls="py-snippet-9911" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-258" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-258 pre">
+      <div role="tabpanel" id="cpp-snippet-8325" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8325 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">text_entry_cancelled</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3250" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3250 pre">
+      <div role="tabpanel" id="cs-snippet-8773" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8773 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TextEntryCancelled</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7064" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7064 pre">
+      <div role="tabpanel" id="pas-snippet-9846" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9846 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextEntryCancelled</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7116" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7116 pre">
+      <div role="tabpanel" id="py-snippet-9911" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9911 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">text_entry_cancelled</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -4190,37 +3898,37 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1770" aria-controls="cpp-snippet-1770" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9666" aria-controls="cpp-snippet-9666" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7708" aria-controls="cs-snippet-7708" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5180" aria-controls="cs-snippet-5180" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8764" aria-controls="pas-snippet-8764" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7967" aria-controls="pas-snippet-7967" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4242" aria-controls="py-snippet-4242" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3256" aria-controls="py-snippet-3256" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1770" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1770 pre">
+      <div role="tabpanel" id="cpp-snippet-9666" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9666 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">text_entry_cancelled</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7708" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7708 pre">
+      <div role="tabpanel" id="cs-snippet-5180" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5180 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TextEntryCancelled</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8764" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8764 pre">
+      <div role="tabpanel" id="pas-snippet-7967" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7967 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextEntryCancelled</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4242" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4242 pre">
+      <div role="tabpanel" id="py-snippet-3256" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3256 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">text_entry_cancelled_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4228,27 +3936,38 @@ supplied rectangle. The text will start with an initial value.</p>
 
       </dd>
 
-
 </section>
 
-      <section class="sk-api-function sk-api-section" >
-        <h3 id="group-text-input" data-anchor> Text Input </h3>
-        <div class="sk-api-description">
-          There are multiple versions of Text Input:
-          <ul>
-              <li>
-                <a href="/api/input/#text-input">
-                  Text Input (  )
-                </a>
-              </li>
-              <li>
-                <a href="/api/input/#text-input-in-window">
-                  Text Input ( Window )
-                </a>
-              </li>
-          </ul>
-        </div>
-      </section>
+        <section class="sk-api-function sk-api-section">
+          <h3 id="group-text-input" data-anchor>
+            Text Input
+            <label class="tag tag-pill tag-primary pull-right">
+              Overloaded
+            </label>
+          </h3>
+          <div class="sk-api-overloaded">
+            <div class="card">
+              <div class="card-header">
+                This function is overloaded. The following versions exist.
+              </div>
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+<a href="/api/input/#text-input">                      <strong>Text Input</strong>
+                      (
+                      )
+</a>                  </li>
+                  <li class="list-group-item">
+<a href="/api/input/#text-input-in-window">                      <strong>Text Input</strong>
+                      (
+                          <em>wind</em>
+                          :
+                          <code>Window</code>
+                      )
+</a>                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <section class="sk-api-function sk-api-section">
   <h3 id="text-input" data-anchor> Text Input </h3>
   <div class="sk-api-description">
@@ -4274,44 +3993,43 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8900" aria-controls="cpp-snippet-8900" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3859" aria-controls="cpp-snippet-3859" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2890" aria-controls="cs-snippet-2890" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8287" aria-controls="cs-snippet-8287" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4512" aria-controls="pas-snippet-4512" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6724" aria-controls="pas-snippet-6724" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2859" aria-controls="py-snippet-2859" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2323" aria-controls="py-snippet-2323" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8900" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8900 pre">
+      <div role="tabpanel" id="cpp-snippet-3859" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3859 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">text_input</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2890" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2890 pre">
+      <div role="tabpanel" id="cs-snippet-8287" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8287 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TextInput</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4512" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4512 pre">
+      <div role="tabpanel" id="pas-snippet-6724" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6724 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextInput</span><span class="p">():</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2859" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2859 pre">
+      <div role="tabpanel" id="py-snippet-2323" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2323 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">text_input</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 
@@ -4369,44 +4087,43 @@ supplied rectangle. The text will start with an initial value.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2297" aria-controls="cpp-snippet-2297" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6928" aria-controls="cpp-snippet-6928" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5232" aria-controls="cs-snippet-5232" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6099" aria-controls="cs-snippet-6099" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3331" aria-controls="pas-snippet-3331" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8004" aria-controls="pas-snippet-8004" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8985" aria-controls="py-snippet-8985" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5796" aria-controls="py-snippet-5796" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2297" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2297 pre">
+      <div role="tabpanel" id="cpp-snippet-6928" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6928 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">text_input</span><span class="p">(</span><span class="n">window</span> <span class="n">wind</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5232" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5232 pre">
+      <div role="tabpanel" id="cs-snippet-6099" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6099 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">TextInput</span><span class="p">(</span><span class="n">Window</span> <span class="n">wind</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3331" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3331 pre">
+      <div role="tabpanel" id="pas-snippet-8004" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8004 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">TextInput</span><span class="p">(</span><span class="n">wind</span><span class="p">:</span> <span class="n">Window</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8985" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8985 pre">
+      <div role="tabpanel" id="py-snippet-5796" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5796 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">text_input_in_window</span><span class="p">(</span><span class="n">wind</span><span class="p">):</span></code></pre>
       </div>
   </div>
 </div>
 
       </dd>
-
 
 </section>
 

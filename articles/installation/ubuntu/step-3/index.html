@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+
+    <title>SplashKit - Articles - Installation - Ubuntu - Step 3</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_installation articles_installation_ubuntu articles_installation_ubuntu_step-3 articles_installation_ubuntu_step-3_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+        <h1>Installing the SplashKit SDK</h1>
+        <p class="lead">
+    Step 3 of 4
+  </p>
+  <hr>
+  <article class="sk-article">
+    <p>Once you have <a href="/articles/installation/ubuntu/step2.html">installed the pre-requisite packages</a>, you can
+install the SplashKit library.</p>
+
+<ol>
+<li><p>Open up a terminal.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Execute the SplashKit library installation script.</p>
+
+<p>Copy and paste the code below into your terminal and press enter.</p>
+<pre class="highlight shell"><code>bash &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh<span class="o">)</span>
+</code></pre>
+<p><img src="/images/install-gifs/Ubuntu/install-splashkit-3d7cca8e.gif" alt="Installing SplashKit library" /></p>
+
+<p>When asked if you have installed the depenencies, type &ldquo;Y&rdquo; and press enter.</p></li>
+<li><p>Add SplashKit to your PATH environment variable.</p>
+
+<p>Copy and paste the code below into your terminal and press enter.</p>
+<pre class="highlight shell"><code><span class="nb">echo</span> -e <span class="s2">"</span><span class="se">\n</span><span class="s2">#SplashKit Library Path</span><span class="se">\n</span><span class="s2">PATH=</span><span class="se">\"</span><span class="nv">$HOME</span><span class="s2">/.splashkit/skm-linux-x64:</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="se">\"</span><span class="s2">"</span> &gt;&gt; ~/.profile
+</code></pre></li>
+<li><p>Restart your computer.</p>
+
+<p>To finalise the installation of SplashKit, you need to restart your computer.</p>
+
+<p>After your computer has reset, log back in and proceed to step five.</p></li>
+<li><p>Open up a terminal.</p>
+
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Confirm your installation was successfull.</p>
+
+<p>Enter the code below into your terminal and press enter. If your installation
+succeeded, a window should open taking you to the SplashKit home page.</p>
+<pre class="highlight shell"><code>skm
+</code></pre></li>
+</ol>
+
+<p>Once you have completed the installation of SplashKit, move on to the
+<a href="/articles/installation/ubuntu/step4.html">next step - Install Visual Studio Code</a></p>
+
+<p>Return to the
+<a href="/articles/installation/ubuntu.html">overview of the Ubuntu Linux install</a>.</p>
+
+  </article>
+  <hr>
+  <nav>
+<a href="/articles/installation/ubuntu/step-2/" class="btn btn-sm btn-primary">        <i class="fa fa-chevron-left"></i>
+        <strong>Previous Step:</strong>
+        Installing Prerequsites for SplashKit
+</a><a href="/articles/installation/ubuntu/step-4/" class="btn btn-sm btn-primary pull-right">        <strong>Next Step:</strong>
+        Installing Visual Studio Code
+        <i class="fa fa-chevron-right"></i>
+</a>  </nav>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-2c341741.js"></script>
+  </body>
+</html>

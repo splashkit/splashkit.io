@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+
+    <title>SplashKit - Articles - Guides - Tags - Databases - Using Databases</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_databases articles_guides_tags_databases_using-databases articles_guides_tags_databases_using-databases_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+        <h1>Using Databases</h1>
+        <aside class="sk-sidebar">
+    <h3>All Guides</h3>
+    <nav role="navigation">
+      <ul class="nav sk-article-nav-root">
+          <li class="nav-item">
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/databases" class="nav-link active">              Databases
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
+</a>          </li>
+      </ul>
+    </nav>
+  </aside>
+  <article class="sk-content">
+      <p class="lead">
+        Written by
+            Jake Renzella
+        on Oct  3 2017
+      </p>
+    <p>Databases are powerful tools for persisting, and querying data. In this guide, we&rsquo;ll be looking at SplashKit&rsquo;s SQLite3 database, and how to use it.</p>
+
+<h3>Important types:</h3>
+
+<ul>
+<li><code>database</code> : The type which represents the actual database.</li>
+<li><code>query_result</code>: This is the type which represents the result of performing an action on the database. If the action performed on the database returns data (such as a select sql statement), then it contains the returned data.</li>
+</ul>
+
+<h3>How to use the database</h3>
+
+<ol>
+<li><p>Create or open a database.</p>
+
+<p>To open a database in SplashKit, you simply call:
+<code>open_database(&quot;test1&quot;, &quot;test_database&quot;);</code>.</p>
+
+<p>The two required parameters are:</p>
+
+<ul>
+<li>SplashKit&rsquo;s name of your database (important)</li>
+<li>the name you wish to assign to the file of the database. (not as important).</li>
+</ul>
+
+<p><code>open_database</code> returns a <code>database</code> type which you can then use to perform queries, so how do we actually open a database? Easy.</p></li>
+<li><p>Create the variable which will hold the result/s of our queries for when we need it later:
+<code>query_result result;</code></p></li>
+<li><p>we&rsquo;re ready to run SQL statements! How exciting&hellip;
+<code>run_sql(my_db, &quot;CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);&quot;);</code>
+This statement ran the sql statement provided to the given database, pretty simple! We can check if it was successful by using <code>query_success(result);</code> if we feel the need to.</p></li>
+<li><p>Let&rsquo;s insert some data:
+<code>run_sql(my_db, &quot;INSERT INTO friends VALUES (10001, \&quot;Jake Renzella\&quot;;&quot;);</code></p></li>
+<li><p>And then let&rsquo;s query the database for the data which we just added (10001, Jake Renzella.)
+<code>result = run_sql(select * from friends;&quot;);</code></p></li>
+</ol>
+
+<p>Notice that this query returns data (because it is a select statement), so we need to see what the data is, to do this, we assign the result of <code>run_sql</code> to our <code>result</code> variable.</p>
+
+<ol>
+<li>Now we can inspect the data using <code>int data = query_column_for_int(result, 0);</code></li>
+</ol>
+
+<p>this method looks at a query_result and checks what data is in the current row&rsquo;s given column. We expect our id of <em>10001</em> to be returned and stored in <code>data</code>.</p>
+
+<p>Putting that together, here&rsquo;s a basic example of how to use a database:</p>
+<pre class="highlight c"><code><span class="n">database</span> <span class="n">my_db</span> <span class="o">=</span> <span class="n">open_database</span><span class="p">(</span><span class="s">"jakes_database"</span><span class="p">,</span> <span class="s">"database_V0.3"</span><span class="p">);</span>
+<span class="n">query_result</span> <span class="n">result</span><span class="p">;</span>
+
+<span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);"</span><span class="p">);</span>
+<span class="n">run_sql</span><span class="p">(</span><span class="n">my_db</span><span class="p">,</span> <span class="s">"INSERT INTO friends VALUES (10001, </span><span class="se">\"</span><span class="s">Jake Renzella</span><span class="se">\"</span><span class="s">;"</span><span class="p">);</span>
+<span class="c1">//Of course we could have just executed this in one large SQL statement!
+</span><span class="n">result</span> <span class="o">=</span> <span class="n">run_sql</span><span class="p">(</span><span class="s">"select * from friends;"</span><span class="p">);</span>
+
+<span class="c1">//at this point (if all goes well), the data is added to the database, so let's read it.
+</span>
+<span class="kt">int</span> <span class="n">data</span> <span class="o">=</span> <span class="n">query_column_for_int</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="o">==</span> <span class="mi">10001</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"WOOHOO"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">///remember to clean up after yourself...
+</span><span class="n">free_all_query_results</span><span class="p">();</span>
+<span class="n">free_database</span><span class="p">(</span><span class="n">my_db</span><span class="p">);</span>
+</code></pre>
+<h3>Notes</h3>
+
+<ul>
+<li>If multiple rows of data are returned from a statement, use <code>get_next_row(result);</code> to move to the next row, and perform your <code>query_column_for_X</code> method again.</li>
+</ul>
+
+<p>The usual pattern is to have a while loop performing <code>get_next_row(result)</code> and accessing the data in the body.</p>
+
+<ul>
+<li>You can natively store
+
+<ul>
+<li>ints</li>
+<li>floats</li>
+<li>text</li>
+<li>bools (as ints.)</li>
+</ul></li>
+</ul>
+
+<p>and there are methods for all of these. See the API for more details.</p>
+
+<ul>
+<li>If needed, you can ask SplashKit what type of data is stored at a column using <code>query_type_of_col(result, 0)</code>.
+We&rsquo;ll ask the database for you ;)</li>
+</ul>
+
+<p>Jake Renzella, 2016.</p>
+
+  </article>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-2c341741.js"></script>
+  </body>
+</html>
