@@ -20,26 +20,26 @@ gem 'require_all', '1.3.3'
 gem 'middleman-autoprefixer', '~>2.7.0'
 
 # Use sprokets for assets + compass
-gem 'middleman-sprockets', '4.0.0'
 gem 'middleman-compass', '4.0.1'
+gem 'middleman-sprockets', '4.0.0'
+
+# Generating articles
+gem 'middleman-blog', '~> 4.0'
 
 # Boostrap as SASS
-gem 'sass', '3.4.19'
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'rails-assets-tether', '>= 1.1.0'
+gem 'sass', '3.4.19'
 
 # Grab jQuery
 gem 'jquery-middleman', '3.1.2'
 
 # Markdown redcarpet parsing engine + syntax highlighter for middleman
-gem 'redcarpet', '3.3.3'
 gem 'middleman-syntax', '~>3.0.0'
+gem 'redcarpet', '3.3.3'
 
 # Publish middleman website to gh-pages
 gem 'middleman-gh-pages', '~>0.3.0'
 
 # Rake tasks
 gem 'rake', '10.5.0'
-
-# Nokogiri for parsing HTML tags
-gem 'nokogiri'

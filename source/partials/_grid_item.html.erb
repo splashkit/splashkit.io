@@ -1,0 +1,9 @@
+<li class="sk-grid-item">
+  <% link_to href, class: "sk-grid-btn" do %>
+    <% unless icon.nil? %>
+      <i class="fa <%= icon %>"></i>
+    <% end %>
+    <header><%= title %></header>
+    <small><%= description %></small>
+  <% end %>
+</li><!--/<%= title.downcase %>-->

@@ -1,0 +1,155 @@
+# Writing a SplashKit Guide
+
+This tutorial will cover the details of how to write a SplashKit guide for the SplashKit website.
+
+You will need:
+
+  1. a [GitHub](http://github.com) account,
+  2. a Ruby development environment (v2.3.1) to build the website,
+  3. an awesome idea for a guide!
+
+## Getting Ready
+
+In order to test your guide in the SplashKit website, you need to download the source code for the website. To do this, make sure you are logged into GitHub, and then [create a fork](http://github.com/splashkit/splashkit.io/fork) of the SplashKit.io website repository onto your own personal GitHub account.
+
+Once you have forked the website repository, you should then [clone your fork](https://help.github.com/articles/cloning-a-repository/) of the repository to your local machine by selecting "clone or download" and copying the link. You can do this via the `git clone <link>` command in the terminal, or by using [GitHub Desktop](https://desktop.github.com).
+
+Once you have cloned your forked repository, follow the instructions posted in the website's [readme](https://github.com/splashkit/splashkit.io/blob/master/README.md).
+
+## Creating The Guide
+
+To create a new guide, navigate to the directory where you cloned the repository:
+
+```
+cd /path/to/splashkit.io
+```
+
+Guides are categorised using a _tag_, which must relate to a member in the API group. The following keys can be used to relate your article to a specific API group:
+
+<% data.api.keys.each do |key| %>
+  - **`<%= key %>`**: <%= key.to_human_case %>
+<% end %>
+
+Once you have decided a name for your guide and which API group(s) it should relate, execute the following command:
+
+```
+bundle exec middleman article "[Name of Guide]" -t [tags]
+```
+
+You can associate multiple tags to one guide by separating tags using a comma. For example, if you wanted to write a `graphics` and `window`-related guide entitled "Drawing simple shapes", you would execute:
+
+```
+bundle exec middleman article "Drawing simple shapes" -t graphics,window
+```
+
+Once you execute this command, you will see that the guide you have named appears under `source/articles/guides` using the current day's date. For example, the command above would create `source/articles/guides/20XX-XX-XX-drawing-simple-shapes.html.md`.
+
+## Adding Required Frontmatter
+
+Open this file in a text editor and you will see the following:
+
+```yaml
+---
+
+title: Drawing simple shapes
+date: 2017-12-11 06:44 UTC
+tags: graphics,window
+
+---
+```
+
+The data separated by the three dashes (`---`) is known as the _frontmatter_ of the guide. This contains metadata about the guide, which (by default) includes the guide name, date created, and associated tags.
+
+<div class="alert alert-warning">
+  <strong>Note:</strong> You <strong>must</strong> add the following keys to the frontmatter:
+  <ul>
+    <li>
+      <strong><code>author</code></strong>:
+      your full name,
+    </li>
+    <li>
+      <strong><code>author_url</code></strong>:
+      a URL to your GitHub profile or personal website,
+    </li>
+    <li>
+      <strong><code>summary</code></strong>:
+      a summary of the guide that should be no more than two to three lines and should embody the gist of the guide,
+    </li>
+    <li>
+      <strong><code>related_funcs</code></strong>:
+      a list of related functions in snake_case.
+    </li>
+  </ul>
+  <strong>If you do not do this you may break the API documentation generation!</strong>
+</div>
+
+We suggest you copy and paste the following example to add it to the frontmatter to ensure no mistakes:
+
+```yaml
+---
+
+title: Drawing simple shapes
+date: 2017-12-11 06:44 UTC
+tags: graphics,window
+author: Fred Smith
+author_url: http://github.com/fsmith
+summary: |
+  This guide discusses how you can open a window to draw some simple
+  shapes in order to start playing around with graphics in SplashKit.
+related_funcs:
+  - create_window
+  - draw_rectangle
+  - refresh_screen
+  - clear_screen
+
+---
+
+```
+
+If you are unsure what functions keys to use, refer to the C++ snake_case name in the website. For example, for the "Free Music" function:
+
+![Example of name to use for function](https://i.imgur.com/TiTmcd3.png)
+
+## Write the guide
+
+Underneath the bottom three dashes, you may begin writing your guide using [Github-flavoured Markdown](https://guides.github.com/features/mastering-markdown/). You won't need to add the title of the guide as a Heading 1 (`<h1>` or `#`) as this is automatically added for you.
+
+<div class="alert alert-warning">
+  <strong>Note:</strong> When writing your guide, ensure you only use
+  Heading 2 to Heading 6 (<code>&lt;h2&gt;</code> ... <code>&lt;h6&gt;</code> or <code>##</code> ... <code>######</code>).
+  This is because Heading 1 is reserved for the guide's title.
+</div>
+
+Remember to keep the language friendly, include examples and ensure it is high quality.
+
+If you would like to include images in your guide, **host them on [Imgur](http://imgur.com)** as this will ensure they exist permanently (unlike temporary image hosting services such as [puush](http://puush.me/)).
+
+## Test the guide
+
+After you have finished writing, it's time to make sure everything looks right!
+
+From your terminal, where you created the guide, run the following command to start running the website locally:
+
+```
+bundle exec middleman
+```
+
+Now, visit [`http://localhost:4567`](http://localhost:4567) to see the website.
+
+Run through the following checklist to make sure:
+
+1. that you can navigate to the guides and see your guide your guide indexed in the _right_ API groups that you tagged your guide under,
+2. make sure it all looks good (i.e., no visual errors),
+3. make sure that relevant API function links appear under the respective functions in the API documentation. For example, if you wrote a `json`-tagged guide related to the `create_json` function, you would want to see the guides appear under the JSON API docs and the respective function:
+    ![JSON Guide Home](https://i.imgur.com/cPKwNgx.png)
+    ![JSON Guide Function](https://i.imgur.com/KNhJIJn.png)
+
+## Merging your guides into the SplashKit website
+
+If it's all looking good, it's time to submit a "pull request" so that a core member of the SplashKit team can review your proposed guide and get it published.
+
+To do this, push your changes via GitHub, and visit the GitHub webiste for your fork. View this [GitHub tutorial](https://help.github.com/guides/creating-a-pull-request/) for more details on how to do this. A member of the SplashKit team will view your guide, give feedback, and otherwise make sure everything looks good. Finally, they will then publish your guide!
+
+SplashKit is completely open source, and free to use &mdash; any contributions to the project are appreciated!
+
+If at any stage of this process you run into any issues, feel free to raise an issue on GitHub.

@@ -41,17 +41,3 @@ body > nav.navbar.sk-navbar {
     }
   }
 }
-
-#sticky-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 2em;
-    height: auto;
-    max-height: 90vh;
-    overflow-x: hidden;
-}
-#sticky-nav:before,
-#sticky-nav:after {
-    content: '';
-    display: table;
-}

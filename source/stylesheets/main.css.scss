@@ -13,14 +13,15 @@
 @import "partials/anchor";
 @import "partials/body";
 @import "partials/footer";
+@import "partials/grid";
 @import "partials/navbar";
 @import "partials/main";
 @import "partials/page-header";
 @import "partials/search";
+@import "partials/sidebar";
 @import "partials/snippet";
 @import "partials/splashkit-logo";
-@import "partials/_article";
-@import "partials/_guides";
+@import "partials/sticky";
 
 // Index partials
 @import "partials/index/main";
@@ -28,3 +29,4 @@
 @import "partials/api/article";
 @import "partials/api/nav";
 @import "partials/api/root-container";
+@import "partials/articles/article";

@@ -58,27 +58,23 @@
           </table>
         </dd>
       <% end # if params %>
+      <%# == Signatures == %>
       <dt>
         Signatures
       </dt>
       <dd>
         <%= snippet function.signatures %>
       </dd>
-
-      <% if !guides.empty? %>
+      <%# == Guides == %>
+      <% function_guides = guides_for_function(guides, function) %>
+      <% unless function_guides.empty? %>
         <dt>
           Guides
         </dt>
         <dd>
-        <% guides.each do |g| %>
-          <% if !g[:api_linked_functions].empty? %>
-            <% g[:api_linked_functions].each do |f| %>
-              <% if function.unique_global_name.downcase == f.downcase %>
-                  <a class="btn btn-primary btn-sm guide-button" target="_blank" href="/<%= g[:uri] %>"><%= g[:doc_title] %></a>
-              <% end # if function match %>
-            <% end # each function %>
-          <% end # if linked functions %>
-        <% end # each guide %>
+        <% function_guides.each do |guide| %>
+          <%= link_to guide.title, guide, class: 'btn btn-primary btn-sm', target: '_blank' %>
+        <% end %>
         </dd>
       <% end # if guides  %>
 

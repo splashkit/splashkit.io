@@ -1,0 +1,15 @@
+.sk-sticky-sidebar {
+  @include media-breakpoint-up(md) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    height: auto;
+    max-height: 90vh;
+    overflow-x: hidden;
+  }
+}
+.sk-sticky-sidebar:before,
+.sk-sticky-sidebar:after {
+    content: '';
+    display: table;
+}

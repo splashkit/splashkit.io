@@ -1,0 +1,26 @@
+---
+# Store platforms as just a key/value pair respective to what the
+# platform name is and its icon
+platforms:
+  -
+    title:        Windows
+    description:  Installation Guide
+    icon:         fa-windows
+    href:         /articles/installation/windows
+  -
+    title:        macOS
+    description:  Installation Guide
+    icon:         fa-apple
+    href:         /articles/installation/mac
+  -
+    title:        Ubuntu
+    description:  Installation Guide
+    icon:         fa-linux
+    href:         /articles/installation/ubuntu
+---
+
+<ul class="sk-grid">
+  <% current_page.data.platforms.each do |platform| %>
+    <%= partial 'partials/grid_item', locals: platform %>
+  <% end %>
+</ul>

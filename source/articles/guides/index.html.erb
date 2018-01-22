@@ -1,0 +1,10 @@
+<ul class="sk-grid">
+  <% blog.tags.keys.each do |tag| %>
+    <%= partial 'partials/grid_item', locals: {
+      title: tag.to_title_case.to_human_case,
+      description: 'Examples & Guides',
+      href: "/articles/guides/tags/#{tag}",
+      icon: nil
+    } %>
+  <% end %>
+</ul>

@@ -1,4 +1,4 @@
-require 'helpers/slug'
+require 'lib/helpers/slug'
 
 HUMANIZED_STRINGS = YAML.load_file('data/humanize.yml').freeze
 
@@ -11,6 +11,10 @@ module CoreExtensions
         selff = selff.gsub(regex, new)
       end
       selff.tr('_', ' ')
+    end
+
+    def to_title_case
+      split(/[_\s]/).map(&:capitalize).join(' ')
     end
 
     def to_kebab_case

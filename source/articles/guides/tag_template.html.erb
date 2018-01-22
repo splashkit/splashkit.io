@@ -1,0 +1,19 @@
+<h1><%= tagname.to_title_case.to_human_case %> Guides</h1>
+<p class="lead">
+  <%= articles.count %> article<%= articles.count > 1 ? 's' : ''%>
+</p>
+<% articles.sort_by(&:date).each do |article| %>
+  <% link_to article, class: 'sk-article-link'  do %>
+    <h4><%= article.title %></h4>
+    <h4 class="lead text-muted">
+      Written by <%= article.metadata[:page][:author] %> on
+      <%= article.date.strftime("%b %e %Y") %>
+    </h6>
+    <p>
+      <%= article.metadata[:page][:summary] %>
+    </p>
+    <span class="sk-read-more">
+      Read More <i class="fa fa-angle-double-right"></i>
+    </a>
+  <% end %>
+<% end %>
