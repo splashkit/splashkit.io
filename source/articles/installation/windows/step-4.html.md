@@ -7,7 +7,7 @@ tags: installation,ubuntu
 
 SplashKit works with a number of programming languages. Each of these has its own set of tools you will need to install.
 
-- For C#, install the [Dotnet core](/articles/installation/languages/windows/dotnet) tools.
+- For C#, install the [Dotnet core](/articles/installation/windows/languages/dotnet) tools.
 - For C++, install [g++](/articles/installation/windows/languages/clang) in MSYS2.
 
 
