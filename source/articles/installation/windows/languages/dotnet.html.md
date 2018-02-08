@@ -17,4 +17,4 @@ To get programming with C#, you can install the Dotnet Core tools
 
     ![](images/install-gifs/Windows/9.gif)
 
-Return to the [overview of the windows install](/articles/installation/windows.html).
+Return to the [overview of the windows install](/articles/installation/windows).

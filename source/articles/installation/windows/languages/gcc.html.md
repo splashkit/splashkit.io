@@ -23,4 +23,4 @@ tags: installation,windows,clang
 
     ![](images/install-gifs/extensions.gif)
 
-Return to the [overview of the Windows install](/articles/installation/windows.html).
+Return to the [overview of the windows install](/articles/installation/windows).
