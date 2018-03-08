@@ -13,6 +13,4 @@ tags: installation,mac
 
     ![](images/install-gifs/mac/5.gif)
 
-[Next - Install Language Tools](/articles/installation/mac/step4.html)
-
-Return to the [overview of the macOS install](/articles/installation/mac.html).
+Return to the [overview of the macOS install](/articles/installation/mac).

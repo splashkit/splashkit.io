@@ -35,4 +35,4 @@ can download and install Visual Studio Code to use as a source code editor.
     ![Installing Visual Studio Code on Ubuntu](images/install-gifs/Ubuntu/install-vsc.gif)
 
 Return to the
-[overview of the Ubuntu Linux install](/articles/installation/ubuntu.html).
+[overview of the Ubuntu Linux install](/articles/installation/ubuntu).

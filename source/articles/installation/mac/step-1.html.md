@@ -26,4 +26,6 @@ to execute it.
 xcode-select --install
 ```
 
-![Installing Command Line Tools](/install-gifs/mac/installing-cmd-line-tools.gif)
+![Installing Command Line Tools](/images/install-gifs/mac/installing-cmd-line-tools.gif)
+
+Return to the [overview of the macOS install](/articles/installation/mac).

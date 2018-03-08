@@ -23,6 +23,6 @@ MSYS2 provide a unix terminal environment for Windows. We will need this to run 
 
     ![](images/install-gifs/Windows/5.gif)
 
-Once you have completed these step, move on to the [next step - installing SplashKit](/articles/installation/windows/step2.html).
+Once you have completed these step, move on to the [next step - installing SplashKit](/articles/installation/windows/step-2.html).
 
-Return to the [overview of the windows install](/articles/installation/windows.html).
+Return to the [overview of the windows install](/articles/installation/windows).

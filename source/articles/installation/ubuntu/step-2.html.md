@@ -57,7 +57,7 @@ for SplashKit to operate on Ubuntu.
 
 
 Once you have completed this step, move on to the
-[next step - Install SplashKit library](/articles/installation/ubuntu/step3.html).
+[next step - Install SplashKit library](/articles/installation/ubuntu/step-3.html).
 
 Return to the
-[overview of the Ubuntu Linux install](/articles/installation/ubuntu.html).
+[overview of the Ubuntu Linux install](/articles/installation/ubuntu).

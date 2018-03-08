@@ -52,8 +52,8 @@ install the SplashKit library.
     ```
 
 Once you have completed the installation of SplashKit, move on to the
-[next step - Install Visual Studio Code](/articles/installation/ubuntu/step4.html)
+[next step - Install Visual Studio Code](/articles/installation/ubuntu/step-4.html)
 
 Return to the
-[overview of the Ubuntu Linux install](/articles/installation/ubuntu.html).
+[overview of the Ubuntu Linux install](/articles/installation/ubuntu).
 

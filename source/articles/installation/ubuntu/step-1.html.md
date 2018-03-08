@@ -35,7 +35,7 @@ To check which version of Ubuntu you are running, follow the steps below.
     ![Checking verison compatibility](images/install-gifs/Ubuntu/interpret-version.jpg)
 
 Once you have confirmed that your version is supported, move on to the
-[next step - Install pre-requisites for SplashKit](/articles/installation/ubuntu/step2.html).
+[next step - Install pre-requisites for SplashKit](/articles/installation/ubuntu/step-2.html).
 
 Return to the
-[overview of the Ubuntu Linux install](/articles/installation/ubuntu.html).
+[overview of the Ubuntu Linux install](/articles/installation/ubuntu).

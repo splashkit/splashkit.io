@@ -15,6 +15,6 @@ SplashKit works with Visual Studio Code, a light weight, cross platform, customi
 
     ![](images/install-gifs/Windows/11.gif)
 
-[Next - Install Language Tools](/articles/installation/windows/step4.html)
+[Next - Install Language Tools](/articles/installation/windows/step-4.html)
 
 Return to the [overview of the windows install](/articles/installation/windows).

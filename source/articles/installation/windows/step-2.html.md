@@ -19,6 +19,6 @@ Once you have MSYS2 installed, you can install the SplashKit library:
 
     ![](images/install-gifs/Windows/7.gif)
 
-[Next - Install Visual Studio Code](/articles/installation/windows/step3.html)
+[Next - Install Visual Studio Code](/articles/installation/windows/step-3.html)
 
-Return to the [overview of the windows install](/articles/installation/windows.html).
+Return to the [overview of the windows install](/articles/installation/windows).

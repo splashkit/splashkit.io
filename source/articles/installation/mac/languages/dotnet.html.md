@@ -47,7 +47,6 @@ This guide assists with installing the [.NET Core SDK](https://microsoft.com/net
     or raise an issue on [GitHub](https://github.com/splashkit/splashkit-macos/issues).
 
 1. In Visual Studio Code you should install the following extensions:
-
     - [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
     - [C# XML Documentation Comments](https://marketplace.visualstudio.com/items?itemName=k--kato.docomment)
     - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
@@ -66,4 +65,4 @@ This guide assists with installing the [.NET Core SDK](https://microsoft.com/net
 
     ![Installing VSCode C# Extensions](images/install-gifs/extensions.gif)
 
-Return to the [overview of the macOS install](/articles/installation/mac.html).
+Return to the [overview of the macOS install](/articles/installation/mac).
