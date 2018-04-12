@@ -30,7 +30,7 @@ public class Program
         //Create an Window object
         Window myWindow = new Window("Drawing simple rectangles", 800, 600);
 
-        //Draw the rectangle, with parameter: Color, x, y, radius
+        //Draw the rectangle, with parameter: Color, x, y, width, height
         SplashKit.DrawRectangle(Color.Black, 100, 200, 200, 300);
 
         SplashKit.DrawRectangle(Color.Red, 400, 300, 100, 10);
