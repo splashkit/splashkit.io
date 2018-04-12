@@ -16,7 +16,7 @@ related_funcs:
 ---
 
 SplashKit's [Graphics library](/api/graphics) provides methods and procedures for working with
-JSON objects in C#.
+graphic objects in C#.
 
 ## SplashKit DrawCircle usage example
 
