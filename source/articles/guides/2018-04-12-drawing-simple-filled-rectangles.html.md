@@ -16,7 +16,7 @@ related_funcs:
 SplashKit's [Graphics library](/api/graphics) provides methods and procedures for working with
 graphic objects in C#.
 
-## SplashKit DrawCircle usage example
+## SplashKit FillRectangle usage example
 
 ```csharp
 using System;
