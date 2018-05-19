@@ -80,6 +80,7 @@ If selected online game, the game will ask some network related questions in ord
 
 ### 1. Player.cs
 #### This class defines everything a player object can do and know.
+- This public class named `Player`
 
 ##### 1.1 Define required variables, fields and properties.
 - The player will have X, Y coordinates so that it can be drew on the game window.
@@ -88,119 +89,119 @@ We create property X and Y.
 ```csharp
 public double X { get; private set; }
 ```
-- Create a `Y` property.
+- Create a `Y` property in similar way with `X` in above example.
 - The player will have a `Name` property as `string` type.
 - The Player will have a `Radius` property assgined as `double` type with default value of `10`.
 
 ```csharp
 public double Radius { get; set; } = 10;
 ```
-- A `Circle` variable `c` will be created for collision detection purpose.
-- The player will have a `Color` stored in `PlayerColor`.
-- The player can move around the screen, we give it a `Speed` in form of integer, with default speed of `5`.
-- The player will have a `Quit` property in form of `boolean`, so that player can exit the game on wish.
+- A private `Circle` variable `c` will be created for collision detection purpose.
+- The player will have a private `Color` stored in `PlayerColor`.
+- The player can move around the screen, we give it a `Speed` in form of integer, with default speed of `5` with private modifier.
+- The player will have a public `Quit` property in form of `boolean`, so that player can exit the game on wish.
 
 ##### 1.2 Create class constructor
 - The player need to know where to draw itself and its name, so we should pass `Window gameWidow` and `string name` in constructor.
 - Within the constructor, we assign X and Y points for player to draw on, and its name and color.
+	- We want to put player object in the center of the gamewindow by using `X = gameWindow.Width / 2;` to make the player appear at the center horizontally.
+	- Set Y equal to half of the height of the gamewindow, now the player shoule be draw at the center of the gamewindow intially, when game started.
+	- Set the Name property to equal passed in name variable
+	- We assign a random color to player's color property by using `PlayerColor = SplashKit.RandomRGBColor(200);`
 
-```csharp
-X = gameWindow.Width / 2; //So it will appear at center of the screen
-//Add Y here
-//Set Name property to equal passed in name variable here
-PlayerColor = SplashKit.RandomRGBColor(200); //We assign a random color to player's color property
-```
 
 ##### 1.3 Create the rest of the class
 - The player will have a `Draw()` method, so that it can draw it self when called
 - This method will draw the player as a filled circle, a circle for collision detection and its name.
-
-```csharp
-SplashKit.FillCircle(PlayerColor, X, Y, Radius);
-c = SplashKit.CircleAt(X, Y, Radius);
-SplashKit.DrawText(Name, Color.Black, X - Radius, Y - Radius - 10);
-```
+- It will include:
+	- Draw a solid circle with passed in PlayerColor, X, Y and Radius parameter `SplashKit.FillCircle(PlayerColor, X, Y, Radius);`
+	- Draw a invisible circle around the solid circle for collision detection purpose `c = SplashKit.CircleAt(X, Y, Radius);`
+	- Finally we need to draw the player's name on top of it `SplashKit.DrawText(Name, Color.Black, X - Radius, Y - Radius - 10);`
+	- These will make up our Draw() method for player class
 
 - The player will have a HandleInput method, so that it can respond to keyboard stroke, in this game the player object can bed moved around by changing its X and Y, and exit the game by pressing ESC key.
-
-```csharp
-if (SplashKit.KeyDown(SplashKitSDK.KeyCode.EscapeKey)) //If Esc key is pressed
-{
-        Quit = true; //Then Quit is set to true, so that game will quit
-}
-
-if (SplashKit.KeyDown(SplashKitSDK.KeyCode.LeftKey)) //If Left arrow key pressed, the player will move left
-{
-        X -= Speed; //With our defined speed
-}
-
-        //Add left code to make it move to other directions.
-```
+- To achieve it we need to create a couple of if statements.
+	- When user pressed ESC key, we will set Quit property to true, by using `SplashKit.KeyDown(SplashKitSDK.KeyCode.EscapeKey)` with if statements we will be able to achieve this.
+	- With similar structure, we can move the player to desired direction with keys we like e.g. WSAD to change its X and Y with out defined Speed variable.
 
 - The player will return true if it collided with other player, in order to know which otherplayer it collided with, we need to pass in otherplayer to this method.
 
 ```csharp
     public bool CollidedWithPlayer(OtherPlayer op)
     {
-
+        //To return the status of collision we use `CirclesIntersect` from SplashKit
+        return SplashKit.CirclesIntersect(c, op.CollisionCircle);
     }
-```
-- To return the status of collision we use `CirclesIntersect` from SplashKit
-
-```csharp
-return SplashKit.CirclesIntersect(c, op.CollisionCircle);
 ```
 
 ### 2. OtherPlayer.cs
 #### This class defines everything a OtherPlayer object can do and know. This class is used to show the other player over the network on our game window.
+- This public class named `OtherPlayer`
 
 ##### 2.1 Define required variables, fields and properties.
 - The OtherPlayer will have similar structure with Player class but significantly less code.
-- It has `Name`, `X`, `Y`, `Radius`, `PlayerColor` properties.
-- The OtherPlayer will have a `CollisionCircle` property to return it's collision circle.
+- It has public `Name`, `X`, `Y`, `Radius` and private `PlayerColor` properties.
+- The OtherPlayer will have a public `CollisionCircle` getter property to return it's collision circle. So that we can use this information to decide the collision between player and otherplayer within the game.
+
 ```csharp
-return SplashKit.CircleAt(X, Y, Radius);
+    public Circle CollisionCircle
+    {
+        get
+        {
+            return SplashKit.CircleAt(X, Y, Radius);
+        }
+    }
 ```
 
 ##### 2.2 Create class constructor
-- In order to draw OtherPlayer on the screen later, we need to pass in `name`, `x`, `y`, `radius` to the constructor to start with and set properties from constructor.
+- In order to draw OtherPlayer on the screen later, we need to pass in ` string name`, ` double x`, `double y`, `double radius` in the constructor to start with and set properties from constructor.
+  - Within the constructor, we will set the corresponding properties equal to passed in value
+  - We also set the PlayerColor to gray within the constructor `PlayerColor = SplashKit.ColorGray();`
 
-```csharp
-//With in the constructor
-{
-    //Assign name, x, y, radius
-    PlayerColor = SplashKit.ColorGray(); //Here we give OtherPlayer on our screen a gray color
-}
-```
 
 ##### 2.3 Create the rest of the class
-- The OhterPlayer will have `Draw()` method, which will draw a filled circle and name on top of it similar with Player class.
+- The OhterPlayer will have `Draw()` method, which will draw a filled circle and name on top of it similar with Player class without worring about `CircleAt` as in Player class, because we have defined `CollisionCircle` previously.
 
 
 ### 3. Network.cs
 #### This class defines everything related to nerwork part that we need to use later in the game, based on [Andrew](https://github.com/macite)'s Chat program example
+- This public class named `GamePeer`
 
 ##### 3.1 Define required variables, fields and properties.
-- A field to store peer's Name
-- A field to store server port as `ServerSocket`
-- A field to store `Dictionary<string, Connection>`
-- A property that will return message from broadcast as string
-- A property will return server socket information as ServerSocket
+- A public `Name` property
+- A private `_server` field to store server port as `ServerSocket`
+- A private `_peers` field to store `Dictionary<string, Connection>`
+- A public `GetMsg` property with private set that will be used later for returning message from broadcast as string
+- A public `Server` property will return `_server` field as `ServerSocket` just in case if we need server informationin other classes.
 
 ##### 3.2 Create class constructor
 - The constructor will simply assign _server a name and a port parameter via passed in `port` as `ushort`
 
-##### 3.3 Create the rest of the class
-- The `ConnectToGamePeer` will be passed in address as ip address and port to connect to.
-
 ```csharp
-//To make a new connection
-Connection newConnection = new Connection($"{address }:{port}", address, port);
-
-//To check if the connectoin is open (connected) we can use
+    public GamePeer(ushort port)
+    {
+        //This will create a server to listen on incoming port which specified by user passed in with port parameter
+        _server = new ServerSocket("GameServer", port);
+    }
 ```
 
-- To check if the connectoin is open we can use `newConnection.IsOpen`
+##### 3.3 Create the rest of the class
+- The `ConnectToGamePeer` will be passed in address as ip address and port as ushort to connect to.
+
+```csharp
+//To make a new connection to host server
+    public void ConnectToGamePeer(string address, ushort port)
+    {
+        // We create a new connection based on port and ip address specified by user (passed in as parameter)
+        Connection newConnection = new Connection($"{address }:{port}", address, port);
+        //If the connection is successfully opened, we print a confirmation message to acknowledge user in console
+        if (newConnection.IsOpen)
+        {
+            Console.WriteLine($"Conected to {address}:{port}");
+        }
+    }
+```
+
 - We need to create a method to `EstablishConnection` which will take `Connection` type as parameter
 
 ```csharp
@@ -211,11 +212,13 @@ private void EstablishConnection(Connection con)
 
         // Wait for a message...
         SplashKit.CheckNetworkActivity();
+        //To prevent missing the message we detect 10 times instead of once
         for (int i = 0; i < 10 && !con.HasMessages; i++)
         {
             SplashKit.CheckNetworkActivity();
         }
 
+        //If there's still no message, we close the connection and throw the exception
         if (!con.HasMessages)
         {
             con.Close();
@@ -226,6 +229,7 @@ private void EstablishConnection(Connection con)
         string name = con.ReadMessageData();
 
         // See if we can register this...
+        //If we found same name within our dictionary, we reject the new connection duplicate name, and close it then throw exception
         if (_peers.ContainsKey(name))
         {
             con.Close();
@@ -233,75 +237,140 @@ private void EstablishConnection(Connection con)
         }
 
         // Register
+        //Otherwise we register the connection
         _peers[name] = con;
         Console.WriteLine($"Connected to {name} at { SplashKit.Ipv4ToStr(con.IP) }:{con.Port}");
     }
 ```
 
-- In order to send message, we create a Broadcast method which will be passed in message as string, then use `SplashKit.BroadcastMessage()` method from SplashKit to broadcast message.
+- In order to send message, we create a method called `Broadcast` which will be passed in message as string, within the method we use `SplashKit.BroadcastMessage(PassedInMessage)` to broadcast message passed to this method.
 - Next we create a `GetNewMessage` method to receive and return the message from network.
 
 ```csharp
-//First we need to check network activity
-SplashKit.CheckNetworkActivity();
+    public string GetNewMessages()
+    {
+        //First we need to check if there is network activity
+        SplashKit.CheckNetworkActivity();
 
-//Next we populate the message to `GetMsg` property when there is a message available and return the GetMsg
-while (SplashKit.HasMessages())
-{
-        using (Message m = SplashKit.ReadMessage())
+        //While SplashKit detects new message, we extract message from SplashKit.ReadMessage()
+        //Then pass the message to GetMsg property for external classed to use, we also return the received message
+        while (SplashKit.HasMessages())
         {
+            using (Message m = SplashKit.ReadMessage())
+            {
                 GetMsg = m.Data;
+            }
         }
-}
+        return GetMsg;
+    }
 ```
 
-- To close the connection properly we can use following code in a method
+- To close the connection properly we can use following code in a `Close()` method
 
 ```csharp
-_server.Close();
-SplashKit.CloseAllConnections();
+_server.Close(); //Close the current server's connections
+SplashKit.CloseAllConnections(); //Use SplashKit to further make sure we close all connections
 ```
 
 
 ### 4. Game.cs
 #### This class handles the logic of the whole game
+- This public class named `Game`
 
 ##### 4.1 Define required variables, fields and properties.
-- We will have `_Player` field to store player objecte we creat in the game
-- We will have `OnlineGame` and `IsServer` as boolean, so that later we can act dependently
-- We will have `ThisPeer` as our network object, so that later we can broadcast and receive message via network
-- We will have `_otherPlayerMsg` field for storing message we get from other player over network
-- We will have List of `_otherPlayers` as OtherPlayer and `_otherNetworkNames` as string to store otherPlayer object and name of otherPlayer we received over network
-- We will have `name` as string, `x`, `y`, `radius` as double to store information for otherPlayer.
-- We will have `Quit` property to return the status from player class `_player.Quit`
+- Create private `_Player` field as `Player` to store player objecte we use in the game
+- Create public `OnlineGame` and `IsServer` as boolean peoperty with private set, so that later we can act dependently
+- Create public `ThisPeer` as `GamePeer` network object, so that later we can broadcast and receive message via network
+- Create private `_otherPlayerMsg` field for storing message we get from other player over network
+- Create private `_otherPlayers` as list with type of OtherPlayer and `_otherNetworkNames` as list with type of string to store otherPlayer object and name of otherPlayer we received over network
+- Create private  `name` as string, `x`, `y`, `radius` as double to store information for otherPlayer.
+- Create `Quit` property to return the status from player class `_player.Quit` with getter
 
 
 ##### 4.2 Create class constructor
 - The constructor will be passed in a Window parameter, so that it knows where to draw everything
-- Once started, the constructor will ask player, name and if it's online or offline game, sever or client, port and ip address and then set corresponding variables and fields accordingly, following is example of how to ask and set the value so that we can use later. Then it will create the player object with defined name and passed in window.
+	- Once started, the constructor will ask player's name and store in a temporary string variable for local use to do this we can use following code
 
-```csharp
-Console.Write("Do you want to play it online? (Y/N) ");
-answer = Console.ReadLine();
-if (answer.ToUpper() == "N")
-{
-         OnlineGame = false;
-}
+ ```csharp
+Console.Write("What is your name: "); //Print question on console 
+string name = Console.ReadLine(); //Store input from user to name variable
+ ```
 
-//If it is client then we need to create peer and then connect to server/host
-GamePeer peer = new GamePeer(port) { Name = name };
-MakeNewConnection(peer);
-```
+ - Next we ask user, and use if else if block, if it's online game we set `OnlineGame` to false
+ - If not, we set `OnlineGame` to true, then ask user which port to run at, the anwser should be converted with `Convert.ToUInt16()` then we store it in `port` ushort variable
+ - Next we create the network object and set our network name with `GamePeer peer = new GamePeer(port) { Name = name };` and set `ThisPeer` property equal to `peer` we've created.
+ - Next we use same technique to ask user if this is host server or not
+	- If this is host we set `IsServer` to true
+	- If this is not host or server which means it is a client, we set `IsServer` to false and use `MakeNewConnection(peer)` method to connect to server (We will create this method later)
+ - After setup, we create the player with passed in Window parameter and name we got from user input.
+ - Then we set the _player property to refer to the player we just created
+
 
 ##### 4.3 Create the rest of the class
-- `HandleInput()` will call indentical method in player class
-- `Draw()` will call indentical method in player class and also draw each otherPlayer from otherPlayers list if this list contains 1 or more otherPlayer
+- `HandleInput()` will call indentical method in player class on _player property
+- `Draw()` will call indentical method in player class on _player property and also draw each otherPlayer from otherPlayers list if this list contains 1 or more otherPlayer
+
+```csharp
+//Code for drawing each OtherPlayer part
+if (_otherPlayers.Count > 0) //If _otherPlayers list contain 1 or more otherPlayer
+{
+      foreach (OtherPlayer op in _otherPlayers) //Loop over each otherPlayer and draw them
+      {
+           op.Draw();
+      }
+}
+```
+
 - `Update()` method will call `CheckCollisions()` method to see if two players collided and also call `UpdateNetworkInfo()` and `UpdateOtherPlayerInfo()` methods if `OnlineGame` is set to true
 - `CheckCollisions()` method will loop over each `_otherPlayers` to see if player collised with otherPlayer and print message to indicate collision
+
+```csharp
+private void CheckCollisions()
+{
+    foreach (OtherPlayer op in _otherPlayers) //Loop over each otherPlayer within _otherPlayers list
+    {
+        if (_player.CollidedWithPlayer(op)) //If _player collided with OtherPlayer, output message
+        {
+            Console.WriteLine("Collided at "+ DateTime.Now);
+        }
+    }
+}
+```
+
 - Next we will create network and otherPlayer related parts
-- `UpdateNetworkInfo()` method will store message we get from other player by using `ThisPeer.GetNewMessages()` to `_otherPlayerMsg` fied, call `UpdateOtherPlayer()` and `BroadcastMessage()` methods to Update otherPlayer's information on our game window and broadcast our player's information to networ, if `IsServer` is set, then this method will accept all new connections by using `SplashKit.AcceptAllNewConnections();`
-- `UpdateOtherPlayer()` method will process incomming message if the message length is greater than 0, we split the string into pieces by comma, we use Split method from C#, `name = _otherPlayerMsg.Split(',')[0];`,`x = Convert.ToDouble(_otherPlayerMsg.Split(',')[1]);`, then if the length of name is greater than 0 and not exist in the `_otherNetworkNames` then we add the otherPlayer to the otherPlayers list
-- After the otherPlayer has been added, we need to update its information depend on recieved information, so it moves on our screen as it does on the other player's screen, for each otherPlayer we update their X, Y and radius in `UpdateOtherPlayerInfo()` method
+- `UpdateNetworkInfo()` method will store message we get from other player
+	- If it is server it will continuously accept incoming connections by using `SplashKit.AcceptAllNewConnections();`
+	- It will always store received message to local property `_otherPlayerMsg = ThisPeer.GetNewMessages();`
+	- It will call `UpdateOtherPlayer();` method to update information for otherPlayer 
+	- IT will broadcast the current player's status by using `BroadcastMessage();` method
+
+
+- `UpdateOtherPlayer()` method will process incoming message if the message length is greater than 0, we split the string into pieces by comma, we use Split method from C#, `name = _otherPlayerMsg.Split(',')[0];`,`x = Convert.ToDouble(_otherPlayerMsg.Split(',')[1]);`, then if the length of name is greater than 0 and not exist in the `_otherNetworkNames` we add the otherPlayer to the otherPlayers list
+
+```csharp
+public void UpdateOtherPlayer()
+{
+	//If the message exists and length is greater than 0, means we really have a message
+    if (_otherPlayerMsg != null && _otherPlayerMsg.Length > 0)
+    {
+		//We separate the string to pieces for later use 
+        name = _otherPlayerMsg.Split(',')[0];
+        x = Convert.ToDouble(_otherPlayerMsg.Split(',')[1]);
+        y = Convert.ToDouble(_otherPlayerMsg.Split(',')[2]);
+        radius = Convert.ToDouble(_otherPlayerMsg.Split(',')[3]);
+    }
+    if (name.Length > 0) //If length of name is greater than, we check if the name does not exist in our list then we add it to our list and create the otherPlayer object
+    {
+        if (!_otherNetworkNames.Contains(name))
+        {
+            _otherNetworkNames.Add(name);
+            _otherPlayers.Add(new OtherPlayer(name, x, y, radius));
+        }
+    }
+}
+```
+
+- After the otherPlayer has been added, we need to update its information depend on received information, so it moves on our screen as it does on the other player's screen, for each otherPlayer we update their X, Y and radius in `UpdateOtherPlayerInfo()` method
 - We create a `BroadcastMessage()` which will broadcast current player's name, X, Y, and radius.
 
 ```csharp
@@ -309,11 +378,13 @@ ThisPeer.Broadcast($"{_player.Name},{_player.X},{_player.Y},{_player.Radius}");
 ```
 
 - We create `MakeNewConnection()` method which will accept GamePeer as parameter, this method will ask for server ip address and server port to connect to, then connect with `peer.ConnectToGamePeer(address, port);`
+	- The address is string type and port is ushort type or Int16 type, we can use `Convert.ToUInt16()` method to convert user's input to ushort then use it in `peer.ConnectToGamePeer(address, port);`
 
 
 ### 5. Program.cs
-- This class will create
- - a game window
- - a game
 
-- Then it will loop through `SplashKit.ProcessEvents();` and methods in game `HandleInput()`, `Update()`, `Draw()` and window Refresh method, while the game did not return Quit as true
+- This class will create
+	- a game window e.g. `Window gameWindow = new Window("Big Eat Small", 900, 900);` a window named Big Eat Small with width and height of 900 pixel
+	- a game e.g. `Game game = new Game(gameWindow);`
+- This class will wrap `SplashKit.ProcessEvents();` and methods in game `HandleInput()`, `Update()`, `Draw()` and window refresh method `gameWindow.Refresh(60);` in a do while loop, if the game did not return Quit as true, it will loop again and again.
+	- `HandleInput()` and other methods within Game class can't be call directly we need to refer it so use `game.HandleInput()` for the rest methods resides in Game class, same rule applies
