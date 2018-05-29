@@ -63,8 +63,8 @@ def snippet(filename_or_hash, path = nil)
       title = ext_to_title[extname]
       lexer = Rouge::Lexer.guess(filename: f)
       src = File.read(f)
-      html = formatter.format(lexer.lex(src))
       formatter = src.lines.count < 5 ? formatter : formatter_table
+      html = formatter.format(lexer.lex(src))
       id = "#{extname[/[a-z]+/]}-#{basename}" # remove "." from extension
       {
         id: id,
