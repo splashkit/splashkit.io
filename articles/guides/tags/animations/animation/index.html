@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+
+    <title>SplashKit - Articles - Guides - Tags - Animations - Animation</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_animations articles_guides_tags_animations_animation articles_guides_tags_animations_animation_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+        <h1>Using Animations</h1>
+        <aside class="sk-sidebar">
+    <h3>All Guides</h3>
+    <nav role="navigation">
+      <ul class="nav sk-article-nav-root">
+          <li class="nav-item">
+<a href="/articles/guides/tags/animations" class="nav-link ">              Animations
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/databases" class="nav-link ">              Databases
+</a>          </li>
+      </ul>
+    </nav>
+  </aside>
+  <article class="sk-content">
+      <p class="lead">
+        Written by
+            Andrew Cain
+        on May 29 2018
+      </p>
+    <p>Animations are a great way to help create more dynamic elements on the screen. These use a combination of a script and a sprite sheet (an image that is divided into separate <em>cells</em> where each cell is the same size and part of the animation.</p>
+
+<p><img src="/images/articles/animations/basic/DanceAnimation-a99e4309.gif" alt="Frog animations" width="170" height="156" /></p>
+
+<h2>Animations</h2>
+
+<p>You can think of animations in SplashKit are similar to a flip book, each image in the flip book is displayed for a short amount of time before the next image is displayed. The terminology in SplashKit defines animations in terms of <strong>frames</strong>, like the frames of a film strip. Frames are setup in an <strong>animation script</strong>, where they are linked together to define how animations created from the script work. Each frame indicates the part of the image it relates to, the amount of time it appears for, and which frame should follow it when the animation is played.</p>
+
+<p>Animation scripts are not linked to a particular image, that is, an animation script can be applied to any number of bitmaps. This means it&rsquo;s possible to write an animation to make a character walk and apply it to all your characters in a game, as long as all of those images are setup in the same way. SplashKit also includes code to help simplify animations when used with a sprite, however you can create and play an animation without using a sprite by interacting with the animation directly, a full list of functions and procedures can be found in the API.</p>
+
+<p>This article focuses on the creation and use of animations without using sprites.</p>
+
+<h2>Animation Frames and Image Cells</h2>
+
+<p>As mentioned above, frames are used to control the speed and order of the images in an animation. At the same time, sprite sheet images contain a number of cells. The animation script links frames to cells, enabling you to reuse parts of the image (cells) in multiple ways within your animations. For example you could include a sprite sheet for a character walking and use this with an animation to walk forward and a second to walk back.</p>
+
+<p>Cells are part of a bitmap image and are defined when the image is loaded (either through a bundle or in your code). When an image is loaded you can setup the cell details to indicate the width and height of the cells, the number of columns and rows, and the total number of cells (which may be fewer than the number of columns x rows).</p>
+
+<p>The cells within an image are accessed by index, with each cell being numbered from the top left to bottom right (starting at 0). These indexes are used in frames to tell SplashKit what to draw to screen during the duration of the frame.</p>
+
+<p><img src="/images/articles/animations/basic/frog-05667c67.png" alt="Frog image sprite sheet example" width="294" height="422" /></p>
+
+<p>The above frog image gives you an example of a sprite sheet. As you can see this one image is actually a series of smaller images, these smaller images are what we call <strong>cells</strong>. For example, the first row show the character walking towards the viewer, while the last row show the character walking away from the viewer. To make an animation we need to link these images together in a meaningful way, this is done using an animation script.</p>
+
+<h2>Animation Frames</h2>
+
+<p>Within SplashKit, each frame have an identifier, cell number, duration, and a link to the next frame. They are incredibly powerful and can be linked together in any order to create different animations from the same images.</p>
+
+<p>The identifier of a frame is used by SplashKit to connect frames together into a sequence. The cell number is used by SplashKit to get the part of the image to draw when the animation is playing that frame. The duration is the number of times the animation needs to be updated before the next frame will be played. The next frame is the index of the frame to move to once this frame completes. If this field is omitted then the animation ends after the current frame has finished.</p>
+
+<p><img alt="Illustration of frames and cells using the Frog sprite sheet" src="/images/articles/animations/basic/Animation-basics-9020dfb0.png" style="width: 600px; display:block; margin: 0 auto;"></img></p>
+
+<h2>Animation Scripts</h2>
+
+<p>Animation script details are coded into a text file in the <strong>animations</strong> subfolder of a SplashKit project&rsquo;s <strong>resources</strong> folder. The format of this document starts with the text <em>SplashKit Animation</em> and is then followed by the definition of the frames defined within that script. The file has a basic line based format, so each line can be used to define one aspect of the script.</p>
+
+<p>Frames are coded within the animation script file using a line that starts with &ldquo;<strong>f:</strong>&rdquo;. The frame definition records the id of the frame, the cell to draw for that frame, its duration as a number of times to be updated, and the id of the frame that will follow this frame.</p>
+
+<p>The following code is the start of an animation script file. </p>
+<pre class="highlight plaintext"><code>SplashKit Animation
+
+//Frames are declared with an f: and contain
+//the following comma separated values
+//ID,CELL,DUR,NEXT
+//
+//ID   - the frame index number
+//       this can be a range defined using [0-3] or [0,1,2,3] for example
+//CELL - the cell of the bitmap to draw
+//       this can be a range defined using [0-3] or [0,1,2,3] for example
+//DUR  - the number of times the frame need to be updated before moving to the next frame
+//NEXT - the index of the frame that follows the current frame
+
+//f: identifier, cell number, duration, next frame)
+f: 0, 4, 5, 1 
+f: 1, 5, 5, 2 
+f: 2, 6, 5, 3 
+f: 3, 7, 5, 
+
+//It can also be written using set-notation, as in the following example:
+f: [4-7], [4-7], 5,
+// or 
+f: [8, 9, 10, 11], [8, 9, 10, 11], 5,
+</code></pre>
+<p><img alt="Illustration of details within a frame" src="/images/articles/animations/basic/Animation-Frame-6014fedc.png" style="width: 600px; display:block; margin: 0 auto;"></img></p>
+
+<p>When designing your animation an easy place to start is with a frame per cell in your animation. You can then put in a set duration, and link the frames together. For example, with the Frog sprite sheet you could use the following as a start. This includes frames in four groups, one for each of the different animations within the sheet (as indicated by the comments). Notice that each of these is a loop, so the &ldquo;toward the user&rdquo; sequence plays cells 0, 1, 2, 3 and then back to 0.</p>
+<pre class="highlight plaintext"><code>SplashKit Animation
+
+// Toward user
+f: [0-3], [0-3], 5, 0
+// To the left
+f: [4-7], [4-7], 5, 4
+// To the right
+f: [8-11], [8-11], 5, 8
+// Away from the user
+f: [12-15], [12-15], 5, 12
+</code></pre>
+<h2>A Starting Point</h2>
+
+<p>The next key element of the Animation is a starting point. This is a named frame that signifies the start of an animation sequence. It is coded in the file using a line starting with &ldquo;<strong>i:</strong>&rdquo; followed by the name of the animation (its identifier) and then the starting frame.</p>
+
+<p>Using the frog animation we have the 4 separate animations, which can then be coded as 4 identifiers for <em>walk forward</em> starting at frame 0 (the loop 0, 1, 2, 3, 0, &hellip;), <em>walk left</em> starting at frame 4, <em>walk right</em> starting at frame 8, and <em>walk away</em> starting at frame 12.</p>
+<pre class="highlight plaintext"><code>SplashKit Animation
+
+// -- Frames --
+// Toward user
+f: [0-3], [0-3], 5, 0
+// To the left
+f: [4-7], [4-7], 5, 4
+// To the right
+f: [8-11], [8-11], 5, 8
+// Away from the user
+f: [12-15], [12-15], 5, 12
+
+// -- Animation Identifiers --
+i:walk forward,0
+i:walk left,4
+i:walk right,8
+i:walk away,12
+</code></pre>
+<h2>Getting it Working</h2>
+
+<p>Once you have a sprite sheet and an animation script the code to get this working is relatively straight forward. What you need to do is:</p>
+
+<ol>
+<li>Load the <strong>image</strong> and set its details.
+
+<ul>
+<li>You can do this with a bundle by specifying the image and its details on the one line</li>
+<li>To load the image manually you need to:
+
+<ol>
+<li>Call <a href="/api/graphics#load-bitmap">Load Bitmap</a> to load the sprite sheet</li>
+<li>Call <a href="/api/graphics#bitmap-set-cell-details">Bitmap Set Cell Details</a> to set the cell details (which includes width, height, columns, rows, count)</li>
+</ol></li>
+</ul></li>
+<li>Load the <strong>animation script</strong> using <a href="/api/animations#load-animation-script">Load Animation Script</a>.</li>
+<li>Create an <strong>animation</strong> from the animation script using the identifier from the script - see <a href="/api/animations#group-create-animation">Create Animation</a></li>
+<li>Create a Drawing Option using <a href="/api/graphics#group-option-with-animation">Option With Animation</a> which can be used to pass options to a draw bitmap call</li>
+<li>Draw the bitmap passing in the image, the location to draw it, and the drawing options. See <a href="/api/graphics/#draw-bitmap-with-options">Draw Bitmap (using an Image)</a> or <a href="/api/graphics/#draw-bitmap-named">Draw Bitmap (using the image name)</a>.</li>
+<li>Update the animation using <a href="/api/animations#update-animation">Update Animation</a>.</li>
+</ol>
+
+<p>This is demonstrated in the following code examples.</p>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-animation_test" aria-controls="cpp-animation_test" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-animation_test" aria-controls="cs-animation_test" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-animation_test" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-animation_test pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+</pre></td><td class="rouge-code"><pre><span class="cp">#include "splashkit.h"
+</span>
+<span class="c1">/// A Test application to demonstrate the use of Animations in SplashKit.
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">window</span> <span class="n">w</span> <span class="o">=</span> <span class="n">open_window</span><span class="p">(</span><span class="s">"Animation Test"</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">120</span><span class="p">);</span>
+    
+    <span class="c1">// We could load all of the resources in a bundle
+</span>    <span class="c1">// load_resource_bundle("dance bundle", "dance_bundle.txt");
+</span>    <span class="c1">//
+</span>    <span class="c1">// Then access by name
+</span>    <span class="c1">// animation_script dance_script = animation_script_named("WalkingScript");
+</span>    <span class="c1">// bitmap frog = bitmap_named("FrogBmp");
+</span>
+    <span class="c1">// Loading them separately
+</span>
+    <span class="c1">// Load image and set its cell details
+</span>    <span class="n">bitmap</span> <span class="n">frog</span> <span class="o">=</span> <span class="n">load_bitmap</span><span class="p">(</span><span class="s">"FrogBmp"</span><span class="p">,</span> <span class="s">"Frog.png"</span><span class="p">);</span>
+    <span class="n">bitmap_set_cell_details</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">);</span> <span class="c1">// cell width, height, cols, rows, count
+</span>
+    <span class="c1">// Load the animation script
+</span>    <span class="n">animation_script</span> <span class="n">dance_script</span> <span class="o">=</span> <span class="n">load_animation_script</span><span class="p">(</span><span class="s">"WalkingScript"</span><span class="p">,</span> <span class="s">"kermit.txt"</span><span class="p">);</span>
+
+    <span class="c1">// Create the animation
+</span>    <span class="n">animation</span> <span class="n">test</span> <span class="o">=</span> <span class="n">create_animation</span><span class="p">(</span><span class="n">dance_script</span><span class="p">,</span> <span class="s">"WalkFront"</span><span class="p">);</span>
+
+    <span class="c1">// Create a drawing option
+</span>    <span class="n">drawing_options</span> <span class="n">opt</span><span class="p">;</span>
+    <span class="n">opt</span> <span class="o">=</span> <span class="n">option_with_animation</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+
+    <span class="c1">// Basic event loop
+</span>    <span class="k">while</span><span class="p">(</span> <span class="n">not</span> <span class="n">quit_requested</span><span class="p">()</span> <span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Draw the bitmap - using opt to link to animation
+</span>        <span class="n">clear_screen</span><span class="p">(</span><span class="n">COLOR_WHITE</span><span class="p">);</span>
+        <span class="n">draw_bitmap</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">opt</span><span class="p">);</span>
+        <span class="n">refresh_screen</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+
+        <span class="c1">// Update the animation
+</span>        <span class="n">update_animation</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+
+        <span class="n">process_events</span><span class="p">();</span>
+
+        <span class="c1">// Switch animations
+</span>        <span class="k">if</span> <span class="p">(</span> <span class="n">key_typed</span><span class="p">(</span><span class="n">UP_KEY</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">assign_animation</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="s">"WalkBack"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">key_typed</span><span class="p">(</span><span class="n">DOWN_KEY</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">assign_animation</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="s">"WalkFront"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">key_typed</span><span class="p">(</span><span class="n">D_KEY</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="n">assign_animation</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="s">"Dance"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+      <div role="tabpanel" id="cs-animation_test" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-animation_test pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+</pre></td><td class="rouge-code"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SplashKitSDK</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// A Test application to demonstrate the use of Animations in SplashKit.</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Window</span> <span class="n">w</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Window</span><span class="p">(</span><span class="s">"Animation Test"</span><span class="p">,</span> <span class="m">120</span><span class="p">,</span> <span class="m">120</span><span class="p">);</span>
+        
+        <span class="c1">// We could load all of the resources in a bundle</span>
+        <span class="c1">// SplashKit.LoadResourceBundle("dance bundle", "dance_bundle.txt");</span>
+        <span class="c1">//</span>
+        <span class="c1">// Then access by name</span>
+        <span class="c1">// AnimationScript danceScript = SplashKit.AnimationScriptNamed("WalkingScript");</span>
+        <span class="c1">// Bitmap frog = SplashKit.BitmapNamed("FrogBmp");</span>
+
+        <span class="c1">// Loading them separately</span>
+
+        <span class="c1">// Load image and set its cell details</span>
+        <span class="n">Bitmap</span> <span class="n">frog</span> <span class="p">=</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">LoadBitmap</span><span class="p">(</span><span class="s">"FrogBmp"</span><span class="p">,</span><span class="s">"Frog.png"</span><span class="p">);</span>
+        <span class="n">frog</span><span class="p">.</span><span class="nf">SetCellDetails</span><span class="p">(</span><span class="m">73</span><span class="p">,</span> <span class="m">105</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">16</span><span class="p">);</span> <span class="c1">// cell width, height, cols, rows, count</span>
+
+        <span class="c1">// Load the animation script</span>
+        <span class="n">AnimationScript</span> <span class="n">danceScript</span> <span class="p">=</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">LoadAnimationScript</span><span class="p">(</span><span class="s">"WalkingScript"</span><span class="p">,</span> <span class="s">"kermit.txt"</span><span class="p">);</span>
+
+        <span class="c1">// Create the animation</span>
+        <span class="n">Animation</span> <span class="n">test</span> <span class="p">=</span> <span class="n">danceScript</span><span class="p">.</span><span class="nf">CreateAnimation</span><span class="p">(</span><span class="s">"WalkFront"</span><span class="p">);</span>
+
+        <span class="c1">// Create a drawing option</span>
+        <span class="n">DrawingOptions</span> <span class="n">opt</span><span class="p">;</span>
+        <span class="n">opt</span> <span class="p">=</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">OptionWithAnimation</span><span class="p">(</span><span class="n">test</span><span class="p">);</span>
+
+        <span class="c1">// Basic event loop</span>
+        <span class="k">while</span><span class="p">(!</span> <span class="n">w</span><span class="p">.</span><span class="n">CloseRequested</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Draw the bitmap - using opt to link to animation</span>
+            <span class="n">w</span><span class="p">.</span><span class="nf">Clear</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">White</span><span class="p">);</span>
+            <span class="n">w</span><span class="p">.</span><span class="nf">DrawBitmap</span><span class="p">(</span><span class="n">frog</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="m">20</span><span class="p">,</span> <span class="n">opt</span><span class="p">);</span>
+            <span class="n">w</span><span class="p">.</span><span class="nf">Refresh</span><span class="p">(</span><span class="m">60</span><span class="p">);</span>
+
+            <span class="c1">// Update the animation</span>
+            <span class="n">test</span><span class="p">.</span><span class="nf">Update</span><span class="p">();</span>
+
+            <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ProcessEvents</span><span class="p">();</span>
+
+            <span class="c1">// Switch animations</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyTyped</span><span class="p">(</span><span class="n">KeyCode</span><span class="p">.</span><span class="n">UpKey</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">test</span><span class="p">.</span><span class="nf">Assign</span><span class="p">(</span><span class="s">"WalkBack"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyTyped</span><span class="p">(</span><span class="n">KeyCode</span><span class="p">.</span><span class="n">DownKey</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">test</span><span class="p">.</span><span class="nf">Assign</span><span class="p">(</span><span class="s">"WalkFront"</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">KeyTyped</span><span class="p">(</span><span class="n">KeyCode</span><span class="p">.</span><span class="n">DKey</span><span class="p">))</span>
+            <span class="p">{</span>
+                <span class="n">test</span><span class="p">.</span><span class="nf">Assign</span><span class="p">(</span><span class="s">"Dance"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<p>To test the above code you can download these <a href="/resources/animation/basics/BasicAnimationResources.zip">resources</a>. This includes sample animation scripts, images, and sounds.</p>
+
+<h2>Other Options</h2>
+
+<h3>Switching Animations</h3>
+
+<p>Once you have an Animation you can use the <a href="/api/animations#assign-animation">Assign Animation</a> method to switch from one animation sequence to another in the same animation script, or to swap to alternate animation scripts.</p>
+
+<p>When calling assign animation, you indicate the animation to change and the new animation details, which include the animation identifier and optionally a new animation script. </p>
+
+<h3>Adding Sounds</h3>
+
+<p>Animations can include points where sounds should be played as well. When sound is played in an animation it is played as soon as the frame starts playing and only plays once for that frames duration. SplashKit will manage the loading of the sound for you (like it does in a bundle).</p>
+
+<p>Sounds are coded with lines starting with &ldquo;<strong>s:</strong>&rdquo;. An example of this is written below, it plays footsteps.wav whenever the frame with the identifier 0 is played.</p>
+<pre class="highlight plaintext"><code>//s: Identifier, SoundName, Filename 
+s: 0, 'FootStep', 'footsteps.wav'
+</code></pre>
+<p><img alt="Illustration of sound details within a frame" src="/images/articles/animations/basic/All-About-Animation-With-Sound-7617df76.png" style="width: 600px; display:block; margin: 0 auto;"></img></p>
+
+<h3>Including Movement</h3>
+
+<p>SplashKit animations also includes options to add vectors to individual frames, which are automatically applied when these animations are used in conjuncture with Sprites. This will allow you to apply a velocity vector to sprites when they&rsquo;re updated. This vector is applied to the current position of the sprite, it is applied every <a href="/api/sprites#update-sprite">UpdateSprite</a> call, and can be applied manually to an animation. Vectors can be applied to a set of frames using set notation ([low – high]).</p>
+
+<p>In the animation script, a vector is indicated using a line starting with &ldquo;<strong>v:</strong>&rdquo;. The following animation script snippet will move the sprite +5 pixels in the x axis and -3 pixels along the y axis for every Sprite Update while the animation is on the 0 frame.</p>
+<pre class="highlight plaintext"><code>//v: identifier, change in x velocity, change in y velocity 
+v: 0, 5, -3
+</code></pre>
+<p><img alt="Illustration of vector details within a frame" src="/images/articles/animations/basic/All-About-Animation-Vectors-53278968.png" style="width: 600px; display:block; margin: 0 auto;"></img></p>
+
+  </article>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-2c341741.js"></script>
+  </body>
+</html>

@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="img/ico" href="../images/favicon.ico">
 
-    <title>SplashKit - Articles - Guides - Tags - JSON - Using JSON</title>
+    <title>SplashKit - Articles - Guides - Tags - Animations</title>
 
     <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
   </head>
-  <body class="articles articles_guides articles_guides_tags articles_guides_tags_json articles_guides_tags_json_using-json articles_guides_tags_json_using-json_index">
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_animations articles_guides_tags_animations_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -75,16 +75,15 @@
     <main id="content">
         <div class="container">
     <div class="row">
-        <h1>Using JSON</h1>
         <aside class="sk-sidebar">
     <h3>All Guides</h3>
     <nav role="navigation">
       <ul class="nav sk-article-nav-root">
           <li class="nav-item">
-<a href="/articles/guides/tags/animations" class="nav-link ">              Animations
+<a href="/articles/guides/tags/animations" class="nav-link active">              Animations
 </a>          </li>
           <li class="nav-item">
-<a href="/articles/guides/tags/json" class="nav-link active">              JSON
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
 </a>          </li>
           <li class="nav-item">
 <a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
@@ -96,48 +95,25 @@
     </nav>
   </aside>
   <article class="sk-content">
-      <p class="lead">
-        Written by
-            Richard Denton
-        on Oct  3 2017
-      </p>
-    <p>JSON (JavaScript Object Notation) if a human-readable text format consisting
-of key-value (or attribute-value) pairs and arrays.</p>
+    <h1>Animations Guides</h1>
+<p class="lead">
+  1 article
+</p>
+<a href="/articles/guides/tags/animations/animation/" class="sk-article-link">    <h4>Using Animations</h4>
+    <h4 class="lead text-muted">
+      Written by Andrew Cain on
+      May 29 2018
+    </h6>
+    <p>
+      Animations allow you to switch between different images to make a more visually dynamic entity 
+on the screen. Splashkit allows you to create animations and use these together with sprite sheets
+to create these animations.
 
-<p>SplashKit&rsquo;s <a href="/api/json">JSON library</a> provides methods and procedures for working with
-JSON objects in C++.</p>
-
-<h2>SplashKit JSON code usage example</h2>
-<pre class="highlight cpp"><code><span class="cp">#include "splashkit.h"
-#include &lt;string&gt;
-</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="c1">//Create the JSON object.
-</span>    <span class="n">json</span> <span class="n">json_object</span> <span class="o">=</span> <span class="n">create_json</span><span class="p">();</span>
-
-    <span class="c1">//Set "name" to "SplashKit"
-</span>    <span class="n">json_set_string</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"name"</span><span class="p">,</span> <span class="s">"SplashKit"</span><span class="p">);</span>
-
-    <span class="c1">//Set "type" to "A programming library"
-</span>    <span class="n">json_set_string</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"type"</span><span class="p">,</span> <span class="s">"A programming library"</span><span class="p">);</span>
-
-    <span class="c1">//Set "age" to 2.
-</span>    <span class="n">json_set_number</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"age"</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-
-    <span class="c1">//Access each of the stored keys.
-</span>    <span class="n">write_line</span><span class="p">(</span><span class="s">"My name is: "</span> <span class="o">+</span> <span class="n">json_read_string</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"name"</span><span class="p">));</span>
-    <span class="n">write_line</span><span class="p">(</span><span class="s">"My type is: "</span> <span class="o">+</span> <span class="n">json_read_string</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"type"</span><span class="p">));</span>
-    <span class="n">write_line</span><span class="p">(</span><span class="s">"I am "</span> <span class="o">+</span> <span class="n">to_string</span><span class="p">(</span> <span class="n">json_read_number</span><span class="p">(</span><span class="n">json_object</span><span class="p">,</span> <span class="s">"age"</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="s">" years old."</span><span class="p">);</span>
-
-    <span class="c1">//Ensure you free the resources after completion.
-</span>    <span class="n">free_json</span><span class="p">(</span><span class="n">json_object</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
+    </p>
+    <span class="sk-read-more">
+      Read More <i class="fa fa-angle-double-right"></i>
+    </a>
+</a>
   </article>
 
     </div>
