@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+
+    <title>SplashKit - Articles - Guides - Tags - Starter - Get Started Drawing</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_starter articles_guides_tags_starter_get-started-drawing articles_guides_tags_starter_get-started-drawing_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+        <h1>Getting Started Drawing using Procedures</h1>
+        <aside class="sk-sidebar">
+    <h3>All Guides</h3>
+    <nav role="navigation">
+      <ul class="nav sk-article-nav-root">
+          <li class="nav-item">
+<a href="/articles/guides/tags/starter" class="nav-link ">              Starter
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/animations" class="nav-link ">              Animations
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/databases" class="nav-link ">              Databases
+</a>          </li>
+      </ul>
+    </nav>
+  </aside>
+  <article class="sk-content">
+      <p class="lead">
+        Written by
+            Andrew Cain
+        on May 30 2018
+      </p>
+    <p>In this article you will see how to get started with SplashKit with some simple drawing operations. Once you have this working you will be able to start exploring the different features you can work with.</p>
+
+<h2>Step 1: Creating a Window</h2>
+
+<p>In SplashKit you can open a Window to draw on and interact with. To open the window you need to call <a href="/api/graphics/#open-window">open_window</a>. This procedure requires you to pass it the window’s title, width and height. For example  <code>open_window(&quot;House Drawing&quot;, 800, 600);</code> will open a window that is 800 pixels wide and 600 pixels high with the title &ldquo;House Drawing&rdquo;, as shown in the following image. Please note that the house and hill are drawn by additional code.</p>
+
+<p><img alt="Window with dimensions illustrated" src="/images/articles/starter/drawing/NewWindow-7ffba13e.png" style="width: 700px"></img></p>
+
+<ol>
+<li>Lets get this started by opening a new Window, and using SplashKit to delay us for a few seconds. Give the following code a try:</li>
+</ol>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-step1" aria-controls="cpp-step1" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-step1" aria-controls="cs-step1" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-step1" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-step1 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="cp">#include "splashkit.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">open_window</span><span class="p">(</span><span class="s">"Window Title... to change"</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+
+    <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+      <div role="tabpanel" id="cs-step1" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-step1 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">using</span> <span class="nn">SplashKitSDK</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">new</span> <span class="nf">Window</span><span class="p">(</span><span class="s">"Window Title... to change"</span><span class="p">,</span> <span class="m">800</span><span class="p">,</span> <span class="m">600</span><span class="p">);</span>
+
+        <span class="n">SplashKit</span><span class="p">.</span><span class="nf">Delay</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<ol>
+<li><p>Compile and run the program from the terminal.</p>
+
+<p>For example in C++ you would use:</p>
+<pre class="highlight shell"><code>skm clang++ program.cpp -o ShapeDrawing
+./ShapeDrawing
+</code></pre>
+<p>You should see the window open, and the program delay for 5 seconds.</p></li>
+<li><p>Change the window title to &ldquo;Shapes by &rdquo; and your name. For example, <code>&quot;Shapes by Andrew&quot;</code>.</p>
+
+<p>Switch back to the terminal to compile and run your program.</p></li>
+</ol>
+
+<h2>Step 2: Drawing to a Window</h2>
+
+<ol>
+<li>Adjust <code>main</code> so that it now draws the house shown above.</li>
+</ol>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-step2" aria-controls="cpp-step2" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-step2" aria-controls="cs-step2" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-step2" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-step2 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">open_window</span><span class="p">(</span><span class="s">"Shapes by ..."</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">);</span>
+
+    <span class="n">clear_screen</span><span class="p">(</span><span class="n">COLOR_WHITE</span><span class="p">);</span>
+    <span class="n">fill_ellipse</span><span class="p">(</span><span class="n">COLOR_BRIGHT_GREEN</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">400</span><span class="p">);</span>
+    <span class="n">fill_rectangle</span><span class="p">(</span><span class="n">COLOR_GRAY</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
+    <span class="n">fill_triangle</span><span class="p">(</span><span class="n">COLOR_RED</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">300</span><span class="p">);</span>
+    <span class="n">refresh_screen</span><span class="p">();</span>
+
+    <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+      <div role="tabpanel" id="cs-step2" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-step2 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="k">using</span> <span class="nn">SplashKitSDK</span><span class="p">;</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Window</span> <span class="n">shapesWindow</span><span class="p">;</span>
+        <span class="n">shapesWindow</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Window</span><span class="p">(</span><span class="s">"Shapes by ..."</span><span class="p">,</span> <span class="m">800</span><span class="p">,</span> <span class="m">600</span><span class="p">);</span>
+
+        <span class="n">shapesWindow</span><span class="p">.</span><span class="nf">Clear</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">White</span><span class="p">);</span>
+        <span class="n">shapesWindow</span><span class="p">.</span><span class="nf">FillEllipse</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">BrightGreen</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">400</span><span class="p">,</span> <span class="m">800</span><span class="p">,</span> <span class="m">400</span><span class="p">);</span>
+        <span class="n">shapesWindow</span><span class="p">.</span><span class="nf">FillRectangle</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">Gray</span><span class="p">,</span> <span class="m">300</span><span class="p">,</span> <span class="m">300</span><span class="p">,</span> <span class="m">200</span><span class="p">,</span> <span class="m">200</span><span class="p">);</span>
+        <span class="n">shapesWindow</span><span class="p">.</span><span class="nf">FillTriangle</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">,</span> <span class="m">250</span><span class="p">,</span> <span class="m">300</span><span class="p">,</span> <span class="m">400</span><span class="p">,</span> <span class="m">150</span><span class="p">,</span> <span class="m">550</span><span class="p">,</span> <span class="m">300</span><span class="p">);</span>
+        <span class="n">shapesWindow</span><span class="p">.</span><span class="nf">Refresh</span><span class="p">();</span>
+
+        <span class="n">SplashKit</span><span class="p">.</span><span class="nf">Delay</span><span class="p">(</span><span class="m">5000</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<ol>
+<li><p>Build and run the program.</p>
+
+<p>For example in C++ you would use:</p>
+<pre class="highlight shell"><code>skm clang++ program.cpp -o ShapeDrawing
+./ShapeDrawing
+</code></pre>
+<p>Make sure it all looks correct before moving on.</p></li>
+</ol>
+
+<h2>Pixels and Coordinates</h2>
+
+<p>The images you see on your computer’s screen are made up of dots called pixels: picture elements. The screen has many pixels arranged into a grid (columns and rows), with each pixel having its own color and unique location (a combination of an <code>x</code> and <code>y</code> value, where <code>x</code> indicates the column and <code>y</code> the row).</p>
+
+<p>The following image shows an example of two rectangles (one filled, one outlined). The top left corner of the screen is at row (x) 0 and column (y) 0, and these numbers increase as you go to the right and down the screen. The call to <code>fill_rectangle</code> and <code>draw_rectangle</code> take in a color, a <code>x</code> value, a <code>y</code> value, and a <code>width</code> and a <code>height</code>. So the blue rectangle is filled at x 1, y 1, is 7 pixels wide, and 3 pixels high.</p>
+
+<p><img alt="Pixel locations are based on x and y locations." src="/images/articles/starter/drawing/DrawFill-5677a211.png" style="width: 700px"></img></p>
+
+<p>Positions on the screen are determined using two values, one for x and the other for y. The x value determines the number of pixels from the left side of the screen. The y value determines the number of pixels from the top of the screen.</p>
+
+<p>For example: the magenta rectangle is drawn at 10, 1. This means its x value is 10 and its y is 1. This rectangle is drawn 10 pixels from the left of the screen, and its 1 pixel from the top.</p>
+
+<h2>Drawing Procedures</h2>
+
+<p>To draw a shape with SplashKit you need to call one of the shape drawing procedures. All of the shape drawing operations in SplashKit take a number of parameter values:</p>
+
+<ul>
+<li>The <strong>color</strong> to draw the shape. 
+SplashKit has a number of colors you can use. See the list of colors starting with (Alice Blue)[/api/color#color-alice-blue]. For example, in C++ the colors are written as <code>COLOR_WHITE</code>, <code>COLOR_GREEN</code>, <code>COLOR_BLUE</code>, <code>COLOR_BLACK</code>, <code>COLOR_RED</code>, and many others. VS Code should show you a list once you type <code>COLOR_</code> then hit ctrl+space. Though this only works if you opened the project folder.</li>
+<li><p>An <strong>x</strong> value, representing the x position of the shape (column). </p>
+
+<p>This is a number of pixels from the left edge of the screen. Larger values are further to the right.</p></li>
+<li><p>A <strong>y</strong> value, representing the y position of the shape (row). </p>
+
+<p>This is a number of pixels from the top edge of the screen. Larger values are further down the screen.</p></li>
+<li><p>and other values for the size of the shape, these will differ depending on the kind of shape being drawn (e.g., rectangle has a width and height, as does ellipse, circles would have a radius).</p></li>
+</ul>
+
+<p>See the following for examples of what you can call:</p>
+
+<ul>
+<li><a href="/api/graphics#clear_screen">Clear Screen</a></li>
+<li><a href="/api/graphics#draw_circle">Draw Circle</a></li>
+<li><a href="/api/graphics#fill_circle">Fill Circle</a></li>
+<li><a href="/api/graphics#draw_rectangle">Draw Rectangle</a></li>
+<li><a href="/api/graphics#fill_rectangle">Fill Rectangle</a></li>
+<li><a href="/api/graphics#draw_triangle">Draw Triangle</a></li>
+<li><a href="/api/graphics#fill_triangle">Fill Triangle</a></li>
+<li><a href="/api/graphics#draw_ellipse">Draw Ellipse</a></li>
+<li><a href="/api/graphics#fill_ellipse">Fill Ellipse</a></li>
+<li><a href="/api/graphics#draw_line">Draw Line</a></li>
+</ul>
+
+<h2>Autocomplete</h2>
+
+<p>You should be able to get Visual Studio Code to show you to list of parameters. Type the start of the procedure name then press <code>ctrl-space</code>. There are usually a couple of different ways to draw each shape, by pressing the up down arrows you should be able to explore this list. An example with C++ is shown below.</p>
+
+<p><img alt="Use `ctrl-space` to bring up the autocomplete for procedures you want to call." src="/images/articles/starter/drawing/AutoComplete-410c6987.png" style="width: 700px"></img></p>
+
+<h2>Double Buffering</h2>
+
+<p>To draw a picture, like the house shown above, the computer executes the code to draw the individual shapes one at a time in the order they appear in the code (in <strong>sequence</strong>).  However, we don&rsquo;t want each element to appear individually, we just want the whole picture to appear at once, so in this case the whole house should show all at once. SplashKit uses a technique called <strong>Double Buffering</strong> to enable this. When double buffering, the computer first draws the shapes, then waits for a command to display the shapes to the user.  With SplashKit, the shapes are all shown together when you call the <code>refresh_screen</code> procedure. This is illustrated below.</p>
+
+<p><img alt="Illustration of double buffering, and the need to refresh screen" src="/images/articles/starter/drawing/RefreshScreen-7b17c149.png" style="width: 700px"></img></p>
+
+  </article>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-2c341741.js"></script>
+  </body>
+</html>

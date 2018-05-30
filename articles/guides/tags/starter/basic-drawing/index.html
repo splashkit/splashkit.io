@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="img/ico" href="../images/favicon.ico">
 
-    <title>SplashKit - Articles - Guides - Tags - JSON</title>
+    <title>SplashKit - Articles - Guides - Tags - Starter - Basic Drawing</title>
 
     <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
   </head>
-  <body class="articles articles_guides articles_guides_tags articles_guides_tags_json articles_guides_tags_json_index">
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_starter articles_guides_tags_starter_basic-drawing articles_guides_tags_starter_basic-drawing_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -75,6 +75,7 @@
     <main id="content">
         <div class="container">
     <div class="row">
+        <h1>Understanding Double Buffering</h1>
         <aside class="sk-sidebar">
     <h3>All Guides</h3>
     <nav role="navigation">
@@ -86,7 +87,7 @@
 <a href="/articles/guides/tags/animations" class="nav-link ">              Animations
 </a>          </li>
           <li class="nav-item">
-<a href="/articles/guides/tags/json" class="nav-link active">              JSON
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
 </a>          </li>
           <li class="nav-item">
 <a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
@@ -98,25 +99,40 @@
     </nav>
   </aside>
   <article class="sk-content">
-    <h1>JSON Guides</h1>
-<p class="lead">
-  1 article
-</p>
-<a href="/articles/guides/tags/json/using-json/" class="sk-article-link">    <h4>Using JSON</h4>
-    <h4 class="lead text-muted">
-      Written by Richard Denton on
-      Oct  3 2017
-    </h6>
-    <p>
-      JSON is a human-readable text format consisting of key/value pairs and arrays.
-SplashKit allows us to read through these files and create our own. This
-article explains the basics of doing so with SplashKit.
+      <p class="lead">
+        Written by
+            Various
+        on May 30 2018
+      </p>
+    <p>Why do we need to <a href="/api/graphics#refresh_screen">Refresh Screen</a>?</p>
 
-    </p>
-    <span class="sk-read-more">
-      Read More <i class="fa fa-angle-double-right"></i>
-    </a>
-</a>
+<h2>Double Buffering</h2>
+
+<p>SplashKit uses a technique called Double Buffering to ensure you have control over how things appear on the screen.  In this technique you draw to a background canvas and then call <code>Refresh Screen</code> to make that canvas appear to the user.</p>
+
+<p>This means you control when something appears on the screen which is important when coordinating a number of shapes, sprites, images or text.</p>
+
+<p>The four images below execute the following pseudo code.</p>
+<pre class="highlight plaintext"><code>call Fill  Triangle() 
+call Fill  Rectangle() 
+call Fill  Circle() 
+call Refresh Screen() 
+</code></pre>
+<p><img alt="Visualisation of the pseudocode running." src="/images/articles/starter/double_buffer/draw_shapes-269dd049.png" style="width: 700px"></img></p>
+
+<h2>The Painter Model</h2>
+
+<p>Drawing shapes, sprites or other devices into a window is similar to an artist painting on a canvas. Once a brush stroke has been applied, you cannot insert anything underneath it. To insert a shape, sprite, image or text you will need to clear the screen and redraw the items in to the order you need them to render. As discussed above, it is important to note that SplashKit executes the commands top -&gt; down. However they are displayed bottom up. Take a look at the images below and the pseudo code. They will give you a better understanding of the Painter Model.</p>
+
+<p><img alt="Code is top down, appearance is bottom up." src="/images/articles/starter/double_buffer/painter-new-210773b3.jpg" style="width: 700px"></img></p>
+
+<p>So when drawing you need to keep two things in mind:</p>
+
+<ol>
+<li>Anything you draw will not appear unit you have refreshed the screen</li>
+<li>Newer drawing operations will draw over the current canvas, on top of anything that was already there</li>
+</ol>
+
   </article>
 
     </div>
