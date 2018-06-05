@@ -55,7 +55,7 @@ set :partials_dir, 'partials'
 
 # Activate markdown using Redcarpet parsing engine and syntax highlighting
 set :markdown_engine, :redcarpet
-set :markdown, fenced_code_blocks: true, smartypants: true
+set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
 activate :syntax
 
 # Pretty index directory structure
