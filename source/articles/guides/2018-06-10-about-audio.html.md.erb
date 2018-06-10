@@ -1,0 +1,105 @@
+---
+
+title: Get started with SplashKit Audio
+date: 2018-06-10 10:00 UTC
+author: Various
+author_url:
+tags: audio
+summary: Adding sound effects and music can really help bring an application to life. In this article see how to get started with Audio in SplashKit.
+  
+related_funcs:
+  - load_sound_effect
+  - load_music
+  - play_sound_effect
+  - play_music
+  - sound_effect_named
+  - music_named
+
+---
+
+This article provides background information you will need to get started with audio in SplashKit. This will introduce you to the file formats supported, along with general information about loading and playing music and sound effects.
+
+### Getting Started With Audio
+
+Music and sound effects make a huge difference to game play experience. SplashKit makes it easy for you to have both music and sound effects in your games. 
+
+Before you get started with audio you will need to get some sound files that you want played in your game. The following table outlines the file formats that SplashKit supports. A tick in the sound effect column means that the format can be used for sound effects, similarly a tick in the music column means it can be used for music.
+
+<table class="table table-condensed table-hover table-striped table-bordered" style="width: 40em">
+    <thead>
+        <tr>
+            <th>Format</th>
+            <th>Sound Effect</th>
+            <th>Music</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>WAV</td>
+            <td><i class="fa fa-check"></i></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>OGG</td>
+            <td><i class="fa fa-check"></i></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>MP3</td>
+            <td></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>MIDI</td>
+            <td></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>FLAC</td>
+            <td><i class="fa fa-check"></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+        <tr>
+            <td>MOD</td>
+            <td><i class="fa fa-check"></td>
+            <td><i class="fa fa-check"></i></td>
+        </tr>
+    </tbody>
+</table>
+
+### Playing a Sound Effect
+
+To play a sound effect you fist must load the audio file into your program. Sounds are stored in the **Resources/sounds** folder, and can be loaded using <%= link_for_function("load_sound_effect") %>. You only need to load the sound effect once, and you can then access it using the name you assigned to the sound effect and <%= link_for_function("sound_effect_named") %>, or by using the name of the sound effect in other calls.
+
+Once it is loaded, you can use the name you can play the sound effect using <%= link_for_function("play_sound_effect") %>. By default the sound effect will play once, at full volume. Additional parameters can be passed along with the sound effect to change the number of times the sound plays, and the volume.
+
+Sounds play until the file ends or until it is manually stopped in your code using <%= link_for_function("stop_sound_effect") %> or <%= link_for_function("stop_music") %>. The sound effect or music will play in the background while your program's code continues to run.
+
+<img alt="Illustration of sound playing in the background" src="/images/articles/audio/about_audio_1.png" style="width: 600px; display:block; margin: 0 auto;"></img>
+
+### Sound Effects vs Music?
+
+Sound effects should be used for short sounds you play in response to some action or event in your program. These will be loaded into memory before they are played.
+
+Music can be longer, and is usually played constantly while the program runs. Unlike sound effects, music is not loaded in its entirety before it starts playing. Instead the music data is read as it is played.
+
+### Mixing Sound Effects
+
+Multiple sounds can be played at one time using SplashKit, these sounds can be mixed using channels. Each channel can only play one sound effect at a time. So every call to <%= link_for_function("play_sound_effect") %> will use a channel that is not currently playing any sound. When there are no free channels SplashKit will stop a channel from playing it's current sound effect and play the new sound effect from the start.
+
+<img alt="Illustration of mixing sound effects" src="/images/articles/audio/about_audio_2.png" style="width: 600px; display:block; margin: 0 auto;"></img>
+
+
+### Music
+
+Music is different from sound effects in that music has it's own reserved channel that only music can be played on. Music, like sound effects will continue to be played until either the music is finished or <%= link_for_function("stop_music") %> is called.
+
+Since Music has one channel to itself, if you call <%= link_for_function("play_music") %> when Music is already playing the currently playing Music will be stopped and the new Music will start playing from the beginning.
+
+<img alt="Illustration of playing music" src="/images/articles/audio/about_audio_4.png" style="width: 600px; display:block; margin: 0 auto;"></img>
+
+### Example Code
+
+The following program code demonstrates the use of these audio features.
+
+<%= snippet "audio_basics", "articles/guides/audio/basic/" %>
