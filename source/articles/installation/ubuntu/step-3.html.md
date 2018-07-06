@@ -5,7 +5,7 @@ tags: installation,ubuntu
 
 ---
 
-Once you have [installed the pre-requisite packages](/articles/installation/ubuntu/step2.html), you can
+Once you have [installed the pre-requisite packages](/articles/installation/ubuntu/step-2/), you can
 install the SplashKit library.
 
 1. Open up a terminal.
