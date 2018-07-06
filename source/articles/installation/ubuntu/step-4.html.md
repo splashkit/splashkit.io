@@ -5,7 +5,7 @@ tags: installation,ubuntu
 
 ---
 
-Once you have the [installed SplashKit library](/articles/installation/ubuntu/step3.html) you
+Once you have the [installed SplashKit library](/articles/installation/ubuntu/step-3/) you
 can download and install Visual Studio Code to use as a source code editor.
 
 1. Download [Visual Studio Code](https://code.visualstudio.com/)
