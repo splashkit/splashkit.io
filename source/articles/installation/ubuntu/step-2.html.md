@@ -6,7 +6,7 @@ tags: installation,ubuntu
 ---
 
 Once you have
-[confirmed that your version of Ubuntu is supported](/articles/installation/ubuntu/step1.html)
+[confirmed that your version of Ubuntu is supported](/articles/installation/ubuntu/step-1/)
 you will need to install a list of required software packages in order
 for SplashKit to operate on Ubuntu.
 
