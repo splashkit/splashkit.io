@@ -19,7 +19,7 @@ MSYS2 provide a unix terminal environment for Windows. We will need this to run 
 
     ![](images/install-gifs/Windows/4.gif)
 
-1. Restart your terminal and relaunch MSYS2, then execute `pacman -su`
+1. Restart your terminal and relaunch MSYS2, then execute `pacman -Su`
 
     ![](images/install-gifs/Windows/5.gif)
 
