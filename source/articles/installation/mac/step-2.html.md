@@ -8,7 +8,7 @@ tags: installation,mac
 1. Code the following code and paste and run it within the Terminal.
 
     ```
-    $ bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)
+    bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)
     ```
 
     This is the code from the [SplashKit Homepage](http://splashkit.io).
