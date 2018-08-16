@@ -82084,6 +82084,72 @@
         }
       },
       {
+        "signature": "int rnd(int min,int max);",
+        "name": "rnd",
+        "method_name": null,
+        "unique_global_name": "rnd_range",
+        "unique_method_name": null,
+        "suffix_name": null,
+        "description": "Generates a random number between 'min' and `max`, including 'min' and 'max'.",
+        "brief": null,
+        "return": {
+          "type": "int",
+          "description": "Returns an `int` between and including `min` and `max`",
+          "is_pointer": false,
+          "is_reference": false,
+          "is_vector": false,
+          "type_parameter": null
+        },
+        "parameters": {
+          "min": {
+            "type": "int",
+            "description": "the `int` representing of minimum bound.",
+            "is_pointer": false,
+            "is_const": false,
+            "is_reference": false,
+            "is_array": false,
+            "array_dimension_sizes": [
+
+            ],
+            "is_vector": false,
+            "type_parameter": null
+          },
+          "max": {
+            "type": "int",
+            "description": "the `int` representing of maximum bound.",
+            "is_pointer": false,
+            "is_const": false,
+            "is_reference": false,
+            "is_array": false,
+            "array_dimension_sizes": [
+
+            ],
+            "is_vector": false,
+            "type_parameter": null
+          }
+        },
+        "attributes": {
+          "suffix": "range",
+          "group": "utilities",
+          "static": "random"
+        },
+        "signatures": {
+          "pascal": [
+            "function Rnd(min: Integer; max: Integer): Integer"
+          ],
+          "python": [
+            "def rnd_range(min, max):"
+          ],
+          "csharp": [
+            "public static int Random.Rnd(int min, int max);",
+            "public static int SplashKit.Rnd(int min, int max);"
+          ],
+          "cpp": [
+            "int rnd(int min, int max)"
+          ]
+        }
+      },
+      {
         "signature": "float rnd();",
         "name": "rnd",
         "method_name": null,
