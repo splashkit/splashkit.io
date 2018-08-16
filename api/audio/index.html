@@ -106,21 +106,6 @@
     Functions
   </li>
     <li class="nav-item">
-      <a href="#audio-ready" class="nav-link">
-        Audio Ready
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#close-audio" class="nav-link">
-        Close Audio
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#open-audio" class="nav-link">
-        Open Audio
-      </a>
-    </li>
-    <li class="nav-item">
       <a href="#group-fade-music-in" class="nav-link">
         Fade Music In
       </a>
@@ -260,6 +245,21 @@
         Stop Sound Effect
       </a>
     </li>
+    <li class="nav-item">
+      <a href="#audio-ready" class="nav-link">
+        Audio Ready
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#close-audio" class="nav-link">
+        Close Audio
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#open-audio" class="nav-link">
+        Open Audio
+      </a>
+    </li>
 </ul>
 
               <ul class="nav sk-api-nav-article">
@@ -391,185 +391,6 @@ by calling the <code>Load Sound Effect(string Name)</code> function to the
     </section>
     <h2> Functions </h2>
         <section class="sk-api-function sk-api-section">
-  <h3 id="audio-ready" data-anchor> Audio Ready </h3>
-  <div class="sk-api-description">
-    <p>Checks if SplashKit audio currently ready to be used.</p>
-
-<p>Should this return <code>False</code>, you may want to use <a href="/api/audio/#open-audio"><code>Open Audio</code></a>
-to enable audio.</p>
-
-  </div>
-    <dl>
-        <dt>
-          Return Type
-        </dt>
-        <dd>
-          <strong>
-            <p><code>Boolean</code></p>
-
-          </strong>
-          <p>Returns <code>True</code> if the audio has been initalised.</p>
-
-        </dd>
-      <dt>
-        Signatures
-      </dt>
-      <dd>
-        <div class="sk-snippet">
-  <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a href="#cpp-snippet-3800" aria-controls="cpp-snippet-3800" role="tab" data-toggle="tab" class="nav-link active">
-          C++
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#cs-snippet-6772" aria-controls="cs-snippet-6772" role="tab" data-toggle="tab" class="nav-link ">
-          C#
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#pas-snippet-5317" aria-controls="pas-snippet-5317" role="tab" data-toggle="tab" class="nav-link ">
-          Pascal
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#py-snippet-8587" aria-controls="py-snippet-8587" role="tab" data-toggle="tab" class="nav-link ">
-          Python
-        </a>
-      </li>
-  </ul>
-  <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3800" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3800 pre">
-        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">audio_ready</span><span class="p">()</span></code></pre>
-      </div>
-      <div role="tabpanel" id="cs-snippet-6772" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6772 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="n">AudioReady</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
-<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">AudioReady</span><span class="p">();</span></code></pre>
-      </div>
-      <div role="tabpanel" id="pas-snippet-5317" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5317 pre">
-        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AudioReady</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
-      </div>
-      <div role="tabpanel" id="py-snippet-8587" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8587 pre">
-        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">audio_ready</span><span class="p">():</span></code></pre>
-      </div>
-  </div>
-</div>
-
-      </dd>
-
-</section>
-
-        <section class="sk-api-function sk-api-section">
-  <h3 id="close-audio" data-anchor> Close Audio </h3>
-  <div class="sk-api-description">
-    <p>Turns off audio, stopping all current sounds effects and music.</p>
-
-  </div>
-    <dl>
-      <dt>
-        Signatures
-      </dt>
-      <dd>
-        <div class="sk-snippet">
-  <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a href="#cpp-snippet-6846" aria-controls="cpp-snippet-6846" role="tab" data-toggle="tab" class="nav-link active">
-          C++
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#cs-snippet-9801" aria-controls="cs-snippet-9801" role="tab" data-toggle="tab" class="nav-link ">
-          C#
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#pas-snippet-3785" aria-controls="pas-snippet-3785" role="tab" data-toggle="tab" class="nav-link ">
-          Pascal
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#py-snippet-1648" aria-controls="py-snippet-1648" role="tab" data-toggle="tab" class="nav-link ">
-          Python
-        </a>
-      </li>
-  </ul>
-  <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6846" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6846 pre">
-        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">close_audio</span><span class="p">()</span></code></pre>
-      </div>
-      <div role="tabpanel" id="cs-snippet-9801" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9801 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">CloseAudio</span><span class="p">();</span>
-<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CloseAudio</span><span class="p">();</span></code></pre>
-      </div>
-      <div role="tabpanel" id="pas-snippet-3785" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3785 pre">
-        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CloseAudio</span><span class="p">()</span></code></pre>
-      </div>
-      <div role="tabpanel" id="py-snippet-1648" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1648 pre">
-        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">close_audio</span><span class="p">():</span></code></pre>
-      </div>
-  </div>
-</div>
-
-      </dd>
-
-</section>
-
-        <section class="sk-api-function sk-api-section">
-  <h3 id="open-audio" data-anchor> Open Audio </h3>
-  <div class="sk-api-description">
-    <p>Starts the SplashKit audio system working.</p>
-
-  </div>
-    <dl>
-      <dt>
-        Signatures
-      </dt>
-      <dd>
-        <div class="sk-snippet">
-  <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item">
-        <a href="#cpp-snippet-6866" aria-controls="cpp-snippet-6866" role="tab" data-toggle="tab" class="nav-link active">
-          C++
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#cs-snippet-5301" aria-controls="cs-snippet-5301" role="tab" data-toggle="tab" class="nav-link ">
-          C#
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#pas-snippet-2867" aria-controls="pas-snippet-2867" role="tab" data-toggle="tab" class="nav-link ">
-          Pascal
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="#py-snippet-6805" aria-controls="py-snippet-6805" role="tab" data-toggle="tab" class="nav-link ">
-          Python
-        </a>
-      </li>
-  </ul>
-  <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6866" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6866 pre">
-        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">open_audio</span><span class="p">()</span></code></pre>
-      </div>
-      <div role="tabpanel" id="cs-snippet-5301" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5301 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">OpenAudio</span><span class="p">();</span>
-<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">OpenAudio</span><span class="p">();</span></code></pre>
-      </div>
-      <div role="tabpanel" id="pas-snippet-2867" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2867 pre">
-        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">OpenAudio</span><span class="p">()</span></code></pre>
-      </div>
-      <div role="tabpanel" id="py-snippet-6805" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6805 pre">
-        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">open_audio</span><span class="p">():</span></code></pre>
-      </div>
-  </div>
-</div>
-
-      </dd>
-
-</section>
-
-        <section class="sk-api-function sk-api-section">
           <h3 id="group-fade-music-in" data-anchor>
             Fade Music In
             <label class="tag tag-pill tag-primary pull-right">
@@ -692,38 +513,38 @@ to enable audio.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1017" aria-controls="cpp-snippet-1017" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7880" aria-controls="cpp-snippet-7880" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1204" aria-controls="cs-snippet-1204" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2563" aria-controls="cs-snippet-2563" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-283" aria-controls="pas-snippet-283" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7797" aria-controls="pas-snippet-7797" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4748" aria-controls="py-snippet-4748" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5102" aria-controls="py-snippet-5102" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1017" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1017 pre">
+      <div role="tabpanel" id="cpp-snippet-7880" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7880 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_music_in</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1204" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1204 pre">
+      <div role="tabpanel" id="cs-snippet-2563" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2563 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-283" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-283 pre">
+      <div role="tabpanel" id="pas-snippet-7797" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7797 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeMusicIn</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4748" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4748 pre">
+      <div role="tabpanel" id="py-snippet-5102" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5102 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_music_in_named</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -803,38 +624,38 @@ and loops a specified number of times</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2304" aria-controls="cpp-snippet-2304" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7460" aria-controls="cpp-snippet-7460" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5449" aria-controls="cs-snippet-5449" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4011" aria-controls="cs-snippet-4011" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7015" aria-controls="pas-snippet-7015" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8914" aria-controls="pas-snippet-8914" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2592" aria-controls="py-snippet-2592" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1042" aria-controls="py-snippet-1042" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2304" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2304 pre">
+      <div role="tabpanel" id="cpp-snippet-7460" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7460 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_music_in</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5449" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5449 pre">
+      <div role="tabpanel" id="cs-snippet-4011" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4011 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7015" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7015 pre">
+      <div role="tabpanel" id="pas-snippet-8914" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8914 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeMusicIn</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2592" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2592 pre">
+      <div role="tabpanel" id="py-snippet-1042" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1042 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_music_in_named_with_times</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -900,38 +721,38 @@ and loops a specified number of times</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1486" aria-controls="cpp-snippet-1486" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-260" aria-controls="cpp-snippet-260" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3348" aria-controls="cs-snippet-3348" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1017" aria-controls="cs-snippet-1017" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6918" aria-controls="pas-snippet-6918" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7532" aria-controls="pas-snippet-7532" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-343" aria-controls="py-snippet-343" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5210" aria-controls="py-snippet-5210" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1486" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1486 pre">
+      <div role="tabpanel" id="cpp-snippet-260" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-260 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_music_in</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3348" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3348 pre">
+      <div role="tabpanel" id="cs-snippet-1017" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1017 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6918" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6918 pre">
+      <div role="tabpanel" id="pas-snippet-7532" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7532 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeMusicIn</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">;</span> <span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-343" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-343 pre">
+      <div role="tabpanel" id="py-snippet-5210" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5210 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_music_in</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1011,38 +832,38 @@ for a specified number of times.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6766" aria-controls="cpp-snippet-6766" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2312" aria-controls="cpp-snippet-2312" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-699" aria-controls="cs-snippet-699" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1752" aria-controls="cs-snippet-1752" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9547" aria-controls="pas-snippet-9547" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4568" aria-controls="pas-snippet-4568" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4822" aria-controls="py-snippet-4822" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7458" aria-controls="py-snippet-7458" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6766" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6766 pre">
+      <div role="tabpanel" id="cpp-snippet-2312" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2312 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_music_in</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-699" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-699 pre">
+      <div role="tabpanel" id="cs-snippet-1752" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1752 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeMusicIn</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9547" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9547 pre">
+      <div role="tabpanel" id="pas-snippet-4568" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4568 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeMusicIn</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4822" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4822 pre">
+      <div role="tabpanel" id="py-snippet-7458" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7458 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_music_in_with_times</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1095,38 +916,38 @@ for a specified number of times.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1127" aria-controls="cpp-snippet-1127" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8435" aria-controls="cpp-snippet-8435" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3198" aria-controls="cs-snippet-3198" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8330" aria-controls="cs-snippet-8330" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3925" aria-controls="pas-snippet-3925" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4794" aria-controls="pas-snippet-4794" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8336" aria-controls="py-snippet-8336" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6253" aria-controls="py-snippet-6253" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1127" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1127 pre">
+      <div role="tabpanel" id="cpp-snippet-8435" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8435 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_music_out</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3198" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3198 pre">
+      <div role="tabpanel" id="cs-snippet-8330" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8330 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FadeMusicOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeMusicOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3925" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3925 pre">
+      <div role="tabpanel" id="pas-snippet-4794" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4794 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeMusicOut</span><span class="p">(</span><span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8336" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8336 pre">
+      <div role="tabpanel" id="py-snippet-6253" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6253 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_music_out</span><span class="p">(</span><span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1150,38 +971,38 @@ for a specified number of times.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8715" aria-controls="cpp-snippet-8715" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3535" aria-controls="cpp-snippet-3535" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8877" aria-controls="cs-snippet-8877" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9367" aria-controls="cs-snippet-9367" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4411" aria-controls="pas-snippet-4411" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7464" aria-controls="pas-snippet-7464" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4287" aria-controls="py-snippet-4287" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9803" aria-controls="py-snippet-9803" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8715" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8715 pre">
+      <div role="tabpanel" id="cpp-snippet-3535" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3535 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_music</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8877" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8877 pre">
+      <div role="tabpanel" id="cs-snippet-9367" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9367 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FreeAllMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeAllMusic</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4411" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4411 pre">
+      <div role="tabpanel" id="pas-snippet-7464" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7464 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllMusic</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4287" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4287 pre">
+      <div role="tabpanel" id="py-snippet-9803" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9803 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_music</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1234,38 +1055,38 @@ for a specified number of times.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4350" aria-controls="cpp-snippet-4350" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6025" aria-controls="cpp-snippet-6025" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8328" aria-controls="cs-snippet-8328" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7574" aria-controls="cs-snippet-7574" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5219" aria-controls="pas-snippet-5219" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9710" aria-controls="pas-snippet-9710" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3312" aria-controls="py-snippet-3312" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9626" aria-controls="py-snippet-9626" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4350" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4350 pre">
+      <div role="tabpanel" id="cpp-snippet-6025" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6025 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_music</span><span class="p">(</span><span class="n">music</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8328" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8328 pre">
+      <div role="tabpanel" id="cs-snippet-7574" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7574 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">FreeMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeMusic</span><span class="p">(</span><span class="n">Music</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5219" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5219 pre">
+      <div role="tabpanel" id="pas-snippet-9710" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9710 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeMusic</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">Music</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3312" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3312 pre">
+      <div role="tabpanel" id="py-snippet-9626" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9626 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_music</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1334,38 +1155,38 @@ has been loaded.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-628" aria-controls="cpp-snippet-628" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1624" aria-controls="cpp-snippet-1624" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2269" aria-controls="cs-snippet-2269" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1645" aria-controls="cs-snippet-1645" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7035" aria-controls="pas-snippet-7035" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6854" aria-controls="pas-snippet-6854" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6596" aria-controls="py-snippet-6596" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-4868" aria-controls="py-snippet-4868" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-628" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-628 pre">
+      <div role="tabpanel" id="cpp-snippet-1624" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1624 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_music</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2269" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2269 pre">
+      <div role="tabpanel" id="cs-snippet-1645" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1645 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">HasMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">HasMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7035" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7035 pre">
+      <div role="tabpanel" id="pas-snippet-6854" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6854 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasMusic</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6596" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6596 pre">
+      <div role="tabpanel" id="py-snippet-4868" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4868 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_music</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1445,38 +1266,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-905" aria-controls="cpp-snippet-905" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6742" aria-controls="cpp-snippet-6742" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5504" aria-controls="cs-snippet-5504" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5510" aria-controls="cs-snippet-5510" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7278" aria-controls="pas-snippet-7278" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8880" aria-controls="pas-snippet-8880" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1727" aria-controls="py-snippet-1727" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3150" aria-controls="py-snippet-3150" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-905" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-905 pre">
+      <div role="tabpanel" id="cpp-snippet-6742" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6742 pre">
         <pre class="codehilite"><code><span class="n">music</span> <span class="n">load_music</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5504" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5504 pre">
+      <div role="tabpanel" id="cs-snippet-5510" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5510 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Music</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">LoadMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span>
 <span class="k">public</span> <span class="nf">Music</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7278" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7278 pre">
+      <div role="tabpanel" id="pas-snippet-8880" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8880 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">LoadMusic</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Music</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1727" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1727 pre">
+      <div role="tabpanel" id="py-snippet-3150" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3150 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">load_music</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1546,38 +1367,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2051" aria-controls="cpp-snippet-2051" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9974" aria-controls="cpp-snippet-9974" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9838" aria-controls="cs-snippet-9838" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1404" aria-controls="cs-snippet-1404" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6262" aria-controls="pas-snippet-6262" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6905" aria-controls="pas-snippet-6905" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7780" aria-controls="py-snippet-7780" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3489" aria-controls="py-snippet-3489" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2051" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2051 pre">
+      <div role="tabpanel" id="cpp-snippet-9974" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9974 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">music_filename</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9838" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9838 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">Music</span><span class="p">.</span><span class="n">MusicFilename</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-1404" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1404 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">Music</span><span class="p">.</span><span class="n">Filename</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MusicFilename</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6262" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6262 pre">
+      <div role="tabpanel" id="pas-snippet-6905" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6905 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MusicFilename</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7780" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7780 pre">
+      <div role="tabpanel" id="py-snippet-3489" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3489 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">music_filename</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1641,38 +1462,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8527" aria-controls="cpp-snippet-8527" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9833" aria-controls="cpp-snippet-9833" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3536" aria-controls="cs-snippet-3536" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8751" aria-controls="cs-snippet-8751" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9587" aria-controls="pas-snippet-9587" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4607" aria-controls="pas-snippet-4607" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9200" aria-controls="py-snippet-9200" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2726" aria-controls="py-snippet-2726" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8527" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8527 pre">
+      <div role="tabpanel" id="cpp-snippet-9833" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9833 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">music_name</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3536" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3536 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">Music</span><span class="p">.</span><span class="n">MusicName</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-8751" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8751 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">Music</span><span class="p">.</span><span class="n">Name</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MusicName</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9587" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9587 pre">
+      <div role="tabpanel" id="pas-snippet-4607" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4607 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MusicName</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9200" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9200 pre">
+      <div role="tabpanel" id="py-snippet-2726" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2726 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">music_name</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1737,38 +1558,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9544" aria-controls="cpp-snippet-9544" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7852" aria-controls="cpp-snippet-7852" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8247" aria-controls="cs-snippet-8247" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9421" aria-controls="cs-snippet-9421" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4117" aria-controls="pas-snippet-4117" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-847" aria-controls="pas-snippet-847" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1053" aria-controls="py-snippet-1053" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7464" aria-controls="py-snippet-7464" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9544" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9544 pre">
+      <div role="tabpanel" id="cpp-snippet-7852" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7852 pre">
         <pre class="codehilite"><code><span class="n">music</span> <span class="n">music_named</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8247" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8247 pre">
+      <div role="tabpanel" id="cs-snippet-9421" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9421 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">Music</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">MusicNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">Music</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MusicNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4117" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4117 pre">
+      <div role="tabpanel" id="pas-snippet-847" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-847 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MusicNamed</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">Music</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1053" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1053 pre">
+      <div role="tabpanel" id="py-snippet-7464" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7464 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">music_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -1809,38 +1630,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4953" aria-controls="cpp-snippet-4953" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1507" aria-controls="cpp-snippet-1507" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5517" aria-controls="cs-snippet-5517" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3816" aria-controls="cs-snippet-3816" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-266" aria-controls="pas-snippet-266" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3770" aria-controls="pas-snippet-3770" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6273" aria-controls="py-snippet-6273" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1913" aria-controls="py-snippet-1913" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4953" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4953 pre">
+      <div role="tabpanel" id="cpp-snippet-1507" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1507 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">music_playing</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5517" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5517 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="n">MusicPlaying</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-3816" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3816 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="n">Playing</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MusicPlaying</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-266" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-266 pre">
+      <div role="tabpanel" id="pas-snippet-3770" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3770 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MusicPlaying</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6273" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6273 pre">
+      <div role="tabpanel" id="py-snippet-1913" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1913 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">music_playing</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1875,38 +1696,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6531" aria-controls="cpp-snippet-6531" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5398" aria-controls="cpp-snippet-5398" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4734" aria-controls="cs-snippet-4734" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8141" aria-controls="cs-snippet-8141" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4018" aria-controls="pas-snippet-4018" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-5046" aria-controls="pas-snippet-5046" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7434" aria-controls="py-snippet-7434" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6104" aria-controls="py-snippet-6104" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6531" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6531 pre">
+      <div role="tabpanel" id="cpp-snippet-5398" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5398 pre">
         <pre class="codehilite"><code><span class="kt">float</span> <span class="n">music_volume</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4734" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4734 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Audio</span><span class="p">.</span><span class="n">MusicVolume</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-8141" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8141 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">Audio</span><span class="p">.</span><span class="n">Volume</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">float</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">MusicVolume</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4018" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4018 pre">
+      <div role="tabpanel" id="pas-snippet-5046" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5046 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">MusicVolume</span><span class="p">():</span> <span class="kt">Single</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7434" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7434 pre">
+      <div role="tabpanel" id="py-snippet-6104" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6104 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">music_volume</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -1930,38 +1751,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-349" aria-controls="cpp-snippet-349" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9480" aria-controls="cpp-snippet-9480" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1759" aria-controls="cs-snippet-1759" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5631" aria-controls="cs-snippet-5631" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9500" aria-controls="pas-snippet-9500" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9800" aria-controls="pas-snippet-9800" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9876" aria-controls="py-snippet-9876" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9899" aria-controls="py-snippet-9899" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-349" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-349 pre">
+      <div role="tabpanel" id="cpp-snippet-9480" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9480 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">pause_music</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1759" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1759 pre">
+      <div role="tabpanel" id="cs-snippet-5631" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5631 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PauseMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PauseMusic</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9500" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9500 pre">
+      <div role="tabpanel" id="pas-snippet-9800" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9800 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PauseMusic</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9876" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9876 pre">
+      <div role="tabpanel" id="py-snippet-9899" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9899 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">pause_music</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2083,38 +1904,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2799" aria-controls="cpp-snippet-2799" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1085" aria-controls="cpp-snippet-1085" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4324" aria-controls="cs-snippet-4324" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8174" aria-controls="cs-snippet-8174" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3802" aria-controls="pas-snippet-3802" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6685" aria-controls="pas-snippet-6685" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8601" aria-controls="py-snippet-8601" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-195" aria-controls="py-snippet-195" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2799" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2799 pre">
+      <div role="tabpanel" id="cpp-snippet-1085" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1085 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_music</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4324" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4324 pre">
+      <div role="tabpanel" id="cs-snippet-8174" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8174 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3802" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3802 pre">
+      <div role="tabpanel" id="pas-snippet-6685" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6685 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlayMusic</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8601" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8601 pre">
+      <div role="tabpanel" id="py-snippet-195" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-195 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_music_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2186,38 +2007,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4888" aria-controls="cpp-snippet-4888" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8966" aria-controls="cpp-snippet-8966" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1385" aria-controls="cs-snippet-1385" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-7336" aria-controls="cs-snippet-7336" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8777" aria-controls="pas-snippet-8777" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2598" aria-controls="pas-snippet-2598" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-161" aria-controls="py-snippet-161" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1863" aria-controls="py-snippet-1863" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4888" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4888 pre">
+      <div role="tabpanel" id="cpp-snippet-8966" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8966 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_music</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1385" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1385 pre">
+      <div role="tabpanel" id="cs-snippet-7336" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7336 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8777" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8777 pre">
+      <div role="tabpanel" id="pas-snippet-2598" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2598 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlayMusic</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-161" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-161 pre">
+      <div role="tabpanel" id="py-snippet-1863" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1863 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_music_named_with_times</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2276,38 +2097,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-30" aria-controls="cpp-snippet-30" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7828" aria-controls="cpp-snippet-7828" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6087" aria-controls="cs-snippet-6087" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8736" aria-controls="cs-snippet-8736" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3815" aria-controls="pas-snippet-3815" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2617" aria-controls="pas-snippet-2617" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4966" aria-controls="py-snippet-4966" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8004" aria-controls="py-snippet-8004" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-30" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-30 pre">
+      <div role="tabpanel" id="cpp-snippet-7828" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7828 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_music</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6087" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6087 pre">
+      <div role="tabpanel" id="cs-snippet-8736" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8736 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3815" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3815 pre">
+      <div role="tabpanel" id="pas-snippet-2617" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2617 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlayMusic</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4966" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4966 pre">
+      <div role="tabpanel" id="py-snippet-8004" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8004 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_music</span><span class="p">(</span><span class="n">data</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2379,38 +2200,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8345" aria-controls="cpp-snippet-8345" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6313" aria-controls="cpp-snippet-6313" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9825" aria-controls="cs-snippet-9825" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2958" aria-controls="cs-snippet-2958" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1562" aria-controls="pas-snippet-1562" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8463" aria-controls="pas-snippet-8463" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2996" aria-controls="py-snippet-2996" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5694" aria-controls="py-snippet-5694" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8345" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8345 pre">
+      <div role="tabpanel" id="cpp-snippet-6313" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6313 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_music</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9825" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9825 pre">
+      <div role="tabpanel" id="cs-snippet-2958" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2958 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1562" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1562 pre">
+      <div role="tabpanel" id="pas-snippet-8463" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8463 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlayMusic</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2996" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2996 pre">
+      <div role="tabpanel" id="py-snippet-5694" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5694 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_music_with_times</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2496,38 +2317,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9555" aria-controls="cpp-snippet-9555" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2938" aria-controls="cpp-snippet-2938" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2242" aria-controls="cs-snippet-2242" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2539" aria-controls="cs-snippet-2539" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6594" aria-controls="pas-snippet-6594" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4332" aria-controls="pas-snippet-4332" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5603" aria-controls="py-snippet-5603" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7386" aria-controls="py-snippet-7386" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9555" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9555 pre">
+      <div role="tabpanel" id="cpp-snippet-2938" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2938 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_music</span><span class="p">(</span><span class="n">music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2242" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2242 pre">
+      <div role="tabpanel" id="cs-snippet-2539" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2539 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">Music</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlayMusic</span><span class="p">(</span><span class="n">Music</span> <span class="n">data</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6594" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6594 pre">
+      <div role="tabpanel" id="pas-snippet-4332" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4332 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlayMusic</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Music</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5603" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5603 pre">
+      <div role="tabpanel" id="py-snippet-7386" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7386 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_music_with_times_and_volume</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2557,38 +2378,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3063" aria-controls="cpp-snippet-3063" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3376" aria-controls="cpp-snippet-3376" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4438" aria-controls="cs-snippet-4438" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9115" aria-controls="cs-snippet-9115" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5636" aria-controls="pas-snippet-5636" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7459" aria-controls="pas-snippet-7459" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1002" aria-controls="py-snippet-1002" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8496" aria-controls="py-snippet-8496" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3063" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3063 pre">
+      <div role="tabpanel" id="cpp-snippet-3376" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3376 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">resume_music</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4438" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4438 pre">
+      <div role="tabpanel" id="cs-snippet-9115" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9115 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">ResumeMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">ResumeMusic</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5636" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5636 pre">
+      <div role="tabpanel" id="pas-snippet-7459" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7459 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">ResumeMusic</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1002" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1002 pre">
+      <div role="tabpanel" id="py-snippet-8496" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8496 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">resume_music</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2642,38 +2463,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-923" aria-controls="cpp-snippet-923" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1179" aria-controls="cpp-snippet-1179" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2321" aria-controls="cs-snippet-2321" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4032" aria-controls="cs-snippet-4032" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-915" aria-controls="pas-snippet-915" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1007" aria-controls="pas-snippet-1007" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2195" aria-controls="py-snippet-2195" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5611" aria-controls="py-snippet-5611" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-923" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-923 pre">
+      <div role="tabpanel" id="cpp-snippet-1179" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1179 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">set_music_volume</span><span class="p">(</span><span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2321" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2321 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="n">SetMusicVolume</span> <span class="p">{</span> <span class="k">set</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-4032" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4032 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="n">Volume</span> <span class="p">{</span> <span class="k">set</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SetMusicVolume</span><span class="p">(</span><span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-915" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-915 pre">
+      <div role="tabpanel" id="pas-snippet-1007" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1007 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">SetMusicVolume</span><span class="p">(</span><span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2195" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2195 pre">
+      <div role="tabpanel" id="py-snippet-5611" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5611 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">set_music_volume</span><span class="p">(</span><span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2697,38 +2518,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1266" aria-controls="cpp-snippet-1266" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6576" aria-controls="cpp-snippet-6576" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1402" aria-controls="cs-snippet-1402" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2074" aria-controls="cs-snippet-2074" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8709" aria-controls="pas-snippet-8709" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-666" aria-controls="pas-snippet-666" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8380" aria-controls="py-snippet-8380" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3817" aria-controls="py-snippet-3817" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1266" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1266 pre">
+      <div role="tabpanel" id="cpp-snippet-6576" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6576 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_music</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1402" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1402 pre">
+      <div role="tabpanel" id="cs-snippet-2074" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2074 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">StopMusic</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StopMusic</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8709" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8709 pre">
+      <div role="tabpanel" id="pas-snippet-666" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-666 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopMusic</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8380" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8380 pre">
+      <div role="tabpanel" id="py-snippet-3817" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3817 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">stop_music</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -2781,38 +2602,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-449" aria-controls="cpp-snippet-449" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9206" aria-controls="cpp-snippet-9206" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-8593" aria-controls="cs-snippet-8593" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4100" aria-controls="cs-snippet-4100" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8348" aria-controls="pas-snippet-8348" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8175" aria-controls="pas-snippet-8175" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9422" aria-controls="py-snippet-9422" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-272" aria-controls="py-snippet-272" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-449" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-449 pre">
+      <div role="tabpanel" id="cpp-snippet-9206" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9206 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_all_sound_effects_out</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-8593" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8593 pre">
+      <div role="tabpanel" id="cs-snippet-4100" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4100 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FadeAllSoundEffectsOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeAllSoundEffectsOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8348" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8348 pre">
+      <div role="tabpanel" id="pas-snippet-8175" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8175 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeAllSoundEffectsOut</span><span class="p">(</span><span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9422" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9422 pre">
+      <div role="tabpanel" id="py-snippet-272" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-272 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_all_sound_effects_out</span><span class="p">(</span><span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2878,38 +2699,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2448" aria-controls="cpp-snippet-2448" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4945" aria-controls="cpp-snippet-4945" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4154" aria-controls="cs-snippet-4154" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9905" aria-controls="cs-snippet-9905" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6199" aria-controls="pas-snippet-6199" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2047" aria-controls="pas-snippet-2047" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1940" aria-controls="py-snippet-1940" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1306" aria-controls="py-snippet-1306" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2448" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2448 pre">
+      <div role="tabpanel" id="cpp-snippet-4945" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4945 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">fade_sound_effect_out</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4154" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4154 pre">
+      <div role="tabpanel" id="cs-snippet-9905" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9905 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">FadeSoundEffectOut</span><span class="p">(</span><span class="kt">int</span> <span class="n">ms</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FadeSoundEffectOut</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ms</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6199" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6199 pre">
+      <div role="tabpanel" id="pas-snippet-2047" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2047 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FadeSoundEffectOut</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">;</span> <span class="n">ms</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1940" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1940 pre">
+      <div role="tabpanel" id="py-snippet-1306" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1306 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">fade_sound_effect_out</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">ms</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -2933,38 +2754,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-2610" aria-controls="cpp-snippet-2610" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1322" aria-controls="cpp-snippet-1322" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9818" aria-controls="cs-snippet-9818" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5501" aria-controls="cs-snippet-5501" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7817" aria-controls="pas-snippet-7817" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2060" aria-controls="pas-snippet-2060" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6679" aria-controls="py-snippet-6679" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6916" aria-controls="py-snippet-6916" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-2610" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2610 pre">
+      <div role="tabpanel" id="cpp-snippet-1322" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1322 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_all_sound_effects</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9818" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9818 pre">
+      <div role="tabpanel" id="cs-snippet-5501" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5501 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">FreeAllSoundEffects</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeAllSoundEffects</span><span class="p">();</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7817" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7817 pre">
+      <div role="tabpanel" id="pas-snippet-2060" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2060 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeAllSoundEffects</span><span class="p">()</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6679" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6679 pre">
+      <div role="tabpanel" id="py-snippet-6916" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6916 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_all_sound_effects</span><span class="p">():</span></code></pre>
       </div>
   </div>
@@ -3017,38 +2838,38 @@ retrieved by passing this <code>Name</code> to the <a href="/api/audio/#music-na
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4198" aria-controls="cpp-snippet-4198" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5490" aria-controls="cpp-snippet-5490" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1561" aria-controls="cs-snippet-1561" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-1927" aria-controls="cs-snippet-1927" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2710" aria-controls="pas-snippet-2710" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1843" aria-controls="pas-snippet-1843" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3183" aria-controls="py-snippet-3183" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-7810" aria-controls="py-snippet-7810" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4198" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4198 pre">
+      <div role="tabpanel" id="cpp-snippet-5490" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5490 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">free_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1561" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1561 pre">
+      <div role="tabpanel" id="cs-snippet-1927" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1927 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">FreeSoundEffect</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">FreeSoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2710" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2710 pre">
+      <div role="tabpanel" id="pas-snippet-1843" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1843 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">FreeSoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3183" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3183 pre">
+      <div role="tabpanel" id="py-snippet-7810" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7810 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">free_sound_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3117,38 +2938,38 @@ has been loaded.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9029" aria-controls="cpp-snippet-9029" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5091" aria-controls="cpp-snippet-5091" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-352" aria-controls="cs-snippet-352" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-672" aria-controls="cs-snippet-672" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5055" aria-controls="pas-snippet-5055" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-305" aria-controls="pas-snippet-305" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4198" aria-controls="py-snippet-4198" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2822" aria-controls="py-snippet-2822" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9029" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9029 pre">
+      <div role="tabpanel" id="cpp-snippet-5091" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5091 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">has_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-352" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-352 pre">
+      <div role="tabpanel" id="cs-snippet-672" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-672 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">HasSoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">HasSoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5055" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5055 pre">
+      <div role="tabpanel" id="pas-snippet-305" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-305 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">HasSoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4198" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4198 pre">
+      <div role="tabpanel" id="py-snippet-2822" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2822 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">has_sound_effect</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3228,38 +3049,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5411" aria-controls="cpp-snippet-5411" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8654" aria-controls="cpp-snippet-8654" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-6905" aria-controls="cs-snippet-6905" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2803" aria-controls="cs-snippet-2803" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2499" aria-controls="pas-snippet-2499" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9011" aria-controls="pas-snippet-9011" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3752" aria-controls="py-snippet-3752" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9782" aria-controls="py-snippet-9782" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5411" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5411 pre">
+      <div role="tabpanel" id="cpp-snippet-8654" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8654 pre">
         <pre class="codehilite"><code><span class="n">sound_effect</span> <span class="n">load_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">filename</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-6905" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6905 pre">
+      <div role="tabpanel" id="cs-snippet-2803" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2803 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">SoundEffect</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">LoadSoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span>
 <span class="k">public</span> <span class="nf">SoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">filename</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2499" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2499 pre">
+      <div role="tabpanel" id="pas-snippet-9011" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9011 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">LoadSoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="k">const</span> <span class="n">filename</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">SoundEffect</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3752" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3752 pre">
+      <div role="tabpanel" id="py-snippet-9782" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9782 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">load_sound_effect</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3423,38 +3244,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3808" aria-controls="cpp-snippet-3808" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3282" aria-controls="cpp-snippet-3282" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-57" aria-controls="cs-snippet-57" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-5823" aria-controls="cs-snippet-5823" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4085" aria-controls="pas-snippet-4085" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7310" aria-controls="pas-snippet-7310" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3582" aria-controls="py-snippet-3582" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3702" aria-controls="py-snippet-3702" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3808" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3808 pre">
+      <div role="tabpanel" id="cpp-snippet-3282" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3282 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-57" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-57 pre">
+      <div role="tabpanel" id="cs-snippet-5823" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5823 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4085" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4085 pre">
+      <div role="tabpanel" id="pas-snippet-7310" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7310 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3582" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3582 pre">
+      <div role="tabpanel" id="py-snippet-3702" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3702 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3526,38 +3347,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3464" aria-controls="cpp-snippet-3464" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6508" aria-controls="cpp-snippet-6508" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1257" aria-controls="cs-snippet-1257" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2475" aria-controls="cs-snippet-2475" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-8319" aria-controls="pas-snippet-8319" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7168" aria-controls="pas-snippet-7168" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5408" aria-controls="py-snippet-5408" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1634" aria-controls="py-snippet-1634" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3464" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3464 pre">
+      <div role="tabpanel" id="cpp-snippet-6508" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6508 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1257" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1257 pre">
+      <div role="tabpanel" id="cs-snippet-2475" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2475 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-8319" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8319 pre">
+      <div role="tabpanel" id="pas-snippet-7168" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7168 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5408" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5408 pre">
+      <div role="tabpanel" id="py-snippet-1634" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1634 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_named_with_volume</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3629,38 +3450,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3251" aria-controls="cpp-snippet-3251" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-7148" aria-controls="cpp-snippet-7148" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5162" aria-controls="cs-snippet-5162" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2609" aria-controls="cs-snippet-2609" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9190" aria-controls="pas-snippet-9190" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-8982" aria-controls="pas-snippet-8982" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4441" aria-controls="py-snippet-4441" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-2015" aria-controls="py-snippet-2015" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3251" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3251 pre">
+      <div role="tabpanel" id="cpp-snippet-7148" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-7148 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5162" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5162 pre">
+      <div role="tabpanel" id="cs-snippet-2609" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2609 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9190" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9190 pre">
+      <div role="tabpanel" id="pas-snippet-8982" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-8982 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4441" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4441 pre">
+      <div role="tabpanel" id="py-snippet-2015" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2015 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_named_with_times</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3746,38 +3567,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6480" aria-controls="cpp-snippet-6480" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6360" aria-controls="cpp-snippet-6360" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-9337" aria-controls="cs-snippet-9337" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-3451" aria-controls="cs-snippet-3451" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4462" aria-controls="pas-snippet-4462" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3327" aria-controls="pas-snippet-3327" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-3385" aria-controls="py-snippet-3385" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-9859" aria-controls="py-snippet-9859" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6480" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6480 pre">
+      <div role="tabpanel" id="cpp-snippet-6360" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6360 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-9337" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9337 pre">
+      <div role="tabpanel" id="cs-snippet-3451" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3451 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4462" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4462 pre">
+      <div role="tabpanel" id="pas-snippet-3327" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3327 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-3385" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3385 pre">
+      <div role="tabpanel" id="py-snippet-9859" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9859 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_named_with_times_and_volume</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3836,38 +3657,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-6817" aria-controls="cpp-snippet-6817" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-101" aria-controls="cpp-snippet-101" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3762" aria-controls="cs-snippet-3762" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2824" aria-controls="cs-snippet-2824" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-6749" aria-controls="pas-snippet-6749" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-2344" aria-controls="pas-snippet-2344" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6839" aria-controls="py-snippet-6839" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6501" aria-controls="py-snippet-6501" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-6817" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6817 pre">
+      <div role="tabpanel" id="cpp-snippet-101" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-101 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3762" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3762 pre">
+      <div role="tabpanel" id="cs-snippet-2824" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2824 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-6749" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6749 pre">
+      <div role="tabpanel" id="pas-snippet-2344" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2344 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6839" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6839 pre">
+      <div role="tabpanel" id="py-snippet-6501" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6501 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -3940,38 +3761,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9325" aria-controls="cpp-snippet-9325" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-6820" aria-controls="cpp-snippet-6820" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5574" aria-controls="cs-snippet-5574" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2486" aria-controls="cs-snippet-2486" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-1649" aria-controls="pas-snippet-1649" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-6318" aria-controls="pas-snippet-6318" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-6507" aria-controls="py-snippet-6507" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3570" aria-controls="py-snippet-3570" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9325" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9325 pre">
+      <div role="tabpanel" id="cpp-snippet-6820" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-6820 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5574" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5574 pre">
+      <div role="tabpanel" id="cs-snippet-2486" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2486 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">float</span> <span class="n">volume</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-1649" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1649 pre">
+      <div role="tabpanel" id="pas-snippet-6318" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-6318 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">;</span> <span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-6507" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6507 pre">
+      <div role="tabpanel" id="py-snippet-3570" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3570 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_with_volume</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4043,38 +3864,38 @@ the <a href="/api/audio/#sound-effect-named"><code>Sound Effect Named</code></a>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-8667" aria-controls="cpp-snippet-8667" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-5784" aria-controls="cpp-snippet-5784" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-1979" aria-controls="cs-snippet-1979" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-225" aria-controls="cs-snippet-225" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-4056" aria-controls="pas-snippet-4056" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-7154" aria-controls="pas-snippet-7154" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-1364" aria-controls="py-snippet-1364" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-300" aria-controls="py-snippet-300" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-8667" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8667 pre">
+      <div role="tabpanel" id="cpp-snippet-5784" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5784 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-1979" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1979 pre">
+      <div role="tabpanel" id="cs-snippet-225" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-225 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-4056" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4056 pre">
+      <div role="tabpanel" id="pas-snippet-7154" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7154 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-1364" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1364 pre">
+      <div role="tabpanel" id="py-snippet-300" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-300 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_with_times</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">times</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4161,38 +3982,38 @@ of times the <a href="/api/audio/#sound-effect"><code>Sound Effect</code></a> is
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-1223" aria-controls="cpp-snippet-1223" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-856" aria-controls="cpp-snippet-856" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-5163" aria-controls="cs-snippet-5163" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-8827" aria-controls="cs-snippet-8827" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3879" aria-controls="pas-snippet-3879" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1144" aria-controls="pas-snippet-1144" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-4637" aria-controls="py-snippet-4637" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5659" aria-controls="py-snippet-5659" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-1223" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1223 pre">
+      <div role="tabpanel" id="cpp-snippet-856" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-856 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">play_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-5163" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-5163 pre">
+      <div role="tabpanel" id="cs-snippet-8827" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-8827 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">PlaySoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">,</span> <span class="kt">int</span> <span class="n">times</span><span class="p">,</span> <span class="kt">float</span> <span class="n">volume</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3879" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3879 pre">
+      <div role="tabpanel" id="pas-snippet-1144" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1144 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">PlaySoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">;</span> <span class="n">times</span><span class="p">:</span> <span class="kt">Integer</span><span class="p">;</span> <span class="n">volume</span><span class="p">:</span> <span class="kt">Single</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-4637" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-4637 pre">
+      <div role="tabpanel" id="py-snippet-5659" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5659 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">play_sound_effect_with_times_and_volume</span><span class="p">(</span><span class="n">effect</span><span class="p">,</span> <span class="n">times</span><span class="p">,</span> <span class="n">volume</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4262,38 +4083,38 @@ of times the <a href="/api/audio/#sound-effect"><code>Sound Effect</code></a> is
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-5397" aria-controls="cpp-snippet-5397" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-8066" aria-controls="cpp-snippet-8066" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-4800" aria-controls="cs-snippet-4800" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9844" aria-controls="cs-snippet-9844" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-7057" aria-controls="pas-snippet-7057" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4151" aria-controls="pas-snippet-4151" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-2288" aria-controls="py-snippet-2288" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-1963" aria-controls="py-snippet-1963" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-5397" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-5397 pre">
+      <div role="tabpanel" id="cpp-snippet-8066" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8066 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">sound_effect_filename</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-4800" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4800 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">SoundEffectFilename</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-9844" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9844 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">Filename</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SoundEffectFilename</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-7057" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7057 pre">
+      <div role="tabpanel" id="pas-snippet-4151" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4151 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">SoundEffectFilename</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-2288" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-2288 pre">
+      <div role="tabpanel" id="py-snippet-1963" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-1963 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">sound_effect_filename</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4357,38 +4178,38 @@ of times the <a href="/api/audio/#sound-effect"><code>Sound Effect</code></a> is
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9985" aria-controls="cpp-snippet-9985" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-1279" aria-controls="cpp-snippet-1279" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3749" aria-controls="cs-snippet-3749" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-9204" aria-controls="cs-snippet-9204" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2644" aria-controls="pas-snippet-2644" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1520" aria-controls="pas-snippet-1520" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8316" aria-controls="py-snippet-8316" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-8852" aria-controls="py-snippet-8852" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9985" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9985 pre">
+      <div role="tabpanel" id="cpp-snippet-1279" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-1279 pre">
         <pre class="codehilite"><code><span class="n">string</span> <span class="n">sound_effect_name</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3749" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3749 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">SoundEffectName</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-9204" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9204 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">string</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">Name</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SoundEffectName</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2644" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2644 pre">
+      <div role="tabpanel" id="pas-snippet-1520" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1520 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">SoundEffectName</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">):</span> <span class="k">String</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8316" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8316 pre">
+      <div role="tabpanel" id="py-snippet-8852" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8852 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">sound_effect_name</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4456,38 +4277,38 @@ and returned.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-186" aria-controls="cpp-snippet-186" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-9439" aria-controls="cpp-snippet-9439" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-2739" aria-controls="cs-snippet-2739" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4455" aria-controls="cs-snippet-4455" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-3317" aria-controls="pas-snippet-3317" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-3852" aria-controls="pas-snippet-3852" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-9022" aria-controls="py-snippet-9022" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6916" aria-controls="py-snippet-6916" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-186" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-186 pre">
+      <div role="tabpanel" id="cpp-snippet-9439" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9439 pre">
         <pre class="codehilite"><code><span class="n">sound_effect</span> <span class="n">sound_effect_named</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-2739" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2739 pre">
+      <div role="tabpanel" id="cs-snippet-4455" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4455 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="n">SoundEffect</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">SoundEffectNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="n">SoundEffect</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SoundEffectNamed</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-3317" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3317 pre">
+      <div role="tabpanel" id="pas-snippet-3852" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-3852 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">SoundEffectNamed</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="n">SoundEffect</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-9022" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9022 pre">
+      <div role="tabpanel" id="py-snippet-6916" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6916 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">sound_effect_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4590,38 +4411,38 @@ and returned.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-9992" aria-controls="cpp-snippet-9992" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2905" aria-controls="cpp-snippet-2905" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-433" aria-controls="cs-snippet-433" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2243" aria-controls="cs-snippet-2243" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-2195" aria-controls="pas-snippet-2195" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-9887" aria-controls="pas-snippet-9887" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8117" aria-controls="py-snippet-8117" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-6934" aria-controls="py-snippet-6934" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-9992" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9992 pre">
+      <div role="tabpanel" id="cpp-snippet-2905" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2905 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">sound_effect_playing</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-433" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-433 pre">
+      <div role="tabpanel" id="cs-snippet-2243" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2243 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">SoundEffectPlaying</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SoundEffectPlaying</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-2195" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-2195 pre">
+      <div role="tabpanel" id="pas-snippet-9887" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9887 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">SoundEffectPlaying</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8117" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8117 pre">
+      <div role="tabpanel" id="py-snippet-6934" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6934 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">sound_effect_playing_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4685,38 +4506,38 @@ and returned.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-603" aria-controls="cpp-snippet-603" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-3227" aria-controls="cpp-snippet-3227" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3251" aria-controls="cs-snippet-3251" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-6606" aria-controls="cs-snippet-6606" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9285" aria-controls="pas-snippet-9285" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-1634" aria-controls="pas-snippet-1634" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-8376" aria-controls="py-snippet-8376" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-777" aria-controls="py-snippet-777" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-603" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-603 pre">
+      <div role="tabpanel" id="cpp-snippet-3227" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3227 pre">
         <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">sound_effect_playing</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3251" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3251 pre">
-        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">SoundEffectPlaying</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+      <div role="tabpanel" id="cs-snippet-6606" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-6606 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="kt">bool</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="n">IsPlaying</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
 <span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">SoundEffectPlaying</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9285" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9285 pre">
+      <div role="tabpanel" id="pas-snippet-1634" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-1634 pre">
         <pre class="codehilite"><code><span class="k">function</span> <span class="n">SoundEffectPlaying</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">):</span> <span class="kt">Boolean</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-8376" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-8376 pre">
+      <div role="tabpanel" id="py-snippet-777" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-777 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">sound_effect_playing</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4802,38 +4623,38 @@ and returned.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-4383" aria-controls="cpp-snippet-4383" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-2667" aria-controls="cpp-snippet-2667" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-7411" aria-controls="cs-snippet-7411" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-2441" aria-controls="cs-snippet-2441" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-9259" aria-controls="pas-snippet-9259" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-4288" aria-controls="pas-snippet-4288" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-5423" aria-controls="py-snippet-5423" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-3745" aria-controls="py-snippet-3745" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-4383" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4383 pre">
+      <div role="tabpanel" id="cpp-snippet-2667" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-2667 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_sound_effect</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">name</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-7411" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-7411 pre">
+      <div role="tabpanel" id="cs-snippet-2441" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-2441 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">StopSoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StopSoundEffect</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-9259" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-9259 pre">
+      <div role="tabpanel" id="pas-snippet-4288" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-4288 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopSoundEffect</span><span class="p">(</span><span class="k">const</span> <span class="n">name</span><span class="p">:</span> <span class="k">String</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-5423" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5423 pre">
+      <div role="tabpanel" id="py-snippet-3745" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3745 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">stop_sound_effect_named</span><span class="p">(</span><span class="n">name</span><span class="p">):</span></code></pre>
       </div>
   </div>
@@ -4886,39 +4707,218 @@ and returned.</p>
         <div class="sk-snippet">
   <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a href="#cpp-snippet-3998" aria-controls="cpp-snippet-3998" role="tab" data-toggle="tab" class="nav-link active">
+        <a href="#cpp-snippet-4471" aria-controls="cpp-snippet-4471" role="tab" data-toggle="tab" class="nav-link active">
           C++
         </a>
       </li>
       <li class="nav-item">
-        <a href="#cs-snippet-3651" aria-controls="cs-snippet-3651" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#cs-snippet-4125" aria-controls="cs-snippet-4125" role="tab" data-toggle="tab" class="nav-link ">
           C#
         </a>
       </li>
       <li class="nav-item">
-        <a href="#pas-snippet-5138" aria-controls="pas-snippet-5138" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#pas-snippet-915" aria-controls="pas-snippet-915" role="tab" data-toggle="tab" class="nav-link ">
           Pascal
         </a>
       </li>
       <li class="nav-item">
-        <a href="#py-snippet-7467" aria-controls="py-snippet-7467" role="tab" data-toggle="tab" class="nav-link ">
+        <a href="#py-snippet-5796" aria-controls="py-snippet-5796" role="tab" data-toggle="tab" class="nav-link ">
           Python
         </a>
       </li>
   </ul>
   <div class="tab-content">
-      <div role="tabpanel" id="cpp-snippet-3998" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-3998 pre">
+      <div role="tabpanel" id="cpp-snippet-4471" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4471 pre">
         <pre class="codehilite"><code><span class="kt">void</span> <span class="n">stop_sound_effect</span><span class="p">(</span><span class="n">sound_effect</span> <span class="n">effect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="cs-snippet-3651" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3651 pre">
+      <div role="tabpanel" id="cs-snippet-4125" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-4125 pre">
         <pre class="codehilite"><code><span class="k">public</span> <span class="k">void</span> <span class="n">SoundEffect</span><span class="p">.</span><span class="nf">StopSoundEffect</span><span class="p">();</span>
 <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">StopSoundEffect</span><span class="p">(</span><span class="n">SoundEffect</span> <span class="n">effect</span><span class="p">);</span></code></pre>
       </div>
-      <div role="tabpanel" id="pas-snippet-5138" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5138 pre">
+      <div role="tabpanel" id="pas-snippet-915" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-915 pre">
         <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">StopSoundEffect</span><span class="p">(</span><span class="n">effect</span><span class="p">:</span> <span class="n">SoundEffect</span><span class="p">)</span></code></pre>
       </div>
-      <div role="tabpanel" id="py-snippet-7467" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-7467 pre">
+      <div role="tabpanel" id="py-snippet-5796" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-5796 pre">
         <pre class="codehilite"><code><span class="k">def</span> <span class="nf">stop_sound_effect</span><span class="p">(</span><span class="n">effect</span><span class="p">):</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+
+</section>
+
+        <section class="sk-api-function sk-api-section">
+  <h3 id="audio-ready" data-anchor> Audio Ready </h3>
+  <div class="sk-api-description">
+    <p>Checks if SplashKit audio currently ready to be used.</p>
+
+<p>Should this return <code>False</code>, you may want to use <a href="/api/audio/#open-audio"><code>Open Audio</code></a>
+to enable audio.</p>
+
+  </div>
+    <dl>
+        <dt>
+          Return Type
+        </dt>
+        <dd>
+          <strong>
+            <p><code>Boolean</code></p>
+
+          </strong>
+          <p>Returns <code>True</code> if the audio has been initalised.</p>
+
+        </dd>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-4672" aria-controls="cpp-snippet-4672" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-9891" aria-controls="cs-snippet-9891" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-5258" aria-controls="pas-snippet-5258" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-3864" aria-controls="py-snippet-3864" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-4672" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-4672 pre">
+        <pre class="codehilite"><code><span class="kt">bool</span> <span class="n">audio_ready</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-9891" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-9891 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">Audio</span><span class="p">.</span><span class="n">IsReady</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">static</span> <span class="kt">bool</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">AudioReady</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-5258" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-5258 pre">
+        <pre class="codehilite"><code><span class="k">function</span> <span class="n">AudioReady</span><span class="p">():</span> <span class="kt">Boolean</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-3864" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-3864 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">audio_ready</span><span class="p">():</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+
+</section>
+
+        <section class="sk-api-function sk-api-section">
+  <h3 id="close-audio" data-anchor> Close Audio </h3>
+  <div class="sk-api-description">
+    <p>Turns off audio, stopping all current sounds effects and music.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-8176" aria-controls="cpp-snippet-8176" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-3634" aria-controls="cs-snippet-3634" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7728" aria-controls="pas-snippet-7728" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-9839" aria-controls="py-snippet-9839" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-8176" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-8176 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">close_audio</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-3634" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-3634 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">CloseAudio</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">CloseAudio</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7728" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7728 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">CloseAudio</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-9839" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-9839 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">close_audio</span><span class="p">():</span></code></pre>
+      </div>
+  </div>
+</div>
+
+      </dd>
+
+</section>
+
+        <section class="sk-api-function sk-api-section">
+  <h3 id="open-audio" data-anchor> Open Audio </h3>
+  <div class="sk-api-description">
+    <p>Starts the SplashKit audio system working.</p>
+
+  </div>
+    <dl>
+      <dt>
+        Signatures
+      </dt>
+      <dd>
+        <div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-snippet-9553" aria-controls="cpp-snippet-9553" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#cs-snippet-1988" aria-controls="cs-snippet-1988" role="tab" data-toggle="tab" class="nav-link ">
+          C#
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#pas-snippet-7042" aria-controls="pas-snippet-7042" role="tab" data-toggle="tab" class="nav-link ">
+          Pascal
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#py-snippet-6337" aria-controls="py-snippet-6337" role="tab" data-toggle="tab" class="nav-link ">
+          Python
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-snippet-9553" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-snippet-9553 pre">
+        <pre class="codehilite"><code><span class="kt">void</span> <span class="n">open_audio</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="cs-snippet-1988" class="tab-pane fade " data-clipboard data-clipboard-target="#cs-snippet-1988 pre">
+        <pre class="codehilite"><code><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">Audio</span><span class="p">.</span><span class="nf">OpenAudio</span><span class="p">();</span>
+<span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">SplashKit</span><span class="p">.</span><span class="nf">OpenAudio</span><span class="p">();</span></code></pre>
+      </div>
+      <div role="tabpanel" id="pas-snippet-7042" class="tab-pane fade " data-clipboard data-clipboard-target="#pas-snippet-7042 pre">
+        <pre class="codehilite"><code><span class="k">procedure</span> <span class="n">OpenAudio</span><span class="p">()</span></code></pre>
+      </div>
+      <div role="tabpanel" id="py-snippet-6337" class="tab-pane fade " data-clipboard data-clipboard-target="#py-snippet-6337 pre">
+        <pre class="codehilite"><code><span class="k">def</span> <span class="nf">open_audio</span><span class="p">():</span></code></pre>
       </div>
   </div>
 </div>
@@ -5004,6 +5004,6 @@ instances of this one sound effect from playing.</p>
   </div>
 </footer>
 
-    <script src="/javascripts/main-2c341741.js"></script>
+    <script src="/javascripts/main-ddb38395.js"></script>
   </body>
 </html>
