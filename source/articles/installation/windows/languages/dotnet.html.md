@@ -7,6 +7,13 @@ tags: installation,windows,dotnet
 
 To get programming with C#, you can install the Dotnet Core tools
 
+1. Open an MSYS2 terminal
+1. Run the following command:
+
+    `pacman -S mingw-w64-{x86_64,i686}-gcc mingw-w64-{i686,x86_64}-gdb`
+
+    ![](images/install-gifs/Windows/install-gpp-msys.gif)
+
 1. Go to the [dotnet core](https://www.microsoft.com/net/core) page.
 
     Select `windows`, `command line/other` then download the `.net core sdk`.
