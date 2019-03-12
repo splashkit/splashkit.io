@@ -1,7 +1,7 @@
 ---
 
 title: Installing Language-Specific Tools
-tags: installation,ubuntu
+tags: installation,linux
 
 ---
 

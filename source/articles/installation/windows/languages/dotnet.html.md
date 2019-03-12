@@ -24,4 +24,8 @@ To get programming with C#, you can install the Dotnet Core tools
 
     ![](images/install-gifs/Windows/9.gif)
 
+1. Install the C# extension in Visual Studio Code.
+
+    The C# extension will give you a great code formatter, Intellisense and OmniSharp. Open the extensions panel in the left of Visual Studio Code, and search for the extension `C#`, install the one by Microsoft.
+
 Return to the [overview of the windows install](/articles/installation/windows).

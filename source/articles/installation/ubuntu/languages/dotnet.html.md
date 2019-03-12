@@ -1,7 +1,7 @@
 ---
 
 title: Installing the .NET Core SDK on Linux
-tags: installation,ubuntu,dotnet
+tags: installation,linux,dotnet
 
 ---
 
