@@ -75,49 +75,32 @@
     <main id="content">
         <div class="container">
     <div class="row">
-        <h1>Ensuring your version of Ubuntu is supported</h1>
+        <h1>Installing the SplashKit Manager</h1>
         <p class="lead">
     Step 1 of 4
   </p>
   <hr>
   <article class="sk-article">
-    <h1>Check that your version of Ubuntu is supported</h1>
-
-<p>SplashKit requires Ubuntu version 16.04 or greater to operate without
-manual intervention.</p>
-
-<p>To check which version of Ubuntu you are running, follow the steps below.</p>
-
-<ol>
+    <ol>
 <li><p>Open up a terminal.</p>
 
-<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
-<li><p>Check your Ubuntu version</p>
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Linux" /></p></li>
+<li><p>Install the SplashKit Manager</p>
 
 <p>Copy and paste the code in the box below into your terminal and press enter.</p>
-<pre class="highlight shell"><code>lsb_release -a
-</code></pre>
-<p><img src="/images/install-gifs/Ubuntu/check-version-8bc70537.gif" alt="Executing lsa-release -a" /></p></li>
-<li><p>Compare your version with the supported version</p>
-
-<p>Check your release version by reading the &ldquo;Release:&rdquo; line presented.</p>
-
-<p>If your version is greater than or equal to 16.04, your version is supported.</p>
-
-<p><img src="/images/install-gifs/Ubuntu/interpret-version-9e4bbc3c.jpg" alt="Checking verison compatibility" /></p></li>
+<pre class="highlight shell"><code>bash &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh<span class="o">)</span>
+</code></pre></li>
+<li><p>Follow prompts, ensure you have all dependencies listed in the installation process.</p></li>
 </ol>
 
-<p>Once you have confirmed that your version is supported, move on to the
-<a href="/articles/installation/ubuntu/step-2/">next step - Install pre-requisites for SplashKit</a>.</p>
-
 <p>Return to the
-<a href="/articles/installation/ubuntu">overview of the Ubuntu Linux install</a>.</p>
+<a href="/articles/installation/ubuntu">overview of the Linux install</a>.</p>
 
   </article>
   <hr>
   <nav>
 <a href="/articles/installation/ubuntu/step-2/" class="btn btn-sm btn-primary pull-right">        <strong>Next Step:</strong>
-        Installing Prerequsites for SplashKit
+        Make the SplashKit Source
         <i class="fa fa-chevron-right"></i>
 </a>  </nav>
 
