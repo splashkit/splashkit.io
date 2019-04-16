@@ -8,7 +8,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/images/favicon.ico" rel="icon" type="image/ico" />
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
 
     <title>SplashKit - Articles - Guides - Tags - Databases - Using Databases</title>
 
@@ -36,7 +36,7 @@
             <a class="dropdown-item" href="/api/json">JSON</a>
             <a class="dropdown-item" href="/api/networking">Networking</a>
             <a class="dropdown-item" href="/api/physics">Physics</a>
-            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resource-bundles">Resource Bundles</a>
             <a class="dropdown-item" href="/api/resources">Resources</a>
             <a class="dropdown-item" href="/api/social">Social</a>
             <a class="dropdown-item" href="/api/sprites">Sprites</a>
@@ -81,13 +81,13 @@
     <nav role="navigation">
       <ul class="nav sk-article-nav-root">
           <li class="nav-item">
+<a href="/articles/guides/tags/starter" class="nav-link ">              Starter
+</a>          </li>
+          <li class="nav-item">
 <a href="/articles/guides/tags/camera" class="nav-link ">              Camera
 </a>          </li>
           <li class="nav-item">
 <a href="/articles/guides/tags/audio" class="nav-link ">              Audio
-</a>          </li>
-          <li class="nav-item">
-<a href="/articles/guides/tags/starter" class="nav-link ">              Starter
 </a>          </li>
           <li class="nav-item">
 <a href="/articles/guides/tags/animations" class="nav-link ">              Animations
@@ -141,7 +141,7 @@
 <code>run_sql(my_db, &quot;CREATE TABLE friends (id INTEGER PRIMARY KEY, name TEXT);&quot;);</code>
 This statement ran the sql statement provided to the given database, pretty simple! We can check if it was successful by using <code>query_success(result);</code> if we feel the need to.</p></li>
 <li><p>Let&rsquo;s insert some data:
-<code>run_sql(my_db, &quot;INSERT INTO friends VALUES (10001, \&quot;Jake Renzella\&quot;;&quot;);</code></p></li>
+<code>run_sql(my_db, &quot;INSERT INTO friends VALUES (10001, \&quot;Jake Renzella\&quot;);&quot;);</code></p></li>
 <li><p>And then let&rsquo;s query the database for the data which we just added (10001, Jake Renzella.)
 <code>result = run_sql(select * from friends;&quot;);</code></p></li>
 </ol>

@@ -8,7 +8,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/images/favicon.ico" rel="icon" type="image/ico" />
+    <link rel="icon" type="img/ico" href="../images/favicon.ico">
 
     <title>SplashKit - Articles - Installation - Ubuntu - Step 4</title>
 
@@ -36,7 +36,7 @@
             <a class="dropdown-item" href="/api/json">JSON</a>
             <a class="dropdown-item" href="/api/networking">Networking</a>
             <a class="dropdown-item" href="/api/physics">Physics</a>
-            <a class="dropdown-item" href="/api/resource_bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resource-bundles">Resource Bundles</a>
             <a class="dropdown-item" href="/api/resources">Resources</a>
             <a class="dropdown-item" href="/api/social">Social</a>
             <a class="dropdown-item" href="/api/sprites">Sprites</a>
@@ -75,35 +75,44 @@
     <main id="content">
         <div class="container">
     <div class="row">
-        <h1>Installing Language-Specific Tools</h1>
+        <h1>Installing Visual Studio Code</h1>
         <p class="lead">
     Step 4 of 4
   </p>
   <hr>
   <article class="sk-article">
-    <p>SplashKit works with a number of programming languages.
-Each of these has its own set of tools you will need to install.</p>
+    <p>Once you have the <a href="/articles/installation/ubuntu/step-3/">installed SplashKit library</a> you
+can download and install Visual Studio Code to use as a source code editor.</p>
 
-<ul>
-<li>For C#, install the <a href="/articles/installation/ubuntu/languages/dotnet">.NET Core</a> SDK.</li>
-<li>For C++, you (should) <em>already</em> be ready to go.</li>
-</ul>
+<ol>
+<li><p>Download <a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
 
-<p>Guides for other supported languages like Python and Pascal are coming soon.</p>
+<p><img src="/images/install-gifs/Ubuntu/download-vsc-92637a66.gif" alt="Downloading Visual Studio Code for Ubuntu" /></p></li>
+<li><p>Open up a terminal.</p>
 
-<h2>What&rsquo;s next?</h2>
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
+<li><p>Install Visual Studio Code</p>
 
-<p>Congratulations! If you&rsquo;ve followed these steps correctly, then you will have
-installed all the tools needed to start programming with SplashKit!</p>
+<p>In the terminal window, change directory using the <code>cd</code> command to the
+directory where Visual Studio Code downloaded</p>
+<pre class="highlight plaintext"><code>cd ~/Downloads
+</code></pre>
+<p>Then, install the .deb package by copying and pasting the code below into
+your terminal and pressing enter.</p>
+<pre class="highlight plaintext"><code>sudo dpkg -i code_1.*.deb
+</code></pre>
+<p><img src="/images/install-gifs/Ubuntu/install-vsc-8360e41c.gif" alt="Installing Visual Studio Code on Ubuntu" /></p></li>
+</ol>
 
-<p>It&rsquo;s time to get programming&hellip;</p>
+<p>Return to the
+<a href="/articles/installation/ubuntu">overview of the Ubuntu Linux install</a>.</p>
 
   </article>
   <hr>
   <nav>
 <a href="/articles/installation/ubuntu/step-3/" class="btn btn-sm btn-primary">        <i class="fa fa-chevron-left"></i>
         <strong>Previous Step:</strong>
-        Installing Visual Studio Code
+        Installing the SplashKit SDK
 </a>  </nav>
 
     </div>
