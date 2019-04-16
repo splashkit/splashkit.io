@@ -9,7 +9,7 @@
         <a class="nav-link <%= active_on 'api' %>" id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
         <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
           <% data.api.each do |api_name, _| %>
-            <a class="dropdown-item" href="/api/<%= api_name %>"><%= api_name.to_human_case %></a>
+            <a class="dropdown-item" href="<%= path_for_group(api_name) %>"><%= api_name.to_human_case %></a>
           <% end %>
         </div>
       </li>
