@@ -22,3 +22,25 @@ def link_for_function(function_name)
         return function_name.to_human_case
     end
 end
+
+def type_for_name(type_name)
+    data.api.each do |api_group, data|
+        types = (data.typedefs + data.structs + data.enums).sort_by { |h| h[:name] }
+        types.each do |type|
+            if type.name == type_name
+                return type
+            end
+        end
+    end
+    return nil
+end
+
+def link_for_type(type_name)
+    type = type_for_name(type_name)
+
+    if type.present?
+        return link_to(type.name.to_human_case, slug_url_for(type))
+    else
+        return type_name.to_human_case
+    end
+end
