@@ -38,7 +38,7 @@ Databases are powerful tools for persisting, and querying data. In this guide, w
   This statement ran the sql statement provided to the given database, pretty simple! We can check if it was successful by using `query_success(result);` if we feel the need to.
 
 1. Let's insert some data:
-  `run_sql(my_db, "INSERT INTO friends VALUES (10001, \"Jake Renzella\";");`
+  `run_sql(my_db, "INSERT INTO friends VALUES (10001, \"Jake Renzella\");");`
 
 1. And then let's query the database for the data which we just added (10001, Jake Renzella.)
   `result = run_sql(select * from friends;");`
