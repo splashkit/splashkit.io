@@ -8,7 +8,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="img/ico" href="../images/favicon.ico">
+    <link href="/images/favicon.ico" rel="icon" type="image/ico" />
 
     <title>SplashKit - Articles - Installation - Ubuntu - Step 2</title>
 
@@ -75,56 +75,30 @@
     <main id="content">
         <div class="container">
     <div class="row">
-        <h1>Installing Prerequsites for SplashKit</h1>
+        <h1>Make the SplashKit Source</h1>
         <p class="lead">
     Step 2 of 4
   </p>
   <hr>
   <article class="sk-article">
     <p>Once you have
-<a href="/articles/installation/ubuntu/step-1/">confirmed that your version of Ubuntu is supported</a>
-you will need to install a list of required software packages in order
-for SplashKit to operate on Ubuntu.</p>
+<a href="/articles/installation/ubuntu/step-1/">Installed the SplashKit Manager</a>
+you can build the SplashKit from source.</p>
 
 <ol>
 <li><p>Open up a terminal.</p>
 
-<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Ubuntu" /></p></li>
-<li><p>Update your system&rsquo;s package manager cache.</p>
+<p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal" /></p></li>
+<li><p>CD into SplashKit source</p>
 
-<p>Copy and paste the code below into your terminal and press enter.</p>
-<pre class="highlight shell"><code>sudo apt-get update
-</code></pre></li>
-<li><p>Install the pre-requisites for SplashKit</p>
-
-<p>Copy and paste the code below into your terminal and press enter.</p>
-<pre class="highlight shell"><code>sudo apt-get install <span class="se">\</span>
-git libsdl2-dev libsdl2-gfx-dev libsdl2-mixer-dev libsdl2-ttf-dev <span class="se">\</span>
-libsdl2-net-dev libsdl2-image-dev libncurses-dev libpng-dev <span class="se">\</span>
-libcurl4-openssl-dev libbz2-dev libflac-dev libvorbis-dev libmikmod-dev <span class="se">\</span>
-libwebp-dev libfreetype6-dev cmake libgconf-2.0 clang
+<p>Copy and paste the code below into your terminal <em>one-by-one</em>.</p>
+<pre class="highlight shell"><code><span class="nb">cd</span> ~/.splashkit/source
+cmake .
+make
+make install
 </code></pre>
-<p>You will be asked to confirm the installation of the selected packages. Review
-the list of packages, and confirm by typing &ldquo;Y&rdquo; and pressing enter.</p>
-
-<p><img src="/images/install-gifs/Ubuntu/confirm-packages-04aa38ce.jpg" alt="Confirm package installation" /></p>
-
-<p>The pre-requisite packages will now be downloaded and installed. Wait
-for the installation process to finish before continuing to the next step.</p></li>
-<li><p>Install libpng12 (Ubuntu 17.04 users only)</p>
-
-<p>If your <a href="/articles/installation/ubuntu/step1.html">version of Ubuntu</a> is less than 17.04, you may skip this step.</p>
-
-<p>To install libpng12, copy and paste the code below into your terminal, one line at a time.</p>
-<pre class="highlight shell"><code><span class="nb">cd</span> /tmp
-wget http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-<span class="nb">cd</span> -
-</code></pre></li>
+<p>You may receive warnings during this process, which can be ignored. However, any errors usually mean you are missing a dependency. Determine which this is, and install it on your districution&rsquo;s package manager.</p></li>
 </ol>
-
-<p>Once you have completed this step, move on to the
-<a href="/articles/installation/ubuntu/step-3/">next step - Install SplashKit library</a>.</p>
 
 <p>Return to the
 <a href="/articles/installation/ubuntu">overview of the Ubuntu Linux install</a>.</p>
@@ -134,9 +108,9 @@ sudo dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
   <nav>
 <a href="/articles/installation/ubuntu/step-1/" class="btn btn-sm btn-primary">        <i class="fa fa-chevron-left"></i>
         <strong>Previous Step:</strong>
-        Ensuring your version of Ubuntu is supported
+        Installing the SplashKit Manager
 </a><a href="/articles/installation/ubuntu/step-3/" class="btn btn-sm btn-primary pull-right">        <strong>Next Step:</strong>
-        Installing the SplashKit SDK
+        Installing Visual Studio Code
         <i class="fa fa-chevron-right"></i>
 </a>  </nav>
 
