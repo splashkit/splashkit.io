@@ -1,38 +1,21 @@
 ---
 
-title: Installing Visual Studio Code
-tags: installation,ubuntu
+title: Installing Language-Specific Tools
+tags: installation,linux
 
 ---
 
-Once you have the [installed SplashKit library](/articles/installation/ubuntu/step-3/) you
-can download and install Visual Studio Code to use as a source code editor.
+SplashKit works with a number of programming languages.
+Each of these has its own set of tools you will need to install.
 
-1. Download [Visual Studio Code](https://code.visualstudio.com/)
+* For C#, install the [.NET Core](/articles/installation/ubuntu/languages/dotnet) SDK.
+* For C++, you (should) _already_ be ready to go.
 
-    ![Downloading Visual Studio Code for Ubuntu](images/install-gifs/Ubuntu/download-vsc.gif)
+Guides for other supported languages like Python and Pascal are coming soon.
 
-2. Open up a terminal.
+## What's next?
 
-    ![Opening a terminal in Ubuntu](images/install-gifs/Ubuntu/open-terminal.gif)
+Congratulations! If you've followed these steps correctly, then you will have
+installed all the tools needed to start programming with SplashKit!
 
-3. Install Visual Studio Code
-
-    In the terminal window, change directory using the ```cd``` command to the
-    directory where Visual Studio Code downloaded
-
-    ```
-    cd ~/Downloads
-    ```
-
-    Then, install the .deb package by copying and pasting the code below into
-    your terminal and pressing enter.
-
-    ```
-    sudo dpkg -i code_1.*.deb
-    ```
-
-    ![Installing Visual Studio Code on Ubuntu](images/install-gifs/Ubuntu/install-vsc.gif)
-
-Return to the
-[overview of the Ubuntu Linux install](/articles/installation/ubuntu).
+It's time to get programming...
