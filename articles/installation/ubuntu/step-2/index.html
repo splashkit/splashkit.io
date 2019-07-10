@@ -83,21 +83,20 @@
   <article class="sk-article">
     <p>Once you have
 <a href="/articles/installation/ubuntu/step-1/">Installed the SplashKit Manager</a>
-you can build the SplashKit from source.</p>
+you can build the SplashKit library from its source.</p>
 
 <ol>
 <li><p>Open up a terminal.</p>
 
 <p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal" /></p></li>
-<li><p>CD into SplashKit source</p>
-
-<p>Copy and paste the code below into your terminal <em>one-by-one</em>.</p>
-<pre class="highlight shell"><code><span class="nb">cd</span> ~/.splashkit/source
-cmake .
-make
-make install
+<li><p>Restart the terminal and execute <code>skm</code> to test it was successfully installed.</p>
+<pre class="highlight shell"><code>skm
 </code></pre>
-<p>You may receive warnings during this process, which can be ignored. However, any errors usually mean you are missing a dependency. Determine which this is, and install it on your districution&rsquo;s package manager.</p></li>
+<p>You should see the following messages:</p>
+<pre class="highlight shell"><code>Splashkit is installed successfully!
+Missing skm command. For <span class="nb">help </span>use <span class="s1">'skm help'</span>
+</code></pre>
+<p>SplashKit supports a number of languages. Run <code>skm help</code> at the terminal to see the different commands you can run.</p></li>
 </ol>
 
 <p>Return to the
