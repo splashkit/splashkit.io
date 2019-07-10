@@ -19,5 +19,18 @@ tags: installation,linux
 
 3. Follow prompts, ensure you have all dependencies listed in the installation process.
 
+4. Restart the terminal and execute `skm` to test it was successfully installed. 
+
+    ```bash
+    skm
+    ```
+
+    You should see the following messages:
+
+    ```bash
+    Splashkit is installed successfully!
+    Missing skm command. For help use 'skm help'
+    ```
+
 Return to the
 [overview of the Linux install](/articles/installation/ubuntu).

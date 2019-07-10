@@ -15,8 +15,19 @@ tags: installation,mac
 
     ![](images/install-gifs/mac/2.gif)
 
-1. Restart the terminal and execute `skm` in the terminal to test SplashKit was successfully installed.
+1. Restart the terminal and execute `skm` to test it was successfully installed.
 
-    ![](images/install-gifs/mac/3.gif)
+    ```bash
+    skm
+    ```
+
+    You should see the following messages:
+
+    ```bash
+    Splashkit is installed successfully!
+    Missing skm command. For help use 'skm help'
+    ```
+
+    SplashKit supports a number of languages. Run `skm help` at the terminal to see the different commands you can run.
 
 Return to the [overview of the macOS install](/articles/installation/mac).
