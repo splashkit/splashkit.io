@@ -5,12 +5,6 @@ tags: installation,mac
 
 ---
 
-1. Start by installing the **git** client. This will be used to download and update SplashKit. Run the following at the Terminal:
-
-    ```bash
-    pacman -S git --noconfirm
-    ```
-
 1. Copy the following code and paste and run it within the Terminal.
 
     ```
