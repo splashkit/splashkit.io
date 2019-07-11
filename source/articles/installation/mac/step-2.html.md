@@ -5,7 +5,13 @@ tags: installation,mac
 
 ---
 
-1. Code the following code and paste and run it within the Terminal.
+1. Start by installing the **git** client. This will be used to download and update SplashKit. Run the following at the Terminal:
+
+    ```bash
+    pacman -S git --noconfirm
+    ```
+
+1. Copy the following code and paste and run it within the Terminal.
 
     ```
     bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)
