@@ -13,21 +13,14 @@ you can build the SplashKit library from its source.
 
     ![Opening a terminal](images/install-gifs/Ubuntu/open-terminal.gif)
 
-2. Restart the terminal and execute `skm` to test it was successfully installed.
+2. Run the following command to install the necessary dependencies and compile splashkit.
 
     ```bash
-    skm
+    skm linux install
     ```
 
-    You should see the following messages:
 
-    ```bash
-    Splashkit is installed successfully!
-    Missing skm command. For help use 'skm help'
-    ```
-
-    SplashKit supports a number of languages. Run `skm help` at the terminal to see the different commands you can run.
-
+[Next - Install Visual Studio Code](/articles/installation/windows/step-3.html)
 
 Return to the
 [overview of the Ubuntu Linux install](/articles/installation/ubuntu).
