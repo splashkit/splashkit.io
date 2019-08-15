@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/images/favicon.ico" rel="icon" type="image/ico" />
 
-    <title>SplashKit - Articles - Installation - Windows - Step 2</title>
+    <title>SplashKit - Articles - Installation - Vm</title>
 
     <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
   </head>
-  <body class="articles articles_installation articles_installation_windows articles_installation_windows_step-2 articles_installation_windows_step-2_index">
+  <body class="articles articles_installation articles_installation_vm articles_installation_vm_index">
     <nav class="navbar navbar-dark sk-navbar">
   <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fa sk-navbar-toggler-icon"></i>
@@ -75,49 +75,26 @@
     <main id="content">
         <div class="container">
     <div class="row">
-        <h1>Installing the SplashKit SDK</h1>
-        <p class="lead">
-    Step 2 of 4
-  </p>
-  <hr>
-  <article class="sk-article">
-    <p>Once you have MSYS2 installed, you can install the SplashKit library:</p>
+        <h1>Using the SplashKit Virtual Machine</h1>
+      <p>If you cannot get SplashKit working natively, you can download and use the provided SplashKit Virtual Machine. The provided virtual maching comes with everything you need to get started quickly with SplashKit.</p>
 
-<ol>
-<li><p>Start by installing the <strong>git</strong> client. This will be used to download and update SplashKit. Run the following at the Terminal:</p>
-<pre class="highlight shell"><code>pacman -S git --noconfirm --disable-download-timeout
-</code></pre></li>
-<li><p>In your MSYS2 Terminal, paste and run the following line</p>
+<p>The provided virtual machine is portable and will work with <a href="https://www.virtualbox.org">VirtualBox</a> or <a href="https://www.vmware.com/products/workstation-player.html">VMware Player</a>.</p>
 
-<p><code>bash &lt;(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)</code>.</p>
+<ul>
+<li>Download the <a href="https://cloudstor.aarnet.edu.au/plus/s/FoPe0AXgbw1Dib9">SplashKitVM.ova</a> virtual machine archive file</li>
+<li>Import this file into your local virtual machine host (eg VirtualBox or VMWare)</li>
+<li>Start the virtual machine and login using <strong>skuser</strong> as the username and <strong>splashkit.io</strong> as the password.</li>
+</ul>
 
-<p>This can also be found on the <a href="http://www.splashkit.io">SplashKit</a> home page.</p>
+<p>This comes with everything you need installed including:</p>
 
-<p><img src="/images/install-gifs/Windows/6-b35c8585.gif" alt="6" /></p></li>
-<li><p>Restart the terminal and execute <code>skm</code> to test it was successfully installed.</p>
-<pre class="highlight shell"><code>skm
-</code></pre>
-<p>You should see the following messages:</p>
-<pre class="highlight shell"><code>Splashkit is installed successfully!
-Missing skm command. For <span class="nb">help </span>use <span class="s1">'skm help'</span>
-</code></pre>
-<p>SplashKit supports a number of languages. Run <code>skm help</code> at the terminal to see the different commands you can run.</p></li>
-</ol>
-
-<p><a href="/articles/installation/windows/step-3/">Next - Install Visual Studio Code</a></p>
-
-<p>Return to the <a href="/articles/installation/windows">overview of the windows install</a>.</p>
-
-  </article>
-  <hr>
-  <nav>
-<a href="/articles/installation/windows/step-1/" class="btn btn-sm btn-primary">        <i class="fa fa-chevron-left"></i>
-        <strong>Previous Step:</strong>
-        Installing MSYS2
-</a><a href="/articles/installation/windows/step-3/" class="btn btn-sm btn-primary pull-right">        <strong>Next Step:</strong>
-        Installing Visual Studio Code
-        <i class="fa fa-chevron-right"></i>
-</a>  </nav>
+<ul>
+<li>Ubuntu operating system</li>
+<li>Visual Studio Code</li>
+<li>Terminal</li>
+<li>C/C++ using the clang++ compiler</li>
+<li>.NET using dotnet core</li>
+</ul>
 
     </div>
   </div>

@@ -85,12 +85,16 @@
 <li><p>Open up a terminal.</p>
 
 <p><img src="/images/install-gifs/Ubuntu/open-terminal-15c5fbea.gif" alt="Opening a terminal in Linux" /></p></li>
+<li><p>Ensure you have <strong>curl</strong> and <strong>git</strong> installed, these are used in the SplashKit install process.</p>
+
+<p>Install using your package manager. For example:</p>
+<pre class="highlight shell"><code>sudo apt-get install curl git
+</code></pre></li>
 <li><p>Install the SplashKit Manager</p>
 
 <p>Copy and paste the code in the box below into your terminal and press enter.</p>
 <pre class="highlight shell"><code>bash &lt;<span class="o">(</span>curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh<span class="o">)</span>
 </code></pre></li>
-<li><p>Follow prompts, ensure you have all dependencies listed in the installation process.</p></li>
 <li><p>Restart the terminal and execute <code>skm</code> to test it was successfully installed. </p>
 <pre class="highlight shell"><code>skm
 </code></pre>
