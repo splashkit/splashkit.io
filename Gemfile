@@ -42,4 +42,4 @@ gem 'redcarpet', '3.3.3'
 gem 'middleman-gh-pages', '~>0.3.0'
 
 # Rake tasks
-gem 'rake', '10.5.0'
+gem 'rake', '12.3.3'
