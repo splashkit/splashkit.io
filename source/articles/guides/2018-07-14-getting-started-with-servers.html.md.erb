@@ -1,0 +1,69 @@
+---
+
+title: Getting Started With Servers
+date: 2018-07-14 08:09 UTC
+tags: networking
+author: Isaac Wallis
+author_url: http://github.com/franknsten
+summary: |
+  This guide is an intruduction to using web servers
+related_funcs:
+  - start_web_server
+  - next_web_request
+  - send_file_response
+---
+This article provides background information you will need to get started with webservers in SplashKit. This will introduce you to the ways to start a webservver, as well as serving a file to the user
+
+## Getting Started With Webservers
+
+Webservers are how websites can show you pages. Your web browser (Chrome, FireFox, Edge) access a URL, and a webserver sees that you want to accesss a page, and finds & delivers the information you want. Normal .html files don't usually need a server, but more advanced ones, like .php, or .py, need the server to interpret the code, which allows them to do awesome things involving data manipulation (Facebook was created in PHP for example) 
+
+### Step 1: Before We Start The Server
+
+Before we start our server, we need to create a file to be served. Create a new project folder and move into it
+```mkdir testServer && cd testServer```
+
+After this, run
+```skm resources```
+
+to create the Resources folder, and all the subfolders in there. The folder we're interested in is Resources/server/, as this is where our server will look for resources to present to the user
+
+Create a file in this folder, and fill it out like a basic HTML document as such
+
+
+<%= snippet "index_file", "articles/guides/server/basic/" %>
+
+Save it as "index.html" in Resources/server/, and we are ready to start
+
+### Step 2: Starting The Server
+
+The command to run the server is ```start_web_server(port)```. The port is the special address that your computer accesses to get information. General websites are port 80 for insecure (http) traffic, and 443 for secure (https) traffic, while secure shell (ssh; remote terminal access) is port 20. For local webservers, it's standard to use port 8080. The server runs on localhost, and is accessed with localhost:port (localhost:8080 in this case)
+
+To start the server on port 8080, and use a variable to access it, is
+
+```web_server webServer = start_web_server(8080)```
+
+### Step 3: Serving Index.html
+
+Now the server is able to run, we need to give it a file to serve; index.html
+
+First, we need to know that someone is trying to access the server. This is called a request, and we need a variable to be able to access each request
+
+```http_request newRequest = next_web_request(webServer);```
+
+Now we have a server, and a request. It's time to send index.html to the person accessing our server
+
+```send_html_file_response(request, file)``` is the command for this. We use the variable for our request (newRequest), and the file we want to give them (index.html)
+
+```send_html_file_response(newRequest, "index.html");```
+
+### Step 4: Stopping The Server
+
+We need to stop the server when it's finished, and this is done with ```stop_web_server(webServer);```. We do this to free up resources, and is good practice in case you have another webserver fighting for the port you're using
+
+### Example Code
+
+The following program code sets up the server, and delivers index.html when http://localhost:8080 is accessed, then closes the server
+
+<%= snippet "server_basic", "articles/guides/server/basic/" %>
+
