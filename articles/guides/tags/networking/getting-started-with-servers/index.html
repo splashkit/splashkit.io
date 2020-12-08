@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/images/favicon.ico" rel="icon" type="image/ico" />
+
+    <title>SplashKit - Articles - Guides - Tags - Networking - Getting Started With Servers</title>
+
+    <link href="/stylesheets/main-19a89ca6.css" rel="stylesheet" />
+  </head>
+  <body class="articles articles_guides articles_guides_tags articles_guides_tags_networking articles_guides_tags_networking_getting-started-with-servers articles_guides_tags_networking_getting-started-with-servers_index">
+    <nav class="navbar navbar-dark sk-navbar">
+  <button class="navbar-toggler collapsed hidden-md-up" type="button" data-toggle="collapse" data-target="#global-navbar-content" aria-controls="global-navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa sk-navbar-toggler-icon"></i>
+  </button>
+  <div class="collapse container navbar-toggleable-sm" id="global-navbar-content">
+    <a class="navbar-brand" href="/">SplashKit</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link " id="api-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+        <div class="dropdown-menu sk-api-menu" aria-labelledby="api-menu-link">
+            <a class="dropdown-item" href="/api/animations">Animations</a>
+            <a class="dropdown-item" href="/api/audio">Audio</a>
+            <a class="dropdown-item" href="/api/camera">Camera</a>
+            <a class="dropdown-item" href="/api/color">Color</a>
+            <a class="dropdown-item" href="/api/database">Database</a>
+            <a class="dropdown-item" href="/api/geometry">Geometry</a>
+            <a class="dropdown-item" href="/api/graphics">Graphics</a>
+            <a class="dropdown-item" href="/api/input">Input</a>
+            <a class="dropdown-item" href="/api/json">JSON</a>
+            <a class="dropdown-item" href="/api/networking">Networking</a>
+            <a class="dropdown-item" href="/api/physics">Physics</a>
+            <a class="dropdown-item" href="/api/resource-bundles">Resource Bundles</a>
+            <a class="dropdown-item" href="/api/resources">Resources</a>
+            <a class="dropdown-item" href="/api/social">Social</a>
+            <a class="dropdown-item" href="/api/sprites">Sprites</a>
+            <a class="dropdown-item" href="/api/terminal">Terminal</a>
+            <a class="dropdown-item" href="/api/timers">Timers</a>
+            <a class="dropdown-item" href="/api/types">Types</a>
+            <a class="dropdown-item" href="/api/utilities">Utilities</a>
+            <a class="dropdown-item" href="/api/windows">Windows</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/articles">Articles &amp; Guides</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/splashkit">Contribute</a>
+      </li>
+    </ul>
+    <form class="form-inline pull-sm-right">
+      <div class="input-group" id="sk-global-search">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search form-control" required type="text" placeholder="Search API...">
+        <div class="sk-search-results-container">
+          <ul class="sk-search-results list"></ul>
+          <div class="sk-search-no–results">
+            <i class="fa fa-question-circle fa-2x"></i>
+            <p>No results found</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+    <main id="content">
+        <div class="container">
+    <div class="row">
+        <h1>Getting Started With Servers</h1>
+        <aside class="sk-sidebar">
+    <h3>All Guides</h3>
+    <nav role="navigation">
+      <ul class="nav sk-article-nav-root">
+          <li class="nav-item">
+<a href="/articles/guides/tags/networking" class="nav-link ">              Networking
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/starter" class="nav-link ">              Starter
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/camera" class="nav-link ">              Camera
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/audio" class="nav-link ">              Audio
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/animations" class="nav-link ">              Animations
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/json" class="nav-link ">              JSON
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/utilities" class="nav-link ">              Utilities
+</a>          </li>
+          <li class="nav-item">
+<a href="/articles/guides/tags/databases" class="nav-link ">              Databases
+</a>          </li>
+      </ul>
+    </nav>
+  </aside>
+  <article class="sk-content">
+      <p class="lead">
+        Written by
+            <a href="http://github.com/franknsten">Andrew Cain and Isaac Wallis</a>
+        on Jul 14 2018
+      </p>
+    <p>This article provides background information you will need to get started building your own web server using SplashKit. You will be introduced to starting a web server and serving a file to the user.</p>
+
+<h2>Getting Started With Web Servers</h2>
+
+<p>Web browsers and servers are programs that make it possible for you to access resources and applications on the internet. When you navigate to a web page, your web browser (Chrome, Edge, FireFox, Safari) uses the URL your specify to open a network connection to a computer running somewhere on the internet. The browser&rsquo;s network connection allows it to send data to the server (called a request) and to receive data back in response.</p>
+
+<p>For the computer you connected with to know what to do there must be a program that is listening for these requests and performing some actions in response. In this case that program is what we generally call a &ldquo;web server&rdquo;. It has an open port (somewhere for others to connect to) and listens on that port for incoming connections. When the connection arrives, it can read the request, perform some actions, and respond.</p>
+
+<p>In this article you will see how to start listening for connections, how to send a file in response, and how to stop listening for new connections. This is then build upon in the <a href="../routing-with-servers/">routing with servers</a> article, which shows you how to customise your response based upon what the caller requested.</p>
+
+<h3>Step 1: Getting Started</h3>
+
+<p>Before we start our server, lets create a file to be served. Create a new project folder (<code>mkdir testServer</code>) and move into it (<code>cd testServer</code>). We need to setup a resources folder where we can store files we want to &ldquo;serve&rdquo;. You can do this by running <code>skm resources</code> at the Terminal. This will create the <strong>Resources</strong> folder, and all the subfolders in there. The folder we&rsquo;re interested in is <strong>Resources/server</strong> as this is where our server will look for files we want to present to the user.</p>
+
+<p>Create a file in this folder, and fill it out like a basic HTML document as such:</p>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#html-index_file" aria-controls="html-index_file" role="tab" data-toggle="tab" class="nav-link active">
+          Html
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="html-index_file" class="tab-pane fade in active" data-clipboard data-clipboard-target="#html-index_file pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Basic HTML Page<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Hello World<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<p>Save it as &ldquo;index.html&rdquo; in <strong>Resources/server</strong> and we are ready to start!</p>
+
+<h3>Step 2: Starting The Server</h3>
+
+<p>To start listening for incomming connections you need to call the <a href="/api/networking/#group-start-web-server">Start Web Server</a> procedure. You can pass a <strong>port</strong> value (integer) to this to indicate which port to listen for connections. Each computer can support multiple concurrent connections, so each needs a unique address, so there can only be one program using a given port at one time. To help make this easier to navigate there are standards for which port to use, and in general web servers listen on port 80 for insecure (http) traffic, and port 443 for secure (https) traffic, while secure shell (ssh; remote terminal access) is port 22 for example. For local web servers, it&rsquo;s standard to use port 8080.</p>
+
+<p>We need to pair the <a href="/api/networking/#group-start-web-server">Start Web Server</a> with a call to the <a href="/api/networking/#stop-web-server">Stop Web Server</a> procedure. This will wrap up any requests that have come in and will stop listening for any new requests. So once you are finished with the web server, you can stop it so that it does not take up system resources that you do not need. The following code shows a small program that starts and stops a web server.</p>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-server_basic0" aria-controls="cpp-server_basic0" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-server_basic0" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-server_basic0 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="cp">#include "splashkit.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">write_line</span><span class="p">(</span><span class="s">"About to start the server..."</span><span class="p">);</span>
+
+    <span class="c1">// Start a web server - defaults to listening to port 8080
+</span>    <span class="n">web_server</span> <span class="n">server</span> <span class="o">=</span> <span class="n">start_web_server</span><span class="p">();</span>
+
+    <span class="c1">// For now we are done... so lets shutdown...
+</span>    <span class="n">stop_web_server</span><span class="p">(</span><span class="n">server</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<h3>Step 3: Responding to a request</h3>
+
+<p><a href="/api/networking/#group-start-web-server">Start Web Server</a> will get the computer to listen for incomming connections on port 8080. So now we need to tell it what to do when a request comes in. Each request needs to have a response, and the clients web browser will be waiting for this.</p>
+
+<p>To send a response you can use the <a href="/api/networking/#group-send-response">Send Response</a> procedure. There are several different versions of this, but the easiest allows you to send a string back as a response to the request. In order to send a response, we must wait to get the next incoming request. This is done by calling the <a href="/api/networking/#next-web-request">Next Web Request</a> function. When you call this the computer will wait for the a request to come in to the web server, when it arrives the details are packaged up for us to use and sent back as an <a href="/api/networking/#http-request">HTTP Request</a>. If you dont want to wait, you can check if there are requests before calling <a href="/api/networking/#next-web-request">Next Web Request</a> by using calling the <a href="/api/networking/#has-incoming-requests">Has Incoming Requests</a> functions which will returns true if there is a request waiting.</p>
+
+<p>The following code shows an appropriate <code>&quot;Hello World&quot;</code> web server program.</p>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-server_basic1" aria-controls="cpp-server_basic1" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-server_basic1" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-server_basic1 pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="cp">#include "splashkit.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">write_line</span><span class="p">(</span><span class="s">"About to start the server..."</span><span class="p">);</span>
+
+    <span class="c1">// Start a web server - defaults to listening to port 8080
+</span>    <span class="n">web_server</span> <span class="n">web_server</span> <span class="o">=</span> <span class="n">start_web_server</span><span class="p">();</span>
+
+    <span class="n">write_line</span><span class="p">(</span><span class="s">"Waiting for a request - navigate to http://localhost:8080"</span><span class="p">);</span>
+
+    <span class="c1">// Wait and get the first request that comes in
+</span>    <span class="n">http_request</span> <span class="n">new_request</span> <span class="o">=</span> <span class="n">next_web_request</span><span class="p">(</span><span class="n">web_server</span><span class="p">);</span>
+
+    <span class="c1">// Send a response back
+</span>    <span class="n">send_response</span><span class="p">(</span><span class="n">new_request</span><span class="p">,</span> <span class="s">"Hello World"</span><span class="p">);</span>
+
+    <span class="c1">// For now we are done... so lets shutdown...
+</span>    <span class="n">stop_web_server</span><span class="p">(</span><span class="n">web_server</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<p>Compile and run your program. Notice that when you run the program nothing seems to happen&hellip; The program is waiting for a request! To create a request navigate to <a href="http://localhost:8080">http://localhost:8080</a> see you should see the response. When you switch back your program will have ended. Trying to make another request will no longer work, as there isn&rsquo;t any program listening for requests on port 8080.</p>
+
+<h3>Step 4: Responding with the contents of a file</h3>
+
+<p>Often you will want to be able to respond with the contents of a file. To help make this easy, SplashKit provides a <a href="/api/networking/#send-file-response">Send File Response</a> procedure along with <a href="/api/networking/#send-html-file-response">Send HTML File Response</a>, <a href="/api/networking/#send-css-file-response">Send Css File Response</a>, <a href="/api/networking/#send-javascript-file-response">Send Javascript File Response</a> to simplify responding with common web file types. When you respond with a file, SplashKit will search the program&rsquo;s Resources folder for the file you specify, and will then send the details from that file across the network as your response to the incoming request.</p>
+
+<p>The follow code replaces the &ldquo;Hello World&rdquo; response with the details from the index.html file we created.</p>
+
+<div class="sk-snippet">
+  <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a href="#cpp-server_basic" aria-controls="cpp-server_basic" role="tab" data-toggle="tab" class="nav-link active">
+          C++
+        </a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div role="tabpanel" id="cpp-server_basic" class="tab-pane fade in active" data-clipboard data-clipboard-target="#cpp-server_basic pre">
+        <pre class="codehilite"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="rouge-code"><pre><span class="cp">#include "splashkit.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">write_line</span><span class="p">(</span><span class="s">"About to start the server..."</span><span class="p">);</span>
+    
+    <span class="c1">// Start a web server - defaults to listening to port 8080
+</span>    <span class="n">web_server</span> <span class="n">server</span> <span class="o">=</span> <span class="n">web_server</span><span class="p">();</span>
+
+    <span class="n">write_line</span><span class="p">(</span><span class="s">"Waiting for a request - navigate to http://localhost:8080"</span><span class="p">);</span>
+
+    <span class="c1">// Wait and get the first request that comes in
+</span>    <span class="n">http_request</span> <span class="n">request</span> <span class="o">=</span> <span class="n">next_web_request</span><span class="p">(</span><span class="n">server</span><span class="p">);</span>
+
+    <span class="c1">// Send back the index.html file
+</span>    <span class="n">send_html_file_response</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">"index.html"</span><span class="p">);</span>
+
+    <span class="c1">// For now we are done... so lets shutdown...
+</span>    <span class="n">stop_web_server</span><span class="p">(</span><span class="n">server</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></td></tr></tbody></table>
+</code></pre>
+      </div>
+  </div>
+</div>
+
+<h3>Next Step</h3>
+
+<p>See how to respond to different requests in the <a href="../routing-with-servers/">routing with servers</a> article.</p>
+
+  </article>
+
+    </div>
+  </div>
+
+    </main>
+    <footer class="sk-footer">
+  <div class="container">
+    <ul class="sk-footer-links">
+        <li>
+          <a href="http://github.com/splashkit" target="_blank"> GitHub </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/splashkit" target="_blank"> Facebook </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/splashkit" target="_blank"> Twitter </a>
+        </li>
+    </ul>
+      <p>
+        SplashKit is an open source project maintained by the <a href="https://github.com/orgs/splashkit/people">core team</a> with the help of all <a href="http://github.com/splashkit/splashkit/graphs/contributors">our contributors</a>.
+      </p>
+      <p>
+        Except as otherwise noted, SplashKit is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.en.html#content">GPL</a>.
+      </p>
+  </div>
+</footer>
+
+    <script src="/javascripts/main-5bcd519a.js"></script>
+  </body>
+</html>
