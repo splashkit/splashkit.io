@@ -16,7 +16,8 @@ def snippet(filename_or_hash, path = nil)
     '.pas'        => 'Pascal',
     '.psuedocode' => 'Psuedocode',
     '.py'         => 'Python',
-    '.swift'      => 'Swift'
+    '.swift'      => 'Swift',
+    '.html'       => 'Html'
   }
   hash_key_to_ext = {
     cpp:        '.cpp',
@@ -25,7 +26,8 @@ def snippet(filename_or_hash, path = nil)
     javascript: '.js',
     python:     '.py',
     swift:      '.swift',
-    csharp:     '.cs'
+    csharp:     '.cs',
+    html:       '.html',
   }
 
   # Check for path, otherwise use current page
