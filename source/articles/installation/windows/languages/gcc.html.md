@@ -19,7 +19,7 @@ tags: installation,windows,clang
 1. In Visual Studio Code you should install the following extensions:
 
   - C++ (search for `ms-vscode.cpptools`)
-  - vscode-icons (`robertohuertasm.vscode-icons`)
+  - vscode-icons (search for `vscode-icons`)
 
     ![](images/install-gifs/extensions.gif)
 

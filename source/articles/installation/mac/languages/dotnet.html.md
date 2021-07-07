@@ -49,14 +49,14 @@ This guide assists with installing the [.NET Core SDK](https://microsoft.com/net
 1. In Visual Studio Code you should install the following extensions:
     - [C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
     - [C# XML Documentation Comments](https://marketplace.visualstudio.com/items?itemName=k--kato.docomment)
-    - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
+    - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
 
     You can do this from the command line by executing:
 
     ```bash
     code --install-extension ms-vscode.csharp
     code --install-extension k--kato.docomment
-    code --install-extension robertohuertasm.vscode-icons
+    code --install-extension vscode-icons
     ```
 
     You can also search for them by opening up the extensions panel.
