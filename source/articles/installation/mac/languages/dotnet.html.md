@@ -19,7 +19,7 @@ This guide assists with installing the [.NET Core SDK](https://microsoft.com/net
 1. Now use `brew` from your terminal to to install the .NET Core SDK:
 
     ```bash
-    $ brew cask install dotnet-sdk
+    $ brew install dotnet-sdk --cask
     ```
 
     You will also need to link the `dotnet` command into `/usr/local/bin`:
