@@ -24,8 +24,113 @@ platforms:
     href:         /articles/installation/vm
 ---
 
-<ul class="sk-grid">
-  <% current_page.data.platforms.each do |platform| %>
-    <%= partial 'partials/grid_item', locals: platform %>
-  <% end %>
-</ul>
+
+    <div class="container">
+        <div class="v_space_40"></div>
+        <div class="content_area os_windows">
+            <div class="cont_right"><img src="app/assets/images/skbox-5d36169d.svg"></div>
+            <div class="cont_left">
+                <div>
+                    <h1>Install on Windows</h1>
+                </div>
+                <div>SplashKit is a beginner's all-purpose software toolkit.</div>
+                <div class="sk_btn_area">
+                    <a href="https://github.com/thoth-tech/splashkit-core/blob/ismail/SplashKit_Install/Windows%20Installer.zip" class="sk_btn_dark"><i class="fa fa-download" aria-hidden="true"></i> Download for <strong>Windows</strong></a>
+                    <div class="sk_btn_info">For Windows 10 and higher</div>
+                </div>
+                <div>To install using CLI, Run the following code at the PowerShell Terminal:</div>
+                <div class="sk_cli_area">
+                    <div class="sk_cli_code">iex ((New-Object System.Net.WebClient).DownloadString('iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/thoth-tech/splashkit-aio/main/aio-install.sh'))'))</div>
+                    <div class="copy_code">Click to copy</div>
+                </div>
+            </div>
+        </div>
+        <div class="content_area os_mac">
+            <div class="cont_right"><img src="app/assets/images/skbox-5d36169d.svg"></div>
+            <div class="cont_left">
+                <div>
+                    <h1>Install on MacOS</h1>
+                </div>
+                <div>SplashKit is a beginner's all-purpose software toolkit.</div>
+                <div class="v_space_40"></div>
+                <div>To install using CLI, Run the following code at the PowerShell Terminal:</div>
+                <div class="sk_cli_area">
+                    <div class="sk_cli_code">bash <(curl -s https://raw.githubusercontent.com/thoth-tech/splashkit-aio/main/aio-install.sh)</div>
+                            <div class="copy_code">Click to copy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_area os_linux">
+                <div class="cont_right"><img src="https://splashkit.io/images/skbox-5d36169d.svg"></div>
+                <div class="cont_left">
+                    <div>
+                        <h1>Install on Linux (Ubuntu)</h1>
+                    </div>
+                    <div>SplashKit is a beginner's all-purpose software toolkit.</div>
+                    <div class="v_space_40"></div>
+                    <div>To install using CLI, Run the following code at the PowerShell Terminal:</div>
+                    <div class="sk_cli_area">
+                        <div class="sk_cli_code">wget https://raw.githubusercontent.com/thoth-tech/splashkit-aio/main/aio-install.sh -O - | bash</div>
+                        <div class="copy_code">Click to copy</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content_area os_vm">
+                <div class="cont_right"><img src="app/assets/images/skbox-5d36169d.svg"></div>
+                <div class="cont_left">
+                    <div>
+                        <h1>Install on Virtual Machine</h1>
+                    </div>
+                    <div>SplashKit is a beginner's all-purpose software toolkit.</div>
+                    <div class="v_space_40"></div>
+                    <div>
+                        <p>If you cannot get SplashKit working natively, you can download and use the provided SplashKit Virtual Machine. The provided virtual maching comes with everything you need to get started quickly with SplashKit.</p>
+
+                        <p>The provided virtual machine is portable and will work with <a href="https://www.virtualbox.org">VirtualBox</a> or <a href="https://www.vmware.com/products/workstation-player.html">VMware Player</a>.</p>
+
+                        <ul>
+                            <li>Download the <a href="https://cloudstor.aarnet.edu.au/plus/s/FoPe0AXgbw1Dib9">SplashKitVM.ova</a> virtual machine archive file</li>
+                            <li>Import this file into your local virtual machine host (eg VirtualBox or VMWare)</li>
+                            <li>Start the virtual machine and login using <strong>skuser</strong> as the username and <strong>splashkit.io</strong> as the password.</li>
+                        </ul>
+
+                        <p>This comes with everything you need installed including:</p>
+
+                        <ul>
+                            <li>Ubuntu operating system</li>
+                            <li>Visual Studio Code</li>
+                            <li>Terminal</li>
+                            <li>C/C++ using the clang++ compiler</li>
+                            <li>.NET using dotnet core</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="content_area os_mobile">
+                <div class="cont_right"><img src="app/assets/images/skbox-5d36169d.svg"></div>
+                <div class="cont_left">
+                    <div>
+                        <h1>Sorry!</h1>
+                    </div>
+                    <div>Splashkit isn't available on mobile devices.</div>
+                    <div class="v_space_40"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="other_title">
+                <h2>Other Platforms</h2>
+                <span id="btn_platforms"><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+            </div>
+            <div class="v_space_20"></div>
+            <div class="button_area">
+                <a href="#" id="windows" class="sk_btn_light"><i class="fa fa-download" aria-hidden="true"></i> Install on <strong>Windows</strong></a>
+                <a href="#" id="mac" class="sk_btn_light"><i class="fa fa-download" aria-hidden="true"></i> Install on <strong>MacOS</strong></a>
+                <a href="#" id="linux" class="sk_btn_light"><i class="fa fa-download" aria-hidden="true"></i> Install on <strong>Linux</strong></a>
+                <a href="#" id="vm" class="sk_btn_light"><i class="fa fa-download" aria-hidden="true"></i> Install on <strong>VM</strong></a>
+            </div>
+            <div class="v_space_40"></div>
+        </div>
+
