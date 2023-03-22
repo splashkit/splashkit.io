@@ -15,7 +15,7 @@ Once you have MSYS2 installed, you can install the SplashKit library:
 
 1. In your MSYS2 Terminal, paste and run the following line
 
-    `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh)`.
+    `bash <(curl -s https://raw.githubusercontent.com/splashkit/skm/master/install-scripts/skm-install.sh) .`
 
     This can also be found on the [SplashKit](http://www.splashkit.io) home page.
 
