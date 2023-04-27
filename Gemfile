@@ -36,7 +36,7 @@ gem 'jquery-middleman', '3.1.2'
 
 # Markdown redcarpet parsing engine + syntax highlighter for middleman
 gem 'middleman-syntax', '~>3.0.0'
-gem 'redcarpet', '3.3.3'
+gem 'redcarpet', '3.5.1'
 
 # Publish middleman website to gh-pages
 gem 'middleman-gh-pages', '~>0.3.0'
